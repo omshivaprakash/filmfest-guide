@@ -6,7 +6,7 @@ const facet = byId('facet');
 const detail = byId('detail');
 const content = byId('detail-content');
 const results = byId('results');
-const views = { films: 'Films', people: 'People', awards: 'Awards' };
+const views = { festivals: 'Festivals', films: 'Films', people: 'People', awards: 'Awards' };
 let view = 'films';
 
 function element(tag, text, className) {
@@ -55,19 +55,11 @@ async function start() {
   }
   for (const honor of honors) addCredit(honor.award[2], honor);
   const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
-  const cards = festivals.map(record => {
-    const card = button('', 'festival-card', () => {
-      festival.value = festival.value === record.id ? '' : record.id;
-      edition.value = '';
-      search.value = '';
-      facet.value = '';
-      render();
-      byId('archive').scrollIntoView();
-    });
-    card.append(element('span', record.region.toUpperCase(), 'tag'), element('span', record.name, 'card-title'), element('span', record.description, 'card-copy'));
-    return card;
-  });
-  byId('festival-grid').replaceChildren(...cards);
+  const previous = byId('previous');
+  const next = byId('next');
+  let items = [];
+  let page = 0;
+  let pageCount = 1;
   options(festival, festivals.map(record => [record.id, record.short]), 'All festivals');
 
   function open(title, category) {
@@ -124,9 +116,8 @@ async function start() {
     const visibleFestivals = festival.value ? [festivalMap.get(festival.value)] : festivals;
     const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
     options(edition, years.map(year => [year, String(year)]), 'All editions');
-    cards.forEach((card, index) => card.setAttribute('aria-pressed', String(festival.value === festivals[index].id)));
     const formats = ['Feature', 'Short film', 'Documentary'];
-    const hasFacet = view !== 'awards';
+    const hasFacet = view === 'films' || view === 'people';
     byId('facet-label').hidden = !hasFacet;
     const choices = view === 'people' ? allRoles : formats;
     byId('facet-caption').textContent = view === 'people' ? 'Role' : 'Format';
@@ -134,8 +125,13 @@ async function start() {
     const query = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
     const match = values => query.every(term => normalize(values.flat(Infinity).filter(Boolean).join(' ')).includes(term));
     const matchesEdition = record => (!festival.value || record.festival === festival.value) && (!edition.value || record.year === Number(edition.value));
-    let items;
-    if (view === 'people') {
+    if (view === 'festivals') {
+      items = visibleFestivals.filter(record => record.editions.some(event => !edition.value || event.year === Number(edition.value)) && match([record.name, record.short, record.region, record.editions.map(event => event.year)])).map(record => result(record.region, record.name, record.description, () => {
+        search.value = '';
+        festival.value = record.id;
+        location.hash = 'films';
+      }));
+    } else if (view === 'people') {
       items = [...people].sort(([a], [b]) => a.localeCompare(b)).flatMap(([name, credits]) => {
         const matching = credits.filter(record => matchesEdition(record) && (!facet.value || record.role === facet.value) && match([name, record.role, record.title, record.award?.[0], label(record)]));
         return matching.length ? [result(unique(matching.map(record => record.role)).join(' · '), name, unique(matching.map(record => record.title || record.award[0])).join(' · '), () => showPerson(name))] : [];
@@ -145,34 +141,64 @@ async function start() {
     } else {
       items = films.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record)));
     }
-    byId('count').textContent = `${items.length} ${items.length === 1 ? 'result' : 'results'}`;
-    results.replaceChildren(...(items.length ? items : [element('p', 'No matches. Try a different search or filter.', 'meta')]));
-    byId('archive-title').textContent = `Browse ${views[view].toLowerCase()}`;
+    document.body.dataset.view = view;
+    byId('archive-title').textContent = views[view];
+    page = 0;
+    paginate();
     for (const link of document.querySelectorAll('nav a')) {
       link.removeAttribute('aria-current');
       if (link.hash === `#${view}`) link.setAttribute('aria-current', 'location');
     }
   }
+  function paginate() {
+    const style = getComputedStyle(results);
+    const columns = Number(style.getPropertyValue('--columns'));
+    const row = parseFloat(style.gridAutoRows);
+    const gap = parseFloat(style.rowGap);
+    const rows = Math.max(1, Math.floor((results.clientHeight + gap) / (row + gap)));
+    const size = columns * rows;
+    pageCount = Math.max(1, Math.ceil(items.length / size));
+    page = Math.min(page, pageCount - 1);
+    const start = page * size;
+    const visible = items.slice(start, start + size);
+    if (visible.length) {
+      results.replaceChildren(...visible);
+    } else {
+      results.replaceChildren(element('p', 'No matches. Try a different search or filter.', 'meta'));
+    }
+    byId('count').textContent = items.length ? `${start + 1}–${start + visible.length} of ${items.length}` : '0 results';
+    byId('page-status').textContent = `Page ${page + 1} of ${pageCount}`;
+    previous.setAttribute('aria-disabled', String(page === 0));
+    next.setAttribute('aria-disabled', String(page + 1 === pageCount));
+  }
   function navigate() {
     const section = location.hash.slice(1);
-    if (!Object.hasOwn(views, section)) return;
-    if (view !== section) {
-      view = section;
-      facet.value = '';
-      render();
-    }
-    byId('archive').scrollIntoView();
+    const selectedView = Object.hasOwn(views, section) ? section : 'films';
+    if (view === selectedView) return;
+    view = selectedView;
+    facet.value = '';
+    render();
   }
   for (const input of [search, festival, edition, facet]) input.addEventListener('input', render);
   byId('reset').addEventListener('click', () => {
     for (const input of [search, festival, edition, facet]) input.value = '';
     render();
   });
-  for (const link of document.querySelectorAll('nav a')) {
-    link.addEventListener('click', () => {
-      if (location.hash === link.hash) navigate();
+  for (const [control, step] of [[previous, -1], [next, 1]]) {
+    control.addEventListener('click', () => {
+      if (control.getAttribute('aria-disabled') === 'true') return;
+      page += step;
+      paginate();
     });
   }
+  let resultWidth = results.clientWidth;
+  let resultHeight = results.clientHeight;
+  new ResizeObserver(() => {
+    if (resultWidth === results.clientWidth && resultHeight === results.clientHeight) return;
+    resultWidth = results.clientWidth;
+    resultHeight = results.clientHeight;
+    paginate();
+  }).observe(results);
   window.addEventListener('hashchange', navigate);
   render();
   navigate();
