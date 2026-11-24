@@ -84,6 +84,7 @@ async function start() {
     const event = record.editions.find(entry => entry.year === film.year);
     open(film.title, `${label(film)} · ${film.format}`);
     if (film.language || film.country) content.append(element('p', [film.language, film.country].filter(Boolean).join(' · '), 'meta'));
+    if (film.section) content.append(element('p', film.section, 'meta'));
     if (film.summary) content.append(element('p', film.summary));
     if (film.cataloguePage) content.append(element('p', `Catalogue index · printed page ${film.cataloguePage}`, 'meta'));
     list('Selected credits', film.credits.map(([role, name]) => {
@@ -146,11 +147,11 @@ async function start() {
     const visibleFestivals = festival.value ? [festivalMap.get(festival.value)] : festivals;
     const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
     options(edition, years.map(year => [year, String(year)]), 'All editions');
-    const formats = ['Feature', 'Short film', 'Documentary', 'Format unlisted'];
+    const formats = unique(films.map(film => film.format)).sort();
     const editionRecord = visibleFestivals.length === 1 && visibleFestivals[0].editions.find(record => record.year === Number(edition.value));
     const note = byId('edition-note');
     note.dataset.status = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are pending.' : '';
-    note.replaceChildren(editionRecord?.catalogue ? source(editionRecord.catalogue, 'Edition catalogue PDF') : document.createTextNode('Archive coverage varies by edition'));
+    note.replaceChildren(editionRecord?.catalogue ? source(editionRecord.catalogue, editionRecord.catalogueLabel || 'Edition catalogue PDF') : document.createTextNode('Archive coverage varies by edition'));
     const hasFacet = view === 'films' || view === 'people';
     byId('facet-label').hidden = !hasFacet;
     const choices = view === 'people' ? allRoles : formats;
@@ -173,7 +174,7 @@ async function start() {
     } else if (view === 'awards') {
       items = awards.filter(record => matchesEdition(record) && match([record.award[0], record.award[2], record.title, label(record)])).map(record => result(label(record), record.award[0], [record.award[2], record.title].filter(Boolean).join(' · '), () => showAward(record)));
     } else {
-      items = films.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record), '▤'));
+      items = films.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record), '▤'));
     }
     document.body.dataset.view = view;
     byId('archive-title').textContent = views[view];

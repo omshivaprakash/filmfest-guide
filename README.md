@@ -13,3 +13,9 @@ Run `node --check dist/app.js` and `node check-catalog.mjs` after editing.
 Official catalogue URLs for the 17 editions are in `tools/biffes-sources.json`, keyed by edition number. Convert downloaded catalogues to `1.txt` through `17.txt` with `pdftotext -layout`. The optional `4-ocr.txt` is the searchable text from Internet Archive item `unset0000unse_n1n9`. The optional `9-ocr.txt` is layout text from the searchable PDF linked on Internet Archive item `biffes.9th-biffes-catalogue-2017`. Run `python3 tools/import-biffes.py <text-directory> dist/catalog.json` to rebuild the extracted entries.
 
 The importer adds printed page references for index-only entries and PDF page links for matching film pages. Scanned and irregular layouts can leave gaps. A PDF link in the edition selector indicates a source is available, even when no titles could be extracted from it. Portraits have source and license credits in their profile. Profiles without a sourced portrait use initials.
+
+## Goa and Kerala programme import
+
+Run `python3 tools/import-goa-kerala.py <source-directory> dist/catalog.json` with PyMuPDF and lxml installed. The source directory contains the PIB Indian Panorama pages as `iffi24.html` and `iffi25.html`, the 30th IFFK screening schedule as `iffk25.pdf`, and OCR from the 16th IDSFFK official selection as `ocr/page-01.txt` through `ocr/page-16.txt`. The importer includes source URLs and reads the 29th IFFK section selections from `tools/iffk-2024-selections.tsv`.
+
+Goa coverage includes Indian Panorama and selected award winners. Kerala coverage includes three sections of the 29th IFFK, the extracted 30th IFFK schedule, and the extracted 16th IDSFFK official selection. Scanned or irregular source layouts can leave gaps.
