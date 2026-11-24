@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore film festivals, films, credits and awards across Bengaluru, Goa and Kerala.">
+<title>FilmFest Guide</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap bar"><a class="brand" href="#">◉ <span>FilmFest</span> Guide</a><nav aria-label="Main navigation"><a href="#festivals">Festivals</a><a href="#films">Films</a><a href="#people">People</a><a href="#awards">Awards</a></nav></div></header>
+<main>
+<section class="hero"><div class="wrap">
+<p class="eyebrow"><span></span> THE FESTIVAL ARCHIVE</p>
+<h1>FilmFest <em>Guide</em></h1>
+<p class="intro">Discover the films, people and prizes behind festival cinema in Bengaluru, Goa and Kerala.</p>
+<a class="primary" href="#festivals">Explore festivals</a>
+</div></section>
+<section class="wrap festivals" id="festivals">
+<div class="heading"><h2>Explore festivals</h2><span>Bengaluru · Goa · Kerala</span></div>
+<div class="festival-grid" id="festival-grid"></div>
+</section>
+<section class="wrap archive" id="archive">
+<div class="heading"><h2 id="archive-title">Browse films</h2><span>Selected past editions</span></div>
+<div class="controls">
+<label>Search <input type="search" id="search" placeholder="Search titles, names, awards…" autocomplete="off"></label>
+<label>Festival <select id="festival"><option value="">All festivals</option></select></label>
+<label>Edition <select id="edition"><option value="">All editions</option></select></label>
+<label id="facet-label"><span id="facet-caption">Format</span><select id="facet"></select></label>
+</div>
+<div class="results-bar"><p id="count" aria-live="polite"></p><button type="button" id="reset">Clear filters</button></div>
+<div id="results" class="results"></div>
+</section>
+</main>
+<footer><div class="wrap"><strong>FilmFest Guide</strong><p>Selected festival records with links to programmes, credits and award announcements.</p></div></footer>
+<dialog id="detail" aria-labelledby="detail-title"><form method="dialog"><button class="close" aria-label="Close details">×</button></form><div id="detail-content"></div></dialog>
+</body>
+</html>
