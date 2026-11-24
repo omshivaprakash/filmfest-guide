@@ -1,0 +1,426 @@
+{
+  "festivals": [
+    {
+      "id": "biffes",
+      "short": "BIFFes",
+      "name": "Bengaluru International Film Festival",
+      "region": "Bengaluru",
+      "description": "Kannada, Indian and Asian cinema.",
+      "url": "https://biffes.org",
+      "editions": [
+        {
+          "year": 2025,
+          "number": "16th",
+          "dates": "1–8 March",
+          "source": "https://16th.biffes.org/"
+        },
+        {
+          "year": 2024,
+          "number": "15th",
+          "dates": "29 February–7 March",
+          "source": "https://15th.biffes.org/awards"
+        }
+      ]
+    },
+    {
+      "id": "iffi",
+      "short": "IFFI",
+      "name": "International Film Festival of India",
+      "region": "Goa",
+      "description": "World cinema and the Indian Panorama.",
+      "url": "https://www.iffigoa.org",
+      "editions": [
+        {
+          "year": 2024,
+          "number": "55th",
+          "dates": "20–28 November",
+          "source": "https://www.iffigoa.org/media/news-and-update"
+        }
+      ]
+    },
+    {
+      "id": "iffk",
+      "short": "IFFK",
+      "name": "International Film Festival of Kerala",
+      "region": "Kerala",
+      "description": "Malayalam and international cinema in Thiruvananthapuram.",
+      "url": "https://iffk.in",
+      "editions": [
+        {
+          "year": 2024,
+          "number": "29th",
+          "dates": "13–20 December",
+          "source": "https://www.iffk.in/images/29IFFKRules.pdf"
+        }
+      ]
+    },
+    {
+      "id": "idsffk",
+      "short": "IDSFFK",
+      "name": "International Documentary & Short Film Festival of Kerala",
+      "region": "Kerala",
+      "description": "Documentaries and shorts in Thiruvananthapuram.",
+      "url": "https://idsffk.in",
+      "editions": [
+        {
+          "year": 2024,
+          "number": "16th",
+          "dates": "26–31 July",
+          "source": "https://idsffk.in/assets/idsffk_2024/16th_IDSFFK_Schedule.pdf"
+        }
+      ]
+    }
+  ],
+  "films": [
+    {
+      "id": "humans",
+      "title": "Humans in the Loop",
+      "festival": "biffes",
+      "year": 2025,
+      "format": "Feature",
+      "language": "Hindi",
+      "country": "India",
+      "summary": "An Adivasi woman takes a job labelling data for AI and notices how the system absorbs biases about her community.",
+      "credits": [
+        [
+          "Director",
+          "Aranya Sahay"
+        ],
+        [
+          "Writer",
+          "Aranya Sahay"
+        ],
+        [
+          "Actor",
+          "Sonal Madhushankar"
+        ],
+        [
+          "Actor",
+          "Ridhima Singh"
+        ],
+        [
+          "Producer",
+          "Mathivanan Rajendran"
+        ],
+        [
+          "Producer",
+          "Shilpa Kumar"
+        ],
+        [
+          "Producer",
+          "Sarabhi Ravichandran"
+        ],
+        [
+          "Cinematographer",
+          "Harshit Saini"
+        ],
+        [
+          "Cinematographer",
+          "Monica Tiwari"
+        ],
+        [
+          "Editor",
+          "Swaroop Reghu"
+        ],
+        [
+          "Costume designer",
+          "Sumangal Nag"
+        ]
+      ],
+      "awards": [
+        [
+          "Best Indian Film",
+          "https://16th.biffes.org/awardWinner"
+        ],
+        [
+          "FIPRESCI Award",
+          "https://16th.biffes.org/awardWinner"
+        ]
+      ],
+      "sources": [
+        "https://2025.jaff-filmfest.org/humans-in-the-loop/",
+        "https://www.rottentomatoes.com/m/humans_in_the_loop/cast-and-crew"
+      ]
+    },
+    {
+      "id": "mikka",
+      "title": "Mikka Bannada Hakki",
+      "festival": "biffes",
+      "year": 2025,
+      "format": "Feature",
+      "language": "Kannada",
+      "country": "India",
+      "summary": "A Kannada competition title from the 16th BIFFes.",
+      "credits": [],
+      "awards": [
+        [
+          "Best Kannada Film",
+          "https://16th.biffes.org/awardWinner"
+        ]
+      ],
+      "sources": []
+    },
+    {
+      "id": "shyam",
+      "title": "Shyamchi Aai",
+      "festival": "biffes",
+      "year": 2024,
+      "format": "Feature",
+      "language": "Marathi",
+      "country": "India",
+      "summary": "A black-and-white adaptation of Sane Guruji’s autobiographical account of his mother.",
+      "credits": [
+        [
+          "Director",
+          "Sujay Dahake"
+        ]
+      ],
+      "awards": [],
+      "sources": [
+        "https://15th.biffes.org/awards"
+      ]
+    },
+    {
+      "id": "toxic",
+      "title": "Toxic",
+      "festival": "iffi",
+      "year": 2024,
+      "format": "Feature",
+      "language": "Lithuanian",
+      "country": "Lithuania",
+      "summary": "Two teenagers form a friendship at a modelling school where the pressure to change their bodies intensifies.",
+      "credits": [
+        [
+          "Director",
+          "Saulė Bliuvaitė"
+        ],
+        [
+          "Writer",
+          "Saulė Bliuvaitė"
+        ],
+        [
+          "Producer",
+          "Giedrė Burokaitė"
+        ],
+        [
+          "Actor",
+          "Vesta Matulytė"
+        ],
+        [
+          "Actor",
+          "Ieva Rupeikaitė"
+        ]
+      ],
+      "awards": [
+        [
+          "Golden Peacock · Best Film",
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48"
+        ],
+        [
+          "Best Actor (Female)",
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48",
+          "Vesta Matulytė"
+        ],
+        [
+          "Best Actor (Female)",
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48",
+          "Ieva Rupeikaitė"
+        ]
+      ],
+      "sources": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48"
+      ]
+    },
+    {
+      "id": "holy",
+      "title": "Holy Cow",
+      "festival": "iffi",
+      "year": 2024,
+      "format": "Feature",
+      "language": "French",
+      "country": "France",
+      "summary": "A teenager in rural France takes on the responsibility of caring for his sister and learns to make Comté.",
+      "credits": [
+        [
+          "Actor",
+          "Clément Faveau"
+        ]
+      ],
+      "awards": [
+        [
+          "Best Actor (Male)",
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48",
+          "Clément Faveau"
+        ]
+      ],
+      "sources": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48"
+      ]
+    },
+    {
+      "id": "familiar",
+      "title": "Familiar Touch",
+      "festival": "iffi",
+      "year": 2024,
+      "format": "Feature",
+      "language": "English",
+      "country": "United States",
+      "summary": "An older woman adjusts to life in assisted living as her relationship with memory changes.",
+      "credits": [
+        [
+          "Director",
+          "Sarah Friedland"
+        ]
+      ],
+      "awards": [
+        [
+          "Best Debut Feature Film",
+          "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48",
+          "Sarah Friedland"
+        ]
+      ],
+      "sources": [
+        "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2078788&lang=2&reg=48"
+      ]
+    },
+    {
+      "id": "malu",
+      "title": "Malu",
+      "festival": "iffk",
+      "year": 2024,
+      "format": "Feature",
+      "language": "Portuguese",
+      "country": "Brazil",
+      "summary": "A former actress navigates tense relationships with her mother and daughter in Rio de Janeiro.",
+      "credits": [
+        [
+          "Director",
+          "Pedro Freire"
+        ]
+      ],
+      "awards": [
+        [
+          "Golden Crow Pheasant · Best Film",
+          "https://www.onmanorama.com/entertainment/entertainment-news/2024/12/20/iffk-2024-brazilian-malu-wins-best-film-award-feminichy-fathima-wins-top-honours.html"
+        ]
+      ],
+      "sources": [
+        "https://www.onmanorama.com/entertainment/entertainment-news/2024/12/20/iffk-2024-brazilian-malu-wins-best-film-award-feminichy-fathima-wins-top-honours.html"
+      ]
+    },
+    {
+      "id": "fathima",
+      "title": "Feminichi Fathima",
+      "festival": "iffk",
+      "year": 2024,
+      "format": "Feature",
+      "language": "Malayalam",
+      "country": "India",
+      "summary": "A homemaker’s effort to replace a mattress becomes a struggle for greater control over her daily life.",
+      "credits": [
+        [
+          "Director",
+          "Fasil Muhammed"
+        ]
+      ],
+      "awards": [
+        [
+          "Audience Prize",
+          "https://www.onmanorama.com/entertainment/entertainment-news/2024/12/20/iffk-2024-brazilian-malu-wins-best-film-award-feminichy-fathima-wins-top-honours.html"
+        ],
+        [
+          "FIPRESCI Award · International Competition",
+          "https://www.onmanorama.com/entertainment/entertainment-news/2024/12/20/iffk-2024-brazilian-malu-wins-best-film-award-feminichy-fathima-wins-top-honours.html"
+        ],
+        [
+          "NETPAC Award · Best Malayalam Film",
+          "https://www.onmanorama.com/entertainment/entertainment-news/2024/12/20/iffk-2024-brazilian-malu-wins-best-film-award-feminichy-fathima-wins-top-honours.html"
+        ]
+      ],
+      "sources": [
+        "https://www.onmanorama.com/entertainment/entertainment-news/2024/12/20/iffk-2024-brazilian-malu-wins-best-film-award-feminichy-fathima-wins-top-honours.html"
+      ]
+    },
+    {
+      "id": "family",
+      "title": "The World Is Family",
+      "festival": "idsffk",
+      "year": 2024,
+      "format": "Documentary",
+      "language": "",
+      "country": "India",
+      "summary": "Anand Patwardhan uses his family archive to reflect on India’s independence movement and its legacy.",
+      "credits": [
+        [
+          "Director",
+          "Anand Patwardhan"
+        ],
+        [
+          "Editor",
+          "Anand Patwardhan"
+        ]
+      ],
+      "awards": [
+        [
+          "Best Long Documentary",
+          "https://www.newindianexpress.com/cities/thiruvananthapuram/2024/Aug/01/anand-patwardhan-wins-best-long-documentary-award-at-idsffk"
+        ],
+        [
+          "Best Editing in a Long Documentary",
+          "https://www.newindianexpress.com/cities/thiruvananthapuram/2024/Aug/01/anand-patwardhan-wins-best-long-documentary-award-at-idsffk",
+          "Anand Patwardhan"
+        ]
+      ],
+      "sources": [
+        "https://www.newindianexpress.com/cities/thiruvananthapuram/2024/Aug/01/anand-patwardhan-wins-best-long-documentary-award-at-idsffk"
+      ]
+    },
+    {
+      "id": "waterman",
+      "title": "Waterman",
+      "festival": "idsffk",
+      "year": 2024,
+      "format": "Short film",
+      "language": "",
+      "country": "India",
+      "summary": "A child in a neighbourhood facing water shortages discovers an unusual power.",
+      "credits": [
+        [
+          "Director",
+          "Vishwas K."
+        ]
+      ],
+      "awards": [
+        [
+          "Best Short Fiction",
+          "https://www.newindianexpress.com/cities/thiruvananthapuram/2024/Aug/01/anand-patwardhan-wins-best-long-documentary-award-at-idsffk"
+        ]
+      ],
+      "sources": [
+        "https://www.newindianexpress.com/cities/thiruvananthapuram/2024/Aug/01/anand-patwardhan-wins-best-long-documentary-award-at-idsffk"
+      ]
+    }
+  ],
+  "honors": [
+    {
+      "festival": "biffes",
+      "year": 2025,
+      "award": [
+        "Lifetime Achievement Award",
+        "https://16th.biffes.org/awardWinner",
+        "Shabana Azmi"
+      ],
+      "role": "Actor"
+    },
+    {
+      "festival": "iffk",
+      "year": 2024,
+      "award": [
+        "Spirit of Cinema Award",
+        "https://www.prd.kerala.gov.in/sites/default/files/inline-files/Kerala%20Calling%20January%202025%20LR-4_compressed.pdf",
+        "Payal Kapadia"
+      ],
+      "role": "Director"
+    }
+  ]
+}
