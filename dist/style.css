@@ -138,3 +138,29 @@ dialog ul { padding-left: 22px; }
   .heading { margin-bottom: 5px; }
   h1 { font-size: 1.75rem; }
 }
+
+.result { display: flex; align-items: center; gap: 11px; }
+.result-copy { display: block; min-width: 0; }
+.thumbnail {
+  position: relative;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 40px;
+  height: 52px;
+  border-radius: 7px;
+  overflow: hidden;
+  background: var(--tint);
+  color: var(--accent);
+  font-weight: 750;
+}
+body[data-view="people"] .thumbnail { width: 44px; height: 44px; border-radius: 50%; }
+.thumbnail img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: white; }
+.profile-photo { margin: 12px 0; }
+.profile-photo .thumbnail, body[data-view="people"] .profile-photo .thumbnail { width: 92px; height: 110px; border-radius: 8px; }
+.profile-photo figcaption { margin-top: 5px; }
+@media (max-width: 540px) {
+  .edition-note:has(a) { display: block; text-align: right; font-size: .8rem; }
+  .result { gap: 6px; }
+  .result .thumbnail, body[data-view="people"] .result .thumbnail { width: 30px; height: 35px; font-size: .8rem; }
+}

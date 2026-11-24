@@ -41,7 +41,7 @@ const normalize = value => value.normalize('NFD').replace(/\p{Diacritic}/gu, '')
 async function start() {
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
-  const { festivals, films, honors } = await response.json();
+  const { festivals, films, honors, portraits = {} } = await response.json();
   const festivalMap = new Map(festivals.map(record => [record.id, record]));
   const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
   const awards = films.flatMap(film => film.awards.map(award => ({ ...film, award, film }))).concat(honors);
@@ -83,17 +83,29 @@ async function start() {
     const record = festivalMap.get(film.festival);
     const event = record.editions.find(entry => entry.year === film.year);
     open(film.title, `${label(film)} · ${film.format}`);
-    content.append(element('p', [film.language, film.country].filter(Boolean).join(' · '), 'meta'), element('p', film.summary));
+    if (film.language || film.country) content.append(element('p', [film.language, film.country].filter(Boolean).join(' · '), 'meta'));
+    if (film.summary) content.append(element('p', film.summary));
+    if (film.cataloguePage) content.append(element('p', `Catalogue index · printed page ${film.cataloguePage}`, 'meta'));
     list('Selected credits', film.credits.map(([role, name]) => {
       const row = element('span', `${role} · `);
       row.append(button(name, 'credit-link', () => showPerson(name)));
       return row;
     }));
     list('Awards', film.awards.map(award => source(award[1], [award[0], award[2]].filter(Boolean).join(' · '))));
-    list('Sources', [source(event.source, `${event.number} edition · ${event.dates}`), source(record.url, 'Official festival website'), ...film.sources.map((url, index) => source(url, `Film reference ${index + 1}`))]);
+    const editionLabel = [`${event.number} edition`, event.dates].filter(Boolean).join(' · ');
+    const references = film.sources.filter(url => url !== event.source);
+    list('Sources', [source(event.source, editionLabel), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`))]);
   }
   function showPerson(name) {
     open(name, 'PEOPLE');
+    const portrait = portraits[name];
+    if (portrait) {
+      const figure = element('figure', '', 'profile-photo');
+      const caption = element('figcaption', '', 'meta');
+      caption.append(source(portrait.source, portrait.credit), ' · ', source(portrait.license, portrait.licenseName), ' · Resized and displayed cropped');
+      figure.append(thumbnail('', portrait), caption);
+      content.append(figure);
+    }
     list('Festival credits and honours', people.get(name).map(record => {
       const row = element('span', `${record.role} · `);
       row.append(record.film ? button(record.film.title, 'credit-link', () => showFilm(record.film)) : source(record.award[1], record.award[0]), ` · ${label(record)}`);
@@ -107,16 +119,38 @@ async function start() {
     if (record.film) list('Film', [button(record.film.title, 'credit-link', () => showFilm(record.film))]);
     list('Source', [source(url, 'Award announcement')]);
   }
-  function result(tag, title, subtitle, action) {
-    const card = button('', 'result', action);
-    card.append(element('span', tag, 'tag'), element('span', title, 'card-title'), element('span', subtitle, 'card-copy'));
-    return card;
+  function thumbnail(fallback, photo) {
+    const frame = element('span', fallback, 'thumbnail');
+    frame.setAttribute('aria-hidden', 'true');
+    if (photo) {
+      const img = element('img');
+      img.alt = '';
+      img.loading = 'lazy';
+      img.src = photo.file;
+      img.addEventListener('error', () => img.remove(), { once: true });
+      frame.append(img);
+    }
+    return frame;
+  }
+  function result(tag, title, subtitle, action, icon = '', photo) {
+    return () => {
+      const card = button('', 'result', action);
+      const copy = element('span', '', 'result-copy');
+      copy.append(element('span', tag, 'tag'), element('span', title, 'card-title'), element('span', subtitle, 'card-copy'));
+      if (icon || photo) card.append(thumbnail(icon, photo));
+      card.append(copy);
+      return card;
+    };
   }
   function render() {
     const visibleFestivals = festival.value ? [festivalMap.get(festival.value)] : festivals;
     const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
     options(edition, years.map(year => [year, String(year)]), 'All editions');
-    const formats = ['Feature', 'Short film', 'Documentary'];
+    const formats = ['Feature', 'Short film', 'Documentary', 'Format unlisted'];
+    const editionRecord = visibleFestivals.length === 1 && visibleFestivals[0].editions.find(record => record.year === Number(edition.value));
+    const note = byId('edition-note');
+    note.dataset.status = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are pending.' : '';
+    note.replaceChildren(editionRecord?.catalogue ? source(editionRecord.catalogue, 'Edition catalogue PDF') : document.createTextNode('Archive coverage varies by edition'));
     const hasFacet = view === 'films' || view === 'people';
     byId('facet-label').hidden = !hasFacet;
     const choices = view === 'people' ? allRoles : formats;
@@ -134,12 +168,12 @@ async function start() {
     } else if (view === 'people') {
       items = [...people].sort(([a], [b]) => a.localeCompare(b)).flatMap(([name, credits]) => {
         const matching = credits.filter(record => matchesEdition(record) && (!facet.value || record.role === facet.value) && match([name, record.role, record.title, record.award?.[0], label(record)]));
-        return matching.length ? [result(unique(matching.map(record => record.role)).join(' · '), name, unique(matching.map(record => record.title || record.award[0])).join(' · '), () => showPerson(name))] : [];
+        return matching.length ? [result(unique(matching.map(record => record.role)).join(' · '), name, unique(matching.map(record => record.title || record.award[0])).join(' · '), () => showPerson(name), name.split(/\s+/).slice(0, 2).map(part => part[0]).join(''), portraits[name])] : [];
       });
     } else if (view === 'awards') {
       items = awards.filter(record => matchesEdition(record) && match([record.award[0], record.award[2], record.title, label(record)])).map(record => result(label(record), record.award[0], [record.award[2], record.title].filter(Boolean).join(' · '), () => showAward(record)));
     } else {
-      items = films.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record)));
+      items = films.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record), '▤'));
     }
     document.body.dataset.view = view;
     byId('archive-title').textContent = views[view];
@@ -162,9 +196,9 @@ async function start() {
     const start = page * size;
     const visible = items.slice(start, start + size);
     if (visible.length) {
-      results.replaceChildren(...visible);
+      results.replaceChildren(...visible.map(makeCard => makeCard()));
     } else {
-      results.replaceChildren(element('p', 'No matches. Try a different search or filter.', 'meta'));
+      results.replaceChildren(element('p', byId('edition-note').dataset.status || 'No matches. Try a different search or filter.', 'meta'));
     }
     byId('count').textContent = items.length ? `${start + 1}–${start + visible.length} of ${items.length}` : '0 results';
     byId('page-status').textContent = `Page ${page + 1} of ${pageCount}`;
