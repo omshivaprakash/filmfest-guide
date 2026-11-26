@@ -38,6 +38,7 @@ If you love cinema, a film festival is a feast. But planning for one, or looking
 | See every edition, with its catalogue PDF and archive documents | **Past years** tab |
 | Look up a film or person across every festival | **Search** (top bar) |
 | Map films, people or festivals worldwide | **Explore → Map** |
+| See which festivals are on now, over or coming next | **Explore → Calendar**, or the strips on the home page |
 | See which languages the films are in | **Explore → Languages** |
 | Find filmmakers who return across festivals and editions | **Explore → Across festivals** |
 | Browse 8,000+ film festivals worldwide by region, country or type (documentary, short, animation, LGBTQ+…) | **Explore → World festivals** |

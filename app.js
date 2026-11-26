@@ -10,7 +10,7 @@ const results = byId('results');
 const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', map: 'Map', years: 'Past years' };
 const searchTabs = { films: 'Films', people: 'People', awards: 'Awards' };
 // Explore, like LitFest's: maps and research views across every festival.
-const exploreTabs = { map: 'Map', languages: 'Languages', across: 'Across festivals', world: 'World festivals' };
+const exploreTabs = { map: 'Map', calendar: 'Calendar', languages: 'Languages', across: 'Across festivals', world: 'World festivals' };
 const listViews = ['films', 'people', 'awards', 'years', 'across', 'world'];
 const exploreViews = ['map', 'languages'];
 const UNLISTED = 'Format unlisted';
@@ -130,7 +130,7 @@ async function start() {
     }
     worldFestivals = [...extra, ...rows].sort((a, b) => (b.links || 0) - (a.links || 0));
     regions = unique(worldFestivals.map(record => record.region)).sort();
-    if (['home', 'world', 'map'].includes(view)) render();
+    if (['home', 'world', 'map', 'calendar'].includes(view)) render();
   }).catch(error => console.warn('World festivals unavailable', error));
   const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
   const ON_YOUTUBE = 'On YouTube';
@@ -138,6 +138,59 @@ async function start() {
   const orderedFilms = [...films].sort((a, b) => Number(Boolean(b.artwork)) - Number(Boolean(a.artwork)));
   const filmsIn = (id, year) => films.filter(film => film.festival === id && (!year || film.year === year));
   const editionLabel = event => [event.number && `${event.number} edition`, [event.dates, event.year].filter(Boolean).join(' ')].filter(Boolean).join(' · ');
+  // Calendar (calendar.js): guide festivals by their edition dates, world festivals by their usual month.
+  const handMonth = new Map(allHand.map(record => [record.id, record.month]));
+  let calendar;
+  function calendarEntries() {
+    if (calendar?.from !== worldFestivals) calendar = { from: worldFestivals, entries: [
+      ...festivals.map(record => ({ record, guide: true, when: festivalWhen({ month: handMonth.get(record.id), ...record }) })),
+      ...worldFestivals.map(record => ({ record, when: festivalWhen(record) }))
+    ].filter(entry => entry.when) };
+    return calendar.entries;
+  }
+  const whenOf = record => calendarEntries().find(entry => entry.record === record)?.when;
+  const whenBadge = when => element('span', when.text, `when ${when.status}`);
+  const openEntry = entry => (entry.guide ? go(entry.record.id, 'discover') : showWorld(entry.record));
+  function whenChip(entry) {
+    const chip = button('', `wchip ${entry.when.status}`, () => openEntry(entry));
+    chip.append(element('b', entry.record.short || entry.record.name), element('span', entry.when.brief));
+    chip.title = `${entry.record.name} · ${entry.when.text}`;
+    return chip;
+  }
+  const onNow = () => calendarEntries().filter(entry => ['now', 'month'].includes(entry.when.status)).sort((a, b) => b.when.sure - a.when.sure || Boolean(b.guide) - Boolean(a.guide));
+  const comingNext = () => calendarEntries().filter(entry => entry.when.status === 'next').sort((a, b) => a.when.start - b.when.start || Boolean(b.guide) - Boolean(a.guide));
+  function renderCalendar() {
+    const today = new Date();
+    byId('cal-sub').textContent = `As of ${today.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}. Exact dates come from announced editions. “Usually” and “dates TBC” mean only the usual month is known, from past editions or Wikidata, so check the festival’s site before you travel.`;
+    const recent = calendarEntries().filter(entry => entry.when.status === 'over' && today - entry.when.end < 45 * 864e5).sort((a, b) => b.when.end - a.when.end);
+    const strip = (heading, entries, empty) => panel(heading, ...(entries.length ? [element('div', '', 'wchips')] : [element('p', empty, 'meta')]));
+    const summary = [['Happening now', onNow(), 'Nothing on record for today.'], ['Coming next', comingNext(), 'Nothing on record yet.'], ['Just finished', recent, 'Nothing in the last six weeks.']].map(([heading, entries, empty]) => {
+      const box = strip(heading, entries, empty);
+      box.querySelector('.wchips')?.append(...entries.slice(0, 8).map(whenChip));
+      return box;
+    });
+    byId('cal-summary').replaceChildren(...summary);
+    // Twelve months from this one; each festival sits in the month its next (or current) run starts.
+    const first = new Date(today.getFullYear(), today.getMonth(), 1);
+    const months = Array.from({ length: 12 }, (_, index) => new Date(first.getFullYear(), first.getMonth() + index, 1));
+    const key = date => date.getFullYear() * 12 + date.getMonth();
+    const byMonth = new Map(months.map(date => [key(date), []]));
+    for (const entry of calendarEntries()) byMonth.get(key(entry.when.start))?.push(entry);
+    byId('cal-months').replaceChildren(...months.map(date => {
+      const entries = byMonth.get(key(date)).sort((a, b) => Boolean(b.guide) - Boolean(a.guide) || a.when.start - b.when.start);
+      const box = panel(`${MONTHS[date.getMonth()]} ${date.getFullYear()} · ${number(entries.length)}`);
+      if (key(date) === key(today)) box.classList.add('current');
+      const rows = entries.slice(0, 12).map(entry => {
+        const row = button('', 'crow', () => openEntry(entry));
+        row.append(element('b', entry.record.short || entry.record.name), element('span', entry.when.status === 'month' ? 'likely on now' : entry.when.sure && entry.when.status !== 'over' ? entry.when.brief : 'dates TBC', `when ${entry.when.status}`));
+        row.title = `${entry.record.name} · ${entry.when.text}`;
+        return row;
+      });
+      box.append(...(rows.length ? rows : [element('p', 'No festivals on record.', 'meta')]));
+      if (entries.length > 12) box.append(element('p', `and ${number(entries.length - 12)} more`, 'meta'));
+      return box;
+    }));
+  }
   const previous = byId('previous');
   const next = byId('next');
   let items = [];
@@ -313,6 +366,8 @@ async function start() {
       const copy = element('span');
       copy.append(element('h3', record.name), element('span', editionLabel(latest), 'd'), element('span', record.region, 'r'));
       const count = record.editions.length;
+      const when = whenOf(record);
+      if (when) copy.append(whenBadge(when));
       card.append(record.logo ? img : element('span', initials(record.short), 'thumbnail'), copy, element('span', `${count} edition${count === 1 ? '' : 's'}`, 'badge'));
       return card;
     }), (() => {
@@ -322,6 +377,11 @@ async function start() {
       card.append(element('span', '🌍', 'thumbnail'), copy, element('span', `${regions.length} regions`, 'badge wip'));
       return card;
     })());
+    byId('home-when').replaceChildren(...[['Happening now', onNow()], ['Next up', comingNext()]].filter(([, entries]) => entries.length).map(([heading, entries]) => {
+      const box = panel(heading, element('div', '', 'wchips'));
+      box.lastChild.append(...entries.slice(0, 6).map(whenChip), button('Full calendar ›', 'hlink', () => go('', 'calendar')));
+      return box;
+    }));
     const homeMap = byId('home-map');
     homeMap.replaceChildren(worldMap(festivalPoints()));
     const winners = films.filter(film => film.awards.length && film.artwork).slice(0, 6);
@@ -472,6 +532,8 @@ async function start() {
     if (record.fiapf) content.append(element('p', `FIAPF accredited · ${record.fiapf}`, 'tag'));
     if (record.types) content.append(element('p', `Type: ${record.types.join(', ')}`, 'meta'));
     content.append(element('p', facts, 'meta'));
+    const when = whenOf(record);
+    if (when) content.append(whenBadge(when));
     const about = element('p', record.desc ? record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.' : '');
     content.append(about);
     worldAbout().then(texts => {
@@ -751,7 +813,7 @@ async function start() {
       const latest = selected.editions[0];
       const official = source(selected.url || selected.source, selected.url ? 'Official site ↗' : 'Source ↗');
       official.className = 'fext';
-      line.replaceChildren(...(selected.logo ? [img] : []), element('span', selected.name, 'fn'), element('span', [latest.dates, latest.year].filter(Boolean).join(' '), 'fd'), official);
+      line.replaceChildren(...(selected.logo ? [img] : []), element('span', selected.name, 'fn'), element('span', [latest.dates, latest.year].filter(Boolean).join(' '), 'fd'), ...[whenOf(selected)].filter(Boolean).map(whenBadge), official);
     }
     const tabs = selected ? festivalTabs : view === 'home' ? {} : Object.hasOwn(exploreTabs, view) ? exploreTabs : searchTabs;
     byId('tabs').replaceChildren(...Object.entries(tabs).map(([key, text]) => {
@@ -770,9 +832,11 @@ async function start() {
     byId('archive').hidden = !listViews.includes(view);
     byId('pager').hidden = !listViews.includes(view);
     byId('explore').hidden = !exploreViews.includes(view);
+    byId('calendar').hidden = view !== 'calendar';
     if (view === 'home') renderHome();
     else if (view === 'discover') renderDiscover(selected);
     else if (exploreViews.includes(view)) renderExplore();
+    else if (view === 'calendar') renderCalendar();
     else renderList();
     document.title = selected ? `${selected.short} · FilmFest Guide` : 'FilmFest Guide';
   }

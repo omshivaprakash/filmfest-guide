@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
 
 const { festivals, films, honors, worldFestivals: hand = [] } = JSON.parse(readFileSync(new URL('./catalog.json', import.meta.url)));
 // Extractor shards listed in data/shards.json are merged the same way app.js merges them.
@@ -54,4 +55,19 @@ for (const entry of sources) {
   const updated = entry.updated || (existsSync(stampFile) && JSON.parse(readFileSync(stampFile)).updated);
   if (updated) assert.ok(!Number.isNaN(Date.parse(updated)), `${entry.id} has a bad updated date`);
 }
+// Calendar status (calendar.js) on fixed dates.
+const { festivalWhen } = createRequire(import.meta.url)('./calendar.js');
+const iffi = { editions: [{ year: 2026, dates: '20–28 November' }, { year: 2025, dates: '20–28 November' }] };
+const on = (record, y, m, d) => festivalWhen(record, new Date(y, m - 1, d))?.status;
+assert.equal(on(iffi, 2026, 11, 26), 'now');
+assert.equal(on(iffi, 2026, 11, 1), 'next');
+assert.equal(on(iffi, 2026, 12, 1), 'over');
+assert.equal(on(iffi, 2027, 11, 22), 'month');
+assert.equal(on(iffi, 2027, 3, 1), 'next');
+assert.equal(on({ editions: [{ year: 2026, dates: '29 December–5 January' }] }, 2027, 1, 3), 'now');
+assert.equal(on({ month: 'October–November' }, 2026, 11, 26), 'month');
+assert.equal(on({ month: 'December' }, 2026, 11, 26), 'next');
+assert.equal(on({ month: 'June' }, 2026, 11, 26), 'over');
+assert.equal(festivalWhen({ month: 'December' }, new Date(2026, 10, 26)).brief, 'usually in December');
+assert.equal(festivalWhen({ editions: [{ year: 2025 }] }), null);
 console.log(`Validated ${films.length} films across ${festivals.length} festivals (${shardList.length} shards), plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);

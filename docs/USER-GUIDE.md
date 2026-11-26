@@ -42,6 +42,7 @@ On Bengaluru, **Archive documents** opens the Internet Archive scans of catalogu
 | Tab | What it shows |
 |---|---|
 | **Map** | A world map of **Films**, **People** or **Festivals**, with bar lists beside it. In Festivals mode: festivals by region, the countries with the most festivals, **festival types** and **founded, by decade**. Tap any bar to jump to that list |
+| **Calendar** | Which festivals are on now, coming next and just finished, and a twelve-month view. “Usually” or “dates TBC” means only the usual month is known |
 | **Languages** | Every language named in the catalogues. Tap one for its films |
 | **Across festivals** | People and films that appear at more than one festival or edition |
 | **World festivals** | About 8,100 festivals worldwide. Search by name, city or country, filter by **region** and **type**. Tap one for its description, founding year, official site, Wikipedia article and logo credit |
