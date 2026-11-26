@@ -1,0 +1,6794 @@
+{
+ "about": "Indian film festivals extracted by tools/extractors/india/extract.py from English Wikipedia and Wikidata. Facts only; each record links its source revision.",
+ "licence": "Wikidata CC0; facts drawn from English Wikipedia (CC BY-SA 4.0), attributed by source link.",
+ "festivals": [
+  {
+   "id": "kiff",
+   "short": "KIFF",
+   "name": "Kolkata International Film Festival",
+   "region": "West Bengal",
+   "country": "India",
+   "description": "Golden Royal Bengal Tiger, Indian languages and Bengali Panorama.",
+   "wikidata": "Q474265",
+   "url": "https://www.kiff.in",
+   "lat": 22.57,
+   "lon": 88.36,
+   "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+   "logo": {
+    "file": "images/world/Q474265.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kolkata_International_Film_Festival.jpg",
+    "credit": "ಚೇತನ್ ಅಣ್ಣಾಜಿ ಗೌಡ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+   },
+   "editions": [
+    {
+     "year": 2025,
+     "number": "31st",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2024,
+     "number": "30th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2023,
+     "number": "29th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2022,
+     "number": "28th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2021,
+     "number": "26th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2019,
+     "number": "25th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2018,
+     "number": "24th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2017,
+     "number": "23rd",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    }
+   ]
+  },
+  {
+   "id": "ciff-chennai",
+   "short": "CIFF",
+   "name": "Chennai International Film Festival",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "description": "Tamil and Indian Panorama competitions with world cinema.",
+   "wikidata": "Q5091441",
+   "url": "https://chennaifilmfest.com",
+   "lat": 13.08,
+   "lon": 80.27,
+   "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+   "editions": [
+    {
+     "year": 2015,
+     "number": "13th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    },
+    {
+     "year": 2010,
+     "number": "8th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    }
+   ]
+  },
+  {
+   "id": "kashish",
+   "short": "KASHISH",
+   "name": "KASHISH Pride Film Festival",
+   "region": "Maharashtra",
+   "country": "India",
+   "description": "LGBTQ+ films from India and around the world.",
+   "wikidata": "Q6935315",
+   "url": "https://mumbaiqueerfest.com",
+   "lat": 19.11,
+   "lon": 72.86,
+   "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+   "editions": [
+    {
+     "year": 2026,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2026"
+      ],
+      [
+       "Narrative Jury",
+       "Parvathy Thiruvothu"
+      ],
+      [
+       "Narrative Jury",
+       "Rajshri Deshpande"
+      ],
+      [
+       "Narrative Jury",
+       "Shonali Bose"
+      ],
+      [
+       "Documentary Jury",
+       "Jaydeep Sarkar"
+      ],
+      [
+       "Documentary Jury",
+       "Monisha Thyagarajan"
+      ],
+      [
+       "Documentary Jury",
+       "Shaunak Sen"
+      ],
+      [
+       "Student Shorts Jury",
+       "Maanvi Gagroo"
+      ],
+      [
+       "Student Shorts Jury",
+       "Rahul Puri"
+      ],
+      [
+       "Student Shorts Jury",
+       "Shazia Iqbal"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Ashwiny Iyer Tiwari"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Ishita Moitra"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Nikkhil Advani"
+      ],
+      [
+       "Genderation Shorts Jury",
+       "Anjali Patil"
+      ],
+      [
+       "Genderation Shorts Jury",
+       "Shals Mahajan"
+      ],
+      [
+       "Genderation Shorts Jury",
+       "Sharif Rangnekar"
+      ]
+     ]
+    },
+    {
+     "year": 2025,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2025"
+      ],
+      [
+       "Narrative Jury",
+       "Shishir Sharma"
+      ],
+      [
+       "Narrative Jury",
+       "Shruti Seth"
+      ],
+      [
+       "Narrative Jury",
+       "Tanuja Chandra"
+      ],
+      [
+       "Documentary Jury",
+       "Bishakha Datta"
+      ],
+      [
+       "Documentary Jury",
+       "Prateek Vats"
+      ],
+      [
+       "Documentary Jury",
+       "Shubhra Chatterjee"
+      ],
+      [
+       "Student Shorts Jury",
+       "Siddharth Menon"
+      ],
+      [
+       "Student Shorts Jury",
+       "Sudhanshu Saria"
+      ],
+      [
+       "Student Shorts Jury",
+       "Svetlana Naudiyal"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Abhishek Chaubey"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Guneet Monga Kapoor"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Vikramaditya Motwane"
+      ]
+     ]
+    },
+    {
+     "year": 2024,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2024"
+      ],
+      [
+       "Narrative Jury",
+       "Barun Sobti"
+      ],
+      [
+       "Narrative Jury",
+       "Kiran Rao"
+      ],
+      [
+       "Narrative Jury",
+       "Sonali Kulkarni"
+      ],
+      [
+       "Documentary Jury",
+       "Kavita Bahl"
+      ],
+      [
+       "Documentary Jury",
+       "Pushpendra Singh"
+      ],
+      [
+       "Documentary Jury",
+       "Shilpi Gulati"
+      ],
+      [
+       "Student Shorts Jury",
+       "Abhijit Majumdar"
+      ],
+      [
+       "Student Shorts Jury",
+       "Gazal Dhaliwal"
+      ],
+      [
+       "Student Shorts Jury",
+       "Shweta Basu Prasad"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Amit Masurkar"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Atika Chohan"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Joy Sengupta"
+      ]
+     ]
+    },
+    {
+     "year": 2023,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2023"
+      ],
+      [
+       "Narrative Jury",
+       "Anup Soni"
+      ],
+      [
+       "Narrative Jury",
+       "Jitin Hingorani"
+      ],
+      [
+       "Narrative Jury",
+       "Lillete Dubey"
+      ],
+      [
+       "Documentary Jury",
+       "Aanchal Kapur"
+      ],
+      [
+       "Documentary Jury",
+       "Nandan Saxena"
+      ],
+      [
+       "Documentary Jury",
+       "Shanti Bhushan Roy"
+      ],
+      [
+       "Student Shorts Jury",
+       "Atika Chohan"
+      ],
+      [
+       "Student Shorts Jury",
+       "Rucha Pathak"
+      ],
+      [
+       "Student Shorts Jury",
+       "Samarth Mahajan"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Aditi Anand"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Cary Sawhney"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Kaizaad Kotwal"
+      ]
+     ]
+    },
+    {
+     "year": 2022,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2022"
+      ],
+      [
+       "Narrative Jury",
+       "Hardik Mehta"
+      ],
+      [
+       "Narrative Jury",
+       "Leena Yadav"
+      ],
+      [
+       "Narrative Jury",
+       "Sameera Iyengar"
+      ],
+      [
+       "Documentary Jury",
+       "Anjali Panjabi"
+      ],
+      [
+       "Documentary Jury",
+       "Priti Chandriani"
+      ],
+      [
+       "Documentary Jury",
+       "Ramanuj Dutta"
+      ],
+      [
+       "Student Shorts Jury",
+       "Anupam Barve"
+      ],
+      [
+       "Student Shorts Jury",
+       "Prathyush Parasuraman"
+      ],
+      [
+       "Student Shorts Jury",
+       "Raga D’Silva"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Alankrita Shrivastava"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Apurva Asrani"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Chhitra Subramaniam"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Nupur Asthana"
+      ]
+     ]
+    },
+    {
+     "year": 2021,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2021"
+      ],
+      [
+       "Narrative Jury",
+       "Cary Rajinder Sawhney"
+      ],
+      [
+       "Narrative Jury",
+       "Gauri Shinde"
+      ],
+      [
+       "Narrative Jury",
+       "Ritesh Batra"
+      ],
+      [
+       "Narrative Jury",
+       "Satya Rai Nagpaul"
+      ],
+      [
+       "Narrative Jury",
+       "Selvaggia Velo"
+      ],
+      [
+       "Documentary Jury",
+       "Beena Paul"
+      ],
+      [
+       "Documentary Jury",
+       "Gargi Sen"
+      ],
+      [
+       "Documentary Jury",
+       "Nandan Saxena"
+      ],
+      [
+       "Student Shorts Jury",
+       "Dr. Anjali Monteiro"
+      ],
+      [
+       "Student Shorts Jury",
+       "Ketki Pandit"
+      ],
+      [
+       "Student Shorts Jury",
+       "Viveck Vaswani"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Renuka Shahane"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Robin Bhatt"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Urmi Juvekar"
+      ]
+     ]
+    },
+    {
+     "year": 2020,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2020"
+      ],
+      [
+       "Narrative Jury",
+       "Hansal Mehta"
+      ],
+      [
+       "Narrative Jury",
+       "Sandhya Mridul"
+      ],
+      [
+       "Narrative Jury",
+       "Sunil Sukthankar"
+      ],
+      [
+       "Documentary Jury",
+       "Faiza Ahmad Khan"
+      ],
+      [
+       "Documentary Jury",
+       "Miriam Chandy Menacherry"
+      ],
+      [
+       "Documentary Jury",
+       "Nakul Singh Sawhney"
+      ],
+      [
+       "Student Shorts Jury",
+       "Rabiya Nazki"
+      ],
+      [
+       "Student Shorts Jury",
+       "Shankhajeet De"
+      ],
+      [
+       "Student Shorts Jury",
+       "Tangella Madhavi"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Anjum Rajabali"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Arunaraje Patil"
+      ],
+      [
+       "KASHISH QDrishti Film Grant Jury",
+       "Onir"
+      ]
+     ]
+    },
+    {
+     "year": 2019,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2019"
+      ],
+      [
+       "Narrative Jury",
+       "Kitu Gidwani"
+      ],
+      [
+       "Narrative Jury",
+       "Neeraj Ghaywan"
+      ],
+      [
+       "Narrative Jury",
+       "Sheeba Chaddha"
+      ],
+      [
+       "Documentary Jury",
+       "Pankaj Rishi Kumar"
+      ],
+      [
+       "Documentary Jury",
+       "Paromita Vohra"
+      ],
+      [
+       "Documentary Jury",
+       "Ranjan Das"
+      ],
+      [
+       "Student Shorts Jury",
+       "Dr. Ivan John"
+      ],
+      [
+       "Student Shorts Jury",
+       "Jyoti Kapoor"
+      ],
+      [
+       "Student Shorts Jury",
+       "Somnath Sen"
+      ]
+     ]
+    },
+    {
+     "year": 2018,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2018"
+      ],
+      [
+       "Narrative Jury",
+       "Jayati Bhatia"
+      ],
+      [
+       "Narrative Jury",
+       "Sid Makkar"
+      ],
+      [
+       "Narrative Jury",
+       "Tara Deshpande"
+      ],
+      [
+       "Documentary Jury",
+       "Batul Mukhtiar"
+      ],
+      [
+       "Documentary Jury",
+       "Malathi Rao"
+      ],
+      [
+       "Documentary Jury",
+       "Ramchandra P.N"
+      ],
+      [
+       "Student Shorts Jury",
+       "Irene Dhar Malik"
+      ],
+      [
+       "Student Shorts Jury",
+       "Jeroo Mulla"
+      ],
+      [
+       "Student Shorts Jury",
+       "Harish Iyer"
+      ]
+     ]
+    },
+    {
+     "year": 2017,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "Jury",
+       "2017"
+      ],
+      [
+       "Narrative Jury",
+       "Anjum Rajabali"
+      ],
+      [
+       "Narrative Jury",
+       "Aseem Chhabra"
+      ],
+      [
+       "Narrative Jury",
+       "Jabeen Merchant"
+      ],
+      [
+       "Narrative Jury",
+       "Lubna Salim"
+      ],
+      [
+       "Narrative Jury",
+       "Vinta Nanda"
+      ],
+      [
+       "Student Shorts Jury",
+       "Avijit Mukul Kishore"
+      ],
+      [
+       "Student Shorts Jury",
+       "Debashree Mukherjee"
+      ],
+      [
+       "Student Shorts Jury",
+       "Pablo Naranjo-Golborne"
+      ]
+     ]
+    },
+    {
+     "year": 2016,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "Andrea Kuhn"
+      ],
+      [
+       "All Categories",
+       "Kaizaad Kotwal"
+      ],
+      [
+       "All Categories",
+       "Manav Gohil"
+      ],
+      [
+       "All Categories",
+       "Parvati Balagopalan"
+      ],
+      [
+       "All Categories",
+       "Rajeshwari Sachdev"
+      ]
+     ]
+    },
+    {
+     "year": 2015,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "Aamir Bashir"
+      ],
+      [
+       "All Categories",
+       "Anubhav Sinha"
+      ],
+      [
+       "All Categories",
+       "Chitra Palekar"
+      ],
+      [
+       "All Categories",
+       "Malavika Saangghvi"
+      ],
+      [
+       "All Categories",
+       "Meghna Malik"
+      ]
+     ]
+    },
+    {
+     "year": 2014,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "Avantika Akerkar"
+      ],
+      [
+       "All Categories",
+       "Nitish Bharadwaj"
+      ],
+      [
+       "All Categories",
+       "Onir"
+      ],
+      [
+       "All Categories",
+       "Pia Benegal"
+      ],
+      [
+       "All Categories",
+       "Sarika"
+      ]
+     ]
+    },
+    {
+     "year": 2013,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "Aruna Raje Patil"
+      ],
+      [
+       "All Categories",
+       "Berwyn Rowlands"
+      ],
+      [
+       "All Categories",
+       "Jerry Pinto"
+      ],
+      [
+       "All Categories",
+       "Quasar Thakore-Padamsee"
+      ],
+      [
+       "All Categories",
+       "Simone Singh"
+      ]
+     ]
+    },
+    {
+     "year": 2012,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "Mahabanoo Mody-Kotwal"
+      ],
+      [
+       "All Categories",
+       "Mayank Shekhar"
+      ],
+      [
+       "All Categories",
+       "Mona Ambegaonkar"
+      ],
+      [
+       "All Categories",
+       "Parvin Dabas"
+      ],
+      [
+       "All Categories",
+       "Renuka Shahane"
+      ]
+     ]
+    },
+    {
+     "year": 2011,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "John Badalu"
+      ],
+      [
+       "All Categories",
+       "Khalid Mohamed"
+      ],
+      [
+       "All Categories",
+       "Sai Paranjpye"
+      ],
+      [
+       "All Categories",
+       "Samir Soni"
+      ],
+      [
+       "All Categories",
+       "Shernaz Patel"
+      ]
+     ]
+    },
+    {
+     "year": 2010,
+     "source": "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "jury": [
+      [
+       "All Categories",
+       "Dolly Thakore"
+      ],
+      [
+       "All Categories",
+       "Mahesh Dattani"
+      ],
+      [
+       "All Categories",
+       "Meenakshi Shedde"
+      ],
+      [
+       "All Categories",
+       "Rajit Kapur"
+      ],
+      [
+       "All Categories",
+       "Suhasini Mulay"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "films": [
+  {
+   "id": "in-ciff-chennai-2015-burraa",
+   "title": "BURRAA",
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "AMMA Award",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+     "Mohan Kumar"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2015-kirumi",
+   "title": "Kirumi",
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Anucharan"
+    ]
+   ],
+   "awards": [
+    [
+     "Best film",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2015-radiopetti",
+   "title": "Radiopetti",
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Hari Viswanath"
+    ],
+    [
+     "Actor",
+     "R.Lakshmanan"
+    ]
+   ],
+   "awards": [
+    [
+     "Second Best film",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    ],
+    [
+     "Special Jury Award (Actor)",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+     "R.Lakshmanan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2015-short-film",
+   "title": "Short film",
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "format": "Short film",
+   "credits": [],
+   "awards": [
+    [
+     "Short film by students of Adyar Film Institute",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2010-aayirathil-oruvan",
+   "title": "Aayirathil Oruvan",
+   "festival": "ciff-chennai",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "R. Parthiban"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Award (Actor)",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+     "R. Parthiban"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2010-angadi-theru",
+   "title": "Angadi Theru",
+   "festival": "ciff-chennai",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Vasanthabalan"
+    ]
+   ],
+   "awards": [
+    [
+     "Best film",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2010-kalavani",
+   "title": "Kalavani",
+   "festival": "ciff-chennai",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "A. Sarkunam"
+    ]
+   ],
+   "awards": [
+    [
+     "Second Best film",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2010-mynaa",
+   "title": "Mynaa",
+   "festival": "ciff-chennai",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Prabhu Solomon"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+     "Prabhu Solomon"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciff-chennai-2010-orr-eravuu",
+   "title": "Orr Eravuu",
+   "festival": "ciff-chennai",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Award (Best Tamil Independent Film)",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-daag",
+   "title": "Daag",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Guntaaj Deep Singh"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-delay",
+   "title": "Delay",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Daryl Wang"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-hills-don-t-dance-alone",
+   "title": "Hills Don't Dance Alone",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Shubham Negi"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Shubham Negi"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-ivan-hadoum",
+   "title": "Ivan & Hadoum",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Silver Chicón"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Silver Chicón"
+    ],
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-life-of-kai",
+   "title": "Life of Kai",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Fox Fisher"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-narmook",
+   "title": "Narmook",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Ghazal Zoghiniya"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Genderation Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-never-never-never",
+   "title": "Never, Never, Never",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "John Sheedy"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-ni-xs",
+   "title": "Niñxs",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Kani Lapuerta"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-no-contest-la-premi-re-marche",
+   "title": "No Contest (La Premiére Marche)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Olivier Wright"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-not-crazy-no-estamos-locos",
+   "title": "Not Crazy (No estamos locos)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Lucía Criado Rosas"
+    ]
+   ],
+   "awards": [
+    [
+     "Aditya Nanda Award for Best Film on Queer Mental Health",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-served-cold",
+   "title": "Served Cold",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Inzamam Manju Nizam"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-sister-of-mine",
+   "title": "Sister of Mine",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "André Vaara"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-tea-powder-chayapodi",
+   "title": "Tea Powder (Chayapodi)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Ismat Chughtai Award For Best Woman Filmmaker of South Asian Origin",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Bhavya Karthikeyan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-thanks-babs",
+   "title": "Thanks Babs!",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Jen Rainin"
+    ],
+    [
+     "Director",
+     "Rivkah Beth Medow"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-the-crack-fatol",
+   "title": "The Crack (Fatol)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sankhajit Biswas"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-the-crowd-jamaat",
+   "title": "The Crowd (Jamaat)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sahand Kabiri"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-upon-starvation-upaasmaar",
+   "title": "Upon Starvation (Upaasmaar)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Saurav Mahind"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-vasso-n-bahr-out-of-my-hands",
+   "title": "Vasso'n Bahr (Out of My Hands)",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Simrat Kaur"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2026-your-fragrance-tumhari-khushboo-by-onir",
+   "title": "Your Fragrance (Tumhari Khushboo) by Onir",
+   "festival": "kashish",
+   "year": 2026,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Shashi Bhushan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-after-all",
+   "title": "After All",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Chongyan Liu"
+    ]
+   ],
+   "awards": [
+    [
+     "Aditya Nanda Award for Best Film on Queer Mental Health",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-b-and-s",
+   "title": "B and S",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Lipika Singh Darai"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-baby",
+   "title": "Baby",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Joao Pedro Mariano"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-jalsa-the-name-day",
+   "title": "Jalsa – The Name Day",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Saikat Mondal"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-jasmine-that-blooms-in-autumn",
+   "title": "Jasmine That Blooms In Autumn",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Chandradeep Das"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-make-up-room",
+   "title": "Make-Up Room",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Shubam Negi"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-odd-fish",
+   "title": "Odd Fish",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Snævar Sölvason"
+    ],
+    [
+     "Actor",
+     "Arna Magnea Danks"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Arna Magnea Danks"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Snævar Sölvason"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-project-priyo",
+   "title": "Project Priyo",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Ismat Chughtai Award For Best Woman Filmmaker of South Asian Origin",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Shoi"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-sole",
+   "title": "Sole",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Ana Berdeja"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-two-travelling-aunties",
+   "title": "Two Travelling Aunties",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Christine Seow"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-us-girls",
+   "title": "Us Girls",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Rayyan Monkey"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-violets-violetas",
+   "title": "Violets (Violetas)",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Borja Escribano"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2025-warm-film",
+   "title": "Warm Film",
+   "festival": "kashish",
+   "year": 2025,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Dragan Jovićević"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-blue-sunshine",
+   "title": "Blue Sunshine",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Samyuktha Vijayan"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Samyuktha Vijayan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-breaking-through",
+   "title": "Breaking Through",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Siham Bel"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-chitthi",
+   "title": "Chitthi",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Sarthak Chauhan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-dear-sahithya",
+   "title": "Dear Sahithya",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Leo Paapam"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-ghadoli",
+   "title": "Ghadoli",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Shubham Negi"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-give",
+   "title": "Give",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Kenya Gillespie"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-iykyk",
+   "title": "IYKYK",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Bonita Rajpurohit"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Bonita Rajpurohit"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-maghreb-s-hope",
+   "title": "Maghreb's Hope",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Bassem Ben Brahim"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-mehroon",
+   "title": "Mehroon",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Abu Sohel Khondekar"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-neirud",
+   "title": "Neirud",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Fernanda Faya"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-night-queen",
+   "title": "Night Queen",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Naireeta Dasgupta"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Ismat Chughtai Award For Best Woman Filmmaker of South Asian Origin",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Naireeta Dasgupta"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Vipin Sharma"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-poisoned-well",
+   "title": "Poisoned Well",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Radek Sevcik"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-sifar",
+   "title": "Sifar",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Edythe"
+    ]
+   ],
+   "awards": [
+    [
+     "Aditya Nanda Award for Best Film on Queer Mental Health",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-the-wake",
+   "title": "The Wake",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-the-witch-of-vihar-lake",
+   "title": "The Witch of Vihar Lake",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Joey Kaushik"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2024-you-promised-me-the-sea",
+   "title": "You Promised Me The Sea",
+   "festival": "kashish",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nadir Moknèche"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-an-avocado-pit",
+   "title": "An Avocado Pit",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Ary Zara"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-bi-the-way",
+   "title": "Bi The Way",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Amir Ovadia Steklov"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-ek-jagah-apni",
+   "title": "Ek Jagah Apni",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ektara Collective"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-jouissance",
+   "title": "Jouissance",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Sadeq Es-haqi"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-law-of-love",
+   "title": "Law of Love",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Barbora Chalupová"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-lie-with-me",
+   "title": "Lie With Me",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Olivier Peyon"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-malwa-khushan",
+   "title": "Malwa Khushan",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Preeti Kanungo"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-mama-bears",
+   "title": "Mama Bears",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Daresha Kyi"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-mehroon",
+   "title": "Mehroon",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Abu Sohel Khondekar"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-our-males-females",
+   "title": "Our Males & Females",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ahmad Alyaseer"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-paloma",
+   "title": "Paloma",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Kika Sena"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Kika Sena"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-preeti-kanungo",
+   "title": "Preeti Kanungo",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-rahul-roye",
+   "title": "Rahul Roye",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ashutosh Shankar (Tara)"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-road-blocked-ahead",
+   "title": "Road Blocked Ahead",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Ismat Chughtai Award For Best Woman Filmmaker of South Asian Origin",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Akanksha Sharma"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-shurpankha",
+   "title": "Shurpankha",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Jayesh Apte"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2023-what-it-means-to-be",
+   "title": "What it Means To Be",
+   "festival": "kashish",
+   "year": 2023,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Lea Luiz de Oliveira"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-beirut-dreams-in-colour",
+   "title": "Beirut Dreams In Colour",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Michael Collins"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-breathe",
+   "title": "Breathe",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Harm van der Sanden"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-coming-to-you",
+   "title": "Coming To You",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gyuri Byun"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-dal-bhat",
+   "title": "Dal Bhat",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nemil Shah"
+    ]
+   ],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Nemil Shah"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-her-canvas",
+   "title": "Her Canvas",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Sagar Minde"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-kinaara",
+   "title": "Kinaara",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Anureet Watta"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-la-queencianera",
+   "title": "LA Queencianera",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Pedro Peira"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-marcel",
+   "title": "Marcel",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gastón Calivari"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-mazel-tov",
+   "title": "Mazel Tov",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Eli Zuzovsky"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-muhafiz",
+   "title": "Muhafiz",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Pradipta Ray"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-naanu-ladies",
+   "title": "Naanu Ladies",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shailaja Padindala"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-taps",
+   "title": "Taps",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Arvind Caulagi"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-the-fish-with-one-sleeve",
+   "title": "The Fish With One Sleeve",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Yu Ishizuka"
+    ],
+    [
+     "Director",
+     "Tsuyoshi Shôji"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Yu Ishizuka"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-the-third-solar-term",
+   "title": "The Third Solar Term",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Zhanfei Song"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-warsha",
+   "title": "Warsha",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Dania Bdeir"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2022-wet-sand",
+   "title": "Wet Sand",
+   "festival": "kashish",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Elene Naveriani"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-advent-of-mary",
+   "title": "Advent of Mary",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Maria Eduardo Maia"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Maria Eduardo Maia"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-are-we-there-yet",
+   "title": "Are We There Yet?",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Bhanu Babbal"
+    ],
+    [
+     "Director",
+     "Kashyap Swaroop"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-begum-parvathi",
+   "title": "Begum Parvathi",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Radhika Prasidhha"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-canela",
+   "title": "Canela",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Cecilia del Valle"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-forgotten-roads",
+   "title": "Forgotten Roads",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nicol Ruiz"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-keep-punching",
+   "title": "Keep Punching",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Kirnay Bhatt"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-nothing-but-a-human",
+   "title": "Nothing But A Human",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Swati Jaiswal"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-on-a-path",
+   "title": "On A Path",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Lihi Lubetkin"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-rebel-dykes",
+   "title": "Rebel Dykes",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Harri Shanahan"
+    ],
+    [
+     "Director",
+     "Siân A. Williams"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-snake",
+   "title": "Snake",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Andrej Volkashin"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-stray-dogs-come-out-at-night",
+   "title": "Stray Dogs Come Out At Night",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Humza Bangash"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-the-caress",
+   "title": "The Caress",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Bhargav Lahkar"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-the-man-with-the-answers",
+   "title": "The Man With The Answers",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-today",
+   "title": "Today",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Francis Chillet"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2021-tracing-utopia",
+   "title": "Tracing Utopia",
+   "festival": "kashish",
+   "year": 2021,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Nick Tyson"
+    ],
+    [
+     "Director",
+     "Catarina de Sousa"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-breakwater",
+   "title": "Breakwater",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Cris Lyra"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-fireflies-jonaki-porua",
+   "title": "Fireflies (Jonaki Porua)",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Benjamin Daimary"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Benjamin Daimary"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-march-for-dignity",
+   "title": "March For Dignity",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "John Eames"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-music-for-the-bleeding-hearts",
+   "title": "Music For The Bleeding Hearts",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rafael Gomes"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-my-brother-is-a-mermaid",
+   "title": "My Brother Is A Mermaid",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Alfie Dale"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-my-mother-s-girlfriend",
+   "title": "My Mother's Girlfriend",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Arun Fulara"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-neon-hearts",
+   "title": "Neon Hearts",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ana Jakimska"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-one-taxi-ride",
+   "title": "One Taxi Ride",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Mak CK"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-sunday",
+   "title": "Sunday",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Arun Fulara"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-the-song-we-sang",
+   "title": "The Song We Sang",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Aarti Neharsh"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-the-summer-of-12",
+   "title": "The Summer of 12",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Kuan-Ling Kuo"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-touchscreen",
+   "title": "Touchscreen",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Arthur Halpern"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2020-we-are-dancers",
+   "title": "We Are Dancers",
+   "festival": "kashish",
+   "year": 2020,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Joe Morris"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-a-little-more-blue",
+   "title": "A Little More Blue",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Sugandha Bansal"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-fifth-floor-on-the-left",
+   "title": "Fifth Floor On The Left",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Renata Lucic"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-hands-wings",
+   "title": "Hands & Wings",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sungbin Byun"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-jose",
+   "title": "Jose",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Li Cheng"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-laadli",
+   "title": "Laadli",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Sudipto Kundu"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-music-for-the-bleeding-hearts",
+   "title": "Music For The Bleeding Hearts",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Screenplay",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-our-way-back",
+   "title": "Our Way Back",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Moshe Rosenthal"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-prisoner-of-society",
+   "title": "Prisoner Of Society",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rati Tsiteladze"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-rangeen",
+   "title": "Rangeen",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shaikh Ayaz"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-sauvage",
+   "title": "Sauvage",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Actor",
+     "Felix Maritaud"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Felix Maritaud"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-shaadi-ke-kapde",
+   "title": "Shaadi Ke Kapde",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sonal Giani"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-the-booth",
+   "title": "The Booth",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Rohin Ravendran Nair"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Rohin Raveendran Nair"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-three",
+   "title": "Three",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Lior Soroka"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-until-porn-do-us-part",
+   "title": "Until Porn Do Us Part",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Jorge Pelicano"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2019-visibles",
+   "title": "Visibles",
+   "festival": "kashish",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Enrique Rey"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-ajay",
+   "title": "Ajay",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Vikrant Dhote"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-birds-of-paradise",
+   "title": "Birds Of Paradise",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rahul MM"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-boys-for-sale",
+   "title": "Boys For Sale",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Itako"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-celebrate-eileen",
+   "title": "Celebrate Eileen",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Judith Westermann"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-goldfish",
+   "title": "Goldfish",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Yorgos Angelopoulos"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-gray",
+   "title": "Gray",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Preet"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-little-potato",
+   "title": "Little Potato",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Wes Hurley"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-marguerite",
+   "title": "Marguerite",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Marianne Farley"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-mater",
+   "title": "Mater",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pablo D’Alo Abba"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-mathias",
+   "title": "Mathias",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Clara Stern"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-pashi",
+   "title": "Pashi",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Siddharth Chauhan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2018-sunken-plum",
+   "title": "Sunken Plum",
+   "festival": "kashish",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gu Xiang"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-beautiful-figure",
+   "title": "Beautiful Figure",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Hajni Kis"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-clarinets-shehenaiiya",
+   "title": "Clarinets (Shehenaiiya)",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Debadrita Bose"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-gloria-and-grace",
+   "title": "Gloria and Grace",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Flávio R. Tambellini"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-maacher-jhol-fish-curry",
+   "title": "Maacher Jhol (Fish Curry)",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Abhishek Verma"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-naked-wheels",
+   "title": "Naked Wheels",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Rajesh James"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Rajesh James"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-no-dress-code-required",
+   "title": "No Dress Code Required",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Cristina Herrera Bórquez"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-play-the-devil",
+   "title": "Play The Devil",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-stay",
+   "title": "Stay",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Milka Mircic Martinovic"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2017-still-devout",
+   "title": "Still Devout",
+   "festival": "kashish",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Melissa Perez"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-any-other-day",
+   "title": "Any Other Day",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Vikrant Dhote"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-beautiful-something",
+   "title": "Beautiful Something",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Brian Sheppard"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-daarvatha-the-threshold",
+   "title": "Daarvatha (The Threshold)",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Nishant Roy Bombarde"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-how-to-win-at-checkers-every-time",
+   "title": "How To Win At Checkers (Every Time)",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Josh Kim"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-normalcy",
+   "title": "Normalcy",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "KASHISH QDrishti Film Grant",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "V. Ramanathan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-pansy",
+   "title": "Pansy",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Jean-Baptiste Erreca"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-san-crist-bal",
+   "title": "San Cristóbal",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Omar Zuniga Hidalgo"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-technical-difficulties-of-intimacy",
+   "title": "Technical Difficulties of Intimacy",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Joel Moffett"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-that-s-my-boy",
+   "title": "That's My Boy",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Akhil Satyan"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-trade-queen",
+   "title": "Trade Queen",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "David Wagner"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2016-transindia",
+   "title": "Transindia",
+   "festival": "kashish",
+   "year": 2016,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Meera Darji"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-09-55-11-05-ingrid-ekman-bergsgatan-4b",
+   "title": "09:55 - 11:05 Ingrid Ekman Bergsgatan 4b",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Cristine Berglund"
+    ],
+    [
+     "Director",
+     "Sophie Vukovic"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-boys-jongens",
+   "title": "Boys (Jongens)",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Mischa Kamp"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-do-i-sound-gay",
+   "title": "Do I Sound Gay?",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "David Thorpe"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-ek-maaya-ashi-hi-a-love-such-as-this",
+   "title": "Ek Maaya Ashi Hi (A Love Such As This)",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Vaibhav Hatkar"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-novena",
+   "title": "Novena",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Anna Rodgers"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-stealth",
+   "title": "Stealth",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2015-sundar",
+   "title": "Sundar",
+   "festival": "kashish",
+   "year": 2015,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Rohan Kanawade"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2014-bridegroom",
+   "title": "Bridegroom",
+   "festival": "kashish",
+   "year": 2014,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Linda Bloodworth-Thomason"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2014-families-are-forever",
+   "title": "Families Are Forever",
+   "festival": "kashish",
+   "year": 2014,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Vivian Kleiman"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2014-i-dentity",
+   "title": "I'dentity",
+   "festival": "kashish",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Sharon Flynn"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2014-mitraa",
+   "title": "Mitraa",
+   "festival": "kashish",
+   "year": 2014,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Ravi Jadhav"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2014-naked",
+   "title": "Naked",
+   "festival": "kashish",
+   "year": 2014,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "José Antonio Cortés Amunarriz"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2014-tru-love",
+   "title": "Tru Love",
+   "festival": "kashish",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Kate Johnston"
+    ],
+    [
+     "Director",
+     "Shauna MacDonald"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2013-dopehri",
+   "title": "Dopehri",
+   "festival": "kashish",
+   "year": 2013,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Manava Naik"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2013-hide-and-seek",
+   "title": "Hide and Seek",
+   "festival": "kashish",
+   "year": 2013,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Saadat Munir"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2013-morgan",
+   "title": "Morgan",
+   "festival": "kashish",
+   "year": 2013,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Michael Akers"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2013-polaroid-girl",
+   "title": "Polaroid Girl",
+   "festival": "kashish",
+   "year": 2013,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "April Maxey"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Best Performance in a Lead Role",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2013-two-girls-against-the-rain",
+   "title": "Two Girls Against The Rain",
+   "festival": "kashish",
+   "year": 2013,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Sopheak Sao"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2013-urmi",
+   "title": "Urmi",
+   "festival": "kashish",
+   "year": 2013,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Jehangir Jani"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-are-we-so-different-aamra-ki-etoi-bhinno",
+   "title": "Are We So Different (Aamra Ki Etoi Bhinno)",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Lok Prakash"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-let-the-butterflies-fly-chittegalu-harad",
+   "title": "Let The Butterflies Fly (Chittegalu Haradali)",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Gopal Menon"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-logging-out",
+   "title": "Logging Out",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nakshatra Bagwe"
+    ]
+   ],
+   "awards": [
+    [
+     "KASHISH Coffee Break Audience Award",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-my-last-round-mi-ultimo-rounde",
+   "title": "My Last Round (Mi Ultimo Rounde)",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Julio Jorquera Arriagada"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-rites-of-passage",
+   "title": "Rites of Passage",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jeff Roy"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Award",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-the-night-is-young-raat-baaki",
+   "title": "The Night Is Young (Raat Baaki)",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Pradipta Ray"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-through-the-window-me-ever-la-chalon",
+   "title": "Through The Window (Me’ever La’chalon)",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Chen Shumowitz"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2012-we-the-outsiders-aamhi-ka-tisre",
+   "title": "We The Outsiders... (Aamhi Ka Tisre...)",
+   "festival": "kashish",
+   "year": 2012,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ramesh Laxman More"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-amen",
+   "title": "Amen",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Judhajit Bagchi"
+    ],
+    [
+     "Director",
+     "Ranadeep Bhattacharyya"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-bullied",
+   "title": "Bullied",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Bill Brummel"
+    ],
+    [
+     "Director",
+     "Geoffrey Sharp"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-i-am",
+   "title": "I Am",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Onir"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Narrative Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ],
+    [
+     "Special Jury Award",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-let-the-world-know-about-me",
+   "title": "Let The World Know About Me",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Marianna Giordano"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-nothing-happened",
+   "title": "Nothing Happened",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Julia Kots"
+    ]
+   ],
+   "awards": [
+    [
+     "KASHISH Coffee Break Audience Award",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-the-flower-bud-kusum",
+   "title": "The Flower Bud (Kusum)",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Riyad Wadia Award For Best Emerging Indian Filmmaker",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222",
+     "Shumona Banerjee"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2011-we-were-here",
+   "title": "We Were Here",
+   "festival": "kashish",
+   "year": 2011,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "David Weissman"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-dirty-magazines",
+   "title": "Dirty Magazines",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jay Levy"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-flying-inside-my-body",
+   "title": "Flying Inside My Body",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-holding-hands",
+   "title": "Holding Hands",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Tonnette Stanford"
+    ],
+    [
+     "Director",
+     "Katherine Wilkinson"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-i-am-gay-jag-ar-bog",
+   "title": "I Am Gay (Jag Ar Bog)",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nicolos Kolovos"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-lost-found",
+   "title": "Lost & Found",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Shrenik Jain"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-prodigal-sons",
+   "title": "Prodigal Sons",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Kimberly Reed"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Feature",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-speak-up-it-is-not-my-fault",
+   "title": "Speak Up! It is Not My Fault",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Deepika Lal"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-steam",
+   "title": "Steam",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Eldar Rapaport"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Narrative Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kashish-2010-xxwhy",
+   "title": "XXWHY",
+   "festival": "kashish",
+   "year": 2010,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Dr.Bharathy Manjula"
+    ]
+   ],
+   "awards": [
+    [
+     "Unity in Diversity Best Documentary Short",
+     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-beautiful-evening-beautiful-day",
+   "title": "Beautiful Evening, Beautiful Day",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ivona Juko"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-kangbo-aloti",
+   "title": "Kangbo Aloti",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Khanjan Kishore Nath"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-porshi",
+   "title": "Porshi",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Chandrasish Ray"
+    ]
+   ],
+   "awards": [
+    [
+     "Bengali Panorama · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-riverstone",
+   "title": "Riverstone",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Lalith Rathnayake"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Lalith Rathnayake"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-shape-of-momo",
+   "title": "Shape of Momo",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Tribeni Rai"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-the-elysian-field",
+   "title": "The Elysian Field",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pradip Kurbah"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Pradip Kurbah"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-to-the-west-in-zapata",
+   "title": "To the West, in Zapata",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "David Bim"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ],
+    [
+     "IMI · FIPRESCI Award for International Competition",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-victoria",
+   "title": "Victoria",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sivaranjini J"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-a-joor",
+   "title": "Aājoor",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Aaryan Chandra Prakash"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Aaryan Chandra Prakash"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-beloved-tropic",
+   "title": "Beloved Tropic",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ana Endara"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ana Endara"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-dead-man-s-switch",
+   "title": "Dead Man's Switch",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Alejandro Gerber Bicecci"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-dhrubor-aschorjo-jibon",
+   "title": "Dhrubor Aschorjo Jibon",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Abhijit Chowdhury"
+    ]
+   ],
+   "awards": [
+    [
+     "Bengali Panorama · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-lacchi",
+   "title": "Lacchi",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Krishne Gowda"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-nukkad-naatak-a-street-play",
+   "title": "Nukkad Naatak (A Street Play)",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Tanmaya Shekhar"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-putulnama",
+   "title": "Putulnama",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ranajit Ray"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-tarika",
+   "title": "Tarika",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Milko Lazarov"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ],
+    [
+     "IMI · FIPRESCI Award for International Competition",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-avni-ki-kismat",
+   "title": "Avni Ki Kismat",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shonet Anthony Barretto"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Shonet Anthony Barretto"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-broken-dreams-stories-from-the-myanmar-c",
+   "title": "Broken Dreams: Stories from the Myanmar Coup",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-chalchitra-ekhon-kaleidoscope-now",
+   "title": "Chalchitra Ekhon (Kaleidoscope Now)",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Anjan Dutt"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-children-of-nobody",
+   "title": "Children of Nobody",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Erez Tadmor"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-joseph-s-son",
+   "title": "Joseph's Son",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Haobam Paban Kumar"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-mon-potongo",
+   "title": "Mon Potongo",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rajdeep Paul"
+    ],
+    [
+     "Director",
+     "Sarmistha Maiti"
+    ]
+   ],
+   "awards": [
+    [
+     "Bengali Panorama · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-one-way",
+   "title": "One Way",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Carlos Daniele Malave"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Carlos Daniele Malave"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-wild-swans",
+   "title": "Wild Swans",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rajni Basumatary"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-adieu-godard",
+   "title": "Adieu Godard",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Amartya Bhattacharyya"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-anatomia",
+   "title": "Anatomia",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ola Jankowska"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ola Jankowska"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-fortune",
+   "title": "Fortune",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Mujaheddin Muzaffar"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-guthlee-ladoo",
+   "title": "Guthlee Ladoo",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ishrat R Khan"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ishrat R Khan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-hitler-s-witch",
+   "title": "Hitler's Witch",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ernesto Ardito & Virna Molina"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ernesto Ardito & Virna Molina"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-jhilli",
+   "title": "Jhilli",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ishaan Ghose"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-muthayya",
+   "title": "Muthayya",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Bhaskhar Maurya"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-naanera",
+   "title": "Naanera",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Deepankar Prakash"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Deepankar Prakash"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-silent-glory",
+   "title": "Silent Glory",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nahid Hassanzadeh"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-streams",
+   "title": "Streams",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Mehdi Hmili"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-the-cloud-and-the-man",
+   "title": "The Cloud and the Man",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-the-terrace",
+   "title": "The Terrace",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-upon-entry",
+   "title": "Upon Entry",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-bander-band",
+   "title": "Bander Band",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Manijeh Hekmat"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-blindfold",
+   "title": "Blindfold",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Taras Dron"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-god-on-the-balcony",
+   "title": "God On The Balcony",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Biswajit Bora"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Biswajit Bora"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-kalla-nottam",
+   "title": "Kalla Nottam",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rahul Riji Nair"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-nonajoler-kabbo",
+   "title": "Nonajoler Kabbo",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-shambala",
+   "title": "Shambala",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Artykpai Suiundukov"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Artykpai Suiundukov"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-aga-s-house",
+   "title": "Aga's House",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Lendita Zeqiraj"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-devi-aur-hero",
+   "title": "Devi aur Hero",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-la-llorona",
+   "title": "La llorona",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jayro Bustamante"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-mai-ghat-crime-no-103-2005",
+   "title": "Mai Ghat: Crime No 103/2005",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ananth Narayan Mahadevan"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-run-kalyani",
+   "title": "Run Kalyani",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-the-painted-bird",
+   "title": "The Painted Bird",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Václav Marhoul"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Václav Marhoul"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-the-parcel",
+   "title": "The Parcel",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Indrasis Acharya"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Indrasis Acharya"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-kedara",
+   "title": "Kedara",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-sun-goes-around-the-earth",
+   "title": "Sun Goes Around the Earth",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Arijit Biswas"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Arijit Biswas"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-tarikh",
+   "title": "Tarikh",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Churni Ganguly"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-the-third-wife",
+   "title": "The Third Wife",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ash Mayfair"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-widow-of-silence",
+   "title": "Widow of Silence",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Praveen Morchhale"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-yomeddine",
+   "title": "Yomeddine",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Abu Bakr Shawky"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Abu Bakr Shawky"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-goodbye-katmandu",
+   "title": "Goodbye Katmandu",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-kupal",
+   "title": "Kupal",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-los-perros",
+   "title": "Los Perros",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Marcela Said"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-pathumma",
+   "title": "Pathumma",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Panchakshari"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-sound-of-silence",
+   "title": "Sound of Silence",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Dr. Bijukumar Damodaran"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Dr. Bijukumar Damodaran"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-the-swan",
+   "title": "The Swan",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ása Hjörleifsdóttir"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ása Hjörleifsdóttir"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-to-let",
+   "title": "To Let",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Chezhian Ra"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  }
+ ],
+ "honors": [
+  {
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "award": [
+    "Director K.Balachander Award",
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+    "Nayanthara"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "award": [
+    "Director K.Balachander Award",
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+    "Arvind Swami"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "award": [
+    "Amitabh Bachchan Award For Youth Icon",
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+    "Nayanthara"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "ciff-chennai",
+   "year": 2015,
+   "award": [
+    "Film Buff",
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+    "N.Vignarajan"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "ciff-chennai",
+   "year": 2010,
+   "award": [
+    "Film Buff",
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286",
+    "Varun Kumar"
+   ],
+   "role": "Honoree"
+  }
+ ]
+}
