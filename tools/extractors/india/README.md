@@ -13,7 +13,7 @@ node check-catalog.mjs
 
 ## What it reads
 
-- **English Wikipedia**, one article per festival (about 12 requests, 5 seconds apart): award tables with one row per edition and one column per award (Kolkata), Category and Winner tables under an edition heading (Chennai), `YEAR: Title - Director | Country` lists under an award heading (KASHISH), and jury tables (KASHISH). Film titles are the italic text in a cell; "Person for *Film*" gives a recipient, "*Film* by Person" a director.
+- **English Wikipedia**, one article per festival through the REST page HTML endpoint (about 12 requests, 5 seconds apart; `action=parse` is refused to cloud runners): award tables with one row per edition and one column per award (Kolkata), Category and Winner tables under an edition heading (Chennai), `YEAR: Title - Director | Country` lists under an award heading (KASHISH), and jury tables (KASHISH). Film titles are the italic text in a cell; "Person for *Film*" gives a recipient, "*Film* by Person" a director.
 - **Wikidata** (two or three SPARQL queries): edition items of each festival, and for each film the article links, its language, country, director, format and a one-line description.
 
 Every film, honour and edition links the Wikipedia revision it came from. Only facts are kept (titles, names, years, award names). Wikidata is CC0; Wikipedia is CC BY-SA 4.0. Logos are reused from `world-festivals.json` with their Commons licence.
