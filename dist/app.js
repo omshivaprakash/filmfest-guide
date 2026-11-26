@@ -165,6 +165,13 @@ async function start() {
       return card;
     };
   }
+  const archiveButton = byId('archive-documents');
+  let documents = [];
+  archiveButton.addEventListener('click', () => {
+    open('Archive documents', 'Servants of Knowledge · Internet Archive');
+    list('BIFFes sources', documents.map(document => source(document.url, document.label)));
+  });
+
   function render() {
     const selected = festivalMap.get(festival.value);
     const context = byId('festival-name');
@@ -182,6 +189,13 @@ async function start() {
     const formats = unique(films.map(film => film.format)).sort();
     const editionRecord = visibleFestivals.length === 1 && visibleFestivals[0].editions.find(record => record.year === Number(edition.value));
     const note = byId('edition-note');
+    const editionSources = editionRecord ? [editionRecord] : (selected?.editions || []);
+    const archiveLinks = editionSources.flatMap(event => (event.archiveDocuments || []).map(document => ({
+      url: document.url,
+      label: document.name.startsWith('Award winners') ? document.name : `${event.year} · ${document.name}`
+    })));
+    documents = [...new Map(archiveLinks.map(document => [document.url, document])).values()];
+    archiveButton.hidden = documents.length === 0;
     note.dataset.status = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are pending.' : '';
     note.replaceChildren(editionRecord?.catalogue ? source(editionRecord.catalogue, editionRecord.catalogueLabel || 'Edition catalogue PDF') : document.createTextNode('Selected editions'));
     const hasFacet = view === 'films' || view === 'people';

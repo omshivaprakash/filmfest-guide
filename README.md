@@ -19,3 +19,7 @@ The importer adds printed page references for index-only entries and PDF page li
 Run `python3 tools/import-goa-kerala.py <source-directory> dist/catalog.json` with PyMuPDF and lxml installed. The source directory contains the PIB Indian Panorama pages as `iffi24.html` and `iffi25.html`, the 30th IFFK screening schedule as `iffk25.pdf`, and OCR from the 16th IDSFFK official selection as `ocr/page-01.txt` through `ocr/page-16.txt`. The importer includes source URLs and reads the 29th IFFK section selections from `tools/iffk-2024-selections.tsv`.
 
 Goa coverage includes Indian Panorama and selected award winners. Kerala coverage includes three sections of the 29th IFFK, the extracted 30th IFFK schedule, and the extracted 16th IDSFFK official selection. Scanned or irregular source layouts can leave gaps.
+
+## Servants of Knowledge archive
+
+The Bengaluru festival selector includes an **Archive documents** menu for the Internet Archive catalogues, schedules and awards. The data import reads the 2022 and 2023 screening schedule PDFs and the retrospective awards PDF using `tools/import-sok-biffes.py` and PyMuPDF. Save the two PDFs as `schedule2022.pdf` and `schedule2023.pdf` alongside `awards2020.txt`, produced with `pdftotext -layout` from the awards PDF. Run `python3 tools/import-sok-biffes.py <source-directory> dist/catalog.json` after the Bengaluru catalogue import. Entries point to individual scan pages. The image-only 2014 and 2020 schedules are available through the document links.
