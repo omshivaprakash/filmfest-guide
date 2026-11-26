@@ -470,6 +470,17 @@ async function start() {
         go('', 'world', false);
         facet.value = region;  // the region options exist only once the world list has rendered
         renderList();
+      }])), element('h5', 'Countries with the most festivals'), ...barList(tally(worldFestivals, record => [record.country]).slice(0, 15).map(([country, count]) => [country, count, () => {
+        search.value = country;
+        go('', 'world', false);
+      }])), element('h5', 'Founded, by decade'), ...barList(tally(worldFestivals.filter(record => record.since > 1800 && record.since <= new Date().getFullYear()), record => [`${Math.floor(record.since / 10) * 10}s`]).sort((a, b) => a[0].localeCompare(b[0])).map(([decade, count]) => [decade, count, () => {
+        const start = Number.parseInt(decade, 10);
+        open(`Festivals founded in the ${decade}`, `${number(count)} festivals`);
+        list('Oldest first', worldFestivals.filter(record => record.since >= start && record.since < start + 10).sort((a, b) => a.since - b.since || (b.links || 0) - (a.links || 0)).slice(0, 40).map(record => {
+          const row = element('span');
+          row.append(button(record.name, 'credit-link', () => showWorld(record)), ` · ${record.since} · ${record.country}`);
+          return row;
+        }));
       }])));
       return;
     }
