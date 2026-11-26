@@ -1,0 +1,9 @@
+name: world-editions
+on:
+  schedule: [{ cron: '17 4 * * 1' }]   # Mondays 04:17 UTC; Wikidata changes slowly
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  sync:
+    uses: ./.github/workflows/extract.yml
+    with: { name: world-editions }

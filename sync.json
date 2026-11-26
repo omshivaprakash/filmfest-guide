@@ -4,6 +4,7 @@
     { "id": "catalog", "label": "Festival catalogues: Bengaluru, Goa and Kerala", "updated": "2026-11-26", "records": 2907, "schedule": "by hand" },
     { "id": "india", "label": "More Indian festivals from Wikipedia and Wikidata", "schedule": "weekly" },
     { "id": "world-festivals", "label": "World festivals, types, descriptions and logos from Wikidata, Wikipedia and Commons", "schedule": "weekly" },
-    { "id": "youtube-links", "label": "YouTube trailers and videos for catalogue films, from Wikidata", "schedule": "weekly" }
+    { "id": "youtube-links", "label": "YouTube trailers and videos for catalogue films, from Wikidata", "schedule": "weekly" },
+    { "id": "world-editions", "label": "Editions, winners and nominees of major world festivals from Wikidata", "schedule": "weekly" }
   ]
 }
