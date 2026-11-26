@@ -21,8 +21,10 @@ on:
       args: { required: false, type: string, default: '' }
 permissions:
   contents: write
+# One group per extractor: GitHub keeps only one pending run per group, so a shared group silently cancelled queued extractors.
+# Pushes from different extractors are serialised by the pull --rebase retry below.
 concurrency:
-  group: data-push
+  group: data-push-${{ inputs.name }}
   cancel-in-progress: false
 jobs:
   extract:
