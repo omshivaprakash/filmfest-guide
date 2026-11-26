@@ -95,4 +95,4 @@ Keyed by person name: `{ file, source, credit, license, licenseName }`. Only pho
 
 ## 4. Extractor shards: `data/<name>/`
 
-Each extractor in `tools/extractors/<name>/` writes only to its own folder in `data/<name>/`. A shard uses the same field names as the matching list above (films, editions or festivals), so the app and `check-catalog.mjs` read it the same way. An extractor's own README describes anything extra it writes.
+Each extractor in `tools/extractors/<name>/` writes only to its own folder in `data/<name>/`. A shard uses the same field names as the matching list above (films, editions or festivals), so the app and `check-catalog.mjs` read it the same way. A shard of festivals, films and honours is `data/<name>/catalog.json` in the shape of `catalog.json`; list its path in `data/shards.json` and the app merges it in. A shard festival with `wikidata` (or an `id` matching a hand-listed entry) comes off the work in progress list. An extractor's own README describes anything extra it writes.

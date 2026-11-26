@@ -72,6 +72,7 @@ Runs share one concurrency group, so two extractors never push at the same time.
 
 | Extractor | Source | Workflow | Schedule (UTC) |
 |---|---|---|---|
+| [india](../tools/extractors/india/README.md) | English Wikipedia festival articles, Wikidata | `india.yml` | Tuesdays 04:23 |
 | world-festivals | Wikidata, English Wikipedia, Wikimedia Commons | world-festivals.yml | Mondays 03:17 |
 | youtube-links | Wikidata (P1651) | youtube-links.yml | Wednesdays 04:23 |
 

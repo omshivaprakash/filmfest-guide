@@ -73,7 +73,18 @@ async function start() {
   const linksLoad = fetch('data/youtube-links/youtube.json').then(reply => (reply.ok ? reply.json() : { films: {} })).catch(() => ({ films: {} }));
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
-  const { festivals, films, honors, portraits = {}, worldFestivals: handWorld = [] } = await response.json();
+  const { festivals, films, honors, portraits = {}, worldFestivals: allHand = [] } = await response.json();
+  // Extractor shards (data/<name>/catalog.json, listed in data/shards.json) add festivals, films and honours; a missing shard is skipped.
+  const shardList = await fetch('data/shards.json').then(reply => (reply.ok ? reply.json() : [])).catch(() => []);
+  for (const shard of await Promise.all(shardList.map(path => fetch(path).then(reply => (reply.ok ? reply.json() : null)).catch(() => null)))) {
+    if (!shard) continue;
+    festivals.push(...(shard.festivals || []));
+    films.push(...(shard.films || []));
+    honors.push(...(shard.honors || []));
+    Object.assign(portraits, shard.portraits);
+  }
+  const imported = new Set(festivals.flatMap(record => [record.id, record.wikidata]).filter(Boolean));
+  const handWorld = allHand.filter(record => !imported.has(record.id));
   const links = (await linksLoad).films;
   for (const film of films) {
     film.title = tidyTitle(film.title);
@@ -98,7 +109,7 @@ async function start() {
     if (!data) return;
     const key = name => normalize(name).replace(/[^a-z0-9]/g, '');
     const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
-    const rows = data.festivals.map(({ ll, ...record }) => ({ ...record, lon: ll[0], lat: ll[1] }));
+    const rows = data.festivals.filter(record => !imported.has(record.id)).map(({ ll, ...record }) => ({ ...record, lon: ll[0], lat: ll[1] }));
     const byName = new Map(rows.map(record => [key(record.name), record]));
     const byHost = new Map(rows.filter(record => record.url).map(record => [host(record.url), record]));
     const extra = [];
@@ -287,12 +298,12 @@ async function start() {
       const latest = record.editions[0];
       const card = button('', 'fcard', () => go(record.id, 'discover'));
       const img = element('img');
-      img.src = record.logo.file;
+      if (record.logo) img.src = record.logo.file;
       img.alt = '';
       const copy = element('span');
-      copy.append(element('h3', record.name), element('span', `${latest.number} edition · ${latest.dates} ${latest.year}`, 'd'), element('span', record.region, 'r'));
+      copy.append(element('h3', record.name), element('span', editionLabel(latest), 'd'), element('span', record.region, 'r'));
       const count = record.editions.length;
-      card.append(img, copy, element('span', `${count} edition${count === 1 ? '' : 's'}`, 'badge'));
+      card.append(record.logo ? img : element('span', initials(record.short), 'thumbnail'), copy, element('span', `${count} edition${count === 1 ? '' : 's'}`, 'badge'));
       return card;
     }), (() => {
       const card = button('', 'fcard wipcard', () => go('', 'world'));
@@ -397,7 +408,7 @@ async function start() {
     byId('d-title').textContent = `${record.name} ${latest.year}`;
     byId('d-sub').textContent = record.description;
     kpis(byId('d-kpis'), [
-      [recent.length, `films from the ${latest.number} edition`],
+      [recent.length, `films from the ${latest.number || latest.year} edition`],
       [all.length, 'films across all editions'],
       [credited.length, 'people credited'],
       [recordAwards.length, 'awards and honours']
@@ -719,12 +730,12 @@ async function start() {
     line.hidden = !selected;
     if (selected) {
       const img = element('img');
-      img.src = selected.logo.file;
+      if (selected.logo) img.src = selected.logo.file;
       img.alt = '';
       const latest = selected.editions[0];
-      const official = source(selected.url, 'Official site ↗');
+      const official = source(selected.url || selected.source, selected.url ? 'Official site ↗' : 'Source ↗');
       official.className = 'fext';
-      line.replaceChildren(img, element('span', selected.name, 'fn'), element('span', `${latest.dates} ${latest.year}`, 'fd'), official);
+      line.replaceChildren(...(selected.logo ? [img] : []), element('span', selected.name, 'fn'), element('span', [latest.dates, latest.year].filter(Boolean).join(' '), 'fd'), official);
     }
     const tabs = selected ? festivalTabs : view === 'home' ? {} : Object.hasOwn(exploreTabs, view) ? exploreTabs : searchTabs;
     byId('tabs').replaceChildren(...Object.entries(tabs).map(([key, text]) => {

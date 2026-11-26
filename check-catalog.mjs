@@ -1,7 +1,17 @@
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 
-const { festivals, films, honors, worldFestivals = [] } = JSON.parse(readFileSync(new URL('./catalog.json', import.meta.url)));
+const { festivals, films, honors, worldFestivals: hand = [] } = JSON.parse(readFileSync(new URL('./catalog.json', import.meta.url)));
+// Extractor shards listed in data/shards.json are merged the same way app.js merges them.
+const shardList = existsSync(new URL('./data/shards.json', import.meta.url)) ? JSON.parse(readFileSync(new URL('./data/shards.json', import.meta.url))) : [];
+for (const path of shardList) {
+  const shard = JSON.parse(readFileSync(new URL(`./${path}`, import.meta.url)));
+  festivals.push(...(shard.festivals || []));
+  films.push(...(shard.films || []));
+  honors.push(...(shard.honors || []));
+}
+const imported = new Set(festivals.flatMap(festival => [festival.id, festival.wikidata]).filter(Boolean));
+const worldFestivals = hand.filter(festival => !imported.has(festival.id));
 assert.equal(new Set(films.map(film => film.id)).size, films.length);
 for (const record of [...films, ...honors]) {
   assert.ok(festivals.some(festival => festival.id === record.festival && festival.editions.some(edition => edition.year === record.year)));
@@ -35,4 +45,4 @@ for (const entry of sources) {
   const updated = entry.updated || (existsSync(stampFile) && JSON.parse(readFileSync(stampFile)).updated);
   if (updated) assert.ok(!Number.isNaN(Date.parse(updated)), `${entry.id} has a bad updated date`);
 }
-console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);
+console.log(`Validated ${films.length} films across ${festivals.length} festivals (${shardList.length} shards), plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);
