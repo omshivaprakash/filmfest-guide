@@ -4,7 +4,7 @@ Adds detail to festivals and films already in the guide. Writes only `data/enric
 
 | Output | Per | Fields | Source |
 |---|---|---|---|
-| `festivals.json` | world festival (Wikidata id) | `fiapf`, `month`, `every`, `langs`, `editions`, `desc`, `wiki` (non-English) | Wikidata (CC0), English Wikipedia FIAPF article |
+| `festivals.json` | world festival (Wikidata id) | `fiapf` (`A-list` or `Accredited`), `month`, `every`, `langs`, `editions`, `desc`, `wiki` (non-English) | Wikidata (CC0), English Wikipedia FIAPF article |
 | `about.json` | world festival with no English article | `{lang, text}` opening sentences | that Wikipedia (CC BY-SA 4.0, linked by `wiki`) |
 | `films.json` | film id | `wikidata`, `minutes`, `genres`, `imdb`, `poster` (Commons image copied to `posters/`, with licence and credit, only for films without artwork) | Wikidata, Wikimedia Commons |
 
