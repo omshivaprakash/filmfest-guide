@@ -1,5 +1,7 @@
 # FilmFest Guide
 
+[Open FilmFest Guide](https://omshivaprakash.github.io/filmfest-guide/)
+
 A dependency-free festival archive, inspired by the [LitFest Speaker Guide](https://github.com/omshivaprakash/litfest-speaker-guide).
 
 Run `python3 -m http.server 8000 --directory dist` from this folder and open http://localhost:8000.
