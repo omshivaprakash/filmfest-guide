@@ -2,6 +2,7 @@ const byId = id => document.getElementById(id);
 const search = byId('search');
 const edition = byId('edition');
 const facet = byId('facet');
+const kind = byId('kind');
 const detail = byId('detail');
 const content = byId('detail-content');
 const results = byId('results');
@@ -259,7 +260,8 @@ async function start() {
   function renderHome() {
     const years = festivals.flatMap(record => record.editions.map(event => event.year));
     kpis(byId('home-kpis'), [
-      [films.length, 'films on record'],
+      [festivals.length + worldFestivals.length, 'film festivals worldwide'],
+      [films.length, 'films on record from the 4 festivals in the guide'],
       [people.size, 'people credited'],
       [years.length, `festival editions, ${Math.min(...years)} to ${Math.max(...years)}`],
       [awards.length, 'awards and honours']
@@ -350,6 +352,7 @@ async function start() {
     }
     const place = [record.city, record.country].filter(Boolean).join(', ');
     const facts = [place + (record.approx ? ' (map position approximate)' : ''), record.since && `since ${record.since}`, record.month && `usually ${record.month}`].filter(Boolean).join(' · ');
+    if (record.types) content.append(element('p', `Type: ${record.types.join(', ')}`, 'meta'));
     content.append(element('p', facts, 'meta'));
     const about = element('p', record.desc ? record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.' : '');
     content.append(about);
@@ -473,6 +476,11 @@ async function start() {
       }])), element('h5', 'Countries with the most festivals'), ...barList(tally(worldFestivals, record => [record.country]).slice(0, 15).map(([country, count]) => [country, count, () => {
         search.value = country;
         go('', 'world', false);
+      }])), element('h5', 'Festival types'), ...barList(tally(worldFestivals, record => record.types || []).map(([name, count]) => [name, count, () => {
+        search.value = '';
+        go('', 'world', false);
+        kind.value = name;  // the type options exist only once the world list has rendered
+        renderList();
       }])), element('h5', 'Founded, by decade'), ...barList(tally(worldFestivals.filter(record => record.since > 1800 && record.since <= new Date().getFullYear()), record => [`${Math.floor(record.since / 10) * 10}s`]).sort((a, b) => a[0].localeCompare(b[0])).map(([decade, count]) => [decade, count, () => {
         const start = Number.parseInt(decade, 10);
         open(`Festivals founded in the ${decade}`, `${number(count)} festivals`);
@@ -519,6 +527,8 @@ async function start() {
     edition.parentElement.hidden = view === 'years' || view === 'world';
     const hasFacet = ['films', 'people', 'world'].includes(view);
     byId('facet-label').hidden = !hasFacet;
+    byId('kind-label').hidden = view !== 'world';
+    if (view === 'world') options(kind, tally(worldFestivals, record => record.types || []).map(([name, count]) => [name, `${name} (${number(count)})`]), 'All types');
     const facetSetup = { people: ['Role', allRoles, 'All roles'], world: ['Region', regions, 'All regions'] }[view] || ['Format', formats, 'All formats'];
     byId('facet-caption').textContent = facetSetup[0];
     options(facet, facetSetup[1].map(value => [value, value]), facetSetup[2]);
@@ -541,7 +551,7 @@ async function start() {
     const match = values => query.every(term => normalize(values.flat(Infinity).filter(Boolean).join(' ')).includes(term));
     const matchesEdition = record => (!festivalId || record.festival === festivalId) && (!edition.value || record.year === Number(edition.value));
     if (view === 'world') {
-      items = worldFestivals.filter(record => (!facet.value || record.region === facet.value) && match([record.name, record.short, record.city, record.country, record.region, record.month, record.desc])).map(record => result(`${record.region}${record.since ? ` · since ${record.since}` : ''}`, record.name, [[record.city, record.country].filter(Boolean).join(', '), record.month].filter(Boolean).join(' · '), () => showWorld(record), initials(record.short || record.name), record.logo));
+      items = worldFestivals.filter(record => (!facet.value || record.region === facet.value) && (!kind.value || record.types?.includes(kind.value)) && match([record.name, record.short, record.city, record.country, record.region, record.month, record.desc, record.types])).map(record => result([record.region, record.types?.[0], record.since && `since ${record.since}`].filter(Boolean).join(' · '), record.name, [[record.city, record.country].filter(Boolean).join(', '), record.month].filter(Boolean).join(' · '), () => showWorld(record), initials(record.short || record.name), record.logo));
     } else if (view === 'across') {
       // Research view: people who return across festivals or editions, most widely travelled first.
       items = [...people].map(([name, credits]) => {
@@ -589,7 +599,7 @@ async function start() {
 
   // Routing: ?f=<festival> picks the festival, #<tab> picks the view.
   function go(id, nextView, resetFilters = true) {
-    if (resetFilters) for (const input of [search, edition, facet]) input.value = '';
+    if (resetFilters) for (const input of [search, edition, facet, kind]) input.value = '';
     festivalId = id;
     view = nextView;
     const url = new URL(location.href);
@@ -644,9 +654,9 @@ async function start() {
     document.title = selected ? `${selected.short} · FilmFest Guide` : 'FilmFest Guide';
   }
 
-  for (const input of [search, edition, facet]) input.addEventListener('input', renderList);
+  for (const input of [search, edition, facet, kind]) input.addEventListener('input', renderList);
   byId('reset').addEventListener('click', () => {
-    for (const input of [search, edition, facet]) input.value = '';
+    for (const input of [search, edition, facet, kind]) input.value = '';
     renderList();
   });
   for (const [control, step] of [[previous, -1], [next, 1]]) {

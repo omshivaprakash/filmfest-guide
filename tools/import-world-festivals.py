@@ -8,7 +8,7 @@ common subclasses, excluding single editions. Only festivals with a name and a c
 Wikidata is CC0. Descriptions quoted from Wikipedia are CC BY-SA and are linked to their article.
 Logos and images come only from Wikimedia Commons and keep their own licence, which is stored with each one.
 """
-import html, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
+import collections, html, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
 
 UA = {'User-Agent': 'filmfest-guide-data/1.0 (open data project; github.com/omshivaprakash/filmfest-guide)'}
 CLASSES = 'wd:Q220505 wd:Q62018250 wd:Q115858865 wd:Q123980018 wd:Q114196733 wd:Q9259338 wd:Q1794431 wd:Q5287670 wd:Q105091183 wd:Q130745618 wd:Q109594423'
@@ -37,6 +37,17 @@ def value(binding, key):
     return binding.get(key, {}).get('value')
 
 
+def fetch_kinds(cache, keys=None):
+    keys = keys or sorted(json.load(open(f'{cache}/ids.json')))
+    kinds = []
+    for i in range(0, len(keys), 400):
+        values = ' '.join('wd:' + key for key in keys[i:i + 400])
+        kinds += sparql(f'''SELECT ?f ?kLabel WHERE {{ VALUES ?f {{ {values} }} {{ ?f wdt:P31 ?k }} UNION {{ ?f wdt:P136 ?k }}
+          FILTER(?k != wd:Q220505) SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''')
+        time.sleep(0.5)
+    json.dump(kinds, open(f'{cache}/kinds.json', 'w'))
+
+
 def fetch(cache):
     os.makedirs(cache, exist_ok=True)
     ids = {value(b, 'f').rsplit('/', 1)[1]: int(value(b, 'links')) for b in sparql(
@@ -56,6 +67,7 @@ def fetch(cache):
             wiki[value(b, 'f').rsplit('/', 1)[1]] = value(b, 't')
         time.sleep(0.5)
     json.dump(details, open(f'{cache}/details.json', 'w'))
+    fetch_kinds(cache, keys)
     json.dump(wiki, open(f'{cache}/enwiki.json', 'w'))
     json.dump(sparql('SELECT ?l ?c WHERE { ?k wdt:P31 wd:Q6256 ; wdt:P625 ?c ; rdfs:label ?l . FILTER(LANG(?l)="en") }'), open(f'{cache}/countries.json', 'w'))
     json.dump(sparql('SELECT ?l ?contLabel WHERE { ?k wdt:P31 wd:Q6256 ; wdt:P30 ?cont ; rdfs:label ?l . FILTER(LANG(?l)="en") SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } }'), open(f'{cache}/continents.json', 'w'))
@@ -115,6 +127,27 @@ def plain(text):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', '', text or ''))).strip()
 
 
+# Festival types from Wikidata classes and genres plus words in the name and description.
+TYPES = [
+    ('Documentary', r'document|doc\b|docs\b|non-?fiction|dok\b|ethnograph'),
+    ('Short film', r'short|corto|court|kurz|minute|micro'),
+    ('Animation', r'anima|cartoon|anime'),
+    ('LGBTQ+', r'lgbt|queer|gay|lesbian|pride|trans\b|inside out|outfest|frameline|kashish'),
+    ('Horror, fantasy and sci-fi', r'horror|fantas|sci-?fi|science fiction|genre|terror|zombie|speculative|fright|gore'),
+    ("Children and youth", r'child|kid|youth|young|jeune|junior|teen|family|infant|schlingel'),
+    ('Student and first films', r'student|school|universit|campus|debut|first film|emerging'),
+    ('Environment and nature', r'environment|nature|wildlife|mountain|ocean|green|\beco|climate|outdoor|adventure|underwater'),
+    ('Human rights and social', r'human rights|refugee|peace|social|justice|disab|deaf'),
+    ('Women', r'women|woman|female|femin|wom[ae]n'),
+    ('Jewish', r'jewish'),
+    ('Indigenous', r'indigenous|aborigin|native|first nations|imagineNATIVE'),
+    ('Music and dance', r'music|dance|rock|jazz|opera'),
+    ('Experimental and art', r'experiment|avant|video art|new media|digital art|media art|art film'),
+    ('Mobile and online', r'mobile|smartphone|phone|online|web ?fest|virtual'),
+    ('Food, sport and travel', r'food|\bsport|\bski|surf|travel|bike|cycling|football'),
+]
+
+
 FORMER = {'Czechoslovakia', 'Soviet Union', 'Yugoslavia', 'West Germany', 'East Germany', 'Socialist Federal Republic of Yugoslavia', 'Kingdom of Italy', 'Russian Empire', 'Serbia and Montenegro'}
 
 
@@ -142,6 +175,9 @@ def build(cache, root='.'):
                         'Indian subcontinent': 'Asia', 'Insular Oceania': 'Oceania', 'Eurasia': 'Europe'}.get(preferred, preferred)
         return 'Other'
 
+    kinds = collections.defaultdict(list)
+    for b in json.load(open(f'{cache}/kinds.json')):
+        kinds[value(b, 'f').rsplit('/', 1)[1]].append(value(b, 'kLabel') or '')
     festivals = {}
     for b in json.load(open(f'{cache}/details.json')):
         qid = value(b, 'f').rsplit('/', 1)[1]
@@ -170,6 +206,10 @@ def build(cache, root='.'):
         if not row['ll']:
             del row['ll']
         row['region'] = region(row['country'])
+        text = ' '.join([row['name'], row.get('desc', '')] + kinds[qid]).lower()
+        found = [name for name, pattern in TYPES if re.search(pattern, text, re.I)]
+        if found:
+            row['types'] = found
         row['links'] = ids.get(qid, 0)
         page = wp.get(qid, {})
         if page.get('extract'):
@@ -198,4 +238,4 @@ def build(cache, root='.'):
 
 
 if __name__ == '__main__':
-    {'fetch': fetch, 'build': build}[sys.argv[1]](sys.argv[2])
+    {'fetch': fetch, 'kinds': fetch_kinds, 'build': build}[sys.argv[1]](sys.argv[2])
