@@ -207,6 +207,7 @@ body[data-view="world"] .result .thumbnail img { object-fit: contain; background
 .hstats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
 .hstats .panel { min-width: 0; }
 .hstats .vb { grid-template-columns: minmax(0, 150px) 1fr 40px; }
+body[data-view="roles"] .vb, body[data-view="impact"] .vb { grid-template-columns: minmax(0, 260px) 1fr 40px; }
 .hstats .meta { margin-top: 6px; }
 .fom { display: flex; gap: 10px; align-items: center; width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 10px; background: #fff; text-align: left; }
 .fom:hover { border-color: var(--accent); }

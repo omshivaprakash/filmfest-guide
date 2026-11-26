@@ -10,9 +10,10 @@ const results = byId('results');
 const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', map: 'Map', years: 'Past years' };
 const searchTabs = { films: 'Films', people: 'People', awards: 'Awards' };
 // Explore, like LitFest's: maps and research views across every festival.
-const exploreTabs = { map: 'Map', calendar: 'Calendar', languages: 'Languages', across: 'Across festivals', world: 'World festivals' };
+const exploreTabs = { map: 'Map', calendar: 'Calendar', languages: 'Languages', roles: 'Roles', impact: 'Award impact', across: 'Across festivals', world: 'World festivals' };
+const ROLES = ['Director', 'Writer', 'Actor', 'Producer', 'Cinematographer', 'Editor', 'Composer', 'Sound'];
 const listViews = ['films', 'people', 'awards', 'years', 'across', 'world'];
-const exploreViews = ['map', 'languages'];
+const exploreViews = ['map', 'languages', 'roles', 'impact'];
 const UNLISTED = 'Format unlisted';
 let festivalId = '';
 let view = 'home';
@@ -627,8 +628,10 @@ async function start() {
     const scoped = festivalId ? filmsIn(festivalId) : films;
     const scopeName = festivalMap.get(festivalId)?.short || 'all festivals';
     const grid = byId('explore').querySelector('.exgrid');
-    const modes = view === 'map' ? { films: 'Films', people: 'People', ...(festivalId ? {} : { festivals: 'Festivals' }) } : {};
-    if (!modes[mapMode]) mapMode = 'films';
+    const modes = view === 'map' ? { films: 'Films', people: 'People', ...(festivalId ? {} : { festivals: 'Festivals' }) }
+      : view === 'roles' ? Object.fromEntries(ROLES.map(role => [role, role]))
+      : view === 'impact' ? { later: 'What winners won next', festivals: 'By festival', returns: 'Did winning directors return?' } : {};
+    if (!modes[mapMode]) mapMode = Object.keys(modes)[0] || 'films';
     byId('ex-mode').replaceChildren(...Object.entries(modes).map(([key, text]) => {
       const pill = button(text, 'pill', () => { mapMode = key; renderExplore(); });
       pill.setAttribute('aria-pressed', String(key === mapMode));
@@ -636,7 +639,9 @@ async function start() {
     }));
     const mapBox = byId('ex-map');
     const bars = byId('ex-bars');
-    grid.classList.toggle('wide', view === 'languages');
+    grid.classList.toggle('wide', ['languages', 'roles', 'impact'].includes(view));
+    if (view === 'roles') return renderRoles(scoped, scopeName, bars);
+    if (view === 'impact') return renderImpact(scoped, scopeName, bars);
     if (view === 'languages') {
       const rows = tally(scoped, languagesOf);
       byId('ex-note').textContent = `${rows.length} languages named across ${number(scoped.filter(film => film.language).length)} of ${number(scoped.length)} films in ${scopeName}. Tap a language to see its films.`;
@@ -696,6 +701,98 @@ async function start() {
     const noun = mapMode === 'people' ? 'people' : 'films';
     mapBox.replaceChildren(worldMap(rows.filter(([country]) => POS[country]).map(([country, count]) => ({ lon: POS[country][0], lat: POS[country][1], count, title: `${country}: ${number(count)} ${noun}`, action: () => showCountry(country, scoped) }))));
     bars.replaceChildren(...barList(rows.map(([country, count]) => [country, count, () => showCountry(country, scoped)])));
+  }
+
+  function filmDialog(title, category, list_) {
+    open(title, category);
+    list('Films', list_.map(film => {
+      const row = element('span');
+      row.append(button(film.title, 'credit-link', () => showFilm(film)), ` · ${label(film)}`);
+      return row;
+    }));
+  }
+  // Roles: people per craft, ranked by the festival awards on record for the films they made in that role.
+  function renderRoles(scoped, scopeName, bars) {
+    const byPerson = new Map();
+    const entry = name => byPerson.get(name) || byPerson.set(name, { films: [], awards: 0, fests: new Set() }).get(name);
+    for (const film of scoped) for (const [role, name] of film.credits) {
+      if (role !== mapMode || entry(name).films.includes(film)) continue;
+      Object.assign(entry(name), { awards: entry(name).awards + film.awards.length }).films.push(film);
+      entry(name).fests.add(film.festival);
+    }
+    for (const honor of honors) if (honor.role === mapMode && honor.award[2] && (!festivalId || honor.festival === festivalId)) {
+      entry(honor.award[2]).awards += 1;
+      entry(honor.award[2]).fests.add(honor.festival);
+    }
+    const rows = [...byPerson];
+    const films_ = unique(rows.flatMap(([, e]) => e.films)).length;
+    byId('ex-note').textContent = `${number(rows.length)} people credited as ${mapMode.toLowerCase()} on ${number(films_)} films in ${scopeName}. “Most awarded” counts the festival awards on record in this guide for their festival selections in this role (plus honours given to them as ${mapMode.toLowerCase()}); it is a measure of festival recognition here, not a judgement of who is best. Tap a name for their credits.`;
+    const films = count => `${count} selection${count === 1 ? '' : 's'}`;
+    const awarded = rows.filter(([, e]) => e.awards).sort(([an, a], [bn, b]) => b.awards - a.awards || b.fests.size - a.fests.size || an.localeCompare(bn)).slice(0, 40);
+    const travelled = rows.filter(([, e]) => e.fests.size > 1).sort(([an, a], [bn, b]) => b.fests.size - a.fests.size || b.films.length - a.films.length || an.localeCompare(bn)).slice(0, 20);
+    bars.replaceChildren(
+      element('h5', 'Most awarded'), ...(awarded.length ? barList(awarded.map(([name, e]) => [`${name} · ${films(e.films.length)}`, e.awards, () => showPerson(name)])) : [element('p', 'No awards on record for this role here yet.', 'meta')]),
+      element('h5', 'Shown at the most festivals'), ...(travelled.length ? barList(travelled.map(([name, e]) => [`${name} · ${films(e.films.length)}`, e.fests.size, () => showPerson(name)])) : [element('p', 'Nobody in this role has films at more than one festival here yet.', 'meta')]));
+  }
+  // Award impact: what festival winners went on to win (Wikidata, via the award-impact extractor), and whether winning directors came back.
+  let impactData;
+  let impactLoad;
+  const MAJOR = [['Academy Awards', /^Academy Award/], ['BAFTA Awards', /BAFTA|British Academy/], ['Golden Globes', /^Golden Globe/], ['European Film Awards', /^European Film Award/], ['César Awards', /^César/], ['Goya Awards', /^Goya Award/], ['Independent Spirit Awards', /^Independent Spirit/], ['National Film Awards (India)', /^National Film Award/]];
+  function laterAwards(film) {
+    const record = impactData[film.wikidata];
+    if (!record) return null;
+    const event = festivalMap.get(film.festival);
+    const own = new Set(film.awards.flatMap(([name, url]) => [normalize(name), String(url).match(/Q\d+$/)?.[0]]));
+    const elsewhere = ([name, qid, year]) => year && year >= film.year && !own.has(qid) && !own.has(normalize(name)) && ![event.short, event.name].some(text => text && name.includes(text));
+    return { won: record.won.filter(elsewhere), nominated: record.nominated.filter(elsewhere) };
+  }
+  function renderImpact(scoped, scopeName, bars) {
+    const note = byId('ex-note');
+    if (!impactData) {
+      note.textContent = 'Loading award records…';
+      bars.replaceChildren();
+      impactLoad ||= optional('data/award-impact/impact.json').then(data => {
+        impactData = data?.films || {};
+        if (view === 'impact') renderExplore();
+      });
+      return;
+    }
+    const winners = scoped.filter(film => film.awards.length);
+    if (mapMode === 'returns') {
+      // From the guide alone: a winning director "returned" when a later edition of any festival here shows another film of theirs.
+      const directed = new Map();
+      for (const film of films) for (const [role, name] of film.credits) if (role === 'Director') (directed.get(name) || directed.set(name, []).get(name)).push(film);
+      const back = new Map();
+      for (const film of winners) for (const [role, name] of film.credits) if (role === 'Director') {
+        const next = directed.get(name).filter(other => other.year > film.year && other.title !== film.title);
+        const was = back.get(name);
+        if (!was || next.length > was.next.length) back.set(name, { film, next });
+      }
+      const all = [...back];
+      const returned = all.filter(([, e]) => e.next.length);
+      note.textContent = `${number(returned.length)} of ${number(all.length)} directors of award-winning films in ${scopeName} came back with another film at a later edition of a festival in this guide. Counted from the guide’s own records only, so recent winners have had less time to return.`;
+      const perFestival = tally(returned.map(([, e]) => e.film), film => [film.festival]);
+      const total = new Map(tally(all.map(([, e]) => e.film), film => [film.festival]));
+      bars.replaceChildren(element('h5', 'Returning winners, by festival where they first won'), ...barList(perFestival.map(([id, count]) => [`${festivalMap.get(id).short} · of ${number(total.get(id))} winning directors`, count, () => filmDialog(`${festivalMap.get(id).short}: winners who came back`, 'Their winning films', returned.filter(([, e]) => e.film.festival === id).map(([, e]) => e.film))])),
+        element('h5', 'Came back most often'), ...barList(returned.sort(([an, a], [bn, b]) => b.next.length - a.next.length || an.localeCompare(bn)).slice(0, 25).map(([name, e]) => [name, e.next.length, () => showPerson(name)])));
+      return;
+    }
+    const checked = winners.filter(film => film.wikidata && impactData[film.wikidata]).map(film => ({ film, later: laterAwards(film) }));
+    const wonMore = checked.filter(entry => entry.later.won.length);
+    note.textContent = `${number(checked.length)} of ${number(winners.length)} award-winning films in ${scopeName} have award records on Wikidata; ${number(wonMore.length)} of those won something else in the same year or later. The other ${number(winners.length - checked.length)} are not checked: they have no Wikidata link yet, so nothing is claimed about them. Awards without a recorded year are left out.`;
+    if (mapMode === 'festivals') {
+      const perFestival = tally(wonMore.map(entry => entry.film), film => [film.festival]);
+      const total = new Map(tally(checked.map(entry => entry.film), film => [film.festival]));
+      bars.replaceChildren(element('h5', 'Winners that went on to win elsewhere'), ...barList(perFestival.map(([id, count]) => [`${festivalMap.get(id).short} · of ${number(total.get(id))} checked winners`, count, () => filmDialog(`${festivalMap.get(id).short}: winners that won elsewhere`, 'Wikidata award records', wonMore.filter(entry => entry.film.festival === id).map(entry => entry.film))])));
+      return;
+    }
+    const major = MAJOR.flatMap(([group, pattern]) => ['won', 'nominated'].map(kind => {
+      const hits = checked.filter(entry => entry.later[kind].some(([name]) => pattern.test(name))).map(entry => entry.film);
+      return [`${group} · ${kind}`, hits.length, () => filmDialog(`Festival winners ${kind === 'won' ? 'that won' : 'nominated for'} ${group}`, 'Wikidata award records', hits)];
+    })).filter(([, count]) => count);
+    const next = tally(checked, entry => unique(entry.later.won.map(([name]) => name))).slice(0, 30);
+    bars.replaceChildren(element('h5', 'Major awards reached after a festival win'), ...(major.length ? barList(major) : [element('p', 'None on record.', 'meta')]),
+      element('h5', 'Awards festival winners won next'), ...barList(next.map(([name, count]) => [name, count, () => filmDialog(name, 'Won after a festival award', checked.filter(entry => entry.later.won.some(([award]) => award === name)).map(entry => entry.film))])));
   }
 
   // Lists
