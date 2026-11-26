@@ -11,7 +11,7 @@ python3 -m http.server 8000      # then open http://localhost:8000
 
 `check-catalog.mjs` prints the totals (films, festivals, world festivals) and stops with an error if anything is broken. GitHub runs the same check on every push and pull request (`.github/workflows/check.yml`).
 
-Publishing is merging to `main`: GitHub Pages serves the repository root. Bump `VERSION` in `sw.js` when `index.html`, `style.css`, `app.js` or `geo.js` change, so installed copies refresh.
+Publishing is merging to `main`: GitHub Pages serves the repository root. Bump `VERSION` in `sw.js` when `index.html`, `style.css`, `app.js`, `geo.js` or `calendar.js` change, so installed copies refresh.
 
 ---
 

@@ -225,3 +225,33 @@ body[data-view="world"] .result .thumbnail img { object-fit: contain; background
 .sync b { color: var(--fg); font-weight: 600; }
 @media (max-width: 860px) { .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .hstats { grid-template-columns: 1fr; } .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* Festival calendar: status badges, chips and the month grid */
+.when { display: inline-block; margin-top: 3px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 600; white-space: nowrap; background: var(--surface); color: var(--muted); }
+.when.now { background: #dcfce7; color: #166534; }
+.when.month { background: #fef3c7; color: #92400e; }
+.when.next { background: var(--tint); color: var(--accent); }
+.fline .when { margin-top: 0; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.fcard .when { white-space: normal; }
+dialog .when { margin: 0 0 8px; }
+.hwhen { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 8px; }
+.hwhen:empty { display: none; }
+.wchips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.wchip { display: flex; flex-direction: column; align-items: flex-start; padding: 4px 10px; border: 1px solid var(--line); border-left: 3px solid var(--line); border-radius: 8px; background: #fff; text-align: left; }
+.wchip:hover { border-color: var(--accent); }
+.wchip b { font-size: 12.5px; }
+.wchip span { font-size: 11px; color: var(--muted); }
+.wchip.now { border-left-color: #16a34a; }
+.wchip.month { border-left-color: #d97706; }
+.wchip.next { border-left-color: var(--accent); }
+#calendar .body { overflow-y: auto; padding-bottom: 12px; }
+.calsum { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 8px 0; }
+.calgrid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.calgrid .panel { min-width: 0; }
+.calgrid .panel.current { outline: 2px solid var(--accent); }
+.crow { display: flex; justify-content: space-between; gap: 6px; width: 100%; padding: 3px 0; border: 0; border-top: 1px solid var(--line); background: none; text-align: left; font-size: 12px; }
+.crow b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; }
+.crow:hover b { color: var(--accent); }
+.crow .when { margin-top: 0; flex: 0 0 auto; }
+@media (max-width: 860px) { .calgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .calsum, .hwhen, .calgrid { grid-template-columns: 1fr; } }

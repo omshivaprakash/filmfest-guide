@@ -21,8 +21,8 @@ FilmFest Guide is exactly that. When you open it, your own phone or laptop reads
 
 ## The pieces
 
-### 1. The page: `index.html`, `style.css`, `app.js`, `geo.js`
-These four files are the whole app: the screens, the colours and the logic. `geo.js` holds the world map outlines and a position for each country. There is no framework and no build step.
+### 1. The page: `index.html`, `style.css`, `app.js`, `geo.js`, `calendar.js`
+These files are the whole app: the screens, the colours and the logic. `geo.js` holds the world map outlines and a position for each country. `calendar.js` works out, from today's date in the browser, whether each festival is on now, over or coming next: exact dates come from edition `dates`; without them it uses the last edition's dates or the usual `month` and labels the result "usually", so no date is invented. There is no framework and no build step.
 
 ### 2. The guide's data: `catalog.json`
 One file with five lists: `festivals` (with their editions), `films` (with credits and awards), `honors` (awards given to a person rather than a film), `portraits` (credited photos of people) and `worldFestivals` (55 hand-checked festivals still to add). The People directory, the maps and the language counts are worked out from this file when the page loads.
