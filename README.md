@@ -38,6 +38,8 @@ Run `node --check app.js` and `node check-catalog.mjs` after editing.
 
 The wider list, `world-festivals.json`, holds about 8,000 film festivals from Wikidata, with descriptions from English Wikipedia and logos from Wikimedia Commons in `images/world/` (each logo keeps its own licence and credit). The app loads it after the first screen and merges in the hand-checked `worldFestivals`, which add the usual month. Rebuild it with `python3 tools/import-world-festivals.py fetch <cache>` then `build <cache>`.
 
+The `youtube` field on a film lists YouTube videos (trailers or full films) that Wikidata records for it, matched by title, year and director with `python3 tools/link-youtube.py <cache>`. Films → On YouTube lists them.
+
 ## Licence
 
 Code is MIT ([LICENSE](LICENSE)). Data is CC BY 4.0 with the exceptions in [LICENSE-DATA.md](LICENSE-DATA.md). Cite it with [CITATION.cff](CITATION.cff).

@@ -106,7 +106,8 @@ async function start() {
     if (['home', 'world', 'map'].includes(view)) render();
   }).catch(error => console.warn('World festivals unavailable', error));
   const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
-  const formats = unique(films.map(film => film.format)).filter(format => format !== UNLISTED).sort();
+  const ON_YOUTUBE = 'On YouTube';
+  const formats = [...unique(films.map(film => film.format)).filter(format => format !== UNLISTED).sort(), ON_YOUTUBE];
   const orderedFilms = [...films].sort((a, b) => Number(Boolean(b.artwork)) - Number(Boolean(a.artwork)));
   const filmsIn = (id, year) => films.filter(film => film.festival === id && (!year || film.year === year));
   const editionLabel = event => [event.number && `${event.number} edition`, [event.dates, event.year].filter(Boolean).join(' ')].filter(Boolean).join(' · ');
@@ -164,6 +165,8 @@ async function start() {
     if (facts) content.append(element('p', facts, 'meta'));
     if (film.summary) content.append(element('p', film.summary));
     if (film.cataloguePage) content.append(element('p', `Catalogue index · printed page ${film.cataloguePage}`, 'meta'));
+    // Videos recorded on Wikidata; YouTube decides what plays in each country.
+    list('Watch on YouTube', (film.youtube || []).map(([id, kind], index) => source(`https://www.youtube.com/watch?v=${id}`, `${kind === 'trailer' ? 'Trailer' : 'Video'}${film.youtube.length > 1 ? ` ${index + 1}` : ''} on YouTube`)));
     list('Credits', film.credits.map(([role, name]) => {
       const row = element('span', `${role} · `);
       row.append(button(name, 'credit-link', () => showPerson(name)));
@@ -171,7 +174,7 @@ async function start() {
     }));
     list('Awards', film.awards.map(award => source(award[1], [award[0], award[2]].filter(Boolean).join(' · '))));
     const references = film.sources.filter(url => url !== event.source);
-    list('Sources', [source(event.source, editionLabel(event)), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`))]);
+    list('Sources', [source(event.source, editionLabel(event)), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`)), film.wikidata && source(`https://www.wikidata.org/wiki/${film.wikidata}`, 'Wikidata')].filter(Boolean));
   }
   function showPerson(name) {
     open(name, 'Person');
@@ -546,7 +549,7 @@ async function start() {
     } else if (view === 'awards') {
       items = awards.filter(record => matchesEdition(record) && match([record.award[0], record.award[2], record.title, label(record)])).map(record => result(label(record), record.award[0], [record.award[2], record.title].filter(Boolean).join(' · '), () => showAward(record), '★'));
     } else {
-      items = orderedFilms.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, filmLine(record), () => showFilm(record), '▶', record.artwork));
+      items = orderedFilms.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value || (facet.value === ON_YOUTUBE && record.youtube)) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, filmLine(record), () => showFilm(record), '▶', record.artwork));
     }
     byId('archive-title').textContent = festivalTabs[view] || exploreTabs[view];
     page = 0;
