@@ -55,7 +55,7 @@ All data files are plain **JSON** (text files that any program can read). The fa
 | `wikidata` | Wikidata id (`Q…`) where the film was matched |
 | `youtube` | List of `[video id, "trailer" or "video"]` from Wikidata; added on load from `data/youtube-links/youtube.json` |
 | `minutes`, `genres`, `imdb` | Runtime, Wikidata genres and IMDb id; added on load from `data/enrich/films.json` |
-| `artwork` (from enrich) | A Wikimedia Commons poster or still, copied to `data/enrich/posters/`, with `license`, `licenseUrl` and `credit`, used only when the film has no artwork |
+| `artwork` (from enrich) | A Wikimedia Commons poster, copied to `data/enrich/posters/`, with `license`, `licenseUrl` and `credit`, used only when the film has no artwork |
 | `fromCatalogue`, `fromGoaKeralaImport` | Marks which importer wrote the record |
 
 ### `honors[]`: awards to a person, not a film

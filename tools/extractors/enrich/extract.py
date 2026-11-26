@@ -10,7 +10,7 @@ Writes only its own shard, data/enrich/:
   festivals.json  per world festival (Wikidata id): FIAPF accreditation, usual month, how often,
                   languages, a short description and a Wikipedia article in another language when English has none.
   about.json      opening sentences from that other-language Wikipedia article (CC BY-SA, linked from the festival).
-  films.json      per film id: Wikidata id, runtime, genres, IMDb id, and a Commons poster or still
+  films.json      per film id: Wikidata id, runtime, genres, IMDb id, and a Commons poster
                   (copied to data/enrich/posters/) with its licence, for films that have no artwork.
 Wikidata is CC0. Images come only from Wikimedia Commons and keep their own licence and credit.
 Every cached reply is kept, so a rerun after a rate limit carries on where it stopped.
@@ -273,7 +273,6 @@ FILM_FACTS = '''SELECT ?f ?k ?v ?u WHERE { VALUES ?f { %s }
   UNION { ?f wdt:P136 ?x . ?x rdfs:label ?v . FILTER(LANG(?v) = "en") BIND("genre" AS ?k) }
   UNION { ?f p:P2047/psv:P2047 [ wikibase:quantityAmount ?v ; wikibase:quantityUnit ?u ] . BIND("runtime" AS ?k) }
   UNION { ?f wdt:P3383 ?v . BIND("poster" AS ?k) }
-  UNION { ?f wdt:P18 ?v . BIND("image" AS ?k) }
   UNION { ?f wdt:P345 ?v . BIND("imdb" AS ?k) }
 }'''
 
@@ -312,7 +311,7 @@ def fact_chunks(candidates):
 
 def picture_files(cache, candidates):
     rows = [row for name, _ in fact_chunks(candidates) for row in json.load(open(os.path.join(cache, name)))]
-    return sorted({urllib.parse.unquote(row['v'].rsplit('/', 1)[1]) for row in rows if row['k'] in ('poster', 'image')})
+    return sorted({urllib.parse.unquote(row['v'].rsplit('/', 1)[1]) for row in rows if row['k'] == 'poster'})
 
 
 def fetch_films(cache):
@@ -437,7 +436,8 @@ def build_films(cache):
             entry['genres'] = sorted({v for v, _ in f['genre']} - {'drama film'} or {'drama film'})[:4]
         if f['imdb']:
             entry['imdb'] = f['imdb'][0][0]
-        for kind in ('poster', 'image'):
+        # Only P3383 (film poster): P18 on a film is often a premiere photo or a portrait, not the film.
+        for kind in ('poster',):
             for v, _ in f[kind]:
                 picture = images.get(urllib.parse.unquote(v.rsplit('/', 1)[1]).replace('_', ' '))
                 if picture and 'poster' not in entry and not film.get('artwork'):
