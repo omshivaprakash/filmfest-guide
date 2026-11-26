@@ -606,6 +606,140 @@
    "number": "1st",
    "title": "Haanduk",
    "director": "Jaicheng Jai Dohutia"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Golden Conch · Best Documentary",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Turn Your Body to the Sun",
+   "director": "Aliona van der Horst",
+   "format": "Documentary",
+   "country": "Netherlands",
+   "number": "17th"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best International Short Fiction",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Saakshatkaaram",
+   "director": "Sudesh Balan",
+   "format": "Short film"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best International Short Fiction",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Brother Troll",
+   "director": "Gudmund Helmsdal",
+   "format": "Short film",
+   "country": "Faroe Islands"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best International Animation",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Prince in a Pastry Shop",
+   "director": "Katarzyna Agopsowicz",
+   "format": "Short film",
+   "country": "Poland"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Pramod Pati Award for Most Innovative / Experimental Film",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Closed to the Light",
+   "director": "Nicola Piovesan",
+   "country": "Italy"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "International Jury · Special Mention",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Ghar Ka Pata",
+   "director": "Madhulika Jalali"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "International Jury · Special Mention",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Who Says The Lepchas Are Vanishing?",
+   "director": "Abhuydaya Khaitan"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best Indian Documentary (above 60 minutes)",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Admitted",
+   "director": "Ojaswwee Sharma",
+   "format": "Documentary",
+   "country": "India"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best Indian Documentary (below 60 minutes)",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Screaming Butterflies",
+   "director": "Aimee Barua",
+   "format": "Documentary",
+   "country": "India"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best Indian Short Fiction",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Geru Patra",
+   "director": "Shristipal Singh",
+   "format": "Short film",
+   "country": "India"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Silver Conch · Best Indian Animation",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Kandittundu (Seen It)",
+   "director": "Adithi Krishnadas",
+   "format": "Short film",
+   "country": "India"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "Dadasaheb Phalke Chitranagari Award for Best Debut Director",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Radha",
+   "director": "Bimal Poddar"
+  },
+  {
+   "festival": "miff",
+   "year": 2022,
+   "award": "IDPA Award for Best Student Film",
+   "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118",
+   "checked": "2026-11-26",
+   "title": "Megha",
+   "director": "Rishi Bhaumik"
   }
  ]
 }
