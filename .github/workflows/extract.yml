@@ -1,0 +1,55 @@
+# Shared by every extractor's scheduled workflow: run one extractor, and commit its shard only if the data changed.
+# A caller, .github/workflows/<name>.yml, is just:
+#
+#   name: <name>
+#   on:
+#     schedule: [{ cron: '17 3 * * 1' }]   # UTC; spread start minutes
+#     workflow_dispatch:
+#   permissions: { contents: write }
+#   jobs:
+#     sync:
+#       uses: ./.github/workflows/extract.yml
+#       with: { name: <name>, packages: 'pymupdf lxml' }
+#
+# and a row in sync.json: { "id": "<name>", "label": "…", "schedule": "weekly" }
+name: extract
+on:
+  workflow_call:
+    inputs:
+      name: { required: true, type: string }
+      packages: { required: false, type: string, default: '' }
+      args: { required: false, type: string, default: '' }
+permissions:
+  contents: write
+concurrency:
+  group: data-push
+  cancel-in-progress: false
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    env:
+      NAME: ${{ inputs.name }}
+      PACKAGES: ${{ inputs.packages }}
+      ARGS: ${{ inputs.args }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Install packages
+        if: inputs.packages != ''
+        run: pip install $PACKAGES
+      - name: Run extractor
+        run: python3 "tools/extractors/$NAME/extract.py" $ARGS
+      - name: Commit if the data changed
+        run: |
+          if [ -z "$(git status --porcelain -- "data/$NAME" ":(exclude)data/$NAME/sync.json")" ]; then echo "No new data from $NAME"; exit 0; fi
+          python3 tools/mark-synced.py "$NAME"
+          node --check app.js && node check-catalog.mjs
+          git config user.name omshivaprakash
+          git config user.email 115216+omshivaprakash@users.noreply.github.com
+          git add "data/$NAME"
+          git commit -m "Sync $NAME data"
+          for wait in 5 15 30 60; do git pull --rebase && git push && exit 0; sleep $wait; done
+          exit 1

@@ -24,4 +24,13 @@ for (const record of world) {
   assert.ok(Math.abs(record.ll[1]) <= 90 && Math.abs(record.ll[0]) <= 180, `${record.id} needs coordinates`);
   if (record.logo) assert.ok(existsSync(new URL(`./${record.logo.file}`, import.meta.url)) && record.logo.license && record.logo.source, `${record.id} logo needs a file and licence`);
 }
+// Data freshness: every source needs an id and label; a date, if given here or in its shard's stamp, must parse.
+const { sources } = JSON.parse(readFileSync(new URL('./sync.json', import.meta.url)));
+assert.equal(new Set(sources.map(entry => entry.id)).size, sources.length, 'sync.json ids must be unique');
+for (const entry of sources) {
+  assert.ok(entry.id && entry.label, 'sync.json entries need an id and label');
+  const stampFile = new URL(`./data/${entry.id}/sync.json`, import.meta.url);
+  const updated = entry.updated || (existsSync(stampFile) && JSON.parse(readFileSync(stampFile)).updated);
+  if (updated) assert.ok(!Number.isNaN(Date.parse(updated)), `${entry.id} has a bad updated date`);
+}
 console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);

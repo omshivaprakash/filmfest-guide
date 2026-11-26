@@ -1,0 +1,7 @@
+{
+  "about": "Data freshness shown on the home page. One entry per source. Hand-run importers carry `updated` here; a scheduled extractor in tools/extractors/<id>/ leaves it out, and the shared workflow stamps data/<id>/sync.json whenever new data lands.",
+  "sources": [
+    { "id": "catalog", "label": "Festival catalogues: Bengaluru, Goa and Kerala", "updated": "2026-11-26", "records": 2907, "schedule": "by hand" },
+    { "id": "world", "label": "World festivals from Wikidata, Wikipedia and Commons", "updated": "2026-11-26", "records": 8130, "schedule": "by hand" }
+  ]
+}
