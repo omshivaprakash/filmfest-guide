@@ -43,10 +43,13 @@ If you love cinema, a film festival is a feast. But planning for one, or looking
 | Find filmmakers who return across festivals and editions | **Explore → Across festivals** |
 | Browse 8,000+ film festivals worldwide by region, country or type (documentary, short, animation, LGBTQ+…) | **Explore → World festivals** |
 | Watch a trailer or full film where one is on YouTube | A film's sheet, or **Films → On YouTube** |
+| Use the site in Kannada (ಕನ್ನಡ) or Hindi (हिन्दी) | The language buttons on the home page or in **About** |
 
 Every view fits one screen and pages instead of scrolling. Links are shareable: `?f=biffes` opens a festival and `#films`, `#people`, `#awards` or `#years` opens a tab.
 
 Detailed steps are in the **[User guide](docs/USER-GUIDE.md)**.
+
+**Languages (beta).** Menus, tabs, headings, captions and calendar statuses can be shown in Kannada or Hindi; the choice is remembered in your browser. Film titles, names, descriptions and other festival data stay in the language they were published in, and are never machine-translated. The translations live in [`i18n.js`](i18n.js) and **still need review by native speakers**: corrections are welcome as a GitHub issue or pull request.
 
 ---
 

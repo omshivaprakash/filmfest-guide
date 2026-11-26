@@ -49,6 +49,7 @@ On Bengaluru, **Archive documents** opens the Internet Archive scans of catalogu
 
 ## Tips
 
+- **Language:** the English / ಕನ್ನಡ / हिन्दी buttons on the home page and in **About** switch menus, tabs and headings. Film titles, names and festival data stay as published. The Kannada and Hindi labels are a beta and still need native-speaker review.
 - **Clear** resets the search and filters.
 - If a number looks low for an older edition, check its catalogue PDF in **Past years**; scans can leave gaps. See [Data notes](DATA-NOTES.md).
 - Something wrong? See [Contributing](CONTRIBUTING.md).
