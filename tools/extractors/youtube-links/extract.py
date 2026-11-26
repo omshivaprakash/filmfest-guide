@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Link catalogue films to YouTube videos recorded on Wikidata (P1651).
 
-Usage: python3 tools/link-youtube.py <cache-dir>
+Usage: python3 tools/extractors/youtube-links/extract.py [cache-dir]
 Matches by title, year within two and the director (or country when the catalogue has no director),
-then writes film.youtube = [[video id, 'trailer' | 'video'], ...] and film.wikidata into catalog.json.
+then writes data/youtube-links/youtube.json: {catalogue film id: {wikidata, youtube: [[video id, 'trailer' | 'video'], ...]}}.
+The app merges it into the catalogue when it loads.
 """
 import collections, json, os, re, sys, unicodedata, urllib.parse, urllib.request
 
@@ -66,10 +67,8 @@ def main(cache):
         if 'countryLabel' in b:
             countries[q].add(key(b['countryLabel']['value']))
 
-    linked = 0
+    links = {}
     for film in catalog['films']:
-        film.pop('youtube', None)
-        film.pop('wikidata', None)
         made_by = {person(name) for role, name in film['credits'] if 'direct' in role.lower()}
         made_in = {key(c) for c in (film.get('country') or '').split(', ') if c}
         for q in sorted(by_title.get(key(film['title']), ())):
@@ -80,13 +79,12 @@ def main(cache):
             else:
                 ok = bool(made_in & countries[q]) and near(q, film['year'], 1)
             if ok:
-                film['wikidata'] = q
-                film['youtube'] = [[video, roles.get(video, 'video')] for video in sorted(videos[q], key=lambda v: (roles.get(v) != 'trailer', v))]
-                linked += 1
+                links[film['id']] = {'wikidata': q, 'youtube': [[video, roles.get(video, 'video')] for video in sorted(videos[q], key=lambda v: (roles.get(v) != 'trailer', v))]}
                 break
-    json.dump(catalog, open('catalog.json', 'w'), ensure_ascii=False, indent=2)
-    print(f'{linked} films linked to YouTube')
+    os.makedirs('data/youtube-links', exist_ok=True)
+    json.dump({'source': 'Wikidata (CC0), property P1651', 'count': len(links), 'films': dict(sorted(links.items()))}, open('data/youtube-links/youtube.json', 'w'), ensure_ascii=False, indent=1)
+    print(f'{len(links)} films linked to YouTube')
 
 
 if __name__ == '__main__':
-    main(sys.argv[1])
+    main(sys.argv[1] if len(sys.argv) > 1 else '.cache/youtube-links')

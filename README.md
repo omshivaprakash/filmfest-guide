@@ -36,17 +36,21 @@ Run `node --check app.js` and `node check-catalog.mjs` after editing.
 
 `worldFestivals` in `catalog.json` lists major film festivals that are not imported yet, each with city, country, region, coordinates, usual month and official site. They appear on the Explore map and the World festivals list. To import one, add it to `festivals` with its editions and films, and remove it from `worldFestivals`. `check-catalog.mjs` checks ids are unique and every festival has coordinates.
 
-The wider list, `world-festivals.json`, holds about 8,000 film festivals from Wikidata, with descriptions from English Wikipedia (in `world-about.json`, loaded only when a festival is opened) and logos from Wikimedia Commons in `images/world/` (each logo keeps its own licence and credit). The app loads it after the first screen and merges in the hand-checked `worldFestivals`, which add the usual month. Each festival gets `types` (documentary, short, animation, LGBTQ+, genre and so on) from its Wikidata classes and genres plus words in its name and description; `python3 tools/import-world-festivals.py kinds <cache>` refreshes the classes. Rebuild it with `python3 tools/import-world-festivals.py fetch <cache>` then `build <cache>`.
+The wider list lives in `data/world-festivals/`: about 8,000 film festivals from Wikidata (`world-festivals.json`), descriptions from English Wikipedia (`world-about.json`, loaded only when a festival is opened) and logos from Wikimedia Commons (`logos/`, each keeping its own licence and credit). The app loads it after the first screen and merges in the hand-checked `worldFestivals`, which add the usual month. Each festival gets `types` (documentary, short, animation, LGBTQ+, genre and so on) from its Wikidata classes and genres plus words in its name and description.
 
-The `youtube` field on a film lists YouTube videos (trailers or full films) that Wikidata records for it, matched by title, year and director with `python3 tools/link-youtube.py <cache>`. Films → On YouTube lists them.
+`data/youtube-links/youtube.json` lists YouTube videos (trailers or full films) that Wikidata records for catalogue films, matched by title, year and director; the app merges them into the catalogue. Films → On YouTube lists them.
 
-### World festival winners and selections
+`data/world-editions/world-films.json` holds the editions, award winners, nominees and selected films of the 40 best-known world festivals, from Wikidata. It shows up as **Explore → World winners** and in each festival's detail.
 
-`data/world-editions/world-films.json` holds the editions, award winners, nominees and selected films of the 40 best-known world festivals, from Wikidata. It is built by `tools/extractors/world-editions/` (see its README) and shows up as **Explore → World winners** and in each festival's detail.
+### Extractors and scheduled refreshes
 
-### Scheduled refreshes
+Each of these is an extractor in `tools/extractors/<name>/` (see its README) that writes only `data/<name>/`. A weekly GitHub Actions workflow, `.github/workflows/<name>.yml`, calls the shared `extract.yml`, which commits only when the data changed and stamps `data/<name>/sync.json` for the Data freshness panel.
 
-GitHub Actions rerun the Wikidata importers every week and commit only when the data changed, authored as the maintainer: `world-festivals` (list, types, descriptions, logos; Mondays 03:17 UTC), `youtube-links` (Wednesdays 04:23 UTC) and `world-editions` (Fridays 05:41 UTC). Each can also be started from the Actions tab. A run that fetched noticeably less than before stops without committing.
+| Extractor | Source | Workflow | Schedule (UTC) |
+|---|---|---|---|
+| world-festivals | Wikidata, English Wikipedia, Wikimedia Commons | world-festivals.yml | Mondays 03:17 |
+| youtube-links | Wikidata (P1651) | youtube-links.yml | Wednesdays 04:23 |
+| world-editions | Wikidata (editions, P166, P1411, P13360) | world-editions.yml | Fridays 05:41 |
 
 ## Licence
 

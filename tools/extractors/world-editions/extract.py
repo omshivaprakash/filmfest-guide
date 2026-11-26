@@ -2,7 +2,7 @@
 """Build data/world-editions/world-films.json: editions, award winners and selected films of the best-known world festivals.
 
 Usage: python3 tools/extractors/world-editions/extract.py [cache-dir] [how many festivals, default 40]
-Takes the festivals with the most Wikipedia language editions from world-festivals.json, then asks Wikidata for
+Takes the festivals with the most Wikipedia language editions from data/world-festivals/, then asks Wikidata for
 their editions (Q27787439), the films that won or were nominated for their awards (P166, P1411) and the films
 presented at each edition (P13360, or P1344 on the film). Data from Wikidata is CC0.
 """
@@ -48,7 +48,7 @@ def year(value):
 
 def main(cache, count=40):
     os.makedirs(cache, exist_ok=True)
-    world = json.load(open('world-festivals.json'))['festivals']
+    world = json.load(open('data/world-festivals/world-festivals.json'))['festivals']
     chosen = world[:count]
     out, film_ids = {}, set()
     for fest in chosen:
@@ -76,13 +76,26 @@ def main(cache, count=40):
             if award and kind == 'won' and award not in entry['awards']:
                 entry['awards'].append(award)
 
-        for b in sparql(f'''SELECT ?film ?aLabel ?date ?filmDate WHERE {{ {awards} ?film p:P166 ?st . ?st ps:P166 ?a . ?film wdt:P31/wdt:P279* wd:Q11424 .
+        def first_release(rows):
+            # Without a date on the award, the film's earliest release (usually its festival premiere) gives the year.
+            earliest = {}
+            for b in rows:
+                y = year(text(b, 'filmDate'))
+                if y and (qid(b, 'film') not in earliest or y < earliest[qid(b, 'film')]):
+                    earliest[qid(b, 'film')] = y
+            return earliest
+
+        won = sparql(f'''SELECT ?film ?aLabel ?date ?filmDate WHERE {{ {awards} ?film p:P166 ?st . ?st ps:P166 ?a . ?film wdt:P31/wdt:P279* wd:Q11424 .
             OPTIONAL {{ ?st pq:P585 ?date }} OPTIONAL {{ ?film wdt:P577 ?filmDate }}
-            SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''', cache, f'{f}-won.json'):
-            add(qid(b, 'film'), year(text(b, 'date')) or year(text(b, 'filmDate')), 'won', text(b, 'aLabel'))
-        for b in sparql(f'''SELECT ?film ?date ?filmDate WHERE {{ {awards} ?film p:P1411 ?st . ?st ps:P1411 ?a . ?film wdt:P31/wdt:P279* wd:Q11424 .
-            OPTIONAL {{ ?st pq:P585 ?date }} OPTIONAL {{ ?film wdt:P577 ?filmDate }} }}''', cache, f'{f}-nominated.json'):
-            add(qid(b, 'film'), year(text(b, 'date')) or year(text(b, 'filmDate')), 'nominated')
+            SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''', cache, f'{f}-won.json')
+        earliest = first_release(won)
+        for b in won:
+            add(qid(b, 'film'), year(text(b, 'date')) or earliest.get(qid(b, 'film')), 'won', text(b, 'aLabel'))
+        nominated = sparql(f'''SELECT ?film ?date ?filmDate WHERE {{ {awards} ?film p:P1411 ?st . ?st ps:P1411 ?a . ?film wdt:P31/wdt:P279* wd:Q11424 .
+            OPTIONAL {{ ?st pq:P585 ?date }} OPTIONAL {{ ?film wdt:P577 ?filmDate }} }}''', cache, f'{f}-nominated.json')
+        earliest = first_release(nominated)
+        for b in nominated:
+            add(qid(b, 'film'), year(text(b, 'date')) or earliest.get(qid(b, 'film')), 'nominated')
         for b in sparql(f'''SELECT DISTINCT ?film ?e WHERE {{ ?e wdt:P179|wdt:P361 wd:{f} ; wdt:P31 wd:{EDITION} .
             {{ ?e wdt:P13360 ?film }} UNION {{ ?film wdt:P1344 ?e }} ?film wdt:P31/wdt:P279* wd:Q11424 . }}''', cache, f'{f}-selected.json'):
             edition = editions.get(qid(b, 'e'))
@@ -111,7 +124,7 @@ def main(cache, count=40):
     for fest in out.values():
         fest['films'] = [row for row in fest['films'] if row[0] in films]
     compact = {k: [v['title'], v['year'], sorted(v['directors']), sorted(v['countries'])] + ([sorted(v['youtube'])] if v['youtube'] else []) for k, v in sorted(films.items())}
-    json.dump({'source': 'Wikidata (CC0)', 'retrieved': time.strftime('%Y-%m-%d'), 'festivals': out, 'films': compact},
+    json.dump({'source': 'Wikidata (CC0)', 'retrieved': time.strftime('%Y-%m-%d'), 'count': len(compact), 'festivals': out, 'films': compact},
               open('data/world-editions/world-films.json', 'w'), ensure_ascii=False, separators=(',', ':'))
     print(len(out), 'festivals,', len(compact), 'films,', sum(len(v['films']) for v in out.values()), 'festival entries')
 

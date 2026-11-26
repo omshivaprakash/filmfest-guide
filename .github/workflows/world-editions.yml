@@ -1,39 +1,9 @@
 name: world-editions
 on:
-  schedule:
-    - cron: '41 5 * * 5'
+  schedule: [{ cron: '41 5 * * 5' }]   # UTC, weekly
   workflow_dispatch:
-permissions:
-  contents: write
-  pages: write
-concurrency:
-  group: data-refresh
-  cancel-in-progress: false
+permissions: { contents: write }
 jobs:
-  refresh:
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Run the extractor
-        run: python3 tools/extractors/world-editions/extract.py .cache/world-editions 40
-      - name: Validate
-        run: node --check app.js && node check-catalog.mjs
-      - name: Commit only if the data changed
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git config user.name "Omshivaprakash H L"
-          git config user.email "omshivaprakash@gmail.com"
-          git add data/world-editions
-          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "Refresh world festival editions and winners from Wikidata"
-          git pull --rebase origin main
-          git push origin HEAD:main
-          gh api -X POST repos/${{ github.repository }}/pages/builds || true
+  sync:
+    uses: ./.github/workflows/extract.yml
+    with: { name: world-editions, args: '.cache/world-editions 40' }

@@ -17,7 +17,7 @@ for (const festival of [...festivals, ...worldFestivals]) {
   if (festival.url) assert.equal(new URL(festival.url).protocol, 'https:');
 }
 for (const festival of worldFestivals) assert.ok(festival.name && festival.city && festival.country && festival.region && festival.month && festival.status === 'wip', festival.id);
-const world = JSON.parse(readFileSync(new URL('./world-festivals.json', import.meta.url))).festivals;
+const world = JSON.parse(readFileSync(new URL('./data/world-festivals/world-festivals.json', import.meta.url))).festivals;
 assert.equal(new Set(world.map(record => record.id)).size, world.length, 'world festival ids must be unique');
 for (const record of world) {
   assert.ok(/^Q\d+$/.test(record.id) && record.name && record.country && record.region, record.id);
@@ -28,5 +28,16 @@ const worldFilms = JSON.parse(readFileSync(new URL('./data/world-editions/world-
 for (const [fid, record] of Object.entries(worldFilms.festivals)) {
   assert.ok(world.some(festival => festival.id === fid), `${fid} must be a world festival`);
   for (const [film, year, kind] of record.films) assert.ok(worldFilms.films[film] && year > 1890 && ['won', 'nominated', 'selected'].includes(kind), `${fid} ${film}`);
+}
+const { films: links } = JSON.parse(readFileSync(new URL('./data/youtube-links/youtube.json', import.meta.url)));
+for (const [id, link] of Object.entries(links)) assert.ok(films.some(film => film.id === id) && /^Q\d+$/.test(link.wikidata) && link.youtube.length, `youtube link ${id}`);
+// Data freshness: every source needs an id and label; a date, if given here or in its shard's stamp, must parse.
+const { sources } = JSON.parse(readFileSync(new URL('./sync.json', import.meta.url)));
+assert.equal(new Set(sources.map(entry => entry.id)).size, sources.length, 'sync.json ids must be unique');
+for (const entry of sources) {
+  assert.ok(entry.id && entry.label, 'sync.json entries need an id and label');
+  const stampFile = new URL(`./data/${entry.id}/sync.json`, import.meta.url);
+  const updated = entry.updated || (existsSync(stampFile) && JSON.parse(readFileSync(stampFile)).updated);
+  if (updated) assert.ok(!Number.isNaN(Date.parse(updated)), `${entry.id} has a bad updated date`);
 }
 console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata, ${Object.keys(worldFilms.films).length} films from ${Object.keys(worldFilms.festivals).length} of them.`);

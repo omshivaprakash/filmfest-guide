@@ -70,10 +70,15 @@ function thumbnail(fallback, photo, className = 'thumbnail') {
 const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join('');
 
 async function start() {
+  const linksLoad = fetch('data/youtube-links/youtube.json').then(reply => (reply.ok ? reply.json() : { films: {} })).catch(() => ({ films: {} }));
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
   const { festivals, films, honors, portraits = {}, worldFestivals: handWorld = [] } = await response.json();
-  for (const film of films) film.title = tidyTitle(film.title);
+  const links = (await linksLoad).films;
+  for (const film of films) {
+    film.title = tidyTitle(film.title);
+    Object.assign(film, links[film.id]);  // YouTube links and Wikidata ids from the youtube-links extractor
+  }
   const festivalMap = new Map(festivals.map(record => [record.id, record]));
   const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
   const awards = films.flatMap(film => film.awards.map(award => ({ ...film, award, film }))).concat(honors);
@@ -89,7 +94,7 @@ async function start() {
   let worldFestivals = handWorld;
   let regions = unique(worldFestivals.map(record => record.region));
   // The world list is large, so it loads after the first screen and is merged with the hand-checked entries.
-  fetch('world-festivals.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
+  fetch('data/world-festivals/world-festivals.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
     if (!data) return;
     const key = name => normalize(name).replace(/[^a-z0-9]/g, '');
     const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
@@ -290,9 +295,11 @@ async function start() {
   // Home
   function renderHome() {
     const years = festivals.flatMap(record => record.editions.map(event => event.year));
+    const countries = unique([...festivals, ...worldFestivals].map(record => record.country).filter(Boolean));
     kpis(byId('home-kpis'), [
       [festivals.length + worldFestivals.length, 'film festivals worldwide'],
-      [films.length + (worldFilms ? Object.keys(worldFilms.films).length : 0), worldFilms ? `films on record: ${number(films.length)} from Indian festival catalogues, ${number(Object.keys(worldFilms.films).length)} from world festivals` : 'films on record from the 4 festivals in the guide'],
+      [countries.length, 'countries with a festival'],
+      [films.length + (worldFilms ? Object.keys(worldFilms.films).length : 0), worldFilms ? `films on record: ${number(films.length)} from Indian festival catalogues, ${number(Object.keys(worldFilms.films).length)} from world festivals` : `films on record from the ${festivals.length} festivals in the guide`],
       [people.size, 'people credited'],
       [years.length, `festival editions, ${Math.min(...years)} to ${Math.max(...years)}`],
       [awards.length, 'awards and honours']
@@ -319,6 +326,85 @@ async function start() {
     homeMap.replaceChildren(worldMap(festivalPoints()));
     const winners = films.filter(film => film.awards.length && film.artwork).slice(0, 6);
     byId('home-shelf').replaceChildren(...winners.map(filmCard));
+    renderHomeStats();
+    renderSync();
+  }
+  // Open the World festivals list with one filter set.
+  function worldWith(control, value) {
+    go('', 'world');
+    control.value = value;
+    renderList();
+  }
+  const panel = (heading, ...children) => {
+    const box = element('div', '', 'panel');
+    box.append(element('h5', heading), ...children);
+    return box;
+  };
+  function renderHomeStats() {
+    const stats = [];
+    // Festival of the month: the best-known hand-listed festival usually held this month (worldFestivals is sorted by Wikipedia links).
+    const month = new Date().toLocaleString('en-GB', { month: 'long' });
+    const thisMonth = worldFestivals.filter(record => record.month?.includes(month));
+    if (thisMonth.length) {
+      const [pick, ...others] = thisMonth;
+      const card = button('', 'fom', () => showWorld(pick));
+      const copy = element('span');
+      copy.append(element('b', pick.name), element('span', [[pick.city, pick.country].filter(Boolean).join(', '), `usually ${pick.month}`].join(' · '), 'd'), element('span', pick.desc ? pick.desc.charAt(0).toUpperCase() + pick.desc.slice(1) : '', 'd'));
+      card.append(thumbnail(initials(pick.short || pick.name), pick.logo), copy);
+      const also = element('p', others.length ? 'Also this month: ' : '', 'meta');
+      others.slice(0, 4).forEach((record, index) => also.append(index ? ', ' : '', button(record.short || record.name, 'credit-link', () => showWorld(record))));
+      stats.push(panel(`Festival of the month · ${month}`, card, also));
+    }
+    const types = tally(worldFestivals, record => record.types || []);
+    if (types.length) stats.push(panel(`Festivals by type · ${types.length} types`, ...barList(types.slice(0, 8).map(([name, count]) => [name, count, () => worldWith(kind, name)]))));
+    const decades = new Map();
+    for (const record of worldFestivals) if (record.since) {
+      const decade = Math.max(1940, Math.floor(record.since / 10) * 10);
+      decades.set(decade, (decades.get(decade) || 0) + 1);
+    }
+    if (decades.size > 1) {
+      const peak = Math.max(...decades.values());
+      const bars = element('div', '', 'bars');
+      for (let decade = 1940; decade <= Math.max(...decades.keys()); decade += 10) {
+        const count = decades.get(decade) || 0;
+        const bar = element('div');
+        bar.title = `${decade === 1940 ? '1940s and earlier' : `${decade}s`}: ${number(count)} festivals founded`;
+        const fill = element('i');
+        fill.style.height = `${Math.round((count / peak) * 100)}%`;
+        bar.append(fill, element('small', `'${String(decade).slice(2)}s`));
+        bars.append(bar);
+      }
+      stats.push(panel('Founded by decade', bars, element('p', `${number([...decades.values()].reduce((a, b) => a + b, 0))} festivals with a known founding year`, 'meta')));
+    }
+    const byCountry = tally(worldFestivals, record => [record.country]);
+    if (byCountry.length) stats.push(panel(`Top countries · ${byCountry.length} in all`, ...barList(byCountry.slice(0, 8).map(([name, count]) => [name, count, () => worldWith(search, name)]))));
+    byId('home-stats').replaceChildren(...stats);
+    const notable = worldFestivals.filter(record => record.logo).slice(0, 12);
+    byId('home-logos').previousElementSibling.hidden = !notable.length;
+    byId('home-logos').replaceChildren(...notable.map(record => {
+      const tile = button('', 'logo', () => showWorld(record));
+      tile.title = `${record.name} · ${record.city || record.country}`;
+      tile.append(thumbnail(initials(record.short || record.name), record.logo, 'lg'), element('span', record.short || record.name));
+      return tile;
+    }));
+  }
+  // Data freshness: sync.json lists each source; a scheduled extractor stamps data/<id>/sync.json only when its data changes.
+  let syncSources;
+  function renderSync() {
+    syncSources ||= fetch('sync.json').then(reply => (reply.ok ? reply.json() : { sources: [] })).then(({ sources }) => Promise.all(sources.map(entry => (entry.updated
+      ? entry
+      : fetch(`data/${entry.id}/sync.json`).then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})).then(stamp => ({ ...entry, ...stamp })))))).catch(() => []);
+    syncSources.then(sources => {
+      const rows = sources.map(entry => {
+        const days = entry.updated ? Math.round((Date.now() - new Date(entry.updated)) / 864e5) : null;
+        const when = days === null ? 'not synced yet' : `updated ${new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(-days, 'day')}`;
+        const row = element('li');
+        row.append(element('b', entry.label), ` · ${when}`, entry.records ? ` · ${number(entry.records)} records` : '', entry.schedule ? ` · refreshed ${entry.schedule}` : '');
+        return row;
+      });
+      byId('sync-list').replaceChildren(...rows);
+      byId('home-sync').hidden = !rows.length;
+    });
   }
 
   // Discover
@@ -372,7 +458,7 @@ async function start() {
   }
 
   let aboutTexts;
-  const worldAbout = () => (aboutTexts ||= fetch('world-about.json').then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})));
+  const worldAbout = () => (aboutTexts ||= fetch('data/world-festivals/world-about.json').then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})));
   function showWorld(record) {
     open(record.name, `${record.region} · Work in progress`);
     if (record.logo) {
