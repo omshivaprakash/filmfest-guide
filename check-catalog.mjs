@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-const { festivals, films, honors } = JSON.parse(readFileSync(new URL('./dist/catalog.json', import.meta.url)));
+const { festivals, films, honors } = JSON.parse(readFileSync(new URL('./catalog.json', import.meta.url)));
 assert.equal(new Set(films.map(film => film.id)).size, films.length);
 for (const record of [...films, ...honors]) {
   assert.ok(festivals.some(festival => festival.id === record.festival && festival.editions.some(edition => edition.year === record.year)));
