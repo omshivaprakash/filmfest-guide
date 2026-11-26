@@ -71,7 +71,7 @@ const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join
 async function start() {
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
-  const { festivals, films, honors, portraits = {}, worldFestivals = [] } = await response.json();
+  const { festivals, films, honors, portraits = {}, worldFestivals: handWorld = [] } = await response.json();
   for (const film of films) film.title = tidyTitle(film.title);
   const festivalMap = new Map(festivals.map(record => [record.id, record]));
   const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
@@ -85,7 +85,26 @@ async function start() {
   for (const honor of honors) addCredit(honor.award[2], honor);
   const countriesOf = film => (film.country ? film.country.split(', ') : []);
   const languagesOf = film => (film.language ? film.language.split(/\s*,\s*/) : []).filter(Boolean);
-  const regions = unique(worldFestivals.map(record => record.region));
+  let worldFestivals = handWorld;
+  let regions = unique(worldFestivals.map(record => record.region));
+  // The world list is large, so it loads after the first screen and is merged with the hand-checked entries.
+  fetch('world-festivals.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
+    if (!data) return;
+    const key = name => normalize(name).replace(/[^a-z0-9]/g, '');
+    const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
+    const rows = data.festivals.map(({ ll, ...record }) => ({ ...record, lon: ll[0], lat: ll[1] }));
+    const byName = new Map(rows.map(record => [key(record.name), record]));
+    const byHost = new Map(rows.filter(record => record.url).map(record => [host(record.url), record]));
+    const extra = [];
+    for (const hand of handWorld) {
+      const found = byName.get(key(hand.name)) || byHost.get(host(hand.url));
+      if (found) Object.assign(found, { short: hand.short, month: hand.month, city: found.city || hand.city });
+      else extra.push(hand);
+    }
+    worldFestivals = [...extra, ...rows].sort((a, b) => (b.links || 0) - (a.links || 0));
+    regions = unique(worldFestivals.map(record => record.region)).sort();
+    if (['home', 'world', 'map'].includes(view)) render();
+  }).catch(error => console.warn('World festivals unavailable', error));
   const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
   const formats = unique(films.map(film => film.format)).filter(format => format !== UNLISTED).sort();
   const orderedFilms = [...films].sort((a, b) => Number(Boolean(b.artwork)) - Number(Boolean(a.artwork)));
@@ -256,7 +275,7 @@ async function start() {
     }), (() => {
       const card = button('', 'fcard wipcard', () => go('', 'world'));
       const copy = element('span');
-      copy.append(element('h3', `${worldFestivals.length} more festivals worldwide`), element('span', 'Cannes, Berlinale, Busan, MAMI, FESPACO and more. Listed now; films and people to come.', 'd'), element('span', 'Work in progress', 'r'));
+      copy.append(element('h3', `${number(worldFestivals.length)} more festivals worldwide`), element('span', 'Cannes, Berlinale, Busan, MAMI, FESPACO and more, with logos and descriptions. Films and people to come.', 'd'), element('span', 'Work in progress', 'r'));
       card.append(element('span', '🌍', 'thumbnail'), copy, element('span', `${regions.length} regions`, 'badge wip'));
       return card;
     })());
@@ -318,9 +337,28 @@ async function start() {
 
   function showWorld(record) {
     open(record.name, `${record.region} · Work in progress`);
-    content.append(element('p', `${record.city}, ${record.country} · usually ${record.month}`, 'meta'));
-    content.append(element('p', 'This festival is listed so we can plan its import. Films, people and past editions will be added from its official catalogues.'));
-    if (record.url) list('Source', [source(record.url, 'Official festival website')]);
+    if (record.logo) {
+      const img = element('img', '', 'wlogo');
+      img.src = record.logo.file;
+      img.alt = `${record.name} logo`;
+      content.append(img);
+    }
+    const place = [record.city, record.country].filter(Boolean).join(', ');
+    const facts = [place + (record.approx ? ' (map position approximate)' : ''), record.since && `since ${record.since}`, record.month && `usually ${record.month}`].filter(Boolean).join(' · ');
+    content.append(element('p', facts, 'meta'));
+    if (record.about) content.append(element('p', record.about));
+    else if (record.desc) content.append(element('p', record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.'));
+    content.append(element('p', 'Listed so we can plan its import. Films, people and past editions will be added from its official catalogues.', 'meta'));
+    list('Sources', [
+      record.url && source(record.url, 'Official festival website'),
+      record.wiki && source(record.wiki, 'Wikipedia'),
+      /^Q\d+$/.test(record.id) && source(`https://www.wikidata.org/wiki/${record.id}`, 'Wikidata')
+    ].filter(Boolean));
+    if (record.logo) {
+      const credit = element('p', `Logo: ${record.logo.credit || 'Wikimedia Commons'}, `, 'meta');
+      credit.append(source(record.logo.licenseUrl || record.logo.source, record.logo.license || 'see licence'), ' via ', source(record.logo.source, 'Wikimedia Commons'));
+      content.append(credit);
+    }
   }
   function showCountry(country, scoped) {
     const list_ = scoped.filter(film => countriesOf(film).includes(country));
@@ -386,7 +424,7 @@ async function start() {
   };
   function festivalPoints() {
     return [
-      ...worldFestivals.map(record => ({ lon: record.lon, lat: record.lat, r: 4, className: 'wip', title: `${record.name} · ${record.city} · work in progress`, action: () => showWorld(record) })),
+      ...worldFestivals.map(record => ({ lon: record.lon, lat: record.lat, r: record.links > 30 ? 3.5 : 2, className: 'wip', title: `${record.name} · ${record.city || record.country} · work in progress`, action: () => showWorld(record) })),
       ...festivals.map(record => ({ lon: record.lon, lat: record.lat, r: 6, title: `${record.name} · in the guide`, action: () => go(record.id, 'discover') }))
     ];
   }
@@ -417,7 +455,7 @@ async function start() {
     }
     if (mapMode === 'festivals') {
       const all = festivalPoints();
-      byId('ex-note').textContent = `${festivals.length} festivals in the guide and ${worldFestivals.length} listed as work in progress. Tap a dot for details.`;
+      byId('ex-note').textContent = `${festivals.length} festivals in the guide and ${number(worldFestivals.length)} listed as work in progress. Tap a dot for details.`;
       mapBox.replaceChildren(worldMap(all));
       const legend = element('div', '', 'legend');
       legend.innerHTML = '<span><i></i>In the guide</span><span><i class="wip"></i>Work in progress</span>';
@@ -486,7 +524,7 @@ async function start() {
     const match = values => query.every(term => normalize(values.flat(Infinity).filter(Boolean).join(' ')).includes(term));
     const matchesEdition = record => (!festivalId || record.festival === festivalId) && (!edition.value || record.year === Number(edition.value));
     if (view === 'world') {
-      items = worldFestivals.filter(record => (!facet.value || record.region === facet.value) && match([record.name, record.short, record.city, record.country, record.region, record.month])).map(record => result(`${record.region} · Work in progress`, record.name, `${record.city}, ${record.country} · ${record.month}`, () => showWorld(record), record.short.slice(0, 3)));
+      items = worldFestivals.filter(record => (!facet.value || record.region === facet.value) && match([record.name, record.short, record.city, record.country, record.region, record.month, record.desc])).map(record => result(`${record.region}${record.since ? ` · since ${record.since}` : ''}`, record.name, [[record.city, record.country].filter(Boolean).join(', '), record.month].filter(Boolean).join(' · '), () => showWorld(record), initials(record.short || record.name), record.logo));
     } else if (view === 'across') {
       // Research view: people who return across festivals or editions, most widely travelled first.
       items = [...people].map(([name, credits]) => {

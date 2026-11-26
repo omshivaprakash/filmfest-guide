@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 
 const { festivals, films, honors, worldFestivals = [] } = JSON.parse(readFileSync(new URL('./catalog.json', import.meta.url)));
 assert.equal(new Set(films.map(film => film.id)).size, films.length);
@@ -17,4 +17,11 @@ for (const festival of [...festivals, ...worldFestivals]) {
   if (festival.url) assert.equal(new URL(festival.url).protocol, 'https:');
 }
 for (const festival of worldFestivals) assert.ok(festival.name && festival.city && festival.country && festival.region && festival.month && festival.status === 'wip', festival.id);
-console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} listed as work in progress.`);
+const world = JSON.parse(readFileSync(new URL('./world-festivals.json', import.meta.url))).festivals;
+assert.equal(new Set(world.map(record => record.id)).size, world.length, 'world festival ids must be unique');
+for (const record of world) {
+  assert.ok(/^Q\d+$/.test(record.id) && record.name && record.country && record.region, record.id);
+  assert.ok(Math.abs(record.ll[1]) <= 90 && Math.abs(record.ll[0]) <= 180, `${record.id} needs coordinates`);
+  if (record.logo) assert.ok(existsSync(new URL(`./${record.logo.file}`, import.meta.url)) && record.logo.license && record.logo.source, `${record.id} logo needs a file and licence`);
+}
+console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);

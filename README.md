@@ -36,6 +36,12 @@ Run `node --check app.js` and `node check-catalog.mjs` after editing.
 
 `worldFestivals` in `catalog.json` lists major film festivals that are not imported yet, each with city, country, region, coordinates, usual month and official site. They appear on the Explore map and the World festivals list. To import one, add it to `festivals` with its editions and films, and remove it from `worldFestivals`. `check-catalog.mjs` checks ids are unique and every festival has coordinates.
 
+The wider list, `world-festivals.json`, holds about 8,000 film festivals from Wikidata, with descriptions from English Wikipedia and logos from Wikimedia Commons in `images/world/` (each logo keeps its own licence and credit). The app loads it after the first screen and merges in the hand-checked `worldFestivals`, which add the usual month. Rebuild it with `python3 tools/import-world-festivals.py fetch <cache>` then `build <cache>`.
+
+## Licence
+
+Code is MIT ([LICENSE](LICENSE)). Data is CC BY 4.0 with the exceptions in [LICENSE-DATA.md](LICENSE-DATA.md). Cite it with [CITATION.cff](CITATION.cff).
+
 Film countries in `catalog.json` are normalised to one spelling per country (for example `USA`, `Usa` and `United States` all become `United States`) so the map can count them. Add any new country's position to `POS` in `geo.js`.
 
 ## Bengaluru archive import
