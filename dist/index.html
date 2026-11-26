@@ -6,18 +6,27 @@
 <meta name="description" content="Explore film festivals, films, credits and awards across Bengaluru, Goa and Kerala.">
 <title>FilmFest Guide</title>
 <link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#ffffff">
 <script defer src="app.js"></script>
 </head>
 <body>
-<header class="top"><div class="wrap bar"><a class="brand" href="#films">◉ FilmFest Guide</a><nav aria-label="Main navigation"><a href="#festivals">Festivals</a><a href="#films">Films</a><a href="#people">People</a><a href="#awards">Awards</a></nav></div></header>
+<header class="wrap">
+<div class="bar"><a class="brand" href="./"><span class="brand-mark" aria-hidden="true">▶</span> FilmFest Guide</a><span class="brand-region">Bengaluru · Goa · Kerala</span></div>
+<div class="festival-strip" id="festival-strip" role="group" aria-label="Choose a festival"></div>
+<div class="festival-context">
+<div class="festival-name" id="festival-name"></div>
+<span class="edition-note" id="edition-note"></span>
+</div>
+<nav class="tabs" aria-label="Guide sections"><a href="#festivals">Festivals</a><a href="#films">Films</a><a href="#people">People</a><a href="#awards">Awards</a></nav>
+</header>
 <main>
 <section class="wrap archive" id="archive">
-<div class="heading"><div><p class="eyebrow">Bengaluru · Goa · Kerala</p><h1 id="archive-title">Films</h1></div><span class="edition-note" id="edition-note">Archive coverage varies by edition</span></div>
+<h1 class="visually-hidden" id="archive-title">Films</h1>
+<input type="hidden" id="festival">
 <div class="controls">
-<label>Search <input type="search" id="search" placeholder="Search titles, names, awards…" autocomplete="off"></label>
-<label>Festival <select id="festival"><option value="">All festivals</option></select></label>
-<label>Edition <select id="edition"><option value="">All editions</option></select></label>
-<label id="facet-label"><span id="facet-caption">Format</span><select id="facet"></select></label>
+<label><span class="visually-hidden">Search</span><input type="search" id="search" placeholder="Search titles, names, awards…" autocomplete="off"></label>
+<label><span class="visually-hidden">Edition</span><select id="edition"><option value="">All editions</option></select></label>
+<label id="facet-label"><span class="visually-hidden" id="facet-caption">Format</span><select id="facet"></select></label>
 </div>
 <div class="results-bar"><p id="count" aria-live="polite"></p><button type="button" id="reset">Clear filters</button></div>
 <div id="results" class="results"></div>
