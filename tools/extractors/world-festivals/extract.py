@@ -1,7 +1,9 @@
-"""Build world-festivals.json from Wikidata, Wikipedia and Wikimedia Commons.
+"""Build data/world-festivals/ (world-festivals.json, world-about.json, logos/) from Wikidata, Wikipedia and Wikimedia Commons.
 
-    python3 tools/import-world-festivals.py fetch <cache-dir>   # query the sources (slow, polite, resumable)
-    python3 tools/import-world-festivals.py build <cache-dir>   # write world-festivals.json, world-about.json and images/world/
+    python3 tools/extractors/world-festivals/extract.py [cache-dir]         # fetch then build (what the weekly workflow runs)
+    python3 tools/extractors/world-festivals/extract.py fetch <cache-dir>   # query the sources (slow, polite)
+    python3 tools/extractors/world-festivals/extract.py build <cache-dir>   # write data/world-festivals/
+    python3 tools/extractors/world-festivals/extract.py kinds <cache-dir>   # refresh the classes used for festival types
 
 Festivals are Wikidata items that are an instance of "film festival" (Q220505) or one of its
 common subclasses, excluding single editions. Only festivals with a name and a country are kept.
@@ -10,6 +12,7 @@ Logos and images come only from Wikimedia Commons and keep their own licence, wh
 """
 import collections, html, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
 
+SHARD = 'data/world-festivals'
 UA = {'User-Agent': 'filmfest-guide-data/1.0 (open data project; github.com/omshivaprakash/filmfest-guide)'}
 CLASSES = 'wd:Q220505 wd:Q62018250 wd:Q115858865 wd:Q123980018 wd:Q114196733 wd:Q9259338 wd:Q1794431 wd:Q5287670 wd:Q105091183 wd:Q130745618 wd:Q109594423'
 IN_GUIDE = re.compile(r'^(International Film Festival of India|Bengaluru International Film Festival|International Film Festival of Kerala|International Documentary and Short Film Festival of Kerala)$', re.I)
@@ -110,7 +113,7 @@ def fetch(cache):
     os.makedirs(f'{cache}/img', exist_ok=True)
     for qid, name in logos.items():
         m, out = meta.get(name), f'{cache}/img/{qid}.bin'
-        if not m or not m.get('thumb') or not m['mime'].startswith('image/') or os.path.exists(out):
+        if not m or not m.get('thumb') or not m['mime'].startswith('image/') or os.path.exists(out) or os.path.exists(f'{SHARD}/logos/{qid}.webp'):
             continue
         data = get(m['thumb'].split('?')[0].replace('thumb.wikimedia.org', 'upload.wikimedia.org'), tries=5)
         if data:
@@ -151,7 +154,8 @@ TYPES = [
 FORMER = {'Czechoslovakia', 'Soviet Union', 'Yugoslavia', 'West Germany', 'East Germany', 'Socialist Federal Republic of Yugoslavia', 'Kingdom of Italy', 'Russian Empire', 'Serbia and Montenegro'}
 
 
-def build(cache, root='.'):
+def build(cache, root=None):
+    root = root or SHARD
     ids = json.load(open(f'{cache}/ids.json'))
     wp = json.load(open(f'{cache}/wpinfo.json'))
     wiki = json.load(open(f'{cache}/enwiki.json'))
@@ -179,7 +183,8 @@ def build(cache, root='.'):
     for b in json.load(open(f'{cache}/kinds.json')):
         kinds[value(b, 'f').rsplit('/', 1)[1]].append(value(b, 'kLabel') or '')
     festivals = {}
-    for b in json.load(open(f'{cache}/details.json')):
+    # Sorted so that festivals with several places or countries pick the same one on every run.
+    for b in sorted(json.load(open(f'{cache}/details.json')), key=lambda b: json.dumps(b, sort_keys=True)):
         qid = value(b, 'f').rsplit('/', 1)[1]
         row = festivals.setdefault(qid, {'id': qid})
         for key, field in (('name', 'fLabel'), ('desc', 'fDescription'), ('country', 'countryLabel'), ('city', 'placeLabel'), ('url', 'web')):
@@ -193,7 +198,7 @@ def build(cache, root='.'):
         if year:
             row.setdefault('since', int(year[0]))
 
-    out_dir = os.path.join(root, 'images', 'world')
+    out_dir = os.path.join(root, 'logos')
     os.makedirs(out_dir, exist_ok=True)
     result = []
     for qid, row in festivals.items():
@@ -220,22 +225,35 @@ def build(cache, root='.'):
         name = images['want'].get(qid)
         meta = images['meta'].get(name or '')
         source = f'{cache}/img/{qid}.bin'
-        if meta and os.path.exists(source) and meta.get('license'):
-            target = os.path.join(out_dir, f'{qid}.webp')
+        target = os.path.join(out_dir, f'{qid}.webp')
+        if meta and meta.get('license') and (os.path.exists(source) or os.path.exists(target)):
             if not os.path.exists(target):
                 subprocess.run(['convert', source + '[0]', '-background', 'white', '-alpha', 'remove', '-resize', '160x160>', '-quality', '78', target], check=False, capture_output=True)
             if os.path.exists(target):
-                row['logo'] = {'file': f'images/world/{qid}.webp', 'source': meta['page'], 'credit': plain(meta.get('artist')) or 'Wikimedia Commons', 'license': meta['license'], 'licenseUrl': meta.get('licenseUrl')}
+                row['logo'] = {'file': f'{SHARD}/logos/{qid}.webp', 'source': meta['page'], 'credit': plain(meta.get('artist')) or 'Wikimedia Commons', 'license': meta['license'], 'licenseUrl': meta.get('licenseUrl')}
         result.append(row)
     result.sort(key=lambda r: (-r['links'], r['name']))
+    # A scheduled run that lost batches to rate limits must not shrink the published list.
+    previous = os.path.join(root, 'world-festivals.json')
+    if os.path.exists(previous):
+        before = len(json.load(open(previous))['festivals'])
+        if len(result) < before * 0.95:
+            sys.exit(f'Refusing to write {len(result)} festivals over {before}: the fetch looks incomplete')
     # Descriptions load only when a festival is opened, which keeps the list and maps light.
     about = {row['id']: row.pop('about') for row in result if 'about' in row}
+    about['count'] = 0  # counted in world-festivals.json
     with open(os.path.join(root, 'world-about.json'), 'w') as handle:
         json.dump(about, handle, ensure_ascii=False, separators=(',', ':'))
     with open(os.path.join(root, 'world-festivals.json'), 'w') as handle:
-        json.dump({'source': 'Wikidata (CC0), English Wikipedia (CC BY-SA 4.0) and Wikimedia Commons', 'retrieved': time.strftime('%Y-%m-%d'), 'festivals': result}, handle, ensure_ascii=False, separators=(',', ':'))
+        json.dump({'source': 'Wikidata (CC0), English Wikipedia (CC BY-SA 4.0) and Wikimedia Commons', 'retrieved': time.strftime('%Y-%m-%d'), 'count': len(result), 'festivals': result}, handle, ensure_ascii=False, separators=(',', ':'))
     print(len(result), 'festivals,', sum('logo' in r for r in result), 'with images')
 
 
 if __name__ == '__main__':
-    {'fetch': fetch, 'kinds': fetch_kinds, 'build': build}[sys.argv[1]](sys.argv[2])
+    if len(sys.argv) > 2:
+        {'fetch': fetch, 'kinds': fetch_kinds, 'build': build}[sys.argv[1]](sys.argv[2])
+    else:
+        cache = sys.argv[1] if len(sys.argv) > 1 else '.cache/world-festivals'
+        os.makedirs(cache, exist_ok=True)
+        fetch(cache)
+        build(cache)

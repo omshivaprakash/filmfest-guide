@@ -53,7 +53,7 @@ All data files are plain **JSON** (text files that any program can read). The fa
 | `cataloguePage` | Printed page number for index-only entries |
 | `artwork` | `{ file, source, ... }` still or poster, with its source |
 | `wikidata` | Wikidata id (`Q…`) where the film was matched |
-| `youtube` | List of `[video id, "trailer" or "video"]` from Wikidata |
+| `youtube` | List of `[video id, "trailer" or "video"]` from Wikidata; added on load from `data/youtube-links/youtube.json` |
 | `fromCatalogue`, `fromGoaKeralaImport` | Marks which importer wrote the record |
 
 ### `honors[]`: awards to a person, not a film
@@ -70,7 +70,7 @@ Keyed by person name: `{ file, source, credit, license, licenseName }`. Only pho
 
 ---
 
-## 2. `world-festivals.json`
+## 2. `data/world-festivals/world-festivals.json`
 
 ```json
 { "source": "...", "retrieved": "2026-11-26", "festivals": [...] }
@@ -89,7 +89,7 @@ Keyed by person name: `{ file, source, credit, license, licenseName }`. Only pho
 | `wiki` | English Wikipedia article |
 | `logo` | `{ file, source, credit, license, licenseUrl }` from Wikimedia Commons |
 
-## 3. `world-about.json`
+## 3. `data/world-festivals/world-about.json`
 
 `{ "<Wikidata id>": "Opening paragraph of the English Wikipedia article" }`. CC BY-SA 4.0, loaded only when a festival is opened.
 

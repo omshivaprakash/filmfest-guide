@@ -10,6 +10,8 @@ import sys
 
 
 def size(value):
+    if isinstance(value, dict) and isinstance(value.get('count'), int):  # a shard can state its own record count
+        return value['count']
     # shortcut: counts the longest top-level list (or the keys of a dict of records); pass a real count if a shard is shaped differently.
     lists = [item for item in (value.values() if isinstance(value, dict) else [value]) if isinstance(item, list)]
     return max(map(len, lists)) if lists else len(value) if isinstance(value, dict) else 0
