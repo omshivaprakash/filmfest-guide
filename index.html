@@ -34,7 +34,7 @@
 <main class="view" id="home" hidden>
   <div class="top">
     <h1>What screens at film festivals, starting with India</h1>
-    <p class="sub">Films, the people who made them, awards and past editions, side by side.</p>
+    <p class="sub">Films, the people who made them, awards and past editions, side by side. Film records come from the official catalogues of the four Indian festivals in the guide so far; the rest of the world’s festivals are listed and being added.</p>
   </div>
   <div class="kpis" id="home-kpis"></div>
   <div class="body"><div class="fgrid" id="festival-cards"></div><div class="homeexplore">
@@ -78,6 +78,7 @@
   <div class="srow">
     <label class="grow-1"><span class="visually-hidden">Search</span><input type="search" id="search" placeholder="Search titles, names, awards…" autocomplete="off"></label>
     <label><span class="visually-hidden">Edition</span><select id="edition"><option value="">All editions</option></select></label>
+    <label id="kind-label" hidden><span class="visually-hidden">Festival type</span><select id="kind"></select></label>
     <label id="facet-label"><span class="visually-hidden" id="facet-caption">Format</span><select id="facet"></select></label>
   </div>
   <div class="meta-row"><p class="meta" id="count" aria-live="polite"></p><span class="edition-note" id="edition-note"></span><button type="button" class="x" id="archive-documents" hidden>Archive documents</button><button type="button" class="x" id="reset">Clear</button></div>
