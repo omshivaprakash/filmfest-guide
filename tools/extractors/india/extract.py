@@ -367,7 +367,7 @@ def build(cache, out=OUT):
             src = e.get('source', source)
             note = {'checked': f"checked online {e['checked']}"} if e.get('checked') else {}
             if not e['title']:
-                if e['person'] and e['person'] != e['award'] and len(e['person'].split()) <= 8:
+                if e['person'] and e['person'] != e['award'] and len(e['person'].split()) <= 8 and is_honour(e['award']):
                     for person in re.split(r'\s+(?:&|and)\s+', e['person']):
                         honors.append(dict(festival=fest['id'], year=e['year'], award=[e['award'], src, clean(person)], role=role_for(e['award']) or 'Honoree', **note))
                 continue
@@ -388,7 +388,7 @@ def build(cache, out=OUT):
                     film['credits'].append(['Director', name])
             if e['director'] and not any(r == 'Director' for r, _ in film['credits']):
                 for name in re.split(r',\s*|\s+(?:&|and)\s+', e['director']):
-                    if clean(name)[:1].isupper():  # drops trailing notes such as "executive producer X"
+                    if clean(name)[:1].isupper() and not re.search(r'[:()]', name):  # drops notes such as "executive producer X" or "Actor: X"
                         film['credits'].append(['Director', clean(name)])
             award = [e['award'], src] + ([e['person']] if e['person'] else [])
             if src not in film['sources']:
@@ -405,6 +405,11 @@ def build(cache, out=OUT):
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(shard, ensure_ascii=False, indent=1) + '\n')
     print(f"{out}: {len(festivals)} festivals, {sum(len(f['editions']) for f in festivals)} editions, {len(films)} films, {len(honors)} honours")
+
+
+def is_honour(award):
+    # A person-only row must name an award; film awards with no parsed film and table labels (Date, Venue, Host) are skipped.
+    return bool(re.search(r'award|prize|honou?r|mention|achiever|icon|retrospective|excellence|buff|jury', award, re.I)) and not re.search(r'\bfilm\b(?! buff)', award, re.I)
 
 
 def role_for(award):
@@ -427,6 +432,7 @@ def test():
     assert cell('<i>Ana Endara</i><p>for</p><p><i><a title="Beloved Tropic"><b>Beloved Tropic</b></a></i></p>') == ('Beloved Tropic', 'Ana Endara', '', 'Beloved Tropic')
     assert cell('Nayanthara') == ('', 'Nayanthara', '', '')
     assert cell('') is None
+    assert is_honour('Achiever\'s Award') and not is_honour('Venue') and not is_honour('Best Film') and not is_honour('Host') and is_honour('Film Buff')
     assert role_for('Best Music Director') == 'Composer' and role_for('Best Editing') == 'Editor'
     assert role_for('Director K.Balachander Award') == '' and role_for('IMI · Best Director') == 'Director'
     assert year_of('25th Kolkata International Film Festival (2019)') == (2019, '25th')
