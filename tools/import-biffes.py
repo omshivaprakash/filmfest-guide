@@ -139,6 +139,8 @@ def main():
     sources = json.loads(Path(__file__).with_name('biffes-sources.json').read_text())
     festival = next(entry for entry in catalog['festivals'] if entry['id'] == 'biffes')
     editions = {record['year']: record for record in festival['editions']}
+    artwork = {(film['year'], normalized(film['title'])): film['artwork']
+               for film in catalog['films'] if film['festival'] == 'biffes' and film.get('artwork')}
     original = [film for film in catalog['films'] if not film.get('fromCatalogue')]
     known = {(film['year'], normalized(film['title'])): film for film in original if film['festival'] == 'biffes'}
     imported = []
@@ -185,6 +187,8 @@ def main():
                 'sources': [f'{source}#page={page}' if metadata and page else source],
                 **({'cataloguePage': page} if page and not metadata else {}), 'fromCatalogue': True,
             }
+            if key in artwork:
+                record['artwork'] = artwork[key]
             known[key] = record
             imported.append(record)
         edition['importedTitles'] = sum(record['year'] == year for record in imported)

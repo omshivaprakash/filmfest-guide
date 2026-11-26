@@ -60,7 +60,21 @@ async function start() {
   let items = [];
   let page = 0;
   let pageCount = 1;
-  options(festival, festivals.map(record => [record.id, record.short]), 'All festivals');
+  const initialFestival = new URLSearchParams(location.search).get('f');
+  festival.value = festivalMap.has(initialFestival) ? initialFestival : '';
+  const festivalButtons = ['', ...festivalMap.keys()].map(id => {
+    const record = festivalMap.get(id);
+    const chip = button(record?.short || 'All festivals', 'festival-chip', () => {
+      festival.value = id;
+      edition.value = '';
+      render();
+    });
+    if (record?.logo) chip.prepend(thumbnail('', record.logo));
+    if (record) chip.title = record.name;
+    return chip;
+  });
+  byId('festival-strip').append(...festivalButtons);
+  const orderedFilms = [...films].sort((a, b) => Number(Boolean(b.artwork)) - Number(Boolean(a.artwork)));
 
   function open(title, category) {
     const heading = element('h2', title);
@@ -83,6 +97,13 @@ async function start() {
     const record = festivalMap.get(film.festival);
     const event = record.editions.find(entry => entry.year === film.year);
     open(film.title, `${label(film)} · ${film.format}`);
+    if (film.artwork) {
+      const figure = element('figure', '', 'film-artwork');
+      const caption = element('figcaption', '', 'meta');
+      caption.append(source(film.artwork.source, film.artwork.credit));
+      figure.append(thumbnail('', film.artwork), caption);
+      content.append(figure);
+    }
     if (film.language || film.country) content.append(element('p', [film.language, film.country].filter(Boolean).join(' · '), 'meta'));
     if (film.section) content.append(element('p', film.section, 'meta'));
     if (film.summary) content.append(element('p', film.summary));
@@ -103,7 +124,8 @@ async function start() {
     if (portrait) {
       const figure = element('figure', '', 'profile-photo');
       const caption = element('figcaption', '', 'meta');
-      caption.append(source(portrait.source, portrait.credit), ' · ', source(portrait.license, portrait.licenseName), ' · Resized and displayed cropped');
+      caption.append(source(portrait.source, portrait.credit));
+      if (portrait.license) caption.append(' · ', source(portrait.license, portrait.licenseName));
       figure.append(thumbnail('', portrait), caption);
       content.append(figure);
     }
@@ -144,6 +166,16 @@ async function start() {
     };
   }
   function render() {
+    const selected = festivalMap.get(festival.value);
+    const context = byId('festival-name');
+    context.replaceChildren();
+    if (selected?.logo) context.append(thumbnail('', selected.logo));
+    context.append(element('strong', selected?.name || 'Film festival archive'));
+    festivalButtons.forEach((chip, index) => chip.setAttribute('aria-pressed', String((festivals[index - 1]?.id || '') === festival.value)));
+    const url = new URL(location.href);
+    if (festival.value) url.searchParams.set('f', festival.value);
+    else url.searchParams.delete('f');
+    if (url.href !== location.href) history.replaceState(null, '', url);
     const visibleFestivals = festival.value ? [festivalMap.get(festival.value)] : festivals;
     const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
     options(edition, years.map(year => [year, String(year)]), 'All editions');
@@ -151,7 +183,7 @@ async function start() {
     const editionRecord = visibleFestivals.length === 1 && visibleFestivals[0].editions.find(record => record.year === Number(edition.value));
     const note = byId('edition-note');
     note.dataset.status = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are pending.' : '';
-    note.replaceChildren(editionRecord?.catalogue ? source(editionRecord.catalogue, editionRecord.catalogueLabel || 'Edition catalogue PDF') : document.createTextNode('Archive coverage varies by edition'));
+    note.replaceChildren(editionRecord?.catalogue ? source(editionRecord.catalogue, editionRecord.catalogueLabel || 'Edition catalogue PDF') : document.createTextNode('Selected editions'));
     const hasFacet = view === 'films' || view === 'people';
     byId('facet-label').hidden = !hasFacet;
     const choices = view === 'people' ? allRoles : formats;
@@ -165,7 +197,7 @@ async function start() {
         search.value = '';
         festival.value = record.id;
         location.hash = 'films';
-      }));
+      }, '', record.logo));
     } else if (view === 'people') {
       items = [...people].sort(([a], [b]) => a.localeCompare(b)).flatMap(([name, credits]) => {
         const matching = credits.filter(record => matchesEdition(record) && (!facet.value || record.role === facet.value) && match([name, record.role, record.title, record.award?.[0], label(record)]));
@@ -174,7 +206,7 @@ async function start() {
     } else if (view === 'awards') {
       items = awards.filter(record => matchesEdition(record) && match([record.award[0], record.award[2], record.title, label(record)])).map(record => result(label(record), record.award[0], [record.award[2], record.title].filter(Boolean).join(' · '), () => showAward(record)));
     } else {
-      items = films.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record), '▤'));
+      items = orderedFilms.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, [record.format, record.language, record.country].filter(Boolean).join(' · '), () => showFilm(record), '▤', record.artwork));
     }
     document.body.dataset.view = view;
     byId('archive-title').textContent = views[view];

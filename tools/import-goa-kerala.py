@@ -125,6 +125,8 @@ def main():
         normalized = unicodedata.normalize('NFKD', title.casefold())
         return festival, year, ''.join(char for char in normalized if char.isalnum())
 
+    artwork = {key(film['festival'], film['year'], film['title']): film['artwork']
+               for film in data['films'] if film.get('artwork')}
     seen = {key(film['festival'], film['year'], film['title']): film for film in films}
     added = Counter()
 
@@ -144,6 +146,8 @@ def main():
                 'festival': festival, 'year': year, 'format': format_name, 'language': language.strip(),
                 'country': country.strip(), 'section': section, 'summary': '', 'credits': credits,
                 'awards': [], 'sources': [source], 'fromGoaKeralaImport': True}
+        if ref in artwork:
+            film['artwork'] = artwork[ref]
         seen[ref] = film
         films.append(film)
         added[festival, year] += 1
