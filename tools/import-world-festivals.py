@@ -1,7 +1,7 @@
 """Build world-festivals.json from Wikidata, Wikipedia and Wikimedia Commons.
 
     python3 tools/import-world-festivals.py fetch <cache-dir>   # query the sources (slow, polite, resumable)
-    python3 tools/import-world-festivals.py build <cache-dir>   # write world-festivals.json and images/world/
+    python3 tools/import-world-festivals.py build <cache-dir>   # write world-festivals.json, world-about.json and images/world/
 
 Festivals are Wikidata items that are an instance of "film festival" (Q220505) or one of its
 common subclasses, excluding single editions. Only festivals with a name and a country are kept.
@@ -188,6 +188,10 @@ def build(cache, root='.'):
                 row['logo'] = {'file': f'images/world/{qid}.webp', 'source': meta['page'], 'credit': plain(meta.get('artist')) or 'Wikimedia Commons', 'license': meta['license'], 'licenseUrl': meta.get('licenseUrl')}
         result.append(row)
     result.sort(key=lambda r: (-r['links'], r['name']))
+    # Descriptions load only when a festival is opened, which keeps the list and maps light.
+    about = {row['id']: row.pop('about') for row in result if 'about' in row}
+    with open(os.path.join(root, 'world-about.json'), 'w') as handle:
+        json.dump(about, handle, ensure_ascii=False, separators=(',', ':'))
     with open(os.path.join(root, 'world-festivals.json'), 'w') as handle:
         json.dump({'source': 'Wikidata (CC0), English Wikipedia (CC BY-SA 4.0) and Wikimedia Commons', 'retrieved': time.strftime('%Y-%m-%d'), 'festivals': result}, handle, ensure_ascii=False, separators=(',', ':'))
     print(len(result), 'festivals,', sum('logo' in r for r in result), 'with images')

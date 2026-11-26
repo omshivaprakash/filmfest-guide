@@ -338,6 +338,8 @@ async function start() {
     for (const card of [...shelf.children]) card.hidden = card.offsetTop + card.offsetHeight > shelf.clientHeight;
   }
 
+  let aboutTexts;
+  const worldAbout = () => (aboutTexts ||= fetch('world-about.json').then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})));
   function showWorld(record) {
     open(record.name, `${record.region} · Work in progress`);
     if (record.logo) {
@@ -349,8 +351,9 @@ async function start() {
     const place = [record.city, record.country].filter(Boolean).join(', ');
     const facts = [place + (record.approx ? ' (map position approximate)' : ''), record.since && `since ${record.since}`, record.month && `usually ${record.month}`].filter(Boolean).join(' · ');
     content.append(element('p', facts, 'meta'));
-    if (record.about) content.append(element('p', record.about));
-    else if (record.desc) content.append(element('p', record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.'));
+    const about = element('p', record.desc ? record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.' : '');
+    content.append(about);
+    worldAbout().then(texts => { if (texts[record.id]) about.textContent = texts[record.id]; });
     content.append(element('p', 'Listed so we can plan its import. Films, people and past editions will be added from its official catalogues.', 'meta'));
     list('Sources', [
       record.url && source(record.url, 'Official festival website'),
