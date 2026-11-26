@@ -85,7 +85,7 @@
    "url": "https://www.mumbaifilmfestival.com",
    "lat": 19.08,
    "lon": 72.88,
-   "source": "https://en.wikipedia.org/w/index.php?title=Mumbai_Academy_of_the_Moving_Image&oldid=1383411643",
+   "source": "https://en.wikipedia.org/w/index.php?title=Mumbai_Academy_of_the_Moving_Image&oldid=1388035734",
    "editions": [
     {
      "year": 2024,
@@ -229,7 +229,7 @@
    "url": "https://miff.in",
    "lat": 18.97,
    "lon": 72.82,
-   "source": "https://en.wikipedia.org/w/index.php?title=Mumbai_International_Film_Festival&oldid=1370945075",
+   "source": "https://en.wikipedia.org/w/index.php?title=Mumbai_International_Film_Festival&oldid=1388035801",
    "logo": {
     "file": "data/world-festivals/logos/Q1952566.webp",
     "source": "https://commons.wikimedia.org/wiki/File:K._Sankaranarayanan_felicitated_the_Jury_members,_at_the_inaugural_function_of_the_13th_Mumbai_International_Film_Festival_for_Documentary,_Short_and_Animation_(MIFF-2014),_in_Mumbai._The_Secretary.jpg",
@@ -243,6 +243,11 @@
      "number": "18th",
      "dates": "15–21 June",
      "source": "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    },
+    {
+     "year": 2022,
+     "number": "17th",
+     "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
     }
    ]
   },
@@ -1059,9 +1064,2331 @@
      "source": "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
     }
    ]
+  },
+  {
+   "id": "bqff",
+   "short": "BQFF",
+   "name": "Bangalore Queer Film Festival",
+   "region": "Karnataka",
+   "country": "India",
+   "description": "Queer films in Bengaluru.",
+   "wikidata": "Q18110176",
+   "url": "https://blrqueerfilmfest.com",
+   "lat": 12.98,
+   "lon": 77.59,
+   "source": "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904",
+   "logo": {
+    "file": "data/world-festivals/logos/Q18110176.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Bengaluru_Pride_2009_(15).jpg",
+    "credit": "Vinayak Das from Bangalore, India",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+   },
+   "editions": [
+    {
+     "year": 2016,
+     "source": "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    },
+    {
+     "year": 2014,
+     "source": "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    }
+   ]
+  },
+  {
+   "id": "rff",
+   "short": "RFF",
+   "name": "Rajasthan Film Festival",
+   "region": "Rajasthan",
+   "country": "India",
+   "description": "Rajasthani cinema awards in Jaipur.",
+   "wikidata": "Q19757778",
+   "lat": 26.91,
+   "lon": 75.82,
+   "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+   "logo": {
+    "file": "data/world-festivals/logos/Q19757778.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Rajasthan_Film_Festival.jpg",
+    "credit": "Sanjana5107",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+   },
+   "editions": [
+    {
+     "year": 2025,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2024,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2023,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2022,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2021,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2020,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2019,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2018,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2017,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2016,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2015,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2014,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    },
+    {
+     "year": 2013,
+     "source": "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870"
+    }
+   ]
+  },
+  {
+   "id": "ciqff",
+   "short": "Reel Desires",
+   "name": "Chennai International Queer Film Festival",
+   "region": "Tamil Nadu",
+   "country": "India",
+   "description": "Queer films in Chennai.",
+   "wikidata": "Q39056038",
+   "lat": 13.08,
+   "lon": 80.27,
+   "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429",
+   "editions": [
+    {
+     "year": 2017,
+     "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    },
+    {
+     "year": 2016,
+     "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    },
+    {
+     "year": 2012,
+     "source": "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    }
+   ]
+  },
+  {
+   "id": "aliff",
+   "short": "ALIIFF",
+   "name": "All Lights India International Film Festival",
+   "region": "Kerala",
+   "country": "India",
+   "description": "International films in Kochi and Hyderabad.",
+   "wikidata": "Q22079821",
+   "lat": 9.97,
+   "lon": 76.28,
+   "source": "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777",
+   "editions": [
+    {
+     "year": 2018,
+     "source": "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    },
+    {
+     "year": 2017,
+     "source": "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    },
+    {
+     "year": 2016,
+     "source": "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    }
+   ]
   }
  ],
  "films": [
+  {
+   "id": "in-aliff-2018-amir",
+   "title": "Amir",
+   "festival": "aliff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nima Eghlime"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Debut Director",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2018-kupal",
+   "title": "Kupal",
+   "festival": "aliff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Actor: Levon Haftvan"
+    ]
+   ],
+   "awards": [
+    [
+     "Debut Director—Honorable Mention (Best Actor)",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2018-octav",
+   "title": "Octav",
+   "festival": "aliff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Serge Loan Celebidachi"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2018-pupa",
+   "title": "Pupa",
+   "festival": "aliff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Indrasis Acharya"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2018-runaway",
+   "title": "Runaway",
+   "festival": "aliff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Abhishek Saha"
+    ]
+   ],
+   "awards": [
+    [
+     "NETPAC Award for the Best Asian Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ],
+    [
+     "Debut Director—Honorable Mention (Best Actress)",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2018-to-let",
+   "title": "To Let",
+   "festival": "aliff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Chezhiyan Ra"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indywood Panorama Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-2001-while-kubrick-was-in-space",
+   "title": "2001: While Kubrick Was in Space",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gabriel Nicoli- Daniel Ortega (cinematography mention)"
+    ]
+   ],
+   "awards": [
+    [
+     "Debut Director Film (Honorable Mention)",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-apricot-groves",
+   "title": "Apricot Groves",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pouria Heidary Oureh"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Debut Director",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-chudala",
+   "title": "Chudala",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Maaria Sayed"
+    ]
+   ],
+   "awards": [
+    [
+     "Short Film (Honorable Mention)",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-hidden-corner",
+   "title": "Hidden Corner",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jaicheng Jai Dohutia"
+    ]
+   ],
+   "awards": [
+    [
+     "NETPAC Award",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-in-return-just-a-book",
+   "title": "In Return: Just A Book",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Shiny Jacob Benjamin"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Documentary",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-minnaminungu-surabhi-lakshmi",
+   "title": "Minnaminungu (Surabhi Lakshmi)",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Anil Thomas"
+    ]
+   ],
+   "awards": [
+    [
+     "Feature Film (Honorable Mention)",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-railway-children",
+   "title": "Railway Children",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Prithvi Konanur"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indywood Panorama Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-saawan",
+   "title": "Saawan",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Farhan Alam"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-take-the-reins",
+   "title": "Take the Reins",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Emma Barrett"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Short Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-the-forsaken",
+   "title": "The Forsaken",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jiju Antony"
+    ]
+   ],
+   "awards": [
+    [
+     "I.V. Sasi Memorial Golden Frame Award for the Best Indian Debut Director",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2017-the-loudest-silence",
+   "title": "The Loudest Silence",
+   "festival": "aliff",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Marccela Moreno"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-1st-sem",
+   "title": "1st Sem",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Dexter Paglinawan Hemedez"
+    ],
+    [
+     "Director",
+     "Allan Michael Ibanez"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Debut Director's Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-cancer-71",
+   "title": "Cancer 71",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Abhishek Talukder"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Short Film—Honorable Mention",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-chaver",
+   "title": "Chaver",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Abhilash Vijayan"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-houra",
+   "title": "Houra",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gholamreza Sagharchiyan"
+    ]
+   ],
+   "awards": [
+    [
+     "NETPAC Award for the Best Asian Cinema",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-laut",
+   "title": "Laut",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Luisito Lagdameo Ignacio"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film—Honorable Mention",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-metamorphosis-roopatharam",
+   "title": "Metamorphosis (Roopatharam)",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "M.B. Padmakumar"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film—Honorable Mention",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-nise-the-heart-of-madness",
+   "title": "Nise—The Heart of Madness",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Roberto Berliner"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-pathemari",
+   "title": "Pathemari",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Salim Ahmed"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indywood Panorama Movie",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-smajl",
+   "title": "SMAJL",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Philipp Majer"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Documentary Film—Winner",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-senior-teacher",
+   "title": "Senior Teacher",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Sha Mo"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Short Film - Honorable Mention",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-shankachil",
+   "title": "Shankachil",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Goutam Gose"
+    ]
+   ],
+   "awards": [
+    [
+     "People Choice Award",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-take-over",
+   "title": "Take Over",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jennifer Alphonsse"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Mention—Best Educational Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-the-great-transmission",
+   "title": "The Great Transmission",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Pema Gellek"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Documentary Film—Winner",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-the-school",
+   "title": "The School",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Shiva Kumar"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Short Film",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-valentina",
+   "title": "Valentina",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Max Kidd"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Student Short Film—Honorable Mention",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-vanishing-island",
+   "title": "Vanishing Island",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "D.Dhanasumod"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Documentary Film—Honorable Mention",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-aliff-2016-violin-player",
+   "title": "Violin Player",
+   "festival": "aliff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Bauddhayan Mukherji"
+    ]
+   ],
+   "awards": [
+    [
+     "Film Critics Circle of India Award For The Best Indian Movie",
+     "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=All_Lights_India_International_Film_Festival&oldid=1381408777"
+   ]
+  },
+  {
+   "id": "in-bqff-2016-in-black-and-white",
+   "title": "In Black and White",
+   "festival": "bqff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2016",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2016-kipling-meets-the-cowboys",
+   "title": "Kipling Meets the Cowboys",
+   "festival": "bqff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2016",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2016-ten-cents-a-dance-parallax",
+   "title": "Ten Cents a Dance: Parallax",
+   "festival": "bqff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2016",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-ebang-bewarish-and-the-unclaimed",
+   "title": "... Ebang Bewarish (\"... and the unclaimed\")",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-aan-poovu-male-flower",
+   "title": "Aan Poovu (Male Flower)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-acceptance",
+   "title": "Acceptance",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-accsex",
+   "title": "Accsex",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-and-you-thought-you-knew-me",
+   "title": "And You Thought You Knew Me",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-angel",
+   "title": "Angel",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-aquaporko",
+   "title": "Aquaporko!",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-audre-lorde-the-berlin-years-1984-1992",
+   "title": "Audre Lorde: The Berlin Years(1984-1992)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-beyond-binary",
+   "title": "Beyond Binary",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-bioscope",
+   "title": "Bioscope",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-blush",
+   "title": "Blush",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-boy",
+   "title": "Boy",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-breaking-out-of-the-box",
+   "title": "Breaking out of the Box",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-brother-and-sister",
+   "title": "Brother and Sister",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-bruno-earlene-go-to-vegas",
+   "title": "Bruno & Earlene Go to Vegas",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-camp-beaverton-meet-the-beavers",
+   "title": "Camp Beaverton: Meet the Beavers",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-cannibales-cannibals",
+   "title": "Cannibales(Cannibals)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-chaleur-humaine-human-warmth",
+   "title": "Chaleur Humaine (Human Warmth)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-change-over-time",
+   "title": "Change Over Time",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-chuppan-chupai-hide-and-seek",
+   "title": "Chuppan Chupai (Hide and Seek)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-damned-if-you-don-t",
+   "title": "Damned If You Don't",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-disrupted",
+   "title": "Disrupted",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-edsaxxx",
+   "title": "EDSAXXX",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-edie-thea-a-very-long-engagement",
+   "title": "Edie & Thea: A Very Long Engagement",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-feel-lost",
+   "title": "Feel Lost",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-frangipani",
+   "title": "Frangipani",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-grace",
+   "title": "Grace",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-her-name-is-sowmya",
+   "title": "Her name is Sowmya",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-i-ve-only-just-begun",
+   "title": "I've Only Just Begun",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-in-berlin-we-die-alone",
+   "title": "In Berlin we die alone",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-ink-deep",
+   "title": "Ink Deep",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-irene",
+   "title": "Irene",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-joaquin-la-habana-living-between-worlds",
+   "title": "Joaquin La Habana: Living between worlds",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-joie",
+   "title": "Joie!",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-just-two-steps-away",
+   "title": "Just Two Steps Away",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-knighthood",
+   "title": "Knighthood",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-knightwood",
+   "title": "Knightwood",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-kuch-palon-mein-in-some-moments",
+   "title": "Kuch Palon Mein(In some moments)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-kusum",
+   "title": "Kusum",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-la-santa-the-blessed",
+   "title": "La Santa(The Blessed)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-margaritas",
+   "title": "Margaritas",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-mecs-meufs-guys-girls",
+   "title": "Mecs Meufs (Guys Girls)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-meghadhanushya-the-colour-of-life",
+   "title": "Meghadhanushya: The Colour Of Life",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-mia",
+   "title": "Mia",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-milk-vodka",
+   "title": "Milk & Vodka",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-miniatures",
+   "title": "Miniatures",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-mondo-sopra-la-testa-the-world-above-hea",
+   "title": "Mondo Sopra La Testa (The World Above Head)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-morning",
+   "title": "Morning",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-mumbai-police",
+   "title": "Mumbai Police",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-muro-wall",
+   "title": "Muro (Wall)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-nubes-flotantes-wandering-clouds",
+   "title": "Nubes Flotantes(Wandering Clouds)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-one-zero-one-the-story-of-cybersissy-and",
+   "title": "One Zero One: The Story of Cybersissy and Babyjane",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-out-in-east-berlin",
+   "title": "Out In East Berlin",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-pr-public-relations",
+   "title": "PR - Public Relations",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-paper-flowers",
+   "title": "Paper Flowers",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-partil-leaving",
+   "title": "Partil(Leaving)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-partir-leaving",
+   "title": "Partir (Leaving)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-pas",
+   "title": "Pas",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-rainbow-popcorn",
+   "title": "Rainbow Popcorn",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-rainbows-are-real",
+   "title": "Rainbows Are Real",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-rotula-label",
+   "title": "Rotula (Label)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-rotulo-label",
+   "title": "Rotulo(Label)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-rue-curiol-curiol-street",
+   "title": "Rue Curiol (Curiol Street)",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-rules-of-the-road",
+   "title": "Rules Of The Road",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-scaffolding",
+   "title": "Scaffolding",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-somagwaza",
+   "title": "Somagwaza",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-still-black-a-portrait-of-black-transmen",
+   "title": "Still Black: A portrait of black Transmen",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-telling-tales",
+   "title": "Telling Tales",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-beginning",
+   "title": "The Beginning",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-brave-unseen",
+   "title": "The Brave Unseen",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-egg",
+   "title": "The Egg",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-falceto-jazz-club",
+   "title": "The Falceto Jazz Club",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-invisible-men",
+   "title": "The Invisible Men",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-kiss",
+   "title": "The Kiss",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-the-language-of-love",
+   "title": "The Language Of Love",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-transgressions",
+   "title": "Transgressions",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-verona",
+   "title": "Verona",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-waiting-in-wilderness",
+   "title": "Waiting in wilderness",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-xxy",
+   "title": "XXY",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
+  {
+   "id": "in-bqff-2014-you-are-my-brother",
+   "title": "You are my Brother",
+   "festival": "bqff",
+   "year": 2014,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "BQFF 2014 Film Screenings",
+     "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Bangalore_Queer_Film_Festival&oldid=1361135904"
+   ]
+  },
   {
    "id": "in-ciff-chennai-2015-burraa",
    "title": "BURRAA",
@@ -1287,6 +3614,117 @@
    ],
    "sources": [
     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
+   ]
+  },
+  {
+   "id": "in-ciqff-2017-abar-jodi-ichchha-karo-if-you-dare-desir",
+   "title": "Abar Jodi Ichchha Karo (If you dare desire)",
+   "festival": "ciqff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Movies Screened",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+   ]
+  },
+  {
+   "id": "in-ciqff-2017-ladies-and-gentlewomen",
+   "title": "Ladies and Gentlewomen",
+   "festival": "ciqff",
+   "year": 2017,
+   "format": "Feature",
+   "language": "Tamil",
+   "country": "India",
+   "summary": "2017 film.",
+   "wikidata": "Q39047991",
+   "credits": [
+    [
+     "Director",
+     "Malini Jeevarathnam"
+    ]
+   ],
+   "awards": [
+    [
+     "Movies Screened",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+   ]
+  },
+  {
+   "id": "in-ciqff-2017-siebzehn-seventeen",
+   "title": "Siebzehn (Seventeen)",
+   "festival": "ciqff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Movies Screened",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+   ]
+  },
+  {
+   "id": "in-ciqff-2016-is-it-too-much-to-ask",
+   "title": "Is It Too Much To Ask?",
+   "festival": "ciqff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Movies Screened",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+   ]
+  },
+  {
+   "id": "in-ciqff-2016-ka-bodyscapes",
+   "title": "Ka Bodyscapes",
+   "festival": "ciqff",
+   "year": 2016,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Movies Screened",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+   ]
+  },
+  {
+   "id": "in-ciqff-2012-all-about-our-famila",
+   "title": "All About Our Famila",
+   "festival": "ciqff",
+   "year": 2012,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Movies Screened",
+     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Chennai_International_Queer_Film_Festival&oldid=1387988429"
    ]
   },
   {
@@ -8208,6 +10646,313 @@
    "checked": "checked online 2026-11-26"
   },
   {
+   "id": "in-miff-2022-admitted",
+   "title": "Admitted",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Ojaswwee Sharma"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Indian Documentary (above 60 minutes)",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-brother-troll",
+   "title": "Brother Troll",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Short film",
+   "country": "Faroe Islands",
+   "credits": [
+    [
+     "Director",
+     "Gudmund Helmsdal"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best International Short Fiction",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-closed-to-the-light",
+   "title": "Closed to the Light",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "country": "Italy",
+   "credits": [
+    [
+     "Director",
+     "Nicola Piovesan"
+    ]
+   ],
+   "awards": [
+    [
+     "Pramod Pati Award for Most Innovative / Experimental Film",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-geru-patra",
+   "title": "Geru Patra",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Short film",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Shristipal Singh"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Indian Short Fiction",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-ghar-ka-pata",
+   "title": "Ghar Ka Pata",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Madhulika Jalali"
+    ]
+   ],
+   "awards": [
+    [
+     "International Jury · Special Mention",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-kandittundu-seen-it",
+   "title": "Kandittundu (Seen It)",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Short film",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Adithi Krishnadas"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Indian Animation",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-megha",
+   "title": "Megha",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Rishi Bhaumik"
+    ]
+   ],
+   "awards": [
+    [
+     "IDPA Award for Best Student Film",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-prince-in-a-pastry-shop",
+   "title": "Prince in a Pastry Shop",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Short film",
+   "country": "Poland",
+   "credits": [
+    [
+     "Director",
+     "Katarzyna Agopsowicz"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best International Animation",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-radha",
+   "title": "Radha",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Bimal Poddar"
+    ]
+   ],
+   "awards": [
+    [
+     "Dadasaheb Phalke Chitranagari Award for Best Debut Director",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-saakshatkaaram",
+   "title": "Saakshatkaaram",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Sudesh Balan"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best International Short Fiction",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-screaming-butterflies",
+   "title": "Screaming Butterflies",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Aimee Barua"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Indian Documentary (below 60 minutes)",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-turn-your-body-to-the-sun",
+   "title": "Turn Your Body to the Sun",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "country": "Netherlands",
+   "credits": [
+    [
+     "Director",
+     "Aliona van der Horst"
+    ]
+   ],
+   "awards": [
+    [
+     "Golden Conch · Best Documentary",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2022-who-says-the-lepchas-are-vanishing",
+   "title": "Who Says The Lepchas Are Vanishing?",
+   "festival": "miff",
+   "year": 2022,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Abhuydaya Khaitan"
+    ]
+   ],
+   "awards": [
+    [
+     "International Jury · Special Mention",
+     "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    ]
+   ],
+   "sources": [
+    "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
    "id": "in-piff-2022-potra",
    "title": "Potra",
    "festival": "piff",
@@ -8742,6 +11487,796 @@
    ],
    "role": "Honoree",
    "checked": "checked online 2026-11-26"
+  },
+  {
+   "festival": "rff",
+   "year": 2013,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "28 September 2013"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2013,
+   "award": [
+    "Best Film",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Bhobhar (Rajasthani) Us Disha Mai (Hindi)"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2013,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "RJ Moniya Anchor Kabeer Anchor Mann"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2013,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Deep Smriti Auditorium Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2013,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2013,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Dr.Mahesh Joshi"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2014,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "20 September 2014"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2014,
+   "award": [
+    "Best Film",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Kahani Ek Devi Ki"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2014,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Ashok Banthia Anchor Kabeer"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2014,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Deep Smriti Auditorium Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2014,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2014,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "T. P. Aggarwal"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2015,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "26 September 2015"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2015,
+   "award": [
+    "Best Film",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Raju Rathod"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2015,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur Bagh"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2015,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2015,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Mohan Kataria"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2015,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Subhash Ghai Rajyavardhan Singh Rathore"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "24 September 2016"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "Best Film",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Hivade Me Fute Laadu"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Aman Verma RJ Mohit"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Maan Palace"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Ikram Rajasthani"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2016,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Javed Akhtar"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2017,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "16 September 2017"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2017,
+   "award": [
+    "Best Film",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Nani Bai Ro Mayro"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2017,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Deep Smriti Auditorium Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2017,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2017,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Pandit Vishwa Mohan Bhatt"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2017,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaiprakash Chouksey"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "25 to 29 September 2018"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "Best Film",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Birani Sardar"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Vatsal Seth"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Maan Palace"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Bharat Nahta"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2018,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jeetendra Kapoor Mithun Sharma Neelu Vaghela"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2019,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "28 September 2019"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2019,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Shreyas Talpade"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2019,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Maan Palace"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2019,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2019,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Shakti Kapoor"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2019,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Komal Nahta Satish Kaushik Rajesh Puri Aniruddh Dave"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2020,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Not held"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2020,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2020,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2020,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2020,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2021,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Not held"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2021,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2021,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2021,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2021,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "The Ceremonies Cancelled due to COVID-19 pandemic."
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2022,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "24 September 2022"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2022,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Tusshar Kapoor Komal Nahta Mahima Chaudhry"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2022,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Maan Palace"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2022,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2022,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Sanjay Mishra (actor)"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "30 September 2023"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Aftab Shivdasani"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Neha Dhupia"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Deep Smriti Auditorium Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Gulshan Grover"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2023,
+   "award": [
+    "Chief Guest",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Govinda"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "28 September 2024"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Arbaaz Khan, Smita Bansal"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Mahendra Gaur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Deep Smriti Auditorium Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Ahmed"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2024,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Mohammed Hussain"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2025,
+   "award": [
+    "Date",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "20 September 2025"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2025,
+   "award": [
+    "Host",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Chunky Panday, Pooja Hegde, Sumit Vyas"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2025,
+   "award": [
+    "Venue",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Deep Smriti Auditorium Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2025,
+   "award": [
+    "City",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Jaipur"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2025,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Raza Murad"
+   ],
+   "role": "Honoree"
+  },
+  {
+   "festival": "rff",
+   "year": 2025,
+   "award": [
+    "Lifetime Achievement Award",
+    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
+    "Dilip Sen"
+   ],
+   "role": "Honoree"
   }
  ]
 }
