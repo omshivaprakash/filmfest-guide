@@ -329,15 +329,25 @@ def fetch_films(cache):
         print(f'film facts {n + 1}', file=sys.stderr)
     files = picture_files(cache, candidates)
     for part in chunks(files, 50):
-        reply = cached(cache, f'commons-{digest(part)}.json', lambda: wiki_api('commons', 'wikimedia', action='query', prop='imageinfo', iiprop='url|extmetadata', iiurlwidth=320, iiextmetadatafilter='Artist|LicenseShortName|LicenseUrl', titles='|'.join('File:' + f for f in part)))
+        # 330 px is one of the thumbnail widths Wikimedia serves; other widths are refused (HTTP 400).
+        try:
+            reply = cached(cache, f'commons-{digest(part)}.json', lambda: wiki_api('commons', 'wikimedia', action='query', prop='imageinfo', iiprop='url|extmetadata', iiurlwidth=330, iiextmetadatafilter='Artist|LicenseShortName|LicenseUrl', titles='|'.join('File:' + f for f in part)))
+        except RuntimeError as error:
+            print(f'  skipped {len(part)} Commons files: {error}', file=sys.stderr)
+            continue
         # Images are copied into the repository, so the page makes no requests to outside services.
         for page in reply.get('query', {}).get('pages', []):
             url = (page.get('imageinfo') or [{}])[0].get('thumburl')
             path = os.path.join(cache, 'img', digest([page['title']]) + '.jpg')
             if url and not os.path.exists(path):
                 os.makedirs(os.path.dirname(path), exist_ok=True)
+                try:
+                    image = get(url, accept='image/*', tries=3)
+                except (RuntimeError, urllib.error.HTTPError) as error:  # one missing poster must not cost the whole run
+                    print(f'  skipped image {page["title"]}: {error}', file=sys.stderr)
+                    continue
                 with open(path + '.part', 'wb') as out:
-                    out.write(get(url, accept='image/*'))
+                    out.write(image)
                 os.replace(path + '.part', path)
     print(f'film pictures {len(files)}', file=sys.stderr)
 
@@ -404,7 +414,8 @@ def build_films(cache):
     directors, countries = collections.defaultdict(set, directors), collections.defaultdict(set, countries)
     images = {}
     for part in chunks(picture_files(cache, candidates), 50):
-            for page in json.load(open(os.path.join(cache, f'commons-{digest(part)}.json'))).get('query', {}).get('pages', []):
+            path = os.path.join(cache, f'commons-{digest(part)}.json')
+            for page in (json.load(open(path)) if os.path.exists(path) else {}).get('query', {}).get('pages', []):
                 info = (page.get('imageinfo') or [{}])[0]
                 meta = info.get('extmetadata', {})
                 local = os.path.join(cache, 'img', digest([page['title']]) + '.jpg')
