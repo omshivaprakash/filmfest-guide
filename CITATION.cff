@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below and keep the CC BY 4.0 attribution."
+title: "FilmFest Guide: open data on what screens at film festivals"
+type: dataset
+authors:
+  - alias: omshivaprakash
+repository-code: "https://github.com/omshivaprakash/filmfest-guide"
+url: "https://omshivaprakash.github.io/filmfest-guide/"
+license: CC-BY-4.0
+version: "2026.11.26"
+date-released: "2026-11-26"
+keywords:
+  - film festivals
+  - cinema
+  - India
+  - open data
