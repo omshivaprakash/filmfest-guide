@@ -36,6 +36,15 @@ for (const record of world) {
 }
 const { films: links } = JSON.parse(readFileSync(new URL('./data/youtube-links/youtube.json', import.meta.url)));
 for (const [id, link] of Object.entries(links)) assert.ok(films.some(film => film.id === id) && /^Q\d+$/.test(link.wikidata) && link.youtube.length, `youtube link ${id}`);
+// enrich shard: films it names must exist, and every poster must be a local file with its licence.
+const enrichFilms = new URL('./data/enrich/films.json', import.meta.url);
+if (existsSync(enrichFilms)) {
+  const filmIds = new Set(films.map(film => film.id));
+  for (const [id, extra] of Object.entries(JSON.parse(readFileSync(enrichFilms)).films)) {
+    assert.ok(filmIds.has(id) && /^Q\d+$/.test(extra.wikidata), `enrich film ${id}`);
+    if (extra.poster) assert.ok(existsSync(new URL(`./${extra.poster.file}`, import.meta.url)) && extra.poster.license && new URL(extra.poster.source).protocol === 'https:', `${id} poster needs a file and licence`);
+  }
+}
 // Data freshness: every source needs an id and label; a date, if given here or in its shard's stamp, must parse.
 const { sources } = JSON.parse(readFileSync(new URL('./sync.json', import.meta.url)));
 assert.equal(new Set(sources.map(entry => entry.id)).size, sources.length, 'sync.json ids must be unique');
