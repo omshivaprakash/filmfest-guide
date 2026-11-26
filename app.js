@@ -218,15 +218,25 @@ async function start() {
   }
   function showAbout() {
     open('About FilmFest Guide', 'About');
+    const G = 'https://github.com/omshivaprakash/filmfest-guide';
     const about = element('div', '', 'about');
-    const intro = element('p', 'A free guide to what screens at film festivals, starting with India. It puts films, credits, awards and past editions side by side so you can plan a festival or look back at one.');
-    const sibling = element('p', 'It is built the same way as ');
-    const lit = source('https://omshivaprakash.github.io/litfest-speaker-guide/', 'LitFest Guide');
-    sibling.append(lit, ', the companion guide to literature festivals.');
-    const data = element('p', 'Every record links to its source: official festival catalogues and announcements, the Press Information Bureau, and the Servants of Knowledge collection on the Internet Archive. Scanned catalogues can leave gaps, and a PDF link means a source exists even when titles have not been extracted yet.');
-    const code = element('p', 'The code and data are open on ');
-    code.append(source('https://github.com/omshivaprakash/filmfest-guide', 'GitHub'), '. Corrections are welcome.');
-    about.append(intro, sibling, data, code);
+    // Each part is text or a [url, label] link, so the copy reads as plain sentences.
+    const section = (heading, ...parts) => {
+      const p = element('p');
+      for (const part of parts) p.append(Array.isArray(part) ? source(...part) : part);
+      about.append(...(heading ? [element('h3', heading)] : []), p);
+    };
+    section('', `An independent, non-commercial guide to what screens at film festivals, starting with India: ${number(films.length)} films, ${number(people.size)} people and ${number(festivals.reduce((sum, record) => sum + record.editions.length, 0))} editions from ${festivals.length} festivals so far, plus ${number(worldFestivals.length)} festivals around the world listed and waiting to be added. It is built for education and research, and is not affiliated with, endorsed by or sponsored by any festival.`);
+    section('', 'It is the companion to ', ['https://omshivaprakash.github.io/litfest-speaker-guide/', 'LitFest Guide'], ', the guide to literature festivals, and is built the same way.');
+    section('Where the information comes from', 'Film records come from each festival’s official catalogues, schedules and award announcements, the Press Information Bureau for Goa’s Indian Panorama, and the Servants of Knowledge collection on the Internet Archive for older Bengaluru catalogues. The world festival list comes from ', ['https://www.wikidata.org/', 'Wikidata'], ', with short descriptions from English Wikipedia and logos from Wikimedia Commons. Trailers and full films on YouTube are the ones Wikidata records for a film. Every record links to its source, and the festival’s own site is always the final word.');
+    section('What to keep in mind', 'Older catalogues are scans, so some editions have gaps or no indexed titles yet; a PDF link means the source exists even when its titles are still to come. The People directory is built from the credits, so a spelling variant counts as a separate person. Film countries are tidied to one spelling per country so the map can count them. Maps place a country or city by one point and are schematic.');
+    section('How festival types are worked out', 'Each world festival can carry types such as documentary, short film, animation, LGBTQ+, children and youth, or horror, fantasy and sci-fi. They come from the festival’s classes and genres on Wikidata plus words in its name and description, so treat them as a guide. A festival can have more than one type, and many have none.');
+    section('Open data', 'The facts here (which films screened where and when, their credits and awards, festival dates, and the tables built from them) are open data under ', ['https://creativecommons.org/licenses/by/4.0/', 'CC BY 4.0'], ': free to use with attribution. The Wikidata list is CC0 and Wikipedia descriptions are CC BY-SA 4.0. See ', [`${G}/blob/main/LICENSE-DATA.md`, 'the data licence'], ' and ', [`${G}/blob/main/CITATION.cff`, 'how to cite'], '. The code is MIT.');
+    section('Stills, posters, portraits and logos', 'These belong to their owners and are shown only to identify a film, person or festival. Images from Wikimedia Commons keep their own licence and are credited where they appear. Nothing here is for sale.');
+    section('Your privacy', 'No account, no tracking, no analytics and no cookies. Pages, data, fonts and images are served from this site, so opening it sends nothing to anyone else. Links to festival sites and YouTube open only when you tap them.');
+    section('Use it as an app', 'The site is plain files with no server of its own. Add it to your home screen from your browser’s menu, and it opens offline once you have visited.');
+    section('Corrections, removal and contact', 'Spotted a mistake, or want a film, name, image or festival changed or removed? ', [`${G}/issues/new`, 'Open an issue on GitHub'], ' and say what and where. Festivals and the people listed here are welcome to ask.');
+    section('', 'Code, data and documentation: ', [G, 'github.com/omshivaprakash/filmfest-guide'], ' · Built by ', ['https://omshivaprakash.github.io/', 'omshivaprakash'], '.');
     content.append(about);
   }
   byId('open-about').addEventListener('click', showAbout);
