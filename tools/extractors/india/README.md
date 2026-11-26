@@ -1,6 +1,6 @@
 # Indian festivals extractor
 
-Writes `data/india/catalog.json`, a shard in the same shape as `catalog.json` (`festivals`, `films`, `honors`), for Indian festivals that are not in the hand-built catalogue: Kolkata (KIFF), MAMI Mumbai, Chennai (CIFF), Pune (PIFF), MIFF Mumbai (documentary, short and animation), KASHISH, Dharamshala, Jaipur, Jagran, Guwahati, the International Children's Film Festival and Osian's Cinefan. The list is `FESTIVALS` at the top of `extract.py`.
+Writes `data/india/catalog.json`, a shard in the same shape as `catalog.json` (`festivals`, `films`, `honors`), for Indian festivals that are not in the hand-built catalogue: Kolkata (KIFF), MAMI Mumbai, Chennai (CIFF), Pune (PIFF), MIFF Mumbai (documentary, short and animation), KASHISH, Dharamshala, Jaipur, Jagran, Guwahati, the International Children's Film Festival, Osian's Cinefan, and candidates such as Hyderabad, Bangalore Queer, Mumbai Women's, ViBGYOR, Jammu and Kashmir, Ladakh, Thrissur, Rajasthan, Chennai Queer, All Lights, Chalachitram and BYOFF. A missing article or one with no award table is skipped, and the film shows its `checked` note in the app. The list is `FESTIVALS` at the top of `extract.py`.
 
 ```
 pip install lxml
@@ -16,7 +16,7 @@ node check-catalog.mjs
 - **English Wikipedia**, one article per festival through the REST page HTML endpoint (about 12 requests, 5 seconds apart; `action=parse` is refused to cloud runners): award tables with one row per edition and one column per award (Kolkata), Category and Winner tables under an edition heading (Chennai), `YEAR: Title - Director | Country` lists under an award heading (KASHISH), and jury tables (KASHISH). Film titles are the italic text in a cell; "Person for *Film*" gives a recipient, "*Film* by Person" a director.
 - **Wikidata** (two or three SPARQL queries): edition items of each festival, and for each film the article links, its language, country, director, format and a one-line description.
 
-- **`checked.json`**, hand-checked winners for festivals whose Wikipedia article has no award table (MAMI 2023 and 2024, MIFF 2024, Jagran 2025, Guwahati 2017). Each record keeps the page it was read from, which may be a press report rather than official results, and a `checked` date. These carry through to the shard as `checked: "checked online <date>"`. Add a record there when you confirm a result. Leave out fees and deadlines.
+- **`checked.json`**, hand-checked winners for festivals whose Wikipedia article has no award table (MAMI 2023 and 2024, MIFF 2022 from PIB and 2024, Jagran 2025, Guwahati 2017). Each record keeps the page it was read from, which may be a press report rather than official results, and a `checked` date. These carry through to the shard as `checked: "checked online <date>"`. Add a record there when you confirm a result. Leave out fees and deadlines.
 
 Every film, honour and edition links the Wikipedia revision it came from. Only facts are kept (titles, names, years, award names). Wikidata is CC0; Wikipedia is CC BY-SA 4.0. Logos are reused from `world-festivals.json` with their Commons licence.
 

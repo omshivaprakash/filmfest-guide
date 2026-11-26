@@ -254,6 +254,7 @@ async function start() {
     }));
     list('Awards', film.awards.map(award => source(award[1], [award[0], award[2]].filter(Boolean).join(' · '))));
     const references = film.sources.filter(url => url !== event.source);
+    if (film.checked) content.append(element('p', `Award details ${film.checked} from the sources below.`, 'meta'));
     list('Sources', [source(event.source, editionLabel(event)), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`)), film.wikidata && source(`https://www.wikidata.org/wiki/${film.wikidata}`, 'Wikidata'), film.imdb && source(`https://www.imdb.com/title/${film.imdb}/`, 'IMDb')].filter(Boolean));
   }
   function showPerson(name) {

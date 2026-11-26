@@ -32,6 +32,18 @@ FESTIVALS = [
     dict(id='jagran', wikidata='Q28173088', wiki='Jagran Film Festival', short='JFF', region='Delhi', lat=28.61, lon=77.21, url='https://www.jagranfilmfestival.com', description='A touring festival across Indian cities.'),
     dict(id='giff', wikidata='Q47086772', wiki='Guwahati International Film Festival', short='GIFF', region='Assam', lat=26.18, lon=91.75, url='https://giff.assam.gov.in', description='Assamese competition and world cinema in Guwahati.'),
     dict(id='icffi', wikidata='Q24904890', wiki="International Children's Film Festival India", short='ICFFI', region='Telangana', lat=17.36, lon=78.47, url='https://cfsindia.org', description='Films for children, the Golden Elephant.'),
+    dict(id='hyd-iff', wikidata='Q5953904', wiki='Hyderabad International Film Festival', short='HIFF', region='Telangana', lat=17.35, lon=78.47, description='World and Indian cinema in Hyderabad.'),
+    dict(id='bqff', wikidata='Q18110176', wiki='Bangalore Queer Film Festival', short='BQFF', region='Karnataka', lat=12.98, lon=77.59, url='https://blrqueerfilmfest.com', description='Queer films in Bengaluru.'),
+    dict(id='mwiff', wikidata='Q17007770', wiki="Mumbai Women's International Film Festival", short='MWIFF', region='Maharashtra', lat=19.08, lon=72.88, description='Films by women filmmakers in Mumbai.'),
+    dict(id='vibgyor', wikidata='Q7924309', wiki='ViBGYOR Film Festival', short='ViBGYOR', region='Kerala', lat=10.52, lon=76.21, format='Documentary', description='Documentaries and shorts on social themes in Thrissur.'),
+    dict(id='iffjk', wikidata='Q141304247', wiki='International Film Festival of Jammu & Kashmir', short='IFFJK', region='Jammu and Kashmir', lat=34.09, lon=74.81, url='https://iffjk.org', description='International cinema in Jammu and Kashmir.'),
+    dict(id='liff', wikidata='Q17068330', wiki='Ladakh International Film Festival', short='LIFF', region='Ladakh', lat=34.16, lon=77.59, description='Films in Leh, Ladakh.'),
+    dict(id='thrissur-iff', wikidata='Q7798275', wiki='Thrissur International Film Festival', short='ITFoK', region='Kerala', lat=10.52, lon=76.21, description='World cinema in Thrissur.'),
+    dict(id='rff', wikidata='Q19757778', wiki='Rajasthan Film Festival', short='RFF', region='Rajasthan', lat=26.91, lon=75.82, description='Rajasthani cinema awards in Jaipur.'),
+    dict(id='ciqff', wikidata='Q39056038', wiki='Chennai International Queer Film Festival', short='Reel Desires', region='Tamil Nadu', lat=13.08, lon=80.27, description='Queer films in Chennai.'),
+    dict(id='aliff', wikidata='Q22079821', wiki='All Lights India International Film Festival', short='ALIIFF', region='Kerala', lat=9.97, lon=76.28, description='International films in Kochi and Hyderabad.'),
+    dict(id='chalachitram', wikidata='Q65080671', wiki='Chalachitram National Film Festival', short='CNFF', region='Assam', lat=26.14, lon=91.74, description='Films on India\'s cultures and communities.'),
+    dict(id='byoff', wikidata='Q917382', wiki='Bring Your Own Film Festival', short='BYOFF', region='Odisha', lat=19.80, lon=85.83, description='An open screening festival on the beach in Puri.'),
     dict(id='osians', wikidata='Q634317', wiki="Osian's Cinefan Festival of Asian and Arab Cinema", short='Cinefan', region='Delhi', lat=28.61, lon=77.21, description='Asian and Arab cinema in New Delhi.'),
 ]
 YEAR = re.compile(r'\b(19[5-9]\d|20[0-4]\d)\b')
@@ -42,7 +54,12 @@ def get(url, data=None, tries=6):
     for attempt in range(tries):
         try:
             return urllib.request.urlopen(urllib.request.Request(url, data=data, headers={**UA, 'Accept': 'application/json, application/sparql-results+json'}), timeout=90).read()
-        except Exception as error:  # 429 from Wikimedia: back off and retry
+        except urllib.error.HTTPError as error:
+            if error.code == 404:
+                return None  # no such article: the festival is skipped
+            print('retry', url[:90], error, file=sys.stderr)
+            time.sleep(20 * (attempt + 1))
+        except Exception as error:  # timeouts: back off and retry
             print('retry', url[:90], error, file=sys.stderr)
             time.sleep(20 * (attempt + 1))
     raise RuntimeError(f'gave up on {url[:90]}')
@@ -64,7 +81,11 @@ def fetch(cache):
         if path.exists():
             continue
         # The REST endpoint (Parsoid HTML) is what Wikimedia accepts from cloud runners; action=parse gets robot-policy 429s.
-        html = get(f"https://en.wikipedia.org/w/rest.php/v1/page/{urllib.parse.quote(fest['wiki'].replace(' ', '_'))}/html").decode()
+        html = get(f"https://en.wikipedia.org/w/rest.php/v1/page/{urllib.parse.quote(fest['wiki'].replace(' ', '_'))}/html")
+        if html is None:
+            print('no article', fest['wiki'], file=sys.stderr)
+            continue
+        html = html.decode()
         revid = re.search(r'Special:Redirect/revision/(\d+)', html)
         title = re.search(r'<title>(.*?)</title>', html, re.S)
         if not (revid and title):

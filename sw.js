@@ -1,6 +1,6 @@
 /* FilmFest Guide service worker, same approach as LitFest Guide: the site is static files, so after the first visit it runs offline.
    Bump VERSION when the page shell changes; code and catalog.json come from the network first and fall back to the cache offline. */
-var VERSION='filmfest-20261126m',SHELL=['./','index.html','style.css','app.js','geo.js','calendar.js','catalog.json','manifest.webmanifest','fonts/fonts.css','assets/logo.svg','assets/icon-192.png','assets/icon-512.png'];
+var VERSION='filmfest-20261126m-in3',SHELL=['./','index.html','style.css','app.js','geo.js','calendar.js','catalog.json','manifest.webmanifest','fonts/fonts.css','assets/logo.svg','assets/icon-192.png','assets/icon-512.png'];
 self.addEventListener('install',function(e){e.waitUntil(caches.open(VERSION).then(function(c){return c.addAll(SHELL)}).then(function(){return self.skipWaiting()}))});
 self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(k){return Promise.all(k.filter(function(x){return x!==VERSION}).map(function(x){return caches.delete(x)}))}).then(function(){return self.clients.claim()}))});
 self.addEventListener('fetch',function(e){var r=e.request;if(r.method!=='GET')return;var u=new URL(r.url);if(u.origin!==location.origin)return;
