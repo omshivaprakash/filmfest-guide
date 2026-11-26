@@ -7,6 +7,7 @@
     { "id": "youtube-links", "label": "YouTube trailers and videos for catalogue films, from Wikidata", "schedule": "weekly" },
     { "id": "world-editions", "label": "Editions, winners and nominees of major world festivals from Wikidata", "schedule": "weekly" },
     { "id": "award-impact", "label": "Awards and nominations festival winners went on to receive, from Wikidata", "schedule": "weekly" },
+    { "id": "big-five", "label": "Editions, line-ups, winners and nominees of Cannes, Venice, Berlin, Toronto and Sundance from Wikidata and Wikipedia", "schedule": "weekly" },
     { "id": "enrich", "label": "FIAPF accreditation, usual month and languages for world festivals; runtime, genres and posters for films", "schedule": "monthly" }
   ]
 }

@@ -76,6 +76,7 @@ Runs share one concurrency group, so two extractors never push at the same time.
 | world-festivals | Wikidata, English Wikipedia, Wikimedia Commons | world-festivals.yml | Mondays 03:17 |
 | youtube-links | Wikidata (P1651) | youtube-links.yml | Wednesdays 04:23 |
 | [world-editions](../tools/extractors/world-editions/README.md) | Wikidata (editions, award winners and nominees) | `world-editions.yml` | Mondays 04:17 |
+| [big-five](../tools/extractors/big-five/README.md) | Wikidata and Wikipedia (Cannes, Venice, Berlin, Toronto, Sundance: editions, line-ups, winners) | `big-five.yml` | Mondays 04:47 |
 | [enrich](../tools/extractors/enrich/README.md) | Wikidata, Wikipedia (FIAPF article, other-language intros), Wikimedia Commons | `enrich.yml` | 2nd of each month 04:41 |
 
 Pick a schedule that matches how often the source changes: daily during a festival's programme announcements, weekly for Wikidata, monthly for archives that rarely change. Spread start times so runs do not all start at once.

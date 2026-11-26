@@ -17,6 +17,7 @@ import wikipedia  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 OUT = os.path.join(ROOT, 'data', 'world-editions', 'catalog.json')
+EXTRACTOR = 'tools/extractors/world-editions/extract.py'  # big-five reuses this module with its own FESTIVALS, HAND_IDS, OUT and EXTRACTOR
 UA = {'User-Agent': 'filmfest-guide-data/1.0 (open data project; github.com/omshivaprakash/filmfest-guide)',
       'Accept': 'application/sparql-results+json'}
 FESTIVALS = {
@@ -220,7 +221,7 @@ def build(raw, world, hand):
     for record in [*films.values(), *honors]:
         record['festival'] = ids.get(record['festival'], record['festival'])
     return {'source': 'Wikidata (CC0) and English Wikipedia edition articles. Each record links to its Wikidata item or the article it came from.',
-            'license': 'Wikidata CC0; facts drawn from English Wikipedia (CC BY-SA 4.0), attributed by source link.', 'extractor': 'tools/extractors/world-editions/extract.py',
+            'license': 'Wikidata CC0; facts drawn from English Wikipedia (CC BY-SA 4.0), attributed by source link.', 'extractor': EXTRACTOR,
             'festivals': festivals, 'films': sorted(films.values(), key=lambda f: (f['festival'], -f['year'], f['title'], f['id'])),
             'honors': sorted(honors, key=lambda h: (h['festival'], -h['year'], h['award'][2], h['award'][0]))}
 
@@ -244,8 +245,7 @@ def check():
     print('self-check passed')
 
 
-if __name__ == '__main__':
-    check()
+def main():
     if '--check' not in sys.argv:
         world = {r['id']: r for r in json.load(open(os.path.join(ROOT, 'data', 'world-festivals', 'world-festivals.json')))['festivals']}
         # A hand-listed festival keeps its id, so the app drops its work-in-progress entry.
@@ -261,3 +261,8 @@ if __name__ == '__main__':
             f.write('\n')
         print(f"{len(out['festivals'])} festivals, {sum(len(x['editions']) for x in out['festivals'])} editions, "
               f"{len(out['films'])} films, {len(out['honors'])} honours -> {os.path.relpath(OUT, ROOT)}")
+
+
+if __name__ == '__main__':
+    check()
+    main()
