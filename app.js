@@ -6,9 +6,12 @@ const detail = byId('detail');
 const content = byId('detail-content');
 const results = byId('results');
 // Same tab layout as LitFest Guide: a festival opens on Discover; "All" opens the home page.
-const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', years: 'Past years' };
+const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', map: 'Map', years: 'Past years' };
 const searchTabs = { films: 'Films', people: 'People', awards: 'Awards' };
-const listViews = ['films', 'people', 'awards', 'years'];
+// Explore, like LitFest's: maps and research views across every festival.
+const exploreTabs = { map: 'Map', languages: 'Languages', across: 'Across festivals', world: 'World festivals' };
+const listViews = ['films', 'people', 'awards', 'years', 'across', 'world'];
+const exploreViews = ['map', 'languages'];
 const UNLISTED = 'Format unlisted';
 let festivalId = '';
 let view = 'home';
@@ -68,7 +71,7 @@ const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join
 async function start() {
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
-  const { festivals, films, honors, portraits = {} } = await response.json();
+  const { festivals, films, honors, portraits = {}, worldFestivals = [] } = await response.json();
   for (const film of films) film.title = tidyTitle(film.title);
   const festivalMap = new Map(festivals.map(record => [record.id, record]));
   const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
@@ -80,6 +83,9 @@ async function start() {
   };
   for (const film of films) for (const [role, name] of film.credits) addCredit(name, { ...film, role, film });
   for (const honor of honors) addCredit(honor.award[2], honor);
+  const countriesOf = film => (film.country ? film.country.split(', ') : []);
+  const languagesOf = film => (film.language ? film.language.split(/\s*,\s*/) : []).filter(Boolean);
+  const regions = unique(worldFestivals.map(record => record.region));
   const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
   const formats = unique(films.map(film => film.format)).filter(format => format !== UNLISTED).sort();
   const orderedFilms = [...films].sort((a, b) => Number(Boolean(b.artwork)) - Number(Boolean(a.artwork)));
@@ -201,6 +207,7 @@ async function start() {
     content.append(about);
   }
   byId('open-about').addEventListener('click', showAbout);
+  byId('open-explore').addEventListener('click', () => go('', 'map'));
   byId('open-search').addEventListener('click', () => {
     go('', 'films');
     search.focus();
@@ -245,7 +252,13 @@ async function start() {
       const count = record.editions.length;
       card.append(img, copy, element('span', `${count} edition${count === 1 ? '' : 's'}`, 'badge'));
       return card;
-    }));
+    }), (() => {
+      const card = button('', 'fcard wipcard', () => go('', 'world'));
+      const copy = element('span');
+      copy.append(element('h3', `${worldFestivals.length} more festivals worldwide`), element('span', 'Cannes, Berlinale, Busan, MAMI, FESPACO and more. Listed now; films and people to come.', 'd'), element('span', 'Work in progress', 'r'));
+      card.append(element('span', '🌍', 'thumbnail'), copy, element('span', `${regions.length} regions`, 'badge wip'));
+      return card;
+    })());
     const winners = films.filter(film => film.awards.length && film.artwork).slice(0, 6);
     byId('home-shelf').replaceChildren(...winners.map(filmCard));
   }
@@ -300,6 +313,136 @@ async function start() {
     for (const card of [...shelf.children]) card.hidden = card.offsetTop + card.offsetHeight > shelf.clientHeight;
   }
 
+  function showWorld(record) {
+    open(record.name, `${record.region} · Work in progress`);
+    content.append(element('p', `${record.city}, ${record.country} · usually ${record.month}`, 'meta'));
+    content.append(element('p', 'This festival is listed so we can plan its import. Films, people and past editions will be added from its official catalogues.'));
+    if (record.url) list('Source', [source(record.url, 'Official festival website')]);
+  }
+  function showCountry(country, scoped) {
+    const list_ = scoped.filter(film => countriesOf(film).includes(country));
+    const credited = unique(list_.flatMap(film => film.credits.map(([, name]) => name)));
+    open(country, `${number(list_.length)} films · ${number(credited.length)} people credited`);
+    list('Films', list_.slice(0, 12).map(film => {
+      const row = element('span');
+      row.append(button(film.title, 'credit-link', () => showFilm(film)), ` · ${label(film)}`);
+      return row;
+    }));
+    content.append(button(`Search all films mentioning ${country}`, 'btn', () => {
+      detail.close();
+      search.value = country;
+      edition.value = '';
+      facet.value = '';
+      go(festivalId, 'films', false);
+    }));
+  }
+
+  // Explore: maps and bar lists
+  let mapMode = 'films';
+  function svgNode(tag, attrs) {
+    const node = document.createElementNS('http://www.w3.org/2000/svg', tag);
+    for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
+    return node;
+  }
+  function worldMap(points) {
+    const [W, H, x0, x1, y0, y1] = [720, 330, -180, 180, -56, 80];
+    const px = lon => ((lon - x0) / (x1 - x0)) * W;
+    const py = lat => ((y1 - lat) / (y1 - y0)) * H;
+    const svg = svgNode('svg', { class: 'map', viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'World map' });
+    for (let lon = -150; lon <= 180; lon += 30) svg.append(svgNode('path', { class: 'grat', d: `M${px(lon)} 0V${H}` }));
+    for (let lat = -30; lat <= 60; lat += 30) svg.append(svgNode('path', { class: 'grat', d: `M0 ${py(lat)}H${W}` }));
+    for (const outline of Object.values(LAND)) svg.append(svgNode('polygon', { class: 'land', points: outline.map(([lon, lat]) => `${px(lon).toFixed(1)},${py(lat).toFixed(1)}`).join(' ') }));
+    const peak = Math.max(1, ...points.map(point => point.count || 1));
+    for (const point of [...points].sort((a, b) => (b.count || 1) - (a.count || 1))) {
+      const r = point.r || 2.5 + Math.sqrt((point.count || 1) / peak) * 16;
+      const dot = svgNode('circle', { cx: px(point.lon).toFixed(1), cy: py(point.lat).toFixed(1), r: r.toFixed(1), tabindex: 0, class: point.className || '' });
+      const title = svgNode('title', {});
+      title.textContent = point.title;
+      dot.append(title);
+      dot.addEventListener('click', point.action);
+      dot.addEventListener('keydown', event => { if (event.key === 'Enter') point.action(); });
+      svg.append(dot);
+    }
+    return svg;
+  }
+  function barList(rows) {
+    const peak = Math.max(1, ...rows.map(([, count]) => count));
+    return rows.map(([name, count, action]) => {
+      const row = button('', 'vb', action);
+      const fill = element('i');
+      fill.style.width = `${Math.max(1, (count / peak) * 100)}%`;
+      row.append(element('span', name), fill, element('em', number(count)));
+      row.title = `${name}: ${number(count)}`;
+      return row;
+    });
+  }
+  const tally = (records, keysOf) => {
+    const counts = new Map();
+    for (const record of records) for (const key of keysOf(record)) counts.set(key, (counts.get(key) || 0) + 1);
+    return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  };
+  function renderExplore() {
+    const scoped = festivalId ? filmsIn(festivalId) : films;
+    const scopeName = festivalMap.get(festivalId)?.short || 'all festivals';
+    const grid = byId('explore').querySelector('.exgrid');
+    const modes = view === 'map' ? { films: 'Films', people: 'People', ...(festivalId ? {} : { festivals: 'Festivals' }) } : {};
+    if (!modes[mapMode]) mapMode = 'films';
+    byId('ex-mode').replaceChildren(...Object.entries(modes).map(([key, text]) => {
+      const pill = button(text, 'pill', () => { mapMode = key; renderExplore(); });
+      pill.setAttribute('aria-pressed', String(key === mapMode));
+      return pill;
+    }));
+    const mapBox = byId('ex-map');
+    const bars = byId('ex-bars');
+    grid.classList.toggle('wide', view === 'languages');
+    if (view === 'languages') {
+      const rows = tally(scoped, languagesOf);
+      byId('ex-note').textContent = `${rows.length} languages named across ${number(scoped.filter(film => film.language).length)} of ${number(scoped.length)} films in ${scopeName}. Tap a language to see its films.`;
+      bars.replaceChildren(...barList(rows.map(([name, count]) => [name, count, () => {
+        search.value = name;
+        edition.value = '';
+        facet.value = '';
+        go(festivalId, 'films', false);
+      }])));
+      return;
+    }
+    if (mapMode === 'festivals') {
+      const all = [
+        ...worldFestivals.map(record => ({ lon: record.lon, lat: record.lat, r: 4, className: 'wip', title: `${record.name} · ${record.city} · work in progress`, action: () => showWorld(record) })),
+        ...festivals.map(record => ({ lon: record.lon, lat: record.lat, r: 6, title: `${record.name} · in the guide`, action: () => go(record.id, 'discover') }))
+      ];
+      byId('ex-note').textContent = `${festivals.length} festivals in the guide and ${worldFestivals.length} listed as work in progress. Tap a dot for details.`;
+      mapBox.replaceChildren(worldMap(all));
+      const legend = element('div', '', 'legend');
+      legend.innerHTML = '<span><i></i>In the guide</span><span><i class="wip"></i>Work in progress</span>';
+      bars.replaceChildren(legend, ...barList(tally(worldFestivals, record => [record.region]).map(([region, count]) => [region, count, () => {
+        search.value = '';
+        go('', 'world', false);
+        facet.value = region;  // the region options exist only once the world list has rendered
+        renderList();
+      }])));
+      return;
+    }
+    let rows;
+    if (mapMode === 'people') {
+      // A person's countries are the production countries of the films they are credited on.
+      const perPerson = new Map();
+      for (const film of scoped) for (const [, name] of film.credits) {
+        if (!perPerson.has(name)) perPerson.set(name, new Set());
+        for (const country of countriesOf(film)) perPerson.get(name).add(country);
+      }
+      rows = tally([...perPerson.values()], set => set);
+      const located = [...perPerson.values()].filter(set => set.size).length;
+      byId('ex-note').textContent = `${number(located)} of ${number(perPerson.size)} credited people in ${scopeName}, placed by the production countries of their films.`;
+    } else {
+      rows = tally(scoped, countriesOf);
+      byId('ex-note').textContent = `${number(scoped.filter(film => film.country).length)} of ${number(scoped.length)} films in ${scopeName} name a production country. Co-productions count once for each country.`;
+    }
+    const noun = mapMode === 'people' ? 'people' : 'films';
+    mapBox.replaceChildren(worldMap(rows.filter(([country]) => POS[country]).map(([country, count]) => ({ lon: POS[country][0], lat: POS[country][1], count, title: `${country}: ${number(count)} ${noun}`, action: () => showCountry(country, scoped) }))));
+    bars.replaceChildren(...barList(rows.map(([country, count]) => [country, count, () => showCountry(country, scoped)])));
+  }
+
   // Lists
   const archiveButton = byId('archive-documents');
   let documents = [];
@@ -312,12 +455,13 @@ async function start() {
     const visibleFestivals = selected ? [selected] : festivals;
     const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
     options(edition, years.map(year => [year, String(year)]), 'All editions');
-    edition.parentElement.hidden = view === 'years';
-    const hasFacet = view === 'films' || view === 'people';
+    edition.parentElement.hidden = view === 'years' || view === 'world';
+    const hasFacet = ['films', 'people', 'world'].includes(view);
     byId('facet-label').hidden = !hasFacet;
-    byId('facet-caption').textContent = view === 'people' ? 'Role' : 'Format';
-    options(facet, (view === 'people' ? allRoles : formats).map(value => [value, value]), view === 'people' ? 'All roles' : 'All formats');
-    search.placeholder = { films: 'Search titles, names, languages…', people: 'Search people, roles, films…', awards: 'Search awards, winners, films…', years: 'Search years…' }[view];
+    const facetSetup = { people: ['Role', allRoles, 'All roles'], world: ['Region', regions, 'All regions'] }[view] || ['Format', formats, 'All formats'];
+    byId('facet-caption').textContent = facetSetup[0];
+    options(facet, facetSetup[1].map(value => [value, value]), facetSetup[2]);
+    search.placeholder = { films: 'Search titles, names, languages, countries…', people: 'Search people, roles, films…', awards: 'Search awards, winners, films…', years: 'Search years…', across: 'Search people, films…', world: 'Search festivals, cities, countries…' }[view];
 
     const editionRecord = selected?.editions.find(event => event.year === Number(edition.value));
     const note = byId('edition-note');
@@ -335,7 +479,17 @@ async function start() {
     const query = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
     const match = values => query.every(term => normalize(values.flat(Infinity).filter(Boolean).join(' ')).includes(term));
     const matchesEdition = record => (!festivalId || record.festival === festivalId) && (!edition.value || record.year === Number(edition.value));
-    if (view === 'years') {
+    if (view === 'world') {
+      items = worldFestivals.filter(record => (!facet.value || record.region === facet.value) && match([record.name, record.short, record.city, record.country, record.region, record.month])).map(record => result(`${record.region} · Work in progress`, record.name, `${record.city}, ${record.country} · ${record.month}`, () => showWorld(record), record.short.slice(0, 3)));
+    } else if (view === 'across') {
+      // Research view: people who return across festivals or editions, most widely travelled first.
+      items = [...people].map(([name, credits]) => {
+        const scoped = credits.filter(matchesEdition);
+        return { name, scoped, fests: unique(scoped.map(record => record.festival)), editions: unique(scoped.map(label)) };
+      }).filter(entry => entry.editions.length > 1 && match([entry.name, entry.scoped.map(record => [record.title, record.role])]))
+        .sort((a, b) => b.fests.length - a.fests.length || b.editions.length - a.editions.length || a.name.localeCompare(b.name))
+        .map(entry => result(`${entry.fests.length} festival${entry.fests.length === 1 ? '' : 's'} · ${entry.editions.length} editions`, entry.name, unique(entry.scoped.map(record => record.title || record.award[0])).join(' · '), () => showPerson(entry.name), initials(entry.name), portraits[entry.name]));
+    } else if (view === 'years') {
       items = selected.editions.filter(event => match([event.year, event.number, event.dates])).map(event => {
         const count = filmsIn(selected.id, event.year).length;
         return result(`${event.number} edition`, `${selected.short} ${event.year}`, [event.dates, count ? `${number(count)} films` : 'Catalogue PDF'].filter(Boolean).join(' · '), () => showEdition(selected, event), String(event.year).slice(2));
@@ -350,7 +504,7 @@ async function start() {
     } else {
       items = orderedFilms.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, filmLine(record), () => showFilm(record), '▶', record.artwork));
     }
-    byId('archive-title').textContent = festivalTabs[view];
+    byId('archive-title').textContent = festivalTabs[view] || exploreTabs[view];
     page = 0;
     paginate();
   }
@@ -388,7 +542,7 @@ async function start() {
     const id = new URLSearchParams(location.search).get('f');
     festivalId = festivalMap.has(id) ? id : '';
     const tab = location.hash.slice(1);
-    const tabs = festivalId ? festivalTabs : searchTabs;
+    const tabs = festivalId ? festivalTabs : { ...searchTabs, ...exploreTabs };
     view = Object.hasOwn(tabs, tab) ? tab : festivalId ? 'discover' : 'home';
   }
   function render() {
@@ -405,7 +559,7 @@ async function start() {
       official.className = 'fext';
       line.replaceChildren(img, element('span', selected.name, 'fn'), element('span', `${latest.dates} ${latest.year}`, 'fd'), official);
     }
-    const tabs = selected ? festivalTabs : view === 'home' ? {} : searchTabs;
+    const tabs = selected ? festivalTabs : view === 'home' ? {} : Object.hasOwn(exploreTabs, view) ? exploreTabs : searchTabs;
     byId('tabs').replaceChildren(...Object.entries(tabs).map(([key, text]) => {
       const link = element('a', text);
       link.href = key === 'discover' ? `?f=${festivalId}` : `${selected ? `?f=${festivalId}` : '?'}#${key}`;
@@ -421,8 +575,10 @@ async function start() {
     byId('discover').hidden = view !== 'discover';
     byId('archive').hidden = !listViews.includes(view);
     byId('pager').hidden = !listViews.includes(view);
+    byId('explore').hidden = !exploreViews.includes(view);
     if (view === 'home') renderHome();
     else if (view === 'discover') renderDiscover(selected);
+    else if (exploreViews.includes(view)) renderExplore();
     else renderList();
     document.title = selected ? `${selected.short} · FilmFest Guide` : 'FilmFest Guide';
   }

@@ -15,6 +15,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="style.css">
+<script defer src="geo.js"></script>
 <script defer src="app.js"></script>
 </head>
 <body>
@@ -23,7 +24,7 @@
   <div class="brand">
     <b><a class="home" href="./"><img class="lgm" src="assets/logo.svg" alt="" width="24" height="24">FilmFest Guide</a></b>
     <span class="bt">Film festivals, films and people</span>
-    <span class="bb"><button type="button" class="fsearch" id="open-search">Search</button><button type="button" class="fsearch" id="open-about">About</button></span>
+    <span class="bb"><button type="button" class="fsearch" id="open-search">Search</button><button type="button" class="fsearch" id="open-explore">Explore</button><button type="button" class="fsearch" id="open-about">About</button></span>
   </div>
   <div class="fb-l" id="festival-strip" role="group" aria-label="Choose a festival"></div>
   <div class="fline" id="festival-line" hidden></div>
@@ -49,6 +50,15 @@
   <div class="panel"><h5>Films on record per edition</h5><div class="bars" id="d-bars"></div></div>
   <h2 class="vh" id="d-shelf-title">Start here</h2>
   <div class="body"><div class="shelf" id="d-shelf"></div></div>
+</main>
+
+<main class="view" id="explore" hidden>
+  <div class="seg" id="ex-mode" role="group" aria-label="What to map"></div>
+  <p class="sub" id="ex-note"></p>
+  <div class="exgrid">
+    <div class="panel mapwrap" id="ex-map"></div>
+    <div class="exbars" id="ex-bars"></div>
+  </div>
 </main>
 
 <main class="view" id="archive" hidden>

@@ -267,7 +267,10 @@
         "file": "images/festival-biffes.webp",
         "source": "https://biffes.org/frontend/images/logo/biffeslogo1.png",
         "credit": "Official festival logo"
-      }
+      },
+      "lat": 12.97,
+      "lon": 77.59,
+      "country": "India"
     },
     {
       "id": "iffi",
@@ -298,7 +301,10 @@
         "file": "images/festival-iffi.webp",
         "source": "https://www.iffigoa.org/images/header-logo/iffi-logo.png",
         "credit": "Official festival logo"
-      }
+      },
+      "lat": 15.5,
+      "lon": 73.83,
+      "country": "India"
     },
     {
       "id": "iffk",
@@ -329,7 +335,10 @@
         "file": "images/festival-iffk.webp",
         "source": "https://www.iffk.in/assets/img/archives_logo.webp",
         "credit": "Official festival logo"
-      }
+      },
+      "lat": 8.52,
+      "lon": 76.94,
+      "country": "India"
     },
     {
       "id": "idsffk",
@@ -352,7 +361,10 @@
         "file": "images/festival-idsffk.webp",
         "source": "https://idsffk.in/favicon.png",
         "credit": "Official festival logo"
-      }
+      },
+      "lat": 8.5,
+      "lon": 76.95,
+      "country": "India"
     }
   ],
   "films": [
@@ -1086,7 +1098,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Thai",
-      "country": "Lebanon, United States, Germany, Saudi                   Director: Ratchapoom Boonbunchachoke                                         Thailand",
+      "country": "Lebanon, United States, Germany, Saudi Arabia, Thailand",
       "summary": "",
       "credits": [
         [
@@ -1299,7 +1311,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "German",
-      "country": "Germany, Cyprus, Palestine, Jordan, Greece, Qatar,                         Director: Fatih Akin                                                    Germany",
+      "country": "Germany, Cyprus, Palestine, Jordan, Greece, Qatar",
       "summary": "",
       "credits": [
         [
@@ -3005,7 +3017,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Czech",
-      "country": "Czech Republic, Slovak Republic",
+      "country": "Czech Republic, Slovakia",
       "summary": "",
       "credits": [
         [
@@ -3620,7 +3632,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Uk, Usa",
+      "country": "United Kingdom, United States",
       "summary": "",
       "credits": [
         [
@@ -4222,7 +4234,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Director: Paul Andrew Williams                                  United Kingdom",
+      "country": "United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -5571,7 +5583,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Arabic, English",
-      "country": "Director: Frank Scheffer                               Netherlands",
+      "country": "Netherlands",
       "summary": "",
       "credits": [
         [
@@ -7877,7 +7889,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Director: Sidney Sokhona                                       Mauritania, France",
-      "country": "Democratic Republic Of The Congo",
+      "country": "DR Congo",
       "summary": "",
       "credits": [
         [
@@ -10138,7 +10150,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Arabic, Spanish",
-      "country": "Usa, Spain, France",
+      "country": "United States, Spain, France",
       "summary": "",
       "credits": [
         [
@@ -10738,7 +10750,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "French, Arabic",
-      "country": "Palestine, United Kingdom, France, Denmark,                         Director: Erige Sehiri                         Tunisia, Qatar, France",
+      "country": "Palestine, United Kingdom, France, Denmark, Tunisia, Qatar",
       "summary": "",
       "credits": [
         [
@@ -10906,7 +10918,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Usa, Germany",
+      "country": "United States, Germany",
       "summary": "",
       "credits": [
         [
@@ -13475,7 +13487,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Director: Djibril Diop Mambéty                              Senegal, France",
-      "country": "Democratic Republic Of The Congo",
+      "country": "DR Congo",
       "summary": "",
       "credits": [
         [
@@ -14632,7 +14644,7 @@
       "year": 2026,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Iraq, Usa, Qatar",
+      "country": "Iraq, United States, Qatar",
       "summary": "",
       "credits": [
         [
@@ -16769,7 +16781,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French | Arabic",
-      "country": "France | Morocco | Belgium | Qatar",
+      "country": "France, Morocco, Belgium, Qatar",
       "summary": "",
       "credits": [
         [
@@ -16843,7 +16855,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Spain | France | Portugal",
+      "country": "Spain, France, Portugal",
       "summary": "",
       "credits": [
         [
@@ -16933,7 +16945,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic | French",
-      "country": "Algeria | Tunisia | France | Canada",
+      "country": "Algeria, Tunisia, France, Canada",
       "summary": "",
       "credits": [
         [
@@ -17343,7 +17355,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Chinese",
-      "country": "Singapore | Germany",
+      "country": "Singapore, Germany",
       "summary": "",
       "credits": [
         [
@@ -17805,7 +17817,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Greek",
-      "country": "Greece | Bulgaria | Usa",
+      "country": "Greece, Bulgaria, United States",
       "summary": "",
       "credits": [
         [
@@ -17879,7 +17891,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Norwegian",
-      "country": "Norway | Netherland | Sweden | Germany",
+      "country": "Norway, Netherlands, Sweden, Germany",
       "summary": "",
       "credits": [
         [
@@ -18489,7 +18501,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French | Luxembourgish | Spanish | Italian",
-      "country": "Luxembourg | Belgium",
+      "country": "Luxembourg, Belgium",
       "summary": "",
       "credits": [
         [
@@ -18551,7 +18563,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Mandarin",
-      "country": "China | France | Denmark | Qatar",
+      "country": "China, France, Denmark, Qatar",
       "summary": "",
       "credits": [
         [
@@ -19121,7 +19133,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Indonesian",
-      "country": "Indonesia | France | Singapore | Germany",
+      "country": "Indonesia, France, Singapore, Germany",
       "summary": "",
       "credits": [
         [
@@ -19195,7 +19207,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Georgian | Turkish",
-      "country": "Sweden | Turkey | Georgia",
+      "country": "Sweden, Turkey, Georgia",
       "summary": "",
       "credits": [
         [
@@ -19467,7 +19479,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Khirghiz",
-      "country": "Kyrgyz Republic",
+      "country": "Kyrgyzstan",
       "summary": "",
       "credits": [
         [
@@ -19607,7 +19619,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Lithuanian",
-      "country": "Lithuania | Latvia",
+      "country": "Lithuania, Latvia",
       "summary": "",
       "credits": [
         [
@@ -19879,7 +19891,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Turkish",
-      "country": "Germany | Turkey | France",
+      "country": "Germany, Turkey, France",
       "summary": "",
       "credits": [
         [
@@ -20097,7 +20109,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Ireland | United Kingdom",
+      "country": "Ireland, United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -20611,7 +20623,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Usa",
+      "country": "United States",
       "summary": "",
       "credits": [
         [
@@ -20685,7 +20697,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Portuguese | Burmese | Chinese | French",
-      "country": "Portugal | Italy | France",
+      "country": "Portugal, Italy, France",
       "summary": "",
       "credits": [
         [
@@ -20792,7 +20804,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic | Hebrew",
-      "country": "Palestine | Germany | France | Italy | Qatar",
+      "country": "Palestine, Germany, France, Italy, Qatar",
       "summary": "",
       "credits": [
         [
@@ -22176,7 +22188,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Greek",
-      "country": "Greece | North Macedonia",
+      "country": "Greece, North Macedonia",
       "summary": "",
       "credits": [
         [
@@ -22472,7 +22484,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "South Africa | Usa | France | Uk",
+      "country": "South Africa, United States, France, United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -22550,7 +22562,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Estonian",
-      "country": "Estonia | Germany",
+      "country": "Estonia, Germany",
       "summary": "",
       "credits": [
         [
@@ -22616,7 +22628,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Spain | France",
+      "country": "Spain, France",
       "summary": "",
       "credits": [
         [
@@ -23360,7 +23372,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Persian",
-      "country": "Iran | Germany",
+      "country": "Iran, Germany",
       "summary": "",
       "credits": [
         [
@@ -23594,7 +23606,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Costa Rica | Spain",
+      "country": "Costa Rica, Spain",
       "summary": "",
       "credits": [
         [
@@ -23872,7 +23884,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Persian",
-      "country": "Iran | Germany",
+      "country": "Iran, Germany",
       "summary": "",
       "credits": [
         [
@@ -24293,7 +24305,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English | Portuguese",
-      "country": "United Kingdom | Portugal",
+      "country": "United Kingdom, Portugal",
       "summary": "",
       "credits": [
         [
@@ -24441,7 +24453,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Czech",
-      "country": "Czech Republic | Slovakia",
+      "country": "Czech Republic, Slovakia",
       "summary": "",
       "credits": [
         [
@@ -24635,7 +24647,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Georgian",
-      "country": "Georgia | France",
+      "country": "Georgia, France",
       "summary": "",
       "credits": [
         [
@@ -24767,7 +24779,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Germany | France",
+      "country": "Germany, France",
       "summary": "",
       "credits": [
         [
@@ -25051,7 +25063,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Nepali | Maithili | Hindi",
-      "country": "Nepal | United States | Norway",
+      "country": "Nepal, United States, Norway",
       "summary": "",
       "credits": [
         [
@@ -25203,7 +25215,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Switzerland | Spain | Peru",
+      "country": "Switzerland, Spain, Peru",
       "summary": "",
       "credits": [
         [
@@ -25289,7 +25301,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English | Russian | Swedish",
-      "country": "Greece | Sweden | France",
+      "country": "Greece, Sweden, France",
       "summary": "",
       "credits": [
         [
@@ -25515,7 +25527,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Tunisia | France | Poland | Saudi Arabia",
+      "country": "Tunisia, France, Poland, Saudi Arabia",
       "summary": "",
       "credits": [
         [
@@ -25601,7 +25613,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "German",
-      "country": "Austria | Germany",
+      "country": "Austria, Germany",
       "summary": "",
       "credits": [
         [
@@ -25893,7 +25905,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic | Somali | English",
-      "country": "Italy | Germany",
+      "country": "Italy, Germany",
       "summary": "",
       "credits": [
         [
@@ -26041,7 +26053,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Ireland | Uk | Germany",
+      "country": "Ireland, United Kingdom, Germany",
       "summary": "",
       "credits": [
         [
@@ -26169,7 +26181,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Nepalese | Tibetan",
-      "country": "France | Nepal | Taiwan",
+      "country": "France, Nepal, Taiwan",
       "summary": "",
       "credits": [
         [
@@ -26313,7 +26325,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French",
-      "country": "France | Canada",
+      "country": "France, Canada",
       "summary": "",
       "credits": [
         [
@@ -26395,7 +26407,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Farsi Dari",
-      "country": "Afghanistan | France | Netherlands",
+      "country": "Afghanistan, France, Netherlands",
       "summary": "",
       "credits": [
         [
@@ -26671,7 +26683,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Argentine | Spain | Portugal",
+      "country": "Argentina, Spain, Portugal",
       "summary": "",
       "credits": [
         [
@@ -27161,7 +27173,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "German | English | French",
-      "country": "Germany | France",
+      "country": "Germany, France",
       "summary": "",
       "credits": [
         [
@@ -27313,7 +27325,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Bolivia | Chile | France",
+      "country": "Bolivia, Chile, France",
       "summary": "",
       "credits": [
         [
@@ -27551,7 +27563,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Danish",
-      "country": "Denmark | Poland | Sweden",
+      "country": "Denmark, Poland, Sweden",
       "summary": "",
       "credits": [
         [
@@ -27831,7 +27843,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Romanian",
-      "country": "Romania | Serbia",
+      "country": "Romania, Serbia",
       "summary": "",
       "credits": [
         [
@@ -28197,7 +28209,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Farsi",
-      "country": "Iran | Germany | France",
+      "country": "Iran, Germany, France",
       "summary": "",
       "credits": [
         [
@@ -28275,7 +28287,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Hindi",
-      "country": "India | Switzerland | Bulgaria | France | Taiwan",
+      "country": "India, Switzerland, Bulgaria, France, Taiwan",
       "summary": "",
       "credits": [
         [
@@ -28489,7 +28501,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French",
-      "country": "France | Belgium",
+      "country": "France, Belgium",
       "summary": "",
       "credits": [
         [
@@ -28571,7 +28583,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Somali",
-      "country": "Austria | France | Somalia",
+      "country": "Austria, France, Somalia",
       "summary": "",
       "credits": [
         [
@@ -28691,7 +28703,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French",
-      "country": "France | Poland | Switzerland",
+      "country": "France, Poland, Switzerland",
       "summary": "",
       "credits": [
         [
@@ -28761,7 +28773,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French",
-      "country": "Switzerland | France | Poland",
+      "country": "Switzerland, France, Poland",
       "summary": "",
       "credits": [
         [
@@ -28831,7 +28843,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French",
-      "country": "France | Switzerland | Poland",
+      "country": "France, Switzerland, Poland",
       "summary": "",
       "credits": [
         [
@@ -29037,7 +29049,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Quechua | Spanish",
-      "country": "Peru | Chile",
+      "country": "Peru, Chile",
       "summary": "",
       "credits": [
         [
@@ -29119,7 +29131,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic | Greek | English",
-      "country": "United Kingdom | France | Germany | Greece",
+      "country": "United Kingdom, France, Germany, Greece",
       "summary": "",
       "credits": [
         [
@@ -29945,7 +29957,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Icelandic",
-      "country": "Iceland | Croatia | France",
+      "country": "Iceland, Croatia, France",
       "summary": "",
       "credits": [
         [
@@ -30073,7 +30085,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Tunisia | France | Canada",
+      "country": "Tunisia, France, Canada",
       "summary": "",
       "credits": [
         [
@@ -30151,7 +30163,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Bulgarian",
-      "country": "Bulgaria | Italy",
+      "country": "Bulgaria, Italy",
       "summary": "",
       "credits": [
         [
@@ -30233,7 +30245,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "German | French | English",
-      "country": "Germany | France",
+      "country": "Germany, France",
       "summary": "",
       "credits": [
         [
@@ -30417,7 +30429,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Armenian | Russian",
-      "country": "Armenia | Russia",
+      "country": "Armenia, Russia",
       "summary": "",
       "credits": [
         [
@@ -30483,7 +30495,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Dutch | French",
-      "country": "Belgium | Netherlands",
+      "country": "Belgium, Netherlands",
       "summary": "",
       "credits": [
         [
@@ -31721,7 +31733,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Nepali | Manipuri | Newari",
-      "country": "Nepal | India",
+      "country": "Nepal, India",
       "summary": "",
       "credits": [
         [
@@ -33126,7 +33138,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Greek",
-      "country": "Cyprus | Greece",
+      "country": "Cyprus, Greece",
       "summary": "",
       "credits": [
         [
@@ -33642,7 +33654,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Spain | Portugal",
+      "country": "Spain, Portugal",
       "summary": "",
       "credits": [
         [
@@ -33872,7 +33884,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "English | Dari | Cantonese",
-      "country": "Usa",
+      "country": "United States",
       "summary": "",
       "credits": [
         [
@@ -34050,7 +34062,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Uk",
+      "country": "United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -35742,7 +35754,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Italian | English",
-      "country": "Italy | France | Switzerland",
+      "country": "Italy, France, Switzerland",
       "summary": "",
       "credits": [
         [
@@ -37234,7 +37246,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Japanese",
-      "country": "Germany | Japan",
+      "country": "Germany, Japan",
       "summary": "",
       "credits": [
         [
@@ -37676,7 +37688,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Farsi",
-      "country": "Germany | France",
+      "country": "Germany, France",
       "summary": "",
       "credits": [
         [
@@ -39391,7 +39403,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Uk",
+      "country": "United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -40393,7 +40405,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "Mandarin | English",
-      "country": "Singapore | Taiwan",
+      "country": "Singapore, Taiwan",
       "summary": "",
       "credits": [
         [
@@ -44002,7 +44014,7 @@
       "year": 2023,
       "format": "Format unlisted",
       "language": "Tamil",
-      "country": "Srilanka",
+      "country": "Sri Lanka",
       "summary": "",
       "credits": [
         [
@@ -44486,7 +44498,7 @@
       "year": 2023,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "summary": "",
       "credits": [
         [
@@ -72394,7 +72406,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Mongolian",
-      "country": "Hong Kong - China",
+      "country": "Hong Kong",
       "summary": "",
       "credits": [
         [
@@ -72457,7 +72469,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Greek, English, Italian",
-      "country": "ltaly, Greece, Germany, France",
+      "country": "Italy, Greece, Germany, France",
       "summary": "",
       "credits": [
         [
@@ -72646,7 +72658,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Malayalam",
-      "country": "India, Kerala",
+      "country": "India",
       "summary": "",
       "credits": [
         [
@@ -72688,7 +72700,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Malayalam",
-      "country": "India, Kerala",
+      "country": "India",
       "summary": "",
       "credits": [
         [
@@ -72730,7 +72742,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Kannada",
-      "country": "India, Karnataka",
+      "country": "India",
       "summary": "",
       "credits": [
         [
@@ -72751,7 +72763,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "summary": "",
       "credits": [
         [
@@ -72793,7 +72805,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "English, Russian, Turkish, Ukrainian, Urdu",
-      "country": "Canada, UK, USA",
+      "country": "Canada, United Kingdom, United States",
       "summary": "",
       "credits": [
         [
@@ -72814,7 +72826,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Russian",
-      "country": "Russi i ussia",
+      "country": "Russia",
       "summary": "",
       "credits": [
         [
@@ -72883,7 +72895,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "German, English",
-      "country": "Germany, USA",
+      "country": "Germany, United States",
       "summary": "",
       "credits": [
         [
@@ -73246,7 +73258,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Italian",
-      "country": "ltaly, France",
+      "country": "Italy, France",
       "summary": "",
       "credits": [
         [
@@ -73267,7 +73279,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Malayalam",
-      "country": "India, Kerala",
+      "country": "India",
       "summary": "",
       "credits": [
         [
@@ -73330,7 +73342,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "English",
-      "country": "France, UK",
+      "country": "France, United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -73642,7 +73654,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "German, French, English, Spanish, Croatian, Italian, Portuguese, Russian, Korean",
-      "country": "France, Germany, UK",
+      "country": "France, Germany, United Kingdom",
       "summary": "",
       "credits": [
         [
@@ -73684,7 +73696,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Greek",
-      "country": "lItaly, Greece, Germany, France",
+      "country": "Italy, Greece, Germany, France",
       "summary": "",
       "credits": [
         [
@@ -73726,7 +73738,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Filipino, Tagalog",
-      "country": "Phillipines",
+      "country": "Philippines",
       "summary": "",
       "credits": [
         [
@@ -73768,7 +73780,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Kannada",
-      "country": "India, Karnataka",
+      "country": "India",
       "summary": "",
       "credits": [
         [
@@ -73789,7 +73801,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Italian",
-      "country": "!taly",
+      "country": "Italy",
       "summary": "",
       "credits": [
         [
@@ -73919,7 +73931,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Arabic, Kurdish",
-      "country": "Iraq , UK, France, Netherlands, United Arab Emirates, Egypt, Palestine",
+      "country": "Iraq, United Kingdom, France, Netherlands, United Arab Emirates, Egypt, Palestine",
       "summary": "",
       "credits": [
         [
@@ -74045,7 +74057,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "summary": "",
       "credits": [
         [
@@ -74175,7 +74187,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "English",
-      "country": "UK, USA, . Greece",
+      "country": "United Kingdom, United States, Greece",
       "summary": "",
       "credits": [
         [
@@ -74217,7 +74229,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "summary": "",
       "credits": [
         [
@@ -74305,7 +74317,7 @@
       "year": 2011,
       "format": "Format unlisted",
       "language": "Malayalam",
-      "country": "India, Kerala",
+      "country": "India",
       "summary": "",
       "credits": [
         [
@@ -80315,7 +80327,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Palestine,France,Qatar",
+      "country": "Palestine, France, Qatar",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80440,7 +80452,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic, English",
-      "country": "Lebanon, USA, Germany, Greece",
+      "country": "Lebanon, United States, Germany, Greece",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80540,7 +80552,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Tunisia,France, Qatar",
+      "country": "Tunisia, France, Qatar",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80617,7 +80629,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA,UK",
+      "country": "United States, United Kingdom",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80646,7 +80658,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Cuba,Guatemala, Mexico",
+      "country": "Cuba, Guatemala, Mexico",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80669,7 +80681,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "France, Latvia, UK, USA",
+      "country": "France, Latvia, United Kingdom, United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80716,7 +80728,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Egypt,Sudan,Tunisia, Saudi Arabia,Qatar, France,Germany",
+      "country": "Egypt, Sudan, Tunisia, Saudi Arabia, Qatar, France, Germany",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80764,7 +80776,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80816,7 +80828,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Italian, French",
-      "country": "Italy,France",
+      "country": "Italy, France",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80973,7 +80985,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Portuguese",
-      "country": "Portugal,Angola",
+      "country": "Portugal, Angola",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -80996,7 +81008,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Indonesia /Vietnamese",
-      "country": "Vietnam,Philippines, Singapore",
+      "country": "Vietnam, Philippines, Singapore",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81019,7 +81031,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Tamil, Malayalam",
-      "country": "India,Canada",
+      "country": "India, Canada",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81218,7 +81230,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81453,7 +81465,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA, Ireland, France, Italy, Japan",
+      "country": "United States, Ireland, France, Italy, Japan",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81501,7 +81513,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Hindi",
-      "country": "India,Italy,Sri Lanka",
+      "country": "India, Italy, Sri Lanka",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81670,7 +81682,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Portuguese, Spanish,Cebuano,French",
-      "country": "Portugal,Spain, Philippines,France, Taiwan",
+      "country": "Portugal, Spain, Philippines, France, Taiwan",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81716,7 +81728,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic,French",
-      "country": "Denmark,Finland,France, Sweden",
+      "country": "Denmark, Finland, France, Sweden",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81788,7 +81800,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French,Bambara",
-      "country": "Mali,France,USA",
+      "country": "Mali, France, United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81858,7 +81870,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Mandarin, French,English,Portuguese",
-      "country": "France, Mauritania, uxembourg, Taiwan, Ivory Coast",
+      "country": "France, Mauritania, Luxembourg, Taiwan, Ivory Coast",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81881,7 +81893,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Chile,Italy",
+      "country": "Chile, Italy",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -81929,7 +81941,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Mandarin",
-      "country": "Taiwan,China",
+      "country": "Taiwan, China",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82115,7 +82127,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic (Iraqi dialect)",
-      "country": "Iraq,USA,Qatar",
+      "country": "Iraq, United States, Qatar",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82268,7 +82280,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish, French,English,Arabic",
-      "country": "Spain,France",
+      "country": "Spain, France",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82345,7 +82357,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Portuguese, German",
-      "country": "Brazil,France,Germany, Netherlands",
+      "country": "Brazil, France, Germany, Netherlands",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82369,7 +82381,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic",
-      "country": "Egypt,France",
+      "country": "Egypt, France",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82416,7 +82428,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "Ireland, South Korea, USA",
+      "country": "Ireland, South Korea, United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82440,7 +82452,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Spanish",
-      "country": "Argentina,Brazil",
+      "country": "Argentina, Brazil",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82487,7 +82499,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Malayalam",
-      "country": " India",
+      "country": "India",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82533,7 +82545,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Chinese,English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82556,7 +82568,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "French,African dialects",
-      "country": "France,Guinea,Lebanon",
+      "country": "France, Guinea, Lebanon",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82601,7 +82613,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Russian,Ukrainian",
-      "country": "France, Germany, Romania,Latvia, Netherlands,Lithuania",
+      "country": "France, Germany, Romania, Latvia, Netherlands, Lithuania",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82625,7 +82637,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Egyptian Arabic",
-      "country": "Egypt (United Arab Republic at the time)",
+      "country": "Egypt",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82897,7 +82909,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Turkish",
-      "country": "Turkey,France,Poland, Canada",
+      "country": "Turkey, France, Poland, Canada",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82926,7 +82938,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Serbian",
-      "country": "Serbia, Italy, Croatia, North Macedonia, Montenegro,Bosnia and Herzegovina",
+      "country": "Serbia, Italy, Croatia, North Macedonia, Montenegro, Bosnia and Herzegovina",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82950,7 +82962,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Mandarin",
-      "country": "China,France",
+      "country": "China, France",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -82978,7 +82990,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Arabic, English 145 /2025",
-      "country": "Germany,Cyprus, Palestine, Jordan, Greece, Qatar, Saudi Arabia",
+      "country": "Germany, Cyprus, Palestine, Jordan, Greece, Qatar, Saudi Arabia",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83007,7 +83019,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Norwegian, English 133 /2025",
-      "country": "Norway,France, Germany,Denmark, Sweden,UK",
+      "country": "Norway, France, Germany, Denmark, Sweden, United Kingdom",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83065,7 +83077,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83087,7 +83099,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83134,7 +83146,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Romanian, Hungarian,German 109 /2025",
-      "country": "Romania,Brazil, Switzerland,UK, Luxembourg",
+      "country": "Romania, Brazil, Switzerland, United Kingdom, Luxembourg",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83163,7 +83175,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Thai",
-      "country": "Thailand,France, Germany,Singapore",
+      "country": "Thailand, France, Germany, Singapore",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83187,7 +83199,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "German, Hungarian,French",
-      "country": "Germany,France, Hungary,China",
+      "country": "Germany, France, Hungary, China",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83264,7 +83276,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Russian,Belarusian, English, Mandarin,Chinese",
-      "country": "Austria,Germany",
+      "country": "Austria, Germany",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83448,7 +83460,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Dari,Afghan Persian",
-      "country": "Türkiye, Iran",
+      "country": "Turkey, Iran",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83472,7 +83484,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Malayalam",
-      "country": "  India",
+      "country": "India",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83552,7 +83564,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Turkish, Macedonian, English",
-      "country": "North Macedonia, Czech Republic,Serbia, Croatia",
+      "country": "North Macedonia, Czech Republic, Serbia, Croatia",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -83604,7 +83616,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "No Dialogue",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84066,7 +84078,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84088,7 +84100,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Catalan,English, Spanish/",
-      "country": "Spain,Sweden,Italy",
+      "country": "Spain, Sweden, Italy",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84135,7 +84147,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Icelandic",
-      "country": "Iceland, Denmark,France, Finland,Sweden",
+      "country": "Iceland, Denmark, France, Finland, Sweden",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84226,7 +84238,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "No Dialogue",
-      "country": "Потёмкин USSR",
+      "country": "USSR",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84248,7 +84260,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Hebrew",
-      "country": "France,Israel,Cyprus, Germany",
+      "country": "France, Israel, Cyprus, Germany",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84681,7 +84693,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Hassaniya Arabic, French,Mandarin",
-      "country": "Mauritania,France",
+      "country": "Mauritania, France",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84726,7 +84738,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "English",
-      "country": "USA",
+      "country": "United States",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84770,7 +84782,7 @@
       "year": 2025,
       "format": "Format unlisted",
       "language": "Russian",
-      "country": "Russia,Germany",
+      "country": "Russia, Germany",
       "section": "Screening schedule",
       "summary": "",
       "credits": [
@@ -84924,7 +84936,7 @@
       "year": 2024,
       "format": "Format unlisted",
       "language": "",
-      "country": "Türkiye, Germany, France",
+      "country": "Turkey, Germany, France",
       "section": "International Competition",
       "summary": "",
       "credits": [
@@ -90382,5 +90394,719 @@
       "source": "https://biffes.org//frontend/images/17biffesawardwinner/17thBiffesCataloguee.pdf#page=166",
       "credit": "2026 BIFFes catalogue"
     }
-  }
+  },
+  "worldFestivals": [
+    {
+      "id": "mami",
+      "name": "MAMI Mumbai Film Festival",
+      "short": "MAMI",
+      "city": "Mumbai",
+      "country": "India",
+      "region": "India",
+      "lat": 19.08,
+      "lon": 72.88,
+      "month": "October–November",
+      "status": "wip",
+      "url": "https://www.mumbaifilmfestival.com"
+    },
+    {
+      "id": "kiff",
+      "name": "Kolkata International Film Festival",
+      "short": "KIFF",
+      "city": "Kolkata",
+      "country": "India",
+      "region": "India",
+      "lat": 22.57,
+      "lon": 88.36,
+      "month": "December",
+      "status": "wip",
+      "url": "https://www.kiff.in"
+    },
+    {
+      "id": "ciff-chennai",
+      "name": "Chennai International Film Festival",
+      "short": "CIFF",
+      "city": "Chennai",
+      "country": "India",
+      "region": "India",
+      "lat": 13.08,
+      "lon": 80.27,
+      "month": "December",
+      "status": "wip"
+    },
+    {
+      "id": "piff",
+      "name": "Pune International Film Festival",
+      "short": "PIFF",
+      "city": "Pune",
+      "country": "India",
+      "region": "India",
+      "lat": 18.52,
+      "lon": 73.86,
+      "month": "January",
+      "status": "wip",
+      "url": "https://www.piffindia.com"
+    },
+    {
+      "id": "miff",
+      "name": "Mumbai International Film Festival (documentary, short and animation)",
+      "short": "MIFF",
+      "city": "Mumbai",
+      "country": "India",
+      "region": "India",
+      "lat": 18.97,
+      "lon": 72.82,
+      "month": "June",
+      "status": "wip",
+      "url": "https://miff.in"
+    },
+    {
+      "id": "diff",
+      "name": "Dharamshala International Film Festival",
+      "short": "DIFF",
+      "city": "Dharamshala",
+      "country": "India",
+      "region": "India",
+      "lat": 32.22,
+      "lon": 76.32,
+      "month": "October–November",
+      "status": "wip",
+      "url": "https://diff.co.in"
+    },
+    {
+      "id": "jiff",
+      "name": "Jaipur International Film Festival",
+      "short": "JIFF",
+      "city": "Jaipur",
+      "country": "India",
+      "region": "India",
+      "lat": 26.91,
+      "lon": 75.79,
+      "month": "January",
+      "status": "wip",
+      "url": "https://www.jiffindia.org"
+    },
+    {
+      "id": "kashish",
+      "name": "KASHISH Mumbai International Queer Film Festival",
+      "short": "KASHISH",
+      "city": "Mumbai",
+      "country": "India",
+      "region": "India",
+      "lat": 19.11,
+      "lon": 72.86,
+      "month": "May–June",
+      "status": "wip",
+      "url": "https://mumbaiqueerfilmfestival.com"
+    },
+    {
+      "id": "jagran",
+      "name": "Jagran Film Festival",
+      "short": "JFF",
+      "city": "New Delhi",
+      "country": "India",
+      "region": "India",
+      "lat": 28.61,
+      "lon": 77.21,
+      "month": "Touring, mid-year",
+      "status": "wip",
+      "url": "https://www.jagranfilmfestival.com"
+    },
+    {
+      "id": "cannes",
+      "name": "Festival de Cannes",
+      "short": "Cannes",
+      "city": "Cannes",
+      "country": "France",
+      "region": "Europe",
+      "lat": 43.55,
+      "lon": 7.02,
+      "month": "May",
+      "status": "wip",
+      "url": "https://www.festival-cannes.com"
+    },
+    {
+      "id": "berlinale",
+      "name": "Berlin International Film Festival",
+      "short": "Berlinale",
+      "city": "Berlin",
+      "country": "Germany",
+      "region": "Europe",
+      "lat": 52.52,
+      "lon": 13.4,
+      "month": "February",
+      "status": "wip",
+      "url": "https://www.berlinale.de"
+    },
+    {
+      "id": "venice",
+      "name": "Venice International Film Festival",
+      "short": "Venice",
+      "city": "Venice",
+      "country": "Italy",
+      "region": "Europe",
+      "lat": 45.41,
+      "lon": 12.34,
+      "month": "August–September",
+      "status": "wip",
+      "url": "https://www.labiennale.org"
+    },
+    {
+      "id": "locarno",
+      "name": "Locarno Film Festival",
+      "short": "Locarno",
+      "city": "Locarno",
+      "country": "Switzerland",
+      "region": "Europe",
+      "lat": 46.17,
+      "lon": 8.8,
+      "month": "August",
+      "status": "wip",
+      "url": "https://www.locarnofestival.ch"
+    },
+    {
+      "id": "sansebastian",
+      "name": "San Sebastián International Film Festival",
+      "short": "San Sebastián",
+      "city": "San Sebastián",
+      "country": "Spain",
+      "region": "Europe",
+      "lat": 43.32,
+      "lon": -1.98,
+      "month": "September",
+      "status": "wip",
+      "url": "https://www.sansebastianfestival.com"
+    },
+    {
+      "id": "kviff",
+      "name": "Karlovy Vary International Film Festival",
+      "short": "KVIFF",
+      "city": "Karlovy Vary",
+      "country": "Czech Republic",
+      "region": "Europe",
+      "lat": 50.23,
+      "lon": 12.87,
+      "month": "July",
+      "status": "wip",
+      "url": "https://www.kviff.com"
+    },
+    {
+      "id": "iffr",
+      "name": "International Film Festival Rotterdam",
+      "short": "IFFR",
+      "city": "Rotterdam",
+      "country": "Netherlands",
+      "region": "Europe",
+      "lat": 51.92,
+      "lon": 4.48,
+      "month": "January–February",
+      "status": "wip",
+      "url": "https://iffr.com"
+    },
+    {
+      "id": "idfa",
+      "name": "International Documentary Film Festival Amsterdam",
+      "short": "IDFA",
+      "city": "Amsterdam",
+      "country": "Netherlands",
+      "region": "Europe",
+      "lat": 52.37,
+      "lon": 4.9,
+      "month": "November",
+      "status": "wip",
+      "url": "https://www.idfa.nl"
+    },
+    {
+      "id": "bfilff",
+      "name": "BFI London Film Festival",
+      "short": "LFF",
+      "city": "London",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "lat": 51.51,
+      "lon": -0.13,
+      "month": "October",
+      "status": "wip",
+      "url": "https://www.bfi.org.uk/london-film-festival"
+    },
+    {
+      "id": "annecy",
+      "name": "Annecy International Animation Film Festival",
+      "short": "Annecy",
+      "city": "Annecy",
+      "country": "France",
+      "region": "Europe",
+      "lat": 45.9,
+      "lon": 6.13,
+      "month": "June",
+      "status": "wip",
+      "url": "https://www.annecyfestival.com"
+    },
+    {
+      "id": "clermont",
+      "name": "Clermont-Ferrand International Short Film Festival",
+      "short": "Clermont-Ferrand",
+      "city": "Clermont-Ferrand",
+      "country": "France",
+      "region": "Europe",
+      "lat": 45.78,
+      "lon": 3.08,
+      "month": "January–February",
+      "status": "wip",
+      "url": "https://www.clermont-filmfest.org"
+    },
+    {
+      "id": "oberhausen",
+      "name": "International Short Film Festival Oberhausen",
+      "short": "Oberhausen",
+      "city": "Oberhausen",
+      "country": "Germany",
+      "region": "Europe",
+      "lat": 51.47,
+      "lon": 6.85,
+      "month": "April–May",
+      "status": "wip",
+      "url": "https://www.kurzfilmtage.de"
+    },
+    {
+      "id": "sitges",
+      "name": "Sitges Film Festival",
+      "short": "Sitges",
+      "city": "Sitges",
+      "country": "Spain",
+      "region": "Europe",
+      "lat": 41.24,
+      "lon": 1.81,
+      "month": "October",
+      "status": "wip",
+      "url": "https://sitgesfilmfestival.com"
+    },
+    {
+      "id": "goteborg",
+      "name": "Göteborg Film Festival",
+      "short": "Göteborg",
+      "city": "Gothenburg",
+      "country": "Sweden",
+      "region": "Europe",
+      "lat": 57.71,
+      "lon": 11.97,
+      "month": "January–February",
+      "status": "wip",
+      "url": "https://goteborgfilmfestival.se"
+    },
+    {
+      "id": "sarajevo",
+      "name": "Sarajevo Film Festival",
+      "short": "Sarajevo",
+      "city": "Sarajevo",
+      "country": "Bosnia and Herzegovina",
+      "region": "Europe",
+      "lat": 43.86,
+      "lon": 18.41,
+      "month": "August",
+      "status": "wip",
+      "url": "https://www.sff.ba"
+    },
+    {
+      "id": "thessaloniki",
+      "name": "Thessaloniki International Film Festival",
+      "short": "Thessaloniki",
+      "city": "Thessaloniki",
+      "country": "Greece",
+      "region": "Europe",
+      "lat": 40.64,
+      "lon": 22.94,
+      "month": "November",
+      "status": "wip",
+      "url": "https://www.filmfestival.gr"
+    },
+    {
+      "id": "poff",
+      "name": "Tallinn Black Nights Film Festival",
+      "short": "PÖFF",
+      "city": "Tallinn",
+      "country": "Estonia",
+      "region": "Europe",
+      "lat": 59.44,
+      "lon": 24.75,
+      "month": "November",
+      "status": "wip",
+      "url": "https://poff.ee"
+    },
+    {
+      "id": "tiff",
+      "name": "Toronto International Film Festival",
+      "short": "TIFF",
+      "city": "Toronto",
+      "country": "Canada",
+      "region": "North America",
+      "lat": 43.65,
+      "lon": -79.38,
+      "month": "September",
+      "status": "wip",
+      "url": "https://www.tiff.net"
+    },
+    {
+      "id": "hotdocs",
+      "name": "Hot Docs Canadian International Documentary Festival",
+      "short": "Hot Docs",
+      "city": "Toronto",
+      "country": "Canada",
+      "region": "North America",
+      "lat": 43.67,
+      "lon": -79.41,
+      "month": "April–May",
+      "status": "wip",
+      "url": "https://hotdocs.ca"
+    },
+    {
+      "id": "sundance",
+      "name": "Sundance Film Festival",
+      "short": "Sundance",
+      "city": "Park City",
+      "country": "United States",
+      "region": "North America",
+      "lat": 40.65,
+      "lon": -111.5,
+      "month": "January",
+      "status": "wip",
+      "url": "https://festival.sundance.org"
+    },
+    {
+      "id": "telluride",
+      "name": "Telluride Film Festival",
+      "short": "Telluride",
+      "city": "Telluride",
+      "country": "United States",
+      "region": "North America",
+      "lat": 37.94,
+      "lon": -107.81,
+      "month": "August–September",
+      "status": "wip",
+      "url": "https://www.telluridefilmfestival.org"
+    },
+    {
+      "id": "nyff",
+      "name": "New York Film Festival",
+      "short": "NYFF",
+      "city": "New York",
+      "country": "United States",
+      "region": "North America",
+      "lat": 40.77,
+      "lon": -73.98,
+      "month": "September–October",
+      "status": "wip",
+      "url": "https://www.filmlinc.org/nyff"
+    },
+    {
+      "id": "tribeca",
+      "name": "Tribeca Festival",
+      "short": "Tribeca",
+      "city": "New York",
+      "country": "United States",
+      "region": "North America",
+      "lat": 40.72,
+      "lon": -74.01,
+      "month": "June",
+      "status": "wip",
+      "url": "https://tribecafilm.com"
+    },
+    {
+      "id": "sxsw",
+      "name": "SXSW Film & TV Festival",
+      "short": "SXSW",
+      "city": "Austin",
+      "country": "United States",
+      "region": "North America",
+      "lat": 30.27,
+      "lon": -97.74,
+      "month": "March",
+      "status": "wip",
+      "url": "https://www.sxsw.com"
+    },
+    {
+      "id": "morelia",
+      "name": "Morelia International Film Festival",
+      "short": "FICM",
+      "city": "Morelia",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 19.7,
+      "lon": -101.19,
+      "month": "October",
+      "status": "wip",
+      "url": "https://moreliafilmfest.com"
+    },
+    {
+      "id": "ficg",
+      "name": "Guadalajara International Film Festival",
+      "short": "FICG",
+      "city": "Guadalajara",
+      "country": "Mexico",
+      "region": "Latin America",
+      "lat": 20.67,
+      "lon": -103.35,
+      "month": "June",
+      "status": "wip",
+      "url": "https://www.ficg.mx"
+    },
+    {
+      "id": "havana",
+      "name": "Havana Film Festival (New Latin American Cinema)",
+      "short": "Havana",
+      "city": "Havana",
+      "country": "Cuba",
+      "region": "Latin America",
+      "lat": 23.11,
+      "lon": -82.37,
+      "month": "December",
+      "status": "wip",
+      "url": "https://habanafilmfestival.com"
+    },
+    {
+      "id": "mardelplata",
+      "name": "Mar del Plata International Film Festival",
+      "short": "Mar del Plata",
+      "city": "Mar del Plata",
+      "country": "Argentina",
+      "region": "Latin America",
+      "lat": -38.0,
+      "lon": -57.56,
+      "month": "November",
+      "status": "wip",
+      "url": "https://www.mardelplatafilmfest.com"
+    },
+    {
+      "id": "biff",
+      "name": "Busan International Film Festival",
+      "short": "BIFF",
+      "city": "Busan",
+      "country": "South Korea",
+      "region": "Asia",
+      "lat": 35.18,
+      "lon": 129.08,
+      "month": "October",
+      "status": "wip",
+      "url": "https://www.biff.kr"
+    },
+    {
+      "id": "jeonju",
+      "name": "Jeonju International Film Festival",
+      "short": "JIFF Korea",
+      "city": "Jeonju",
+      "country": "South Korea",
+      "region": "Asia",
+      "lat": 35.82,
+      "lon": 127.15,
+      "month": "April–May",
+      "status": "wip",
+      "url": "https://www.jeonjufest.kr"
+    },
+    {
+      "id": "tiffjp",
+      "name": "Tokyo International Film Festival",
+      "short": "TIFF Japan",
+      "city": "Tokyo",
+      "country": "Japan",
+      "region": "Asia",
+      "lat": 35.68,
+      "lon": 139.69,
+      "month": "October–November",
+      "status": "wip",
+      "url": "https://www.tiff-jp.net"
+    },
+    {
+      "id": "yidff",
+      "name": "Yamagata International Documentary Film Festival",
+      "short": "YIDFF",
+      "city": "Yamagata",
+      "country": "Japan",
+      "region": "Asia",
+      "lat": 38.24,
+      "lon": 140.36,
+      "month": "October (odd years)",
+      "status": "wip",
+      "url": "https://www.yidff.jp"
+    },
+    {
+      "id": "siff",
+      "name": "Shanghai International Film Festival",
+      "short": "SIFF",
+      "city": "Shanghai",
+      "country": "China",
+      "region": "Asia",
+      "lat": 31.23,
+      "lon": 121.47,
+      "month": "June",
+      "status": "wip",
+      "url": "https://www.siff.com"
+    },
+    {
+      "id": "hkiff",
+      "name": "Hong Kong International Film Festival",
+      "short": "HKIFF",
+      "city": "Hong Kong",
+      "country": "Hong Kong",
+      "region": "Asia",
+      "lat": 22.3,
+      "lon": 114.17,
+      "month": "March–April",
+      "status": "wip",
+      "url": "https://www.hkiff.org.hk"
+    },
+    {
+      "id": "sgiff",
+      "name": "Singapore International Film Festival",
+      "short": "SGIFF",
+      "city": "Singapore",
+      "country": "Singapore",
+      "region": "Asia",
+      "lat": 1.29,
+      "lon": 103.85,
+      "month": "November–December",
+      "status": "wip",
+      "url": "https://sgiff.com"
+    },
+    {
+      "id": "kimff",
+      "name": "Kathmandu International Mountain Film Festival",
+      "short": "KIMFF",
+      "city": "Kathmandu",
+      "country": "Nepal",
+      "region": "Asia",
+      "lat": 27.72,
+      "lon": 85.32,
+      "month": "December",
+      "status": "wip",
+      "url": "https://kimff.org"
+    },
+    {
+      "id": "dhaka",
+      "name": "Dhaka International Film Festival",
+      "short": "DIFF Dhaka",
+      "city": "Dhaka",
+      "country": "Bangladesh",
+      "region": "Asia",
+      "lat": 23.81,
+      "lon": 90.41,
+      "month": "January",
+      "status": "wip"
+    },
+    {
+      "id": "fajr",
+      "name": "Fajr International Film Festival",
+      "short": "Fajr",
+      "city": "Tehran",
+      "country": "Iran",
+      "region": "Middle East",
+      "lat": 35.69,
+      "lon": 51.39,
+      "month": "Spring",
+      "status": "wip"
+    },
+    {
+      "id": "redsea",
+      "name": "Red Sea International Film Festival",
+      "short": "Red Sea",
+      "city": "Jeddah",
+      "country": "Saudi Arabia",
+      "region": "Middle East",
+      "lat": 21.49,
+      "lon": 39.19,
+      "month": "December",
+      "status": "wip",
+      "url": "https://redseafilmfest.com"
+    },
+    {
+      "id": "cairo",
+      "name": "Cairo International Film Festival",
+      "short": "CIFF Cairo",
+      "city": "Cairo",
+      "country": "Egypt",
+      "region": "Africa",
+      "lat": 30.04,
+      "lon": 31.24,
+      "month": "November",
+      "status": "wip",
+      "url": "https://www.ciff.org.eg"
+    },
+    {
+      "id": "marrakech",
+      "name": "Marrakech International Film Festival",
+      "short": "Marrakech",
+      "city": "Marrakech",
+      "country": "Morocco",
+      "region": "Africa",
+      "lat": 31.63,
+      "lon": -8.01,
+      "month": "November–December",
+      "status": "wip",
+      "url": "https://www.festivalmarrakech.info"
+    },
+    {
+      "id": "fespaco",
+      "name": "FESPACO Pan-African Film and Television Festival",
+      "short": "FESPACO",
+      "city": "Ouagadougou",
+      "country": "Burkina Faso",
+      "region": "Africa",
+      "lat": 12.37,
+      "lon": -1.52,
+      "month": "February–March (odd years)",
+      "status": "wip",
+      "url": "https://fespaco.org"
+    },
+    {
+      "id": "durban",
+      "name": "Durban International Film Festival",
+      "short": "DIFF Durban",
+      "city": "Durban",
+      "country": "South Africa",
+      "region": "Africa",
+      "lat": -29.86,
+      "lon": 31.02,
+      "month": "July",
+      "status": "wip",
+      "url": "https://www.durbanfilmfest.co.za"
+    },
+    {
+      "id": "sff",
+      "name": "Sydney Film Festival",
+      "short": "SFF",
+      "city": "Sydney",
+      "country": "Australia",
+      "region": "Oceania",
+      "lat": -33.87,
+      "lon": 151.21,
+      "month": "June",
+      "status": "wip",
+      "url": "https://www.sff.org.au"
+    },
+    {
+      "id": "miffau",
+      "name": "Melbourne International Film Festival",
+      "short": "MIFF Melbourne",
+      "city": "Melbourne",
+      "country": "Australia",
+      "region": "Oceania",
+      "lat": -37.81,
+      "lon": 144.96,
+      "month": "August",
+      "status": "wip",
+      "url": "https://miff.com.au"
+    },
+    {
+      "id": "iffm",
+      "name": "Indian Film Festival of Melbourne",
+      "short": "IFFM",
+      "city": "Melbourne",
+      "country": "Australia",
+      "region": "Oceania",
+      "lat": -37.82,
+      "lon": 144.97,
+      "month": "August",
+      "status": "wip",
+      "url": "https://www.iffm.com.au"
+    }
+  ]
 }

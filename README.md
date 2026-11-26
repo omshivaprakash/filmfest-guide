@@ -15,18 +15,28 @@ Same structure as LitFest Guide:
 | Browse films, people or awards for that festival | **Films**, **People**, **Awards** tabs |
 | See every edition with its catalogue and archive documents | **Past years** tab |
 | Look up a film or person across every festival | **Search** (top bar) |
+| See where the films and their makers come from, on a world map | **Explore → Map** (Films, People, Festivals), or a festival's **Map** tab |
+| See which languages the films are in | **Explore → Languages** |
+| Find filmmakers who return across festivals and editions | **Explore → Across festivals** |
+| See the festivals worldwide that are listed and still to be added | **Explore → World festivals**, or the work in progress card on Home |
 
 Every view fits one screen and pages instead of scrolling. Links are shareable: `?f=biffes` opens a festival and `#films`, `#people`, `#awards` or `#years` opens a tab.
 
 ## Files
 
-`index.html`, `style.css` and `app.js` are the whole app. `catalog.json` holds the data and `images/` the artwork and portraits. `fonts/`, `assets/`, `manifest.webmanifest` and `sw.js` match LitFest Guide (Fraunces and Inter, installable, offline). GitHub Pages serves the repository root from `main`.
+`index.html`, `style.css` and `app.js` are the whole app, with map outlines and country positions in `geo.js`. `catalog.json` holds the data and `images/` the artwork and portraits. `fonts/`, `assets/`, `manifest.webmanifest` and `sw.js` match LitFest Guide (Fraunces and Inter, installable, offline). GitHub Pages serves the repository root from `main`.
 
 Run `python3 -m http.server 8000` from this folder and open http://localhost:8000.
 
 Edit `catalog.json` to extend the starter archive. Editions belong to festival IDs. Films link to an edition by festival ID and year. Each credit pairs a role with a name. Film awards can include a named recipient, and standalone awards can list a person without a film. Add source URLs alongside the claims they support. The archive displays selected records and derives the people directory from the credited names.
 
 Run `node --check app.js` and `node check-catalog.mjs` after editing.
+
+## World festivals (work in progress)
+
+`worldFestivals` in `catalog.json` lists major film festivals that are not imported yet, each with city, country, region, coordinates, usual month and official site. They appear on the Explore map and the World festivals list. To import one, add it to `festivals` with its editions and films, and remove it from `worldFestivals`. `check-catalog.mjs` checks ids are unique and every festival has coordinates.
+
+Film countries in `catalog.json` are normalised to one spelling per country (for example `USA`, `Usa` and `United States` all become `United States`) so the map can count them. Add any new country's position to `POS` in `geo.js`.
 
 ## Bengaluru archive import
 
