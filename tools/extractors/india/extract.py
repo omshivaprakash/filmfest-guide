@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / 'data' / 'india' / 'catalog.json'
+CHECKED = Path(__file__).with_name('checked.json')
 UA = {'User-Agent': 'filmfest-guide-data/1.0 (open data project; github.com/omshivaprakash/filmfest-guide)'}
 
 # id matches the hand-listed worldFestivals entry (if any) and wikidata the data/world-festivals/world-festivals.json row, so the loader can drop both.
@@ -304,14 +305,20 @@ def build(cache, out=OUT):
             wd_editions.setdefault(val(b, 'f'), {})[year] = dict(number=ORDINAL.search(val(b, 'edLabel')).group(1) if ORDINAL.search(val(b, 'edLabel')) else '', qid=val(b, 'ed'))
     world = ROOT / 'data' / 'world-festivals' / 'world-festivals.json'
     logos = {r['id']: r['logo'] for r in json.loads(world.read_text())['festivals'] if r.get('logo')} if world.exists() else {}
+    checked = json.loads(CHECKED.read_text())['records']
     festivals, films, honors = [], {}, []
     for fest in FESTIVALS:
         path = cache / 'wiki' / f"{fest['id']}.json"
-        if not path.exists():
-            continue
-        page = json.loads(path.read_text())
-        source = f"https://en.wikipedia.org/w/index.php?title={urllib.parse.quote(page['title'].replace(' ', '_'))}&oldid={page['revid']}"
-        entries, juries = extract(fest, page)
+        entries, juries, source = [], [], None
+        if path.exists():
+            page = json.loads(path.read_text())
+            source = f"https://en.wikipedia.org/w/index.php?title={urllib.parse.quote(page['title'].replace(' ', '_'))}&oldid={page['revid']}"
+            entries, juries = extract(fest, page)
+        # Hand-checked winners from official sites, PIB and the press, kept with their source and the date they were checked.
+        for r in checked:
+            if r['festival'] == fest['id']:
+                entries.append({'number': '', 'title': '', 'person': '', 'director': '', 'link': '', **{k: v for k, v in r.items() if k != 'festival'}})
+        source = source or next((e['source'] for e in entries), None)
         years = {}
         for e in entries:
             if e['number']:
@@ -327,15 +334,21 @@ def build(cache, out=OUT):
         jury_by_year = {}
         for year, category, name in juries:
             jury_by_year.setdefault(year, []).append([category, name])
-        editions = [dict(year=y, **({'number': n} if n else {}), source=source, **({'jury': jury_by_year[y]} if y in jury_by_year else {})) for y, n in sorted(years.items(), reverse=True)]
+        first = {}
+        for e in reversed(entries):
+            first[e['year']] = e
+        editions = [dict(year=y, **({'number': n} if n else {}), **({'dates': first[y]['dates']} if first.get(y, {}).get('dates') else {}),
+                         source=first.get(y, {}).get('source', source), **({'jury': jury_by_year[y]} if y in jury_by_year else {})) for y, n in sorted(years.items(), reverse=True)]
         festivals.append(dict(id=fest['id'], short=fest['short'], name=fest.get('name', fest['wiki']), region=fest['region'], country='India',
                               description=fest['description'], wikidata=fest['wikidata'], **({'url': fest['url']} if fest.get('url') else {}),
                               lat=fest['lat'], lon=fest['lon'], source=source, **({'logo': logos[fest['wikidata']]} if fest['wikidata'] in logos else {}), editions=editions))
         for e in entries:
+            src = e.get('source', source)
+            note = {'checked': f"checked online {e['checked']}"} if e.get('checked') else {}
             if not e['title']:
                 if e['person'] and e['person'] != e['award'] and len(e['person'].split()) <= 8:
                     for person in re.split(r'\s+(?:&|and)\s+', e['person']):
-                        honors.append(dict(festival=fest['id'], year=e['year'], award=[e['award'], source, clean(person)], role=role_for(e['award']) or 'Honoree'))
+                        honors.append(dict(festival=fest['id'], year=e['year'], award=[e['award'], src, clean(person)], role=role_for(e['award']) or 'Honoree', **note))
                 continue
             wd = films_wd.get(e['link']) if e['link'] else None
             key = (fest['id'], e['year'], slug(e['title']))
@@ -343,20 +356,22 @@ def build(cache, out=OUT):
             if not film:
                 kinds = wd['kinds'] if wd else set()
                 low = e['award'].lower()
-                fmt = 'Documentary' if 'Q93204' in kinds or 'documentary' in low else 'Short film' if 'Q24862' in kinds or 'short' in low else fest.get('format', 'Feature')
+                fmt = e.get('format') or ('Documentary' if 'Q93204' in kinds or 'documentary' in low else 'Short film' if 'Q24862' in kinds or 'short' in low else fest.get('format', 'Feature'))
                 film = films[key] = dict(id=f"in-{fest['id']}-{e['year']}-{slug(e['title'])}", title=e['title'], festival=fest['id'], year=e['year'], format=fmt,
                                          **({'language': ', '.join(wd['lang'])} if wd and wd['lang'] else {}),
-                                         **({'country': ', '.join(wd['country'])} if wd and wd['country'] else {}),
+                                         **({'country': ', '.join(wd['country'])} if wd and wd['country'] else {'country': e['country']} if e.get('country') else {}),
                                          **({'summary': wd['desc'][0].upper() + wd['desc'][1:] + '.'} if wd and wd['desc'] else {}),
                                          **({'wikidata': wd['qid']} if wd else {}),
-                                         credits=[], awards=[], sources=[source])
+                                         credits=[], awards=[], sources=[src], **note)
                 for name in (wd['dir'] if wd else []):
                     film['credits'].append(['Director', name])
             if e['director'] and not any(r == 'Director' for r, _ in film['credits']):
                 for name in re.split(r',\s*|\s+(?:&|and)\s+', e['director']):
                     if clean(name)[:1].isupper():  # drops trailing notes such as "executive producer X"
                         film['credits'].append(['Director', clean(name)])
-            award = [e['award'], source] + ([e['person']] if e['person'] else [])
+            award = [e['award'], src] + ([e['person']] if e['person'] else [])
+            if src not in film['sources']:
+                film['sources'].append(src)
             if award not in film['awards']:
                 film['awards'].append(award)
             role = role_for(e['award'])
@@ -373,6 +388,10 @@ def build(cache, out=OUT):
 
 def role_for(award):
     low = award.lower()
+    if re.search(r'music|score', low):
+        return 'Composer'
+    if 'cinematograph' in low or 'editing' in low:
+        return 'Cinematographer' if 'cinematograph' in low else 'Editor'
     return 'Director' if re.search(r'best direct|direct(or|ion)$', low) else 'Actor' if re.search(r'\bact(or|ress|ing)\b|performance', low) else 'Writer' if 'screenplay' in low else ''
 
 
@@ -387,6 +406,7 @@ def test():
     assert cell('<i>Ana Endara</i><p>for</p><p><i><a title="Beloved Tropic"><b>Beloved Tropic</b></a></i></p>') == ('Beloved Tropic', 'Ana Endara', '', 'Beloved Tropic')
     assert cell('Nayanthara') == ('', 'Nayanthara', '', '')
     assert cell('') is None
+    assert role_for('Best Music Director') == 'Composer' and role_for('Best Editing') == 'Editor'
     assert role_for('Director K.Balachander Award') == '' and role_for('IMI · Best Director') == 'Director'
     assert year_of('25th Kolkata International Film Festival (2019)') == (2019, '25th')
     print('ok')
