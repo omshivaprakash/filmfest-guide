@@ -10,7 +10,7 @@ common subclasses, excluding single editions. Only festivals with a name and a c
 Wikidata is CC0. Descriptions quoted from Wikipedia are CC BY-SA and are linked to their article.
 Logos and images come only from Wikimedia Commons and keep their own licence, which is stored with each one.
 """
-import collections, html, json, os, re, subprocess, sys, time, urllib.parse, urllib.request
+import collections, html, json, os, re, sys, time, urllib.parse, urllib.request
 
 SHARD = 'data/world-festivals'
 UA = {'User-Agent': 'filmfest-guide-data/1.0 (open data project; github.com/omshivaprakash/filmfest-guide)'}
@@ -111,14 +111,18 @@ def fetch(cache):
         time.sleep(1)
     json.dump({'want': logos, 'meta': meta}, open(f'{cache}/images.json', 'w'))
     os.makedirs(f'{cache}/img', exist_ok=True)
+    budget = 60  # new logos per run; Commons rate-limits image downloads, so the rest wait for next week
     for qid, name in logos.items():
         m, out = meta.get(name), f'{cache}/img/{qid}.bin'
-        if not m or not m.get('thumb') or not m['mime'].startswith('image/') or os.path.exists(out) or os.path.exists(f'{SHARD}/logos/{qid}.webp'):
+        if not m or not m.get('thumb') or not m.get('license') or not m['mime'].startswith('image/') or os.path.exists(out) or os.path.exists(f'{SHARD}/logos/{qid}.webp'):
             continue
-        data = get(m['thumb'].split('?')[0].replace('thumb.wikimedia.org', 'upload.wikimedia.org'), tries=5)
+        if budget <= 0:
+            break
+        budget -= 1
+        data = get(m['thumb'].split('?')[0].replace('thumb.wikimedia.org', 'upload.wikimedia.org'), tries=2)
         if data:
             open(out, 'wb').write(data)
-        time.sleep(1.2)
+        time.sleep(2)
 
 
 def point(text):
@@ -149,6 +153,20 @@ TYPES = [
     ('Mobile and online', r'mobile|smartphone|phone|online|web ?fest|virtual'),
     ('Food, sport and travel', r'food|\bsport|\bski|surf|travel|bike|cycling|football'),
 ]
+
+
+def to_webp(source, target):
+    """Flatten onto white and shrink to fit 160 px. Skips files Pillow cannot read."""
+    try:
+        from PIL import Image
+        with Image.open(source) as image:
+            image = image.convert('RGBA')
+            flat = Image.new('RGB', image.size, 'white')
+            flat.paste(image, mask=image.getchannel('A'))
+            flat.thumbnail((160, 160))
+            flat.save(target, 'WEBP', quality=78)
+    except Exception as error:
+        print('skip logo', source, error, file=sys.stderr)
 
 
 FORMER = {'Czechoslovakia', 'Soviet Union', 'Yugoslavia', 'West Germany', 'East Germany', 'Socialist Federal Republic of Yugoslavia', 'Kingdom of Italy', 'Russian Empire', 'Serbia and Montenegro'}
@@ -228,7 +246,7 @@ def build(cache, root=None):
         target = os.path.join(out_dir, f'{qid}.webp')
         if meta and meta.get('license') and (os.path.exists(source) or os.path.exists(target)):
             if not os.path.exists(target):
-                subprocess.run(['convert', source + '[0]', '-background', 'white', '-alpha', 'remove', '-resize', '160x160>', '-quality', '78', target], check=False, capture_output=True)
+                to_webp(source, target)
             if os.path.exists(target):
                 row['logo'] = {'file': f'{SHARD}/logos/{qid}.webp', 'source': meta['page'], 'credit': plain(meta.get('artist')) or 'Wikimedia Commons', 'license': meta['license'], 'licenseUrl': meta.get('licenseUrl')}
         result.append(row)
@@ -241,6 +259,13 @@ def build(cache, root=None):
             sys.exit(f'Refusing to write {len(result)} festivals over {before}: the fetch looks incomplete')
     # Descriptions load only when a festival is opened, which keeps the list and maps light.
     about = {row['id']: row.pop('about') for row in result if 'about' in row}
+    # Keep last run's description where Wikipedia rate-limited this one.
+    old_about = os.path.join(root, 'world-about.json')
+    if os.path.exists(old_about):
+        for qid, text in json.load(open(old_about)).items():
+            if qid != 'count' and qid not in about and any(row['id'] == qid for row in result):
+                about[qid] = text
+    about = dict(sorted(about.items()))
     about['count'] = 0  # counted in world-festivals.json
     with open(os.path.join(root, 'world-about.json'), 'w') as handle:
         json.dump(about, handle, ensure_ascii=False, separators=(',', ':'))

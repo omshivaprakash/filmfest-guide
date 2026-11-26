@@ -6,4 +6,4 @@ permissions: { contents: write }
 jobs:
   sync:
     uses: ./.github/workflows/extract.yml
-    with: { name: world-festivals, args: '.cache/world-festivals' }
+    with: { name: world-festivals, packages: 'pillow', args: '.cache/world-festivals' }
