@@ -116,6 +116,7 @@ Each data source has an **extractor** in `tools/extractors/<name>/` that writes 
 | Know what each data field means | [Data dictionary](docs/DATA-DICTIONARY.md) |
 | Add a festival, run an extractor or refresh data | [Maintaining](docs/MAINTAINING.md) |
 | See festival-by-festival notes and gaps | [Data notes](docs/DATA-NOTES.md) |
+| Read or correct the worldwide festival research | [Research](docs/research/README.md) |
 | Ask "why does it say…?" | [FAQ](docs/FAQ.md) |
 | Report a mistake, suggest a festival, or help | [Contributing](docs/CONTRIBUTING.md) |
 
