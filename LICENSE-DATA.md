@@ -6,14 +6,14 @@ The **facts and compilations** published by FilmFest Guide are licensed under th
 commercially, as long as you give attribution.
 
 ## What is covered
-`catalog.json` and `world-festivals.json`, and the same facts as they appear in the app, to the extent we hold any rights in them:
+`catalog.json` and `data/world-festivals/world-festivals.json`, and the same facts as they appear in the app, to the extent we hold any rights in them:
 
 - festival names, places, editions, dates and official links;
 - which films screened at which festival edition, their credits, sections, languages and countries, and the awards they won;
 - our derived views: the people directory, the maps, language counts and the Across festivals list.
 
 ## Data from other open sources
-- The world festival list in `world-festivals.json` comes from [Wikidata](https://www.wikidata.org/), which is released under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Each festival keeps its Wikidata ID (`Q…`) so it can be traced and corrected at the source.
+- The world festival list in `data/world-festivals/world-festivals.json` comes from [Wikidata](https://www.wikidata.org/), which is released under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). Each festival keeps its Wikidata ID (`Q…`) so it can be traced and corrected at the source.
 - Short festival descriptions marked as from Wikipedia are quoted from the opening of the English Wikipedia article and are available under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Each one links to its article.
 
 ## What is not covered

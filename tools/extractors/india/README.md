@@ -18,7 +18,7 @@ node check-catalog.mjs
 
 Every film, honour and edition links the Wikipedia revision it came from. Only facts are kept (titles, names, years, award names). Wikidata is CC0; Wikipedia is CC BY-SA 4.0. Logos are reused from `world-festivals.json` with their Commons licence.
 
-Festival ids match the hand-listed `worldFestivals` ids, and `wikidata` matches the `world-festivals.json` row, so the app takes an imported festival off the work in progress list.
+Festival ids match the hand-listed `worldFestivals` ids, and `wikidata` matches the `data/world-festivals/world-festivals.json` row, so the app takes an imported festival off the work in progress list.
 
 ## Schedule
 

@@ -70,6 +70,7 @@ function thumbnail(fallback, photo, className = 'thumbnail') {
 const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join('');
 
 async function start() {
+  const linksLoad = fetch('data/youtube-links/youtube.json').then(reply => (reply.ok ? reply.json() : { films: {} })).catch(() => ({ films: {} }));
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
   const { festivals, films, honors, portraits = {}, worldFestivals: allHand = [] } = await response.json();
@@ -84,7 +85,11 @@ async function start() {
   }
   const imported = new Set(festivals.flatMap(record => [record.id, record.wikidata]).filter(Boolean));
   const handWorld = allHand.filter(record => !imported.has(record.id));
-  for (const film of films) film.title = tidyTitle(film.title);
+  const links = (await linksLoad).films;
+  for (const film of films) {
+    film.title = tidyTitle(film.title);
+    Object.assign(film, links[film.id]);  // YouTube links and Wikidata ids from the youtube-links extractor
+  }
   const festivalMap = new Map(festivals.map(record => [record.id, record]));
   const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
   const awards = films.flatMap(film => film.awards.map(award => ({ ...film, award, film }))).concat(honors);
@@ -100,7 +105,7 @@ async function start() {
   let worldFestivals = handWorld;
   let regions = unique(worldFestivals.map(record => record.region));
   // The world list is large, so it loads after the first screen and is merged with the hand-checked entries.
-  fetch('world-festivals.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
+  fetch('data/world-festivals/world-festivals.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
     if (!data) return;
     const key = name => normalize(name).replace(/[^a-z0-9]/g, '');
     const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
@@ -443,7 +448,7 @@ async function start() {
   }
 
   let aboutTexts;
-  const worldAbout = () => (aboutTexts ||= fetch('world-about.json').then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})));
+  const worldAbout = () => (aboutTexts ||= fetch('data/world-festivals/world-about.json').then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})));
   function showWorld(record) {
     open(record.name, `${record.region} · Work in progress`);
     if (record.logo) {
