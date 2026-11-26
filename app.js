@@ -208,6 +208,7 @@ async function start() {
   }
   byId('open-about').addEventListener('click', showAbout);
   byId('open-explore').addEventListener('click', () => go('', 'map'));
+  for (const link of document.querySelectorAll('[data-go]')) link.addEventListener('click', () => go('', link.dataset.go));
   byId('open-search').addEventListener('click', () => {
     go('', 'films');
     search.focus();
@@ -259,6 +260,8 @@ async function start() {
       card.append(element('span', '🌍', 'thumbnail'), copy, element('span', `${regions.length} regions`, 'badge wip'));
       return card;
     })());
+    const homeMap = byId('home-map');
+    homeMap.replaceChildren(worldMap(festivalPoints()));
     const winners = films.filter(film => film.awards.length && film.artwork).slice(0, 6);
     byId('home-shelf').replaceChildren(...winners.map(filmCard));
   }
@@ -381,6 +384,12 @@ async function start() {
     for (const record of records) for (const key of keysOf(record)) counts.set(key, (counts.get(key) || 0) + 1);
     return [...counts].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   };
+  function festivalPoints() {
+    return [
+      ...worldFestivals.map(record => ({ lon: record.lon, lat: record.lat, r: 4, className: 'wip', title: `${record.name} · ${record.city} · work in progress`, action: () => showWorld(record) })),
+      ...festivals.map(record => ({ lon: record.lon, lat: record.lat, r: 6, title: `${record.name} · in the guide`, action: () => go(record.id, 'discover') }))
+    ];
+  }
   function renderExplore() {
     const scoped = festivalId ? filmsIn(festivalId) : films;
     const scopeName = festivalMap.get(festivalId)?.short || 'all festivals';
@@ -407,10 +416,7 @@ async function start() {
       return;
     }
     if (mapMode === 'festivals') {
-      const all = [
-        ...worldFestivals.map(record => ({ lon: record.lon, lat: record.lat, r: 4, className: 'wip', title: `${record.name} · ${record.city} · work in progress`, action: () => showWorld(record) })),
-        ...festivals.map(record => ({ lon: record.lon, lat: record.lat, r: 6, title: `${record.name} · in the guide`, action: () => go(record.id, 'discover') }))
-      ];
+      const all = festivalPoints();
       byId('ex-note').textContent = `${festivals.length} festivals in the guide and ${worldFestivals.length} listed as work in progress. Tap a dot for details.`;
       mapBox.replaceChildren(worldMap(all));
       const legend = element('div', '', 'legend');
