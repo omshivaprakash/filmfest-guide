@@ -12,7 +12,8 @@ Thank you for wanting to help. You do not need to be a programmer for most of th
 3. **Point us to old catalogues.** Scans on the Internet Archive or a festival's own archive fill the Past years tab.
 4. **Fix a wrong YouTube link or festival type.** These come from Wikidata, so fixing them there helps everyone; tell us and we will refresh.
 5. **Correct the research.** The [worldwide festival research](research/README.md) has many unchecked facts. Fix any line with a source link.
-6. **If you represent a festival, filmmaker or photographer:** tell us if anything should be corrected, updated or removed. We will act on it.
+6. **Check the Kannada and Hindi labels.** They are new and need review by native speakers. Switch language on the home page, and if a label reads oddly, open an issue with the English text and your better wording, or edit the dictionary in [`i18n.js`](../i18n.js) directly.
+7. **If you represent a festival, filmmaker or photographer:** tell us if anything should be corrected, updated or removed. We will act on it.
 
 ## If you are a developer
 

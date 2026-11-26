@@ -256,3 +256,11 @@ dialog .when { margin: 0 0 8px; }
 .crow .when { margin-top: 0; flex: 0 0 auto; }
 @media (max-width: 860px) { .calgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .calsum, .hwhen, .calgrid { grid-template-columns: 1fr; } }
+
+/* Language switcher and Kannada / Hindi text (i18n.js). Latin fonts have no Kannada or Devanagari glyphs, so name good system ones. */
+.lsw { display: flex; gap: 6px; margin: 8px 0 4px; }
+.lsw button { height: 30px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg, #fff); color: var(--fg); padding: 0 12px; font: 600 12.5px var(--body); cursor: pointer; }
+.lsw button.on { background: var(--fg); color: var(--bg, #fff); }
+:root[lang=kn] { --body: "Inter", "Noto Sans Kannada", "Tunga", "Kannada Sangam MN", system-ui, sans-serif; --display: "Fraunces", "Noto Serif Kannada", "Noto Sans Kannada", "Tunga", Georgia, serif; }
+:root[lang=hi] { --body: "Inter", "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", system-ui, sans-serif; --display: "Fraunces", "Noto Serif Devanagari", "Noto Sans Devanagari", "Nirmala UI", Georgia, serif; }
+:root[lang=kn] *, :root[lang=hi] * { letter-spacing: 0 !important; }
