@@ -533,7 +533,7 @@ async function start() {
     }
     const place = [record.city, record.country].filter(Boolean).join(', ');
     const facts = [place + (record.approx ? ' (map position approximate)' : ''), record.since && `since ${record.since}`, record.every, record.month && `usually ${record.month}`, record.langs && `in ${record.langs.join(', ')}`].filter(Boolean).join(' · ');
-    if (record.fiapf) content.append(element('p', `FIAPF accredited · ${record.fiapf}`, 'tag'));
+    if (record.fiapf) content.append(element('p', record.fiapf === 'A-list' ? 'FIAPF A-list festival' : 'FIAPF accredited', 'tag'));
     if (record.types) content.append(element('p', `Type: ${record.types.join(', ')}`, 'meta'));
     content.append(element('p', facts, 'meta'));
     const when = whenOf(record);

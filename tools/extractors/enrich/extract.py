@@ -27,8 +27,6 @@ WDQS_GAP = float(os.environ.get('ENRICH_WDQS_GAP', GAP))  # the query service ca
 FILM_CLASSES = 'wd:Q11424 wd:Q24862 wd:Q93204 wd:Q202866 wd:Q506240 wd:Q17517379 wd:Q226730'
 OTHER_WIKIS = ['fr', 'es', 'de', 'it', 'pt', 'ru', 'pl', 'nl', 'cs', 'sv', 'tr', 'fa', 'ar', 'ja', 'zh', 'ko', 'hi', 'ca', 'uk', 'hu', 'ro', 'el', 'fi', 'da', 'no', 'he', 'id', 'sr', 'hr', 'bg', 'sk', 'sl', 'et', 'lt', 'lv', 'eu', 'gl']
 MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-FIAPF_TABLES = [('competitive status', 'Competitive'), ('specialised competitive', 'Competitive specialised'),
-                ('non-competitive', 'Non-competitive'), ('documentary and short', 'Documentary and short film')]
 last_call = collections.defaultdict(float)
 
 
@@ -123,7 +121,7 @@ def fetch_festivals(cache):
     for n, part in enumerate(chunks(ids, 200)):
         cached(cache, f'fest-{digest(part)}.json', lambda: split_sparql(FESTIVAL_FACTS, part, lambda ids: ' '.join('wd:' + i for i in ids)))
         print(f'festival facts {n + 1}/{-(-len(ids) // 200)}', file=sys.stderr)
-    cached(cache, 'fiapf.json', lambda: wiki_api('en', 'wikipedia', action='parse', page='International Federation of Film Producers Associations', prop='wikitext'))
+    cached(cache, 'fiapf.json', lambda: wiki_api('en', 'wikipedia', action='parse', page='FIAPF', prop='wikitext', redirects=1))
     # Other-language opening sentences for festivals with no English article, 20 titles per request.
     facts = festival_facts(cache, world)
     wanted = collections.defaultdict(list)
@@ -203,27 +201,27 @@ def descriptions(cache):
 
 
 def fiapf_accreditation(cache, world):
-    """FIAPF category by festival, read from the tables on the English Wikipedia FIAPF article."""
-    text = json.load(open(os.path.join(cache, 'fiapf.json')))['parse']['wikitext']
-    text = text.split('used to be accredited')[0]  # the withdrawn festivals come last
+    """FIAPF accreditation by festival, from the accredited-festivals table on the English Wikipedia FIAPF article:
+    'A-list' for festivals marked with an asterisk, otherwise 'Accredited'."""
+    return fiapf_from_wikitext(json.load(open(os.path.join(cache, 'fiapf.json')))['parse']['wikitext'], world)
+
+
+def fiapf_from_wikitext(text, world):
+    text = re.split(r'==\s*Former accredited', text)[0]  # withdrawn festivals come after this heading
+    at = text.find('Accredited film festivals')
     by_title = {urllib.parse.unquote(r['wiki'].rsplit('/wiki/', 1)[1]).replace('_', ' ').lower(): r['id'] for r in world if r.get('wiki')}
     by_name = {key(r['name']): r['id'] for r in world}
-    found, marks = {}, []
-    for phrase, category in FIAPF_TABLES:
-        at = text.find(phrase)
-        if at >= 0:
-            marks.append((at, category))
-    marks.sort()
-    for n, (at, category) in enumerate(marks):
-        section = text[at:marks[n + 1][0] if n + 1 < len(marks) else len(text)]
-        for table in re.findall(r'\{\|.*?\n\|\}', section, re.S):
-            for row in table.split('\n|-')[1:]:
-                for target, shown in re.findall(r'\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]', row):
-                    if target.lower().startswith(('file:', 'image:')):
-                        continue
-                    q = by_title.get(target.strip().lower()) or by_name.get(key(shown or target))
-                    if q:
-                        found.setdefault(q, category)
+    found = {}
+    for table in re.findall(r'\{\|.*?\n\|\}', text[at:] if at >= 0 else '', re.S):
+        for row in table.split('\n|-')[1:]:
+            cells = [cell.strip() for cell in row.split('\n|')[1:]]
+            if len(cells) < 2:
+                continue  # header rows use '!'
+            link = re.search(r'\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]', cells[1])  # the Festival column, not the city
+            if link:
+                q = by_title.get(link.group(1).strip().lower()) or by_name.get(key(link.group(2) or link.group(1)))
+                if q:
+                    found[q] = 'A-list' if '*' in cells[1] else 'Accredited'
     return found
 
 
@@ -485,6 +483,12 @@ def test():
     years = collections.defaultdict(set, {'Q1': {2019}, 'Q2': {2020}})
     directors = collections.defaultdict(set, {'Q1': {person('Lee Ana')}, 'Q2': {person('Bob')}})
     assert match(film, {'Q1', 'Q2'}, years, directors, collections.defaultdict(set)) == 'Q1'
+    sample = ('==Accredited film festivals==\n{| class="wikitable"\n|-\n! Location\n! Festival\n|-\n| {{flagicon|FRA}} [[Cannes]]\n'
+              "| '''[[Cannes Film Festival|Festival de Cannes]]*'''\n| Competitive\n|-\n| [[Kyiv]]\n| [[Molodist]]\n| Competitive\n|}\n"
+              '== Former accredited film festivals ==\n{|\n|-\n| [[Adelaide]]\n| [[Adelaide Film Festival]]\n|}')
+    world = [{'id': 'Q1', 'name': 'Cannes Film Festival', 'wiki': 'https://en.wikipedia.org/wiki/Cannes_Film_Festival'},
+             {'id': 'Q2', 'name': 'Molodist'}, {'id': 'Q3', 'name': 'Adelaide Film Festival'}, {'id': 'Q4', 'name': 'Cannes'}]
+    assert fiapf_from_wikitext(sample, world) == {'Q1': 'A-list', 'Q2': 'Accredited'}
     calls = []
     def fake(query, tries=12):
         calls.append(query)
