@@ -1250,12 +1250,7 @@
    "festival": "aliff",
    "year": 2018,
    "format": "Feature",
-   "credits": [
-    [
-     "Director",
-     "Actor: Levon Haftvan"
-    ]
-   ],
+   "credits": [],
    "awards": [
     [
      "Debut Director—Honorable Mention (Best Actor)",
@@ -1364,12 +1359,7 @@
    "festival": "aliff",
    "year": 2017,
    "format": "Feature",
-   "credits": [
-    [
-     "Director",
-     "Gabriel Nicoli- Daniel Ortega (cinematography mention)"
-    ]
-   ],
+   "credits": [],
    "awards": [
     [
      "Debut Director Film (Honorable Mention)",
@@ -5377,12 +5367,7 @@
    "festival": "kashish",
    "year": 2023,
    "format": "Feature",
-   "credits": [
-    [
-     "Director",
-     "Ashutosh Shankar (Tara)"
-    ]
-   ],
+   "credits": [],
    "awards": [
     [
      "Special Jury Mention",
@@ -11490,231 +11475,11 @@
   },
   {
    "festival": "rff",
-   "year": 2013,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "28 September 2013"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2013,
-   "award": [
-    "Best Film",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Bhobhar (Rajasthani) Us Disha Mai (Hindi)"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2013,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "RJ Moniya Anchor Kabeer Anchor Mann"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2013,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Deep Smriti Auditorium Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2013,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2013,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Dr.Mahesh Joshi"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2014,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "20 September 2014"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2014,
-   "award": [
-    "Best Film",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Kahani Ek Devi Ki"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2014,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Ashok Banthia Anchor Kabeer"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2014,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Deep Smriti Auditorium Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2014,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2014,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "T. P. Aggarwal"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2015,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "26 September 2015"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2015,
-   "award": [
-    "Best Film",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Raju Rathod"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2015,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur Bagh"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2015,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
    "year": 2015,
    "award": [
     "Lifetime Achievement Award",
     "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
     "Mohan Kataria"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2015,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Subhash Ghai Rajyavardhan Singh Rathore"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2016,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "24 September 2016"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2016,
-   "award": [
-    "Best Film",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Hivade Me Fute Laadu"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2016,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Aman Verma RJ Mohit"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2016,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Maan Palace"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2016,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
    ],
    "role": "Honoree"
   },
@@ -11730,121 +11495,11 @@
   },
   {
    "festival": "rff",
-   "year": 2016,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Javed Akhtar"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2017,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "16 September 2017"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2017,
-   "award": [
-    "Best Film",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Nani Bai Ro Mayro"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2017,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Deep Smriti Auditorium Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2017,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
    "year": 2017,
    "award": [
     "Lifetime Achievement Award",
     "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
     "Pandit Vishwa Mohan Bhatt"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2017,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaiprakash Chouksey"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2018,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "25 to 29 September 2018"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2018,
-   "award": [
-    "Best Film",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Birani Sardar"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2018,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Vatsal Seth"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2018,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Maan Palace"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2018,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
    ],
    "role": "Honoree"
   },
@@ -11860,56 +11515,6 @@
   },
   {
    "festival": "rff",
-   "year": 2018,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jeetendra Kapoor Mithun Sharma Neelu Vaghela"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2019,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "28 September 2019"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2019,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Shreyas Talpade"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2019,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Maan Palace"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2019,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
    "year": 2019,
    "award": [
     "Lifetime Achievement Award",
@@ -11920,56 +11525,6 @@
   },
   {
    "festival": "rff",
-   "year": 2019,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Komal Nahta Satish Kaushik Rajesh Puri Aniruddh Dave"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2020,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Not held"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2020,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2020,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2020,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
    "year": 2020,
    "award": [
     "Lifetime Achievement Award",
@@ -11982,89 +11537,9 @@
    "festival": "rff",
    "year": 2021,
    "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Not held"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2021,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2021,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2021,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2021,
-   "award": [
     "Lifetime Achievement Award",
     "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
     "The Ceremonies Cancelled due to COVID-19 pandemic."
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2022,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "24 September 2022"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2022,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Tusshar Kapoor Komal Nahta Mahima Chaudhry"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2022,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Maan Palace"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2022,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
    ],
    "role": "Honoree"
   },
@@ -12082,119 +11557,9 @@
    "festival": "rff",
    "year": 2023,
    "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "30 September 2023"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2023,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Aftab Shivdasani"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2023,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Neha Dhupia"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2023,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Deep Smriti Auditorium Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2023,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2023,
-   "award": [
     "Lifetime Achievement Award",
     "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
     "Gulshan Grover"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2023,
-   "award": [
-    "Chief Guest",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Govinda"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2024,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "28 September 2024"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2024,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Arbaaz Khan, Smita Bansal"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2024,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Mahendra Gaur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2024,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Deep Smriti Auditorium Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2024,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
    ],
    "role": "Honoree"
   },
@@ -12215,46 +11580,6 @@
     "Lifetime Achievement Award",
     "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
     "Mohammed Hussain"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2025,
-   "award": [
-    "Date",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "20 September 2025"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2025,
-   "award": [
-    "Host",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Chunky Panday, Pooja Hegde, Sumit Vyas"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2025,
-   "award": [
-    "Venue",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Deep Smriti Auditorium Jaipur"
-   ],
-   "role": "Honoree"
-  },
-  {
-   "festival": "rff",
-   "year": 2025,
-   "award": [
-    "City",
-    "https://en.wikipedia.org/w/index.php?title=Rajasthan_Film_Festival&oldid=1386215870",
-    "Jaipur"
    ],
    "role": "Honoree"
   },
