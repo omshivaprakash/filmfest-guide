@@ -110,3 +110,6 @@ figcaption { margin-top: 4px; }
   .result .thumbnail { width: 38px; height: 43px; }
 }
 @media (max-width: 380px) { .results { --columns: 1; } }
+.edition-links { display: flex; align-items: center; justify-content: end; gap: 7px 12px; flex-wrap: wrap; }
+.edition-links button { font-size: .875rem; white-space: nowrap; }
+@media (max-width: 540px) { .edition-links { gap: 4px; } .edition-links button { font-size: .8rem; } }
