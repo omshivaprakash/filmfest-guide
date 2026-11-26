@@ -1,0 +1,9 @@
+name: award-impact
+on:
+  schedule: [{ cron: '41 5 * * 3' }]   # Wednesdays 05:41 UTC, after Monday's world-editions run adds winners
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  sync:
+    uses: ./.github/workflows/extract.yml
+    with: { name: award-impact }

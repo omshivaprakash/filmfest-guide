@@ -70,4 +70,6 @@ assert.equal(on({ month: 'December' }, 2026, 11, 26), 'next');
 assert.equal(on({ month: 'June' }, 2026, 11, 26), 'over');
 assert.equal(festivalWhen({ month: 'December' }, new Date(2026, 10, 26)).brief, 'usually in December');
 assert.equal(festivalWhen({ editions: [{ year: 2025 }] }), null);
+const impact = JSON.parse(readFileSync(new URL('./data/award-impact/impact.json', import.meta.url)));
+for (const [qid, record] of Object.entries(impact.films)) assert.ok(/^Q\d+$/.test(qid) && [...record.won, ...record.nominated].every(([name, award, year]) => name && /^Q\d+$/.test(award) && (year === null || Number.isInteger(year))), `award impact ${qid}`);
 console.log(`Validated ${films.length} films across ${festivals.length} festivals (${shardList.length} shards), plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);
