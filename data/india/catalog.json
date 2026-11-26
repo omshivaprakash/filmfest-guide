@@ -75,6 +75,30 @@
    ]
   },
   {
+   "id": "mami",
+   "short": "MAMI",
+   "name": "MAMI Mumbai Film Festival",
+   "region": "Maharashtra",
+   "country": "India",
+   "description": "South Asia competition and world cinema in Mumbai.",
+   "wikidata": "Q17075409",
+   "url": "https://www.mumbaifilmfestival.com",
+   "lat": 19.08,
+   "lon": 72.88,
+   "source": "https://en.wikipedia.org/w/index.php?title=Mumbai_Academy_of_the_Moving_Image&oldid=1383411643",
+   "editions": [
+    {
+     "year": 2024,
+     "source": "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    },
+    {
+     "year": 2023,
+     "dates": "27 October–5 November",
+     "source": "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    }
+   ]
+  },
+  {
    "id": "ciff-chennai",
    "short": "CIFF",
    "name": "Chennai International Film Festival",
@@ -191,6 +215,34 @@
     {
      "year": 2006,
      "source": "https://en.wikipedia.org/w/index.php?title=Pune_International_Film_Festival&oldid=1370370081"
+    }
+   ]
+  },
+  {
+   "id": "miff",
+   "short": "MIFF",
+   "name": "Mumbai International Film Festival (documentary, short and animation)",
+   "region": "Maharashtra",
+   "country": "India",
+   "description": "Golden and Silver Conch for documentary, short fiction and animation.",
+   "wikidata": "Q1952566",
+   "url": "https://miff.in",
+   "lat": 18.97,
+   "lon": 72.82,
+   "source": "https://en.wikipedia.org/w/index.php?title=Mumbai_International_Film_Festival&oldid=1370945075",
+   "logo": {
+    "file": "data/world-festivals/logos/Q1952566.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:K._Sankaranarayanan_felicitated_the_Jury_members,_at_the_inaugural_function_of_the_13th_Mumbai_International_Film_Festival_for_Documentary,_Short_and_Animation_(MIFF-2014),_in_Mumbai._The_Secretary.jpg",
+    "credit": "Ministry of Information and Broadcasting",
+    "license": "GODL-India",
+    "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+   },
+   "editions": [
+    {
+     "year": 2024,
+     "number": "18th",
+     "dates": "15–21 June",
+     "source": "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
     }
    ]
   },
@@ -954,6 +1006,59 @@
      ]
     }
    ]
+  },
+  {
+   "id": "jagran",
+   "short": "JFF",
+   "name": "Jagran Film Festival",
+   "region": "Delhi",
+   "country": "India",
+   "description": "A touring festival across Indian cities.",
+   "wikidata": "Q28173088",
+   "url": "https://www.jagranfilmfestival.com",
+   "lat": 28.61,
+   "lon": 77.21,
+   "source": "https://en.wikipedia.org/w/index.php?title=Jagran_Film_Festival&oldid=1345119458",
+   "logo": {
+    "file": "data/world-festivals/logos/Q28173088.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Minister_of_State_(Independent_Charge)_for_Information_%26_Broadcasting,_Shri_Manish_Tewari_lighting_the_lamp_to_inaugurate_the_Jagran_Film_Festival,_in_New_Delhi_on_July_05,_2013.jpg",
+    "credit": "Ministry of Information and Broadcasting",
+    "license": "GODL-India",
+    "licenseUrl": "https://data.gov.in/sites/default/files/Gazette_Notification_OGDL.pdf"
+   },
+   "editions": [
+    {
+     "year": 2025,
+     "number": "12th",
+     "source": "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    },
+    {
+     "year": 2017,
+     "number": "8th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Jagran_Film_Festival&oldid=1345119458"
+    }
+   ]
+  },
+  {
+   "id": "giff",
+   "short": "GIFF",
+   "name": "Guwahati International Film Festival",
+   "region": "Assam",
+   "country": "India",
+   "description": "Assamese competition and world cinema in Guwahati.",
+   "wikidata": "Q47086772",
+   "url": "https://giff.assam.gov.in",
+   "lat": 26.18,
+   "lon": 91.75,
+   "source": "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385",
+   "editions": [
+    {
+     "year": 2017,
+     "number": "1st",
+     "dates": "28 October–2 November",
+     "source": "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+    }
+   ]
   }
  ],
  "films": [
@@ -1183,6 +1288,356 @@
    "sources": [
     "https://en.wikipedia.org/w/index.php?title=Chennai_International_Film_Festival&oldid=1387674286"
    ]
+  },
+  {
+   "id": "in-giff-2017-antardrishti",
+   "title": "Antardrishti",
+   "festival": "giff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rima Das"
+    ]
+   ],
+   "awards": [
+    [
+     "Second Best Assamese Film",
+     "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-giff-2017-haanduk",
+   "title": "Haanduk",
+   "festival": "giff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Jaicheng Jai Dohutia"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Award",
+     "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-giff-2017-khandobdaah",
+   "title": "Khandobdaah",
+   "festival": "giff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sankar Borua"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Assamese Film",
+     "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Guwahati_International_Film_Festival&oldid=1374801385"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-6a-akash-ganga",
+   "title": "6A Akash Ganga",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Documentary",
+   "credits": [],
+   "awards": [
+    [
+     "Best Documentary",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-gypsy",
+   "title": "Gypsy",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shashi Chandrakant Khandare"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Debut Director",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-laapataa-ladies",
+   "title": "Laapataa Ladies",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Composer",
+     "Ram Sampath"
+    ],
+    [
+     "Actor",
+     "Sparsh Shrivastava"
+    ],
+    [
+     "Actor",
+     "Nitanshi Goel"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Music Director",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Ram Sampath"
+    ],
+    [
+     "Best Actor (Male)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Sparsh Shrivastava"
+    ],
+    [
+     "Best Actor (Female)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Nitanshi Goel"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-mrs",
+   "title": "Mrs",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Arati Kadav"
+    ],
+    [
+     "Actor",
+     "Sanya Malhotra"
+    ]
+   ],
+   "awards": [
+    [
+     "Best OTT Film",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ],
+    [
+     "Best Actor (OTT, Female)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Sanya Malhotra"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-namaste-sir",
+   "title": "Namaste Sir",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gaurav Asri"
+    ]
+   ],
+   "awards": [
+    [
+     "Most Admired Film (Audience Choice)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-quadrilateral",
+   "title": "Quadrilateral",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Best Feature Film (International)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-the-first-film",
+   "title": "The First Film",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Piyush Thakur"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Short Film (India)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-the-nominees",
+   "title": "The Nominees",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Birutė Kapustinskaitė"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Short Film (International)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-the-spark-chingar",
+   "title": "The Spark - Chingar",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Cinematographer",
+     "Arjun Negi"
+    ],
+    [
+     "Composer",
+     "Roy Menezes"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Cinematography",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Arjun Negi"
+    ],
+    [
+     "Best Background Score",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Roy Menezes"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-jagran-2025-village-rockstar-2",
+   "title": "Village Rockstar 2",
+   "festival": "jagran",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rima Das"
+    ],
+    [
+     "Writer",
+     "Rima Das"
+    ],
+    [
+     "Editor",
+     "Rima Das"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Feature Film (Indian)",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+    ],
+    [
+     "Best Director",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Rima Das"
+    ],
+    [
+     "Best Screenplay",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Rima Das"
+    ],
+    [
+     "Best Editing",
+     "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+     "Rima Das"
+    ]
+   ],
+   "sources": [
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851"
+   ],
+   "checked": "checked online 2026-11-26"
   },
   {
    "id": "in-kashish-2026-daag",
@@ -7031,6 +7486,728 @@
    ]
   },
   {
+   "id": "in-mami-2024-a-tale-of-two-cities",
+   "title": "A Tale of Two Cities",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Sameeha Sabnis"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Silver Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-ade-on-a-sunday",
+   "title": "Ade (On A Sunday)",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Theja Rio"
+    ]
+   ],
+   "awards": [
+    [
+     "Large Short Films · Best Film",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-agent-of-happiness",
+   "title": "Agent of Happiness",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Arun Bhattarai"
+    ],
+    [
+     "Director",
+     "Dorottya Zurbó"
+    ]
+   ],
+   "awards": [
+    [
+     "NETPAC Special Mention",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-bmcld",
+   "title": "BMCLD",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Shreela Agarwal"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Gold Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-coming-back-to-life",
+   "title": "Coming Back to Life",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Mantra Watsa"
+    ]
+   ],
+   "awards": [
+    [
+     "Large Short Films · Special Jury Prize",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-girls-will-be-girls",
+   "title": "Girls Will Be Girls",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shuchi Talati"
+    ]
+   ],
+   "awards": [
+    [
+     "South Asia Competition · Special Mention",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ],
+    [
+     "NETPAC Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ],
+    [
+     "Film Critics Guild Gender Sensitivity Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ],
+    [
+     "Rashid Irani Young Critics Choice Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-i-was-painted-red",
+   "title": "I Was Painted Red",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Bhagyesh Rajeshirke"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Silver Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-nocturnes",
+   "title": "Nocturnes",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Anirban Dutta"
+    ],
+    [
+     "Director",
+     "Anupama Srinivasan"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Gateway Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-rhythm-of-a-flower",
+   "title": "Rhythm of a Flower",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Amit Dutta"
+    ]
+   ],
+   "awards": [
+    [
+     "Golden Gateway Award",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-shambala",
+   "title": "Shambala",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Min Bahadur Bham"
+    ]
+   ],
+   "awards": [
+    [
+     "NETPAC Special Mention",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2024-the-fable",
+   "title": "The Fable",
+   "festival": "mami",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Raam Reddy"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Prize",
+     "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+    ]
+   ],
+   "sources": [
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-against-the-tide",
+   "title": "Against the Tide",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Sarvnik Kaur"
+    ]
+   ],
+   "awards": [
+    [
+     "Golden Gateway Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-agra",
+   "title": "Agra",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Kanu Behl"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-bahadur-the-brave",
+   "title": "Bahadur - The Brave",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Diwa Shah"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Gateway Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-barir-naam-shahana",
+   "title": "Barir Naam Shahana",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Leesa Gazi"
+    ]
+   ],
+   "awards": [
+    [
+     "Film Critics Guild Gender Sensitivity Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-blackhole",
+   "title": "Blackhole",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pradyumna Patil"
+    ]
+   ],
+   "awards": [
+    [
+     "Light Camera Impact Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-flowering-man",
+   "title": "Flowering Man",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Soumyajit Ghosh Dastidar"
+    ]
+   ],
+   "awards": [
+    [
+     "Light Camera Impact Award · Special Mention",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-kayo-kayo-colour",
+   "title": "Kayo Kayo Colour?",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shahrukhkhan Chavada"
+    ]
+   ],
+   "awards": [
+    [
+     "Rashid Irani Young Critics' Choice Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-praan-pratishthana",
+   "title": "Praan Pratishthana",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pankaj Sonawane"
+    ]
+   ],
+   "awards": [
+    [
+     "Light Camera Impact Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-rimdogittanga",
+   "title": "Rimdogittanga",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Dominic Sangma"
+    ]
+   ],
+   "awards": [
+    [
+     "NETPAC Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-mami-2023-the-monk-and-the-gun",
+   "title": "The Monk and the Gun",
+   "festival": "mami",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pawo Choyning Dorji"
+    ]
+   ],
+   "awards": [
+    [
+     "IMDb Audience Choice Award",
+     "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    ]
+   ],
+   "sources": [
+    "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-6-a-akash-ganga",
+   "title": "6-A Akash Ganga",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Documentary",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Nirmal Chander Dandriyal"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Documentary Film (above 60 minutes)",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-a-coconut-tree",
+   "title": "A Coconut Tree",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Documentary",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Joshy Benedict"
+    ]
+   ],
+   "awards": [
+    [
+     "National Competition · Special Jury Mention",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-golden-thread",
+   "title": "Golden Thread",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Nishtha Jain"
+    ]
+   ],
+   "awards": [
+    [
+     "Golden Conch · Best Documentary",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-lovely-jackson",
+   "title": "Lovely Jackson",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Documentary",
+   "country": "United States",
+   "credits": [
+    [
+     "Director",
+     "Matt Waldeck"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Special Jury Mention",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-nirjara",
+   "title": "Nirjara",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Short film",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Gaurav Pati"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Animation Film",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-salt",
+   "title": "Salt",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Short film",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Barkha Prashant Naik"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Short Fiction Film",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-sour-milk",
+   "title": "Sour Milk",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Short film",
+   "country": "Estonia",
+   "credits": [
+    [
+     "Director",
+     "Vera Pirogova"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Short Fiction Film",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-the-old-young-crow",
+   "title": "The Old Young Crow",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Documentary",
+   "country": "Japan",
+   "credits": [
+    [
+     "Director",
+     "Liam LoPinto"
+    ]
+   ],
+   "awards": [
+    [
+     "Pramod Pati Award for Most Innovative / Experimental Film",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "id": "in-miff-2024-zima",
+   "title": "Zima",
+   "festival": "miff",
+   "year": 2024,
+   "format": "Short film",
+   "country": "Poland",
+   "credits": [
+    [
+     "Director",
+     "Tomek Popakul"
+    ],
+    [
+     "Director",
+     "Kasumi Ozeki"
+    ]
+   ],
+   "awards": [
+    [
+     "Best International Animation Film",
+     "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+    ]
+   ],
+   "sources": [
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here"
+   ],
+   "checked": "checked online 2026-11-26"
+  },
+  {
    "id": "in-piff-2022-potra",
    "title": "Potra",
    "festival": "piff",
@@ -7451,6 +8628,17 @@
  ],
  "honors": [
   {
+   "festival": "mami",
+   "year": 2024,
+   "award": [
+    "Excellence in Cinema Award",
+    "https://elle.in/winners-from-mami-mumbai-film-festival-2024",
+    "Shabana Azmi"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-26"
+  },
+  {
    "festival": "ciff-chennai",
    "year": 2015,
    "award": [
@@ -7499,6 +8687,61 @@
     "Varun Kumar"
    ],
    "role": "Honoree"
+  },
+  {
+   "festival": "miff",
+   "year": 2024,
+   "award": [
+    "V. Shantaram Lifetime Achievement Award",
+    "https://www.freepressjournal.in/entertainment/18th-miff-2024-announces-winners-at-the-closing-ceremony-read-the-entire-list-here",
+    "Subbiah Nallamuthu"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "festival": "jagran",
+   "year": 2025,
+   "award": [
+    "Retrospective India",
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+    "Pankaj Kapur"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "festival": "jagran",
+   "year": 2025,
+   "award": [
+    "Retrospective International",
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+    "Krzysztof Zanussi"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "festival": "jagran",
+   "year": 2025,
+   "award": [
+    "Achiever's Award",
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+    "Vineet Kumar Singh"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-26"
+  },
+  {
+   "festival": "jagran",
+   "year": 2025,
+   "award": [
+    "True Icon of Indian Cinema",
+    "https://www.deccanchronicle.com/entertainment/the-12th-jagran-film-festival-concludes-in-mumbai-with-an-esteemed-lineup-and-celebratory-award-night-1867851",
+    "Sameer Anjaan"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-26"
   }
  ]
 }
