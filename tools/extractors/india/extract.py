@@ -62,12 +62,13 @@ def fetch(cache):
         path = cache / 'wiki' / f"{fest['id']}.json"
         if path.exists():
             continue
-        title = urllib.parse.quote(fest['wiki'])
-        body = json.loads(get(f'https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text|revid&redirects=1&maxlag=5&page={title}'))
-        if 'parse' not in body:
-            print('no article', fest['wiki'], file=sys.stderr)
-            continue
-        path.write_text(json.dumps({'title': body['parse']['title'], 'revid': body['parse']['revid'], 'html': body['parse']['text']['*']}))
+        # The REST endpoint (Parsoid HTML) is what Wikimedia accepts from cloud runners; action=parse gets robot-policy 429s.
+        html = get(f"https://en.wikipedia.org/w/rest.php/v1/page/{urllib.parse.quote(fest['wiki'].replace(' ', '_'))}/html").decode()
+        revid = re.search(r'Special:Redirect/revision/(\d+)', html)
+        title = re.search(r'<title>(.*?)</title>', html, re.S)
+        if not (revid and title):
+            raise RuntimeError(f"unexpected page for {fest['wiki']}")
+        path.write_text(json.dumps({'title': clean(title.group(1)), 'revid': int(revid.group(1)), 'html': html}))
         time.sleep(5)
     qids = ' '.join('wd:' + fest['wikidata'] for fest in FESTIVALS)
     editions = sparql(f'''SELECT ?f ?ed ?edLabel ?n ?start ?date WHERE {{ VALUES ?f {{ {qids} }} ?ed wdt:P179|wdt:P361 ?f .
@@ -175,18 +176,19 @@ def grid(table):
 
 
 def headings(doc):
-    """Yield (heading trail, element) for each top-level block in the article."""
-    trail = {}
-    root = doc.xpath('//div[contains(@class,"mw-parser-output")]')[0]
-    for el in root:
-        if 'mw-heading' in (el.get('class') or ''):
-            h = el.xpath('./h2|./h3|./h4')
-            if h:
-                level = int(h[0].tag[1])
-                trail = {k: v for k, v in trail.items() if k < level}
-                trail[level] = text_of(h[0])
+    """Yield (heading trail, block) for each wikitable and top-level list, in page order (parse API or Parsoid HTML)."""
+    skip = 'toc|navbox|infobox|reflist|references|sidebar|hatnote'
+    blocks, trail = [], {}
+    for el in doc.iter('h2', 'h3', 'h4', 'table', 'ul', 'ol'):
+        if el.tag[0] == 'h':
+            level = int(el.tag[1])
+            trail = {k: v for k, v in trail.items() if k < level}
+            trail[level] = text_of(el)
+        elif any(re.search(skip, (a.get('class') or '') + ' ' + (a.get('id') or '')) for a in el.iterancestors()) or re.search(skip, el.get('class') or ''):
             continue
-        yield [trail[k] for k in sorted(trail)], el
+        elif el.tag == 'table' and 'wikitable' in (el.get('class') or '') or el.tag != 'table' and not any(a.tag in ('ul', 'ol', 'table') for a in el.iterancestors()):
+            blocks.append(([trail[k] for k in sorted(trail)], el))
+    yield from blocks  # collected first: extract() edits the tree
 
 
 def year_of(*texts):
@@ -205,8 +207,7 @@ def extract(fest, page):
     for trail, el in headings(doc):
         heading = trail[-1] if trail else ''
         h_year, h_number = year_of(*reversed(trail))
-        tables = [el] if el.tag == 'table' else el.xpath('.//table')
-        for table in tables:
+        for table in [el] if el.tag == 'table' else []:
             if 'wikitable' not in (table.get('class') or ''):
                 continue
             rows = grid(table)
@@ -264,7 +265,7 @@ def extract(fest, page):
                     title, person = person, ''
                 award = text_of(r[cat]) if cat is not None else heading
                 entries.append(dict(year=year, number=number or h_number, award=award, title=title, person=person, director=director, link=link))
-        for li in el.xpath('./li|./ul/li') if el.tag in ('ul', 'ol') else []:
+        for li in el.xpath('./li') if el.tag in ('ul', 'ol') else []:
             # "2025: <i>Title</i> - Director | Country" under an award heading (KASHISH).
             text = text_of(strip_refs(li))
             match = re.match(r'^((?:19|20)\d\d)\s*[:–-]', text)
