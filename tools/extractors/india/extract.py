@@ -369,7 +369,10 @@ def build(cache, out=OUT):
             if not e['title']:
                 if e['person'] and e['person'] != e['award'] and len(e['person'].split()) <= 8 and is_honour(e['award']):
                     for person in re.split(r'\s+(?:&|and)\s+', e['person']):
-                        honors.append(dict(festival=fest['id'], year=e['year'], award=[e['award'], src, clean(person)], role=role_for(e['award']) or 'Honoree', **note))
+                        person = clean(re.sub(r'\s*\([^)]*\)$', '', person))  # "Sanjay Mishra (actor)"
+                        if re.search(r'cancel|postpone|not held|\.$', person, re.I):
+                            continue
+                        honors.append(dict(festival=fest['id'], year=e['year'], award=[e['award'], src, person], role=role_for(e['award']) or 'Honoree', **note))
                 continue
             wd = films_wd.get(e['link']) if e['link'] else None
             key = (fest['id'], e['year'], slug(e['title']))
