@@ -72,7 +72,7 @@ Runs share one concurrency group, so two extractors never push at the same time.
 
 | Extractor | Source | Workflow | Schedule (UTC) |
 |---|---|---|---|
-| Each new extractor adds its row here when it lands | | | |
+| [india](../tools/extractors/india/README.md) | English Wikipedia festival articles, Wikidata | `india.yml` | Tuesdays 04:23 |
 
 Pick a schedule that matches how often the source changes: daily during a festival's programme announcements, weekly for Wikidata, monthly for archives that rarely change. Spread start times so runs do not all start at once.
 
