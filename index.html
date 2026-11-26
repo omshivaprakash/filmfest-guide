@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FilmFest Guide</title>
+<meta name="description" content="What screens at film festivals, starting with India: films, the people who made them, awards and past editions. Free, works offline.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="FilmFest Guide"><meta property="og:title" content="FilmFest Guide: film festivals, films and people">
+<meta property="og:description" content="Films, credits, awards and past editions from Bengaluru, Goa and Kerala film festivals in one place.">
+<meta property="og:url" content="https://omshivaprakash.github.io/filmfest-guide/">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#be123c">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="FilmFest Guide">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script defer src="app.js"></script>
+</head>
+<body>
+<div class="app">
+<header class="fbar">
+  <div class="brand">
+    <b><a class="home" href="./"><img class="lgm" src="assets/logo.svg" alt="" width="24" height="24">FilmFest Guide</a></b>
+    <span class="bt">Film festivals, films and people</span>
+    <span class="bb"><button type="button" class="fsearch" id="open-search">Search</button><button type="button" class="fsearch" id="open-about">About</button></span>
+  </div>
+  <div class="fb-l" id="festival-strip" role="group" aria-label="Choose a festival"></div>
+  <div class="fline" id="festival-line" hidden></div>
+  <nav class="tabs" id="tabs" aria-label="Guide sections"></nav>
+</header>
+
+<main class="view" id="home" hidden>
+  <div class="top">
+    <h1>What screens at film festivals, starting with India</h1>
+    <p class="sub">Films, the people who made them, awards and past editions, side by side.</p>
+  </div>
+  <div class="kpis" id="home-kpis"></div>
+  <div class="body"><div class="fgrid" id="festival-cards"></div><h2 class="vh">Award-winning films</h2><div class="shelf" id="home-shelf"></div></div>
+</main>
+
+<main class="view" id="discover" hidden>
+  <div class="top">
+    <p class="kicker" id="d-kicker"></p>
+    <h1 id="d-title"></h1>
+    <p class="sub" id="d-sub"></p>
+  </div>
+  <div class="kpis" id="d-kpis"></div>
+  <div class="panel"><h5>Films on record per edition</h5><div class="bars" id="d-bars"></div></div>
+  <h2 class="vh" id="d-shelf-title">Start here</h2>
+  <div class="body"><div class="shelf" id="d-shelf"></div></div>
+</main>
+
+<main class="view" id="archive" hidden>
+  <h1 class="visually-hidden" id="archive-title">Films</h1>
+  <div class="srow">
+    <label class="grow-1"><span class="visually-hidden">Search</span><input type="search" id="search" placeholder="Search titles, names, awards…" autocomplete="off"></label>
+    <label><span class="visually-hidden">Edition</span><select id="edition"><option value="">All editions</option></select></label>
+    <label id="facet-label"><span class="visually-hidden" id="facet-caption">Format</span><select id="facet"></select></label>
+  </div>
+  <div class="meta-row"><p class="meta" id="count" aria-live="polite"></p><span class="edition-note" id="edition-note"></span><button type="button" class="x" id="archive-documents" hidden>Archive documents</button><button type="button" class="x" id="reset">Clear</button></div>
+  <div class="body"><div id="results" class="results"></div></div>
+</main>
+
+<nav class="pager" id="pager" aria-label="Results pages" hidden>
+  <button type="button" class="pbtn" id="previous">‹ Prev</button>
+  <span id="page-status" aria-live="polite"></span>
+  <button type="button" class="pbtn" id="next">Next ›</button>
+</nav>
+</div>
+
+<dialog id="detail" aria-labelledby="detail-title"><form method="dialog"><button class="close" aria-label="Close">×</button></form><div id="detail-content"></div></dialog>
+</body>
+</html>

@@ -1,0 +1,461 @@
+const byId = id => document.getElementById(id);
+const search = byId('search');
+const edition = byId('edition');
+const facet = byId('facet');
+const detail = byId('detail');
+const content = byId('detail-content');
+const results = byId('results');
+// Same tab layout as LitFest Guide: a festival opens on Discover; "All" opens the home page.
+const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', years: 'Past years' };
+const searchTabs = { films: 'Films', people: 'People', awards: 'Awards' };
+const listViews = ['films', 'people', 'awards', 'years'];
+const UNLISTED = 'Format unlisted';
+let festivalId = '';
+let view = 'home';
+
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+function button(text, className, action) {
+  const node = element('button', text, className);
+  node.type = 'button';
+  node.addEventListener('click', action);
+  return node;
+}
+function source(url, label) {
+  const link = element('a', label, 'source');
+  link.href = url;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  return link;
+}
+function options(select, values, defaultLabel) {
+  const previous = select.value;
+  select.replaceChildren(new Option(defaultLabel, ''), ...values.map(([value, label]) => new Option(label, value)));
+  if (values.some(([value]) => String(value) === previous)) select.value = previous;
+}
+const unique = values => [...new Set(values)];
+const normalize = value => value.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+const number = value => value.toLocaleString('en-IN');
+const SMALL = new Set(['a', 'an', 'and', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'or', 'the', 'to', 'with']);
+// Catalogue scans print many titles in capitals; show them in title case so lists read evenly.
+function tidyTitle(title) {
+  if (title !== title.toUpperCase() || !/\p{Lu}/u.test(title)) return title;
+  return title.toLowerCase().replace(/[\p{L}\p{N}'’]+/gu, (word, offset) => {
+    if (/^[ivxlc]+$/.test(word) && word.length > 1) return word.toUpperCase();
+    if (offset > 0 && SMALL.has(word)) return word;
+    return word[0].toUpperCase() + word.slice(1);
+  });
+}
+function thumbnail(fallback, photo, className = 'thumbnail') {
+  const frame = element('span', fallback, className);
+  frame.setAttribute('aria-hidden', 'true');
+  if (photo) {
+    const img = element('img');
+    img.alt = '';
+    img.loading = 'lazy';
+    img.src = photo.file;
+    img.addEventListener('error', () => img.remove(), { once: true });
+    frame.append(img);
+  }
+  return frame;
+}
+const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join('');
+
+async function start() {
+  const response = await fetch('catalog.json');
+  if (!response.ok) throw new Error('Catalogue unavailable');
+  const { festivals, films, honors, portraits = {} } = await response.json();
+  for (const film of films) film.title = tidyTitle(film.title);
+  const festivalMap = new Map(festivals.map(record => [record.id, record]));
+  const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
+  const awards = films.flatMap(film => film.awards.map(award => ({ ...film, award, film }))).concat(honors);
+  const people = new Map();
+  const addCredit = (name, record) => {
+    if (!people.has(name)) people.set(name, []);
+    people.get(name).push(record);
+  };
+  for (const film of films) for (const [role, name] of film.credits) addCredit(name, { ...film, role, film });
+  for (const honor of honors) addCredit(honor.award[2], honor);
+  const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
+  const formats = unique(films.map(film => film.format)).filter(format => format !== UNLISTED).sort();
+  const orderedFilms = [...films].sort((a, b) => Number(Boolean(b.artwork)) - Number(Boolean(a.artwork)));
+  const filmsIn = (id, year) => films.filter(film => film.festival === id && (!year || film.year === year));
+  const editionLabel = event => [event.number && `${event.number} edition`, [event.dates, event.year].filter(Boolean).join(' ')].filter(Boolean).join(' · ');
+  const previous = byId('previous');
+  const next = byId('next');
+  let items = [];
+  let page = 0;
+  let pageCount = 1;
+
+  // Festival chips, like the LitFest Guide strip.
+  const chips = ['', ...festivalMap.keys()].map(id => {
+    const record = festivalMap.get(id);
+    const chip = button(record?.short || 'All', 'fchip', () => go(id, id ? 'discover' : 'home'));
+    if (record?.logo) {
+      const img = element('img');
+      img.src = record.logo.file;
+      img.alt = '';
+      chip.prepend(img);
+      chip.title = record.name;
+    }
+    return chip;
+  });
+  byId('festival-strip').append(...chips);
+
+  // Detail sheet
+  function open(title, category) {
+    const heading = element('h2', title);
+    heading.id = 'detail-title';
+    content.replaceChildren(element('p', category, 'tag'), heading);
+    if (!detail.open) detail.showModal();
+    detail.scrollTop = 0;
+  }
+  function list(heading, values) {
+    if (!values.length) return;
+    const ul = element('ul');
+    for (const value of values) {
+      const li = element('li');
+      li.append(value);
+      ul.append(li);
+    }
+    content.append(element('h3', heading), ul);
+  }
+  function showFilm(film) {
+    const record = festivalMap.get(film.festival);
+    const event = record.editions.find(entry => entry.year === film.year);
+    open(film.title, [label(film), film.format !== UNLISTED && film.format].filter(Boolean).join(' · '));
+    if (film.artwork) {
+      const figure = element('figure', '', 'film-artwork');
+      const caption = element('figcaption');
+      caption.append(source(film.artwork.source, film.artwork.credit));
+      figure.append(thumbnail('', film.artwork), caption);
+      content.append(figure);
+    }
+    const facts = [film.language, film.country, film.section].filter(Boolean).join(' · ');
+    if (facts) content.append(element('p', facts, 'meta'));
+    if (film.summary) content.append(element('p', film.summary));
+    if (film.cataloguePage) content.append(element('p', `Catalogue index · printed page ${film.cataloguePage}`, 'meta'));
+    list('Credits', film.credits.map(([role, name]) => {
+      const row = element('span', `${role} · `);
+      row.append(button(name, 'credit-link', () => showPerson(name)));
+      return row;
+    }));
+    list('Awards', film.awards.map(award => source(award[1], [award[0], award[2]].filter(Boolean).join(' · '))));
+    const references = film.sources.filter(url => url !== event.source);
+    list('Sources', [source(event.source, editionLabel(event)), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`))]);
+  }
+  function showPerson(name) {
+    open(name, 'Person');
+    const portrait = portraits[name];
+    if (portrait) {
+      const figure = element('figure', '', 'profile-photo');
+      const caption = element('figcaption');
+      caption.append(source(portrait.source, portrait.credit));
+      if (portrait.license) caption.append(' · ', source(portrait.license, portrait.licenseName));
+      figure.append(thumbnail('', portrait), caption);
+      content.append(figure);
+    }
+    list('Festival credits and honours', people.get(name).map(record => {
+      const row = element('span', `${record.role} · `);
+      row.append(record.film ? button(record.film.title, 'credit-link', () => showFilm(record.film)) : source(record.award[1], record.award[0]), ` · ${label(record)}`);
+      return row;
+    }));
+  }
+  function showAward(record) {
+    const [name, url, recipient] = record.award;
+    open(name, label(record));
+    if (recipient) content.append(people.has(recipient) ? button(recipient, 'credit-link', () => showPerson(recipient)) : element('p', recipient));
+    if (record.film) list('Film', [button(record.film.title, 'credit-link', () => showFilm(record.film))]);
+    list('Source', [source(url, 'Award announcement')]);
+  }
+  function showEdition(record, event) {
+    open(`${record.short} ${event.year}`, editionLabel(event));
+    const count = filmsIn(record.id, event.year).length;
+    content.append(element('p', count ? `${number(count)} films on record from this edition.` : 'The catalogue is available as a PDF. Indexed titles are still to come.', 'meta'));
+    list('Documents', [
+      event.catalogue && source(event.catalogue, event.catalogueLabel || 'Edition catalogue PDF'),
+      event.source && event.source !== event.catalogue && source(event.source, 'Edition source'),
+      ...(event.archiveDocuments || []).map(doc => source(doc.url, doc.name))
+    ].filter(Boolean));
+    if (count) content.append(button('Browse these films', 'btn', () => {
+      detail.close();
+      edition.value = String(event.year);
+      go(record.id, 'films', false);
+    }));
+  }
+  function showAbout() {
+    open('About FilmFest Guide', 'About');
+    const about = element('div', '', 'about');
+    const intro = element('p', 'A free guide to what screens at film festivals, starting with India. It puts films, credits, awards and past editions side by side so you can plan a festival or look back at one.');
+    const sibling = element('p', 'It is built the same way as ');
+    const lit = source('https://omshivaprakash.github.io/litfest-speaker-guide/', 'LitFest Guide');
+    sibling.append(lit, ', the companion guide to literature festivals.');
+    const data = element('p', 'Every record links to its source: official festival catalogues and announcements, the Press Information Bureau, and the Servants of Knowledge collection on the Internet Archive. Scanned catalogues can leave gaps, and a PDF link means a source exists even when titles have not been extracted yet.');
+    const code = element('p', 'The code and data are open on ');
+    code.append(source('https://github.com/omshivaprakash/filmfest-guide', 'GitHub'), '. Corrections are welcome.');
+    about.append(intro, sibling, data, code);
+    content.append(about);
+  }
+  byId('open-about').addEventListener('click', showAbout);
+  byId('open-search').addEventListener('click', () => {
+    go('', 'films');
+    search.focus();
+  });
+
+  // Cards
+  function result(tag, title, subtitle, action, icon = '', photo) {
+    return () => {
+      const card = button('', 'result', action);
+      const copy = element('span', '', 'result-copy');
+      copy.append(element('span', tag, 'tag'), element('span', title, 'card-title'), element('span', subtitle, 'card-copy'));
+      card.append(thumbnail(icon, photo), copy);
+      return card;
+    };
+  }
+  function kpis(target, values) {
+    target.replaceChildren(...values.map(([value, caption]) => {
+      const tile = element('div', '', 'kpi');
+      tile.append(element('b', typeof value === 'number' ? number(value) : value), element('span', caption));
+      return tile;
+    }));
+  }
+  const filmLine = film => [film.format !== UNLISTED && film.format, film.language, film.country].filter(Boolean).join(' · ');
+
+  // Home
+  function renderHome() {
+    const years = festivals.flatMap(record => record.editions.map(event => event.year));
+    kpis(byId('home-kpis'), [
+      [films.length, 'films on record'],
+      [people.size, 'people credited'],
+      [years.length, `festival editions, ${Math.min(...years)} to ${Math.max(...years)}`],
+      [awards.length, 'awards and honours']
+    ]);
+    byId('festival-cards').replaceChildren(...festivals.map(record => {
+      const latest = record.editions[0];
+      const card = button('', 'fcard', () => go(record.id, 'discover'));
+      const img = element('img');
+      img.src = record.logo.file;
+      img.alt = '';
+      const copy = element('span');
+      copy.append(element('h3', record.name), element('span', `${latest.number} edition · ${latest.dates} ${latest.year}`, 'd'), element('span', record.region, 'r'));
+      const count = record.editions.length;
+      card.append(img, copy, element('span', `${count} edition${count === 1 ? '' : 's'}`, 'badge'));
+      return card;
+    }));
+    const winners = films.filter(film => film.awards.length && film.artwork).slice(0, 6);
+    byId('home-shelf').replaceChildren(...winners.map(filmCard));
+  }
+
+  // Discover
+  function renderDiscover(record) {
+    const latest = record.editions[0];
+    const recent = filmsIn(record.id, latest.year);
+    const all = filmsIn(record.id);
+    const credited = unique(all.flatMap(film => film.credits.map(([, name]) => name)));
+    const recordAwards = awards.filter(entry => entry.festival === record.id);
+    byId('d-kicker').textContent = [latest.dates && `${latest.dates} ${latest.year}`, record.region].filter(Boolean).join(' · ');
+    byId('d-title').textContent = `${record.name} ${latest.year}`;
+    byId('d-sub').textContent = record.description;
+    kpis(byId('d-kpis'), [
+      [recent.length, `films from the ${latest.number} edition`],
+      [all.length, 'films across all editions'],
+      [credited.length, 'people credited'],
+      [recordAwards.length, 'awards and honours']
+    ]);
+    const counts = [...record.editions].reverse().map(event => [event.year, filmsIn(record.id, event.year).length]);
+    const peak = Math.max(1, ...counts.map(([, count]) => count));
+    byId('d-bars').replaceChildren(...counts.map(([year, count]) => {
+      const bar = element('div');
+      bar.title = `${year}: ${count} films`;
+      const fill = element('i');
+      fill.style.height = `${Math.round((count / peak) * 100)}%`;
+      bar.append(fill, element('small', `'${String(year).slice(2)}`));
+      return bar;
+    }));
+    byId('discover').querySelector('.panel').hidden = counts.length < 2;
+    // Award winners first, then films with artwork from the latest edition.
+    const picks = unique([
+      ...all.filter(film => film.awards.length && film.artwork),
+      ...recent.filter(film => film.artwork),
+      ...all.filter(film => film.artwork),
+      ...all
+    ]).slice(0, 18);
+    byId('d-shelf-title').textContent = picks.some(film => film.awards.length) ? 'Start here: award winners and new films' : 'Start here';
+    byId('d-shelf').replaceChildren(...picks.map(filmCard));
+    fitShelf();
+  }
+  function filmCard(film) {
+    const card = button('', 'card', () => showFilm(film));
+    card.append(thumbnail('▶', film.artwork, 'ph'), element('span', film.title, 'nm'), element('span', film.awards[0]?.[0] || filmLine(film) || label(film), 'ln'));
+    return card;
+  }
+  // One screen per view: drop shelf cards that would be cut off at the bottom.
+  function fitShelf() {
+    const shelf = byId('d-shelf');
+    for (const card of [...shelf.children]) card.hidden = false;
+    for (const card of [...shelf.children]) card.hidden = card.offsetTop + card.offsetHeight > shelf.clientHeight;
+  }
+
+  // Lists
+  const archiveButton = byId('archive-documents');
+  let documents = [];
+  archiveButton.addEventListener('click', () => {
+    open('Archive documents', 'Servants of Knowledge · Internet Archive');
+    list('Sources', documents.map(doc => source(doc.url, doc.label)));
+  });
+  function renderList() {
+    const selected = festivalMap.get(festivalId);
+    const visibleFestivals = selected ? [selected] : festivals;
+    const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
+    options(edition, years.map(year => [year, String(year)]), 'All editions');
+    edition.parentElement.hidden = view === 'years';
+    const hasFacet = view === 'films' || view === 'people';
+    byId('facet-label').hidden = !hasFacet;
+    byId('facet-caption').textContent = view === 'people' ? 'Role' : 'Format';
+    options(facet, (view === 'people' ? allRoles : formats).map(value => [value, value]), view === 'people' ? 'All roles' : 'All formats');
+    search.placeholder = { films: 'Search titles, names, languages…', people: 'Search people, roles, films…', awards: 'Search awards, winners, films…', years: 'Search years…' }[view];
+
+    const editionRecord = selected?.editions.find(event => event.year === Number(edition.value));
+    const note = byId('edition-note');
+    note.replaceChildren();
+    if (editionRecord?.catalogue) note.append(source(editionRecord.catalogue, editionRecord.catalogueLabel || 'Edition catalogue PDF'));
+    const archiveLinks = (editionRecord ? [editionRecord] : selected?.editions || []).flatMap(event => (event.archiveDocuments || []).map(doc => ({
+      url: doc.url,
+      label: doc.name.startsWith('Award winners') ? doc.name : `${event.year} · ${doc.name}`
+    })));
+    documents = [...new Map(archiveLinks.map(doc => [doc.url, doc])).values()];
+    archiveButton.hidden = documents.length === 0;
+    const emptyNote = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are still to come.' : 'No matches. Try a different search or filter.';
+    results.dataset.empty = emptyNote;
+
+    const query = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
+    const match = values => query.every(term => normalize(values.flat(Infinity).filter(Boolean).join(' ')).includes(term));
+    const matchesEdition = record => (!festivalId || record.festival === festivalId) && (!edition.value || record.year === Number(edition.value));
+    if (view === 'years') {
+      items = selected.editions.filter(event => match([event.year, event.number, event.dates])).map(event => {
+        const count = filmsIn(selected.id, event.year).length;
+        return result(`${event.number} edition`, `${selected.short} ${event.year}`, [event.dates, count ? `${number(count)} films` : 'Catalogue PDF'].filter(Boolean).join(' · '), () => showEdition(selected, event), String(event.year).slice(2));
+      });
+    } else if (view === 'people') {
+      items = [...people].sort(([a], [b]) => a.localeCompare(b)).flatMap(([name, credits]) => {
+        const matching = credits.filter(record => matchesEdition(record) && (!facet.value || record.role === facet.value) && match([name, record.role, record.title, record.award?.[0], label(record)]));
+        return matching.length ? [result(unique(matching.map(record => record.role)).join(' · '), name, unique(matching.map(record => record.title || record.award[0])).join(' · '), () => showPerson(name), initials(name), portraits[name])] : [];
+      });
+    } else if (view === 'awards') {
+      items = awards.filter(record => matchesEdition(record) && match([record.award[0], record.award[2], record.title, label(record)])).map(record => result(label(record), record.award[0], [record.award[2], record.title].filter(Boolean).join(' · '), () => showAward(record), '★'));
+    } else {
+      items = orderedFilms.filter(record => matchesEdition(record) && (!facet.value || record.format === facet.value) && match([record.title, record.format, record.language, record.country, record.section, label(record), record.credits, record.awards.map(([name,, recipient]) => [name, recipient])])).map(record => result(label(record), record.title, filmLine(record), () => showFilm(record), '▶', record.artwork));
+    }
+    byId('archive-title').textContent = festivalTabs[view];
+    page = 0;
+    paginate();
+  }
+  function paginate() {
+    const style = getComputedStyle(results);
+    const columns = Number(style.getPropertyValue('--columns'));
+    const row = parseFloat(style.gridAutoRows);
+    const gap = parseFloat(style.rowGap);
+    const rows = Math.max(1, Math.floor((results.clientHeight + gap) / (row + gap)));
+    const size = columns * rows;
+    pageCount = Math.max(1, Math.ceil(items.length / size));
+    page = Math.min(page, pageCount - 1);
+    const first = page * size;
+    const visible = items.slice(first, first + size);
+    results.replaceChildren(...(visible.length ? visible.map(makeCard => makeCard()) : [element('p', results.dataset.empty, 'empty')]));
+    byId('count').textContent = items.length ? `${number(first + 1)}–${number(first + visible.length)} of ${number(items.length)}` : '0 results';
+    byId('page-status').textContent = `Page ${page + 1} of ${pageCount}`;
+    previous.setAttribute('aria-disabled', String(page === 0));
+    next.setAttribute('aria-disabled', String(page + 1 === pageCount));
+  }
+
+  // Routing: ?f=<festival> picks the festival, #<tab> picks the view.
+  function go(id, nextView, resetFilters = true) {
+    if (resetFilters) for (const input of [search, edition, facet]) input.value = '';
+    festivalId = id;
+    view = nextView;
+    const url = new URL(location.href);
+    if (id) url.searchParams.set('f', id);
+    else url.searchParams.delete('f');
+    url.hash = nextView === 'home' || (id && nextView === 'discover') ? '' : nextView;
+    if (url.href !== location.href) history.pushState(null, '', url);
+    render();
+  }
+  function readLocation() {
+    const id = new URLSearchParams(location.search).get('f');
+    festivalId = festivalMap.has(id) ? id : '';
+    const tab = location.hash.slice(1);
+    const tabs = festivalId ? festivalTabs : searchTabs;
+    view = Object.hasOwn(tabs, tab) ? tab : festivalId ? 'discover' : 'home';
+  }
+  function render() {
+    const selected = festivalMap.get(festivalId);
+    chips.forEach((chip, index) => chip.setAttribute('aria-pressed', String((festivals[index - 1]?.id || '') === festivalId)));
+    const line = byId('festival-line');
+    line.hidden = !selected;
+    if (selected) {
+      const img = element('img');
+      img.src = selected.logo.file;
+      img.alt = '';
+      const latest = selected.editions[0];
+      const official = source(selected.url, 'Official site ↗');
+      official.className = 'fext';
+      line.replaceChildren(img, element('span', selected.name, 'fn'), element('span', `${latest.dates} ${latest.year}`, 'fd'), official);
+    }
+    const tabs = selected ? festivalTabs : view === 'home' ? {} : searchTabs;
+    byId('tabs').replaceChildren(...Object.entries(tabs).map(([key, text]) => {
+      const link = element('a', text);
+      link.href = key === 'discover' ? `?f=${festivalId}` : `${selected ? `?f=${festivalId}` : '?'}#${key}`;
+      if (key === view) link.setAttribute('aria-current', 'page');
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        go(festivalId, key);
+      });
+      return link;
+    }));
+    document.body.dataset.view = view;
+    byId('home').hidden = view !== 'home';
+    byId('discover').hidden = view !== 'discover';
+    byId('archive').hidden = !listViews.includes(view);
+    byId('pager').hidden = !listViews.includes(view);
+    if (view === 'home') renderHome();
+    else if (view === 'discover') renderDiscover(selected);
+    else renderList();
+    document.title = selected ? `${selected.short} · FilmFest Guide` : 'FilmFest Guide';
+  }
+
+  for (const input of [search, edition, facet]) input.addEventListener('input', renderList);
+  byId('reset').addEventListener('click', () => {
+    for (const input of [search, edition, facet]) input.value = '';
+    renderList();
+  });
+  for (const [control, step] of [[previous, -1], [next, 1]]) {
+    control.addEventListener('click', () => {
+      if (control.getAttribute('aria-disabled') === 'true') return;
+      page += step;
+      paginate();
+    });
+  }
+  let size = '';
+  new ResizeObserver(() => {
+    const nextSize = `${results.clientWidth}x${results.clientHeight}`;
+    if (nextSize === size || byId('archive').hidden) return;
+    size = nextSize;
+    paginate();
+  }).observe(results);
+  window.addEventListener('resize', () => { if (!byId('discover').hidden) fitShelf(); });
+  window.addEventListener('popstate', () => {
+    readLocation();
+    render();
+  });
+  readLocation();
+  render();
+}
+start().catch(error => {
+  console.error(error);
+  document.querySelector('.app').append(element('p', 'The catalogue could not load. Refresh to try again.', 'empty'));
+});
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js');
