@@ -1,0 +1,39 @@
+name: world-festivals
+on:
+  schedule:
+    - cron: '17 3 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run the extractor
+        run: mkdir -p .cache/wf && python3 tools/import-world-festivals.py fetch .cache/wf && python3 tools/import-world-festivals.py build .cache/wf
+      - name: Validate
+        run: node --check app.js && node check-catalog.mjs
+      - name: Commit only if the data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "Omshivaprakash H L"
+          git config user.email "omshivaprakash@gmail.com"
+          git add world-festivals.json world-about.json images/world
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Refresh world festivals from Wikidata"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          gh api -X POST repos/${{ github.repository }}/pages/builds || true

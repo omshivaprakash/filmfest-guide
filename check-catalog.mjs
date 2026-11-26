@@ -24,4 +24,9 @@ for (const record of world) {
   assert.ok(Math.abs(record.ll[1]) <= 90 && Math.abs(record.ll[0]) <= 180, `${record.id} needs coordinates`);
   if (record.logo) assert.ok(existsSync(new URL(`./${record.logo.file}`, import.meta.url)) && record.logo.license && record.logo.source, `${record.id} logo needs a file and licence`);
 }
-console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);
+const worldFilms = JSON.parse(readFileSync(new URL('./data/world-editions/world-films.json', import.meta.url)));
+for (const [fid, record] of Object.entries(worldFilms.festivals)) {
+  assert.ok(world.some(festival => festival.id === fid), `${fid} must be a world festival`);
+  for (const [film, year, kind] of record.films) assert.ok(worldFilms.films[film] && year > 1890 && ['won', 'nominated', 'selected'].includes(kind), `${fid} ${film}`);
+}
+console.log(`Validated ${films.length} films across ${festivals.length} festivals, plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata, ${Object.keys(worldFilms.films).length} films from ${Object.keys(worldFilms.festivals).length} of them.`);

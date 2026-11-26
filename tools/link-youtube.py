@@ -81,7 +81,7 @@ def main(cache):
                 ok = bool(made_in & countries[q]) and near(q, film['year'], 1)
             if ok:
                 film['wikidata'] = q
-                film['youtube'] = [[video, roles.get(video, 'video')] for video in sorted(videos[q], key=lambda v: roles.get(v) != 'trailer')]
+                film['youtube'] = [[video, roles.get(video, 'video')] for video in sorted(videos[q], key=lambda v: (roles.get(v) != 'trailer', v))]
                 linked += 1
                 break
     json.dump(catalog, open('catalog.json', 'w'), ensure_ascii=False, indent=2)

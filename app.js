@@ -10,8 +10,8 @@ const results = byId('results');
 const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', map: 'Map', years: 'Past years' };
 const searchTabs = { films: 'Films', people: 'People', awards: 'Awards' };
 // Explore, like LitFest's: maps and research views across every festival.
-const exploreTabs = { map: 'Map', languages: 'Languages', across: 'Across festivals', world: 'World festivals' };
-const listViews = ['films', 'people', 'awards', 'years', 'across', 'world'];
+const exploreTabs = { map: 'Map', languages: 'Languages', across: 'Across festivals', world: 'World festivals', winners: 'World winners' };
+const listViews = ['films', 'people', 'awards', 'years', 'across', 'world', 'winners'];
 const exploreViews = ['map', 'languages'];
 const UNLISTED = 'Format unlisted';
 let festivalId = '';
@@ -104,8 +104,39 @@ async function start() {
     }
     worldFestivals = [...extra, ...rows].sort((a, b) => (b.links || 0) - (a.links || 0));
     regions = unique(worldFestivals.map(record => record.region)).sort();
+    worldById = new Map(worldFestivals.map(record => [record.id, record]));
     if (['home', 'world', 'map'].includes(view)) render();
+    worldFilmsReady();
   }).catch(error => console.warn('World festivals unavailable', error));
+  // Winners, nominees and selected films of the best-known world festivals, from Wikidata.
+  let worldById = new Map();
+  let worldFilms = null;
+  let worldEntries = [];
+  let worldFilmsLoad;
+  const worldFilmsReady = () => (worldFilmsLoad ||= fetch('data/world-editions/world-films.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
+    if (!data) return null;
+    worldFilms = data;
+    worldEntries = Object.entries(data.festivals).flatMap(([fid, record]) => record.films.map(([film, year, kind, prizes]) => ({ fid, film, year, kind, prizes, info: data.films[film] })));
+    if (['home', 'winners'].includes(view)) render();
+    return data;
+  }).catch(() => null));
+  const festName = fid => worldById.get(fid)?.short || worldById.get(fid)?.name || fid;
+  const entryLabel = entry => (entry.kind === 'won' ? `Won: ${entry.prizes.join(', ') || 'award'}` : entry.kind === 'nominated' ? 'Nominated' : 'Selected');
+  function showWorldFilm(id) {
+    const [title, year, directors, countries, videos = []] = worldFilms.films[id];
+    open(title, [year, directors.length && `Directed by ${directors.join(', ')}`].filter(Boolean).join(' · '));
+    if (countries.length) content.append(element('p', countries.join(', '), 'meta'));
+    list('At festivals', worldEntries.filter(entry => entry.film === id).sort((a, b) => a.year - b.year).map(entry => {
+      const row = element('span');
+      const festival = worldById.get(entry.fid);
+      row.append(festival ? button(festName(entry.fid), 'credit-link', () => showWorld(festival)) : festName(entry.fid), ` ${entry.year} · ${entryLabel(entry)}`);
+      return row;
+    }));
+    const local = films.find(film => film.wikidata === id);
+    if (local) content.append(button(`Also in ${label(local)} ›`, 'btn', () => showFilm(local)));
+    list('Watch on YouTube', videos.map((video, index) => source(`https://www.youtube.com/watch?v=${video}`, `Video${videos.length > 1 ? ` ${index + 1}` : ''} on YouTube`)));
+    list('Sources', [source(`https://www.wikidata.org/wiki/${id}`, 'Wikidata')]);
+  }
   const allRoles = unique([...people.values()].flat().map(record => record.role)).sort();
   const ON_YOUTUBE = 'On YouTube';
   const formats = [...unique(films.map(film => film.format)).filter(format => format !== UNLISTED).sort(), ON_YOUTUBE];
@@ -261,7 +292,7 @@ async function start() {
     const years = festivals.flatMap(record => record.editions.map(event => event.year));
     kpis(byId('home-kpis'), [
       [festivals.length + worldFestivals.length, 'film festivals worldwide'],
-      [films.length, 'films on record from the 4 festivals in the guide'],
+      [films.length + (worldFilms ? Object.keys(worldFilms.films).length : 0), worldFilms ? `films on record: ${number(films.length)} from Indian festival catalogues, ${number(Object.keys(worldFilms.films).length)} from world festivals` : 'films on record from the 4 festivals in the guide'],
       [people.size, 'people credited'],
       [years.length, `festival editions, ${Math.min(...years)} to ${Math.max(...years)}`],
       [awards.length, 'awards and honours']
@@ -357,7 +388,32 @@ async function start() {
     const about = element('p', record.desc ? record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.' : '');
     content.append(about);
     worldAbout().then(texts => { if (texts[record.id]) about.textContent = texts[record.id]; });
-    content.append(element('p', 'Listed so we can plan its import. Films, people and past editions will be added from its official catalogues.', 'meta'));
+    const record_ = worldFilms?.festivals[record.id];
+    const shown = content;
+    const history = element('div');
+    content.append(history);
+    worldFilmsReady().then(() => {
+      const data = worldFilms?.festivals[record.id];
+      if (!data || content !== shown || !shown.contains(history)) return;
+      const won = worldEntries.filter(entry => entry.fid === record.id && entry.kind === 'won');
+      const years = data.editions.map(([year]) => year);
+      history.append(element('p', [years.length && `${years.length} editions on record, ${Math.min(...years)} to ${Math.max(...years)}`, `${number(data.films.length)} films (${number(won.length)} winners)`].filter(Boolean).join(' · '), 'meta'));
+      const ul = element('ul');
+      for (const entry of won.slice(0, 15)) {
+        const li = element('li');
+        li.append(`${entry.year} · `, button(entry.info[0], 'credit-link', () => showWorldFilm(entry.film)), ` · ${entry.prizes.join(', ')}`);
+        ul.append(li);
+      }
+      if (won.length) history.append(element('h3', 'Recent winners'), ul);
+      if (data.films.length) history.append(button(`All ${number(data.films.length)} films from this festival ›`, 'btn', () => {
+        detail.close();
+        search.value = '';
+        go('', 'winners', false);
+        facet.value = record.id;  // the festival options exist only once the list has rendered
+        renderList();
+      }));
+    });
+    if (!record_) content.append(element('p', 'Listed so we can plan its import. Films, people and past editions will be added from its official catalogues and Wikidata.', 'meta'));
     list('Sources', [
       record.url && source(record.url, 'Official festival website'),
       record.wiki && source(record.wiki, 'Wikipedia'),
@@ -524,15 +580,18 @@ async function start() {
     const visibleFestivals = selected ? [selected] : festivals;
     const years = unique(visibleFestivals.flatMap(record => record.editions.map(event => event.year))).sort((a, b) => b - a);
     options(edition, years.map(year => [year, String(year)]), 'All editions');
-    edition.parentElement.hidden = view === 'years' || view === 'world';
-    const hasFacet = ['films', 'people', 'world'].includes(view);
+    edition.parentElement.hidden = ['years', 'world', 'winners'].includes(view);
+    const hasFacet = ['films', 'people', 'world', 'winners'].includes(view);
     byId('facet-label').hidden = !hasFacet;
-    byId('kind-label').hidden = view !== 'world';
+    byId('kind-label').hidden = !['world', 'winners'].includes(view);
     if (view === 'world') options(kind, tally(worldFestivals, record => record.types || []).map(([name, count]) => [name, `${name} (${number(count)})`]), 'All types');
+    if (view === 'winners') options(kind, [['won', 'Winners'], ['nominated', 'Nominated'], ['selected', 'Selected']], 'Won, nominated or selected');
     const facetSetup = { people: ['Role', allRoles, 'All roles'], world: ['Region', regions, 'All regions'] }[view] || ['Format', formats, 'All formats'];
     byId('facet-caption').textContent = facetSetup[0];
-    options(facet, facetSetup[1].map(value => [value, value]), facetSetup[2]);
-    search.placeholder = { films: 'Search titles, names, languages, countries…', people: 'Search people, roles, films…', awards: 'Search awards, winners, films…', years: 'Search years…', across: 'Search people, films…', world: 'Search festivals, cities, countries…' }[view];
+    if (view === 'winners') options(facet, Object.keys(worldFilms?.festivals || {}).filter(fid => worldFilms.festivals[fid].films.length).map(fid => [fid, worldById.get(fid)?.name || fid]), 'All festivals');
+    else options(facet, facetSetup[1].map(value => [value, value]), facetSetup[2]);
+    if (view === 'winners') byId('facet-caption').textContent = 'Festival';
+    search.placeholder = { films: 'Search titles, names, languages, countries…', people: 'Search people, roles, films…', awards: 'Search awards, winners, films…', years: 'Search years…', across: 'Search people, films…', world: 'Search festivals, cities, countries…', winners: 'Search films, directors, awards, countries…' }[view];
 
     const editionRecord = selected?.editions.find(event => event.year === Number(edition.value));
     const note = byId('edition-note');
@@ -550,7 +609,13 @@ async function start() {
     const query = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
     const match = values => query.every(term => normalize(values.flat(Infinity).filter(Boolean).join(' ')).includes(term));
     const matchesEdition = record => (!festivalId || record.festival === festivalId) && (!edition.value || record.year === Number(edition.value));
-    if (view === 'world') {
+    if (view === 'winners') {
+      if (!worldFilms) results.dataset.empty = 'Loading world festival films…';
+      worldFilmsReady();
+      items = worldEntries.filter(entry => (!facet.value || entry.fid === facet.value) && (!kind.value || entry.kind === kind.value) && match([entry.info, entry.prizes, festName(entry.fid), worldById.get(entry.fid)?.name, entry.year]))
+        .sort((a, b) => b.year - a.year || (a.kind === 'won' ? -1 : 0) - (b.kind === 'won' ? -1 : 0))
+        .map(entry => result(`${festName(entry.fid)} · ${entry.year}`, entry.info[0], [entryLabel(entry), entry.info[2].join(', '), entry.info[3].join(', ')].filter(Boolean).join(' · '), () => showWorldFilm(entry.film), entry.kind === 'won' ? '★' : '▶'));
+    } else if (view === 'world') {
       items = worldFestivals.filter(record => (!facet.value || record.region === facet.value) && (!kind.value || record.types?.includes(kind.value)) && match([record.name, record.short, record.city, record.country, record.region, record.month, record.desc, record.types])).map(record => result([record.region, record.types?.[0], record.since && `since ${record.since}`].filter(Boolean).join(' · '), record.name, [[record.city, record.country].filter(Boolean).join(', '), record.month].filter(Boolean).join(' · '), () => showWorld(record), initials(record.short || record.name), record.logo));
     } else if (view === 'across') {
       // Research view: people who return across festivals or editions, most widely travelled first.

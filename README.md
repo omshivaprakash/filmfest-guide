@@ -40,6 +40,14 @@ The wider list, `world-festivals.json`, holds about 8,000 film festivals from Wi
 
 The `youtube` field on a film lists YouTube videos (trailers or full films) that Wikidata records for it, matched by title, year and director with `python3 tools/link-youtube.py <cache>`. Films → On YouTube lists them.
 
+### World festival winners and selections
+
+`data/world-editions/world-films.json` holds the editions, award winners, nominees and selected films of the 40 best-known world festivals, from Wikidata. It is built by `tools/extractors/world-editions/` (see its README) and shows up as **Explore → World winners** and in each festival's detail.
+
+### Scheduled refreshes
+
+GitHub Actions rerun the Wikidata importers every week and commit only when the data changed, authored as the maintainer: `world-festivals` (list, types, descriptions, logos; Mondays 03:17 UTC), `youtube-links` (Wednesdays 04:23 UTC) and `world-editions` (Fridays 05:41 UTC). Each can also be started from the Actions tab. A run that fetched noticeably less than before stops without committing.
+
 ## Licence
 
 Code is MIT ([LICENSE](LICENSE)). Data is CC BY 4.0 with the exceptions in [LICENSE-DATA.md](LICENSE-DATA.md). Cite it with [CITATION.cff](CITATION.cff).

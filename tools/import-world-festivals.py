@@ -110,7 +110,7 @@ def fetch(cache):
     os.makedirs(f'{cache}/img', exist_ok=True)
     for qid, name in logos.items():
         m, out = meta.get(name), f'{cache}/img/{qid}.bin'
-        if not m or not m.get('thumb') or not m['mime'].startswith('image/') or os.path.exists(out):
+        if not m or not m.get('thumb') or not m['mime'].startswith('image/') or os.path.exists(out) or os.path.exists(f'images/world/{qid}.webp'):
             continue
         data = get(m['thumb'].split('?')[0].replace('thumb.wikimedia.org', 'upload.wikimedia.org'), tries=5)
         if data:
@@ -179,7 +179,8 @@ def build(cache, root='.'):
     for b in json.load(open(f'{cache}/kinds.json')):
         kinds[value(b, 'f').rsplit('/', 1)[1]].append(value(b, 'kLabel') or '')
     festivals = {}
-    for b in json.load(open(f'{cache}/details.json')):
+    # Sorted so that festivals with several places or countries pick the same one on every run.
+    for b in sorted(json.load(open(f'{cache}/details.json')), key=lambda b: json.dumps(b, sort_keys=True)):
         qid = value(b, 'f').rsplit('/', 1)[1]
         row = festivals.setdefault(qid, {'id': qid})
         for key, field in (('name', 'fLabel'), ('desc', 'fDescription'), ('country', 'countryLabel'), ('city', 'placeLabel'), ('url', 'web')):
@@ -220,14 +221,20 @@ def build(cache, root='.'):
         name = images['want'].get(qid)
         meta = images['meta'].get(name or '')
         source = f'{cache}/img/{qid}.bin'
-        if meta and os.path.exists(source) and meta.get('license'):
-            target = os.path.join(out_dir, f'{qid}.webp')
+        target = os.path.join(out_dir, f'{qid}.webp')
+        if meta and meta.get('license') and (os.path.exists(source) or os.path.exists(target)):
             if not os.path.exists(target):
                 subprocess.run(['convert', source + '[0]', '-background', 'white', '-alpha', 'remove', '-resize', '160x160>', '-quality', '78', target], check=False, capture_output=True)
             if os.path.exists(target):
                 row['logo'] = {'file': f'images/world/{qid}.webp', 'source': meta['page'], 'credit': plain(meta.get('artist')) or 'Wikimedia Commons', 'license': meta['license'], 'licenseUrl': meta.get('licenseUrl')}
         result.append(row)
     result.sort(key=lambda r: (-r['links'], r['name']))
+    # A scheduled run that lost batches to rate limits must not shrink the published list.
+    previous = os.path.join(root, 'world-festivals.json')
+    if os.path.exists(previous):
+        before = len(json.load(open(previous))['festivals'])
+        if len(result) < before * 0.95:
+            sys.exit(f'Refusing to write {len(result)} festivals over {before}: the fetch looks incomplete')
     # Descriptions load only when a festival is opened, which keeps the list and maps light.
     about = {row['id']: row.pop('about') for row in result if 'about' in row}
     with open(os.path.join(root, 'world-about.json'), 'w') as handle:
