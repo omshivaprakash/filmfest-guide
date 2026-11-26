@@ -200,5 +200,28 @@ figcaption { margin-top: 4px; font-size: 12px; color: var(--muted); }
 /* World festival logos from Wikimedia Commons */
 body[data-view="world"] .result .thumbnail img { object-fit: contain; background: #fff; padding: 4px; }
 .wlogo { display: block; max-width: 160px; max-height: 96px; object-fit: contain; margin: 0 0 12px; background: #fff; border-radius: 8px; padding: 6px; }
-#home-kpis { grid-template-columns: repeat(5, 1fr); }
-@media (max-width: 720px) { #home-kpis { grid-template-columns: repeat(2, 1fr); } #home-kpis .kpi:first-child { grid-column: 1 / -1; } }
+#home-kpis { grid-template-columns: repeat(6, 1fr); }
+@media (max-width: 720px) { #home-kpis { grid-template-columns: repeat(3, 1fr); } }
+
+/* home: stats, notable logos, data freshness */
+.hstats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 12px; }
+.hstats .panel { min-width: 0; }
+.hstats .vb { grid-template-columns: minmax(0, 150px) 1fr 40px; }
+.hstats .meta { margin-top: 6px; }
+.fom { display: flex; gap: 10px; align-items: center; width: 100%; padding: 8px; border: 1px solid var(--line); border-radius: 10px; background: #fff; text-align: left; }
+.fom:hover { border-color: var(--accent); }
+.fom .thumbnail { width: 64px; height: 64px; background: #fff; }
+.fom .thumbnail img { object-fit: contain; padding: 4px; }
+.fom b { display: block; font: 700 1rem/1.15 var(--display); }
+.fom .d { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: 12px; color: var(--muted); margin-top: 2px; }
+.logos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; padding-top: 6px; }
+.logo { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 0; padding: 8px 6px; border: 1px solid var(--line); border-radius: 10px; background: #fff; font-size: 11.5px; font-weight: 600; }
+.logo:hover { border-color: var(--accent); }
+.logo span:last-child { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.logo .lg { position: relative; display: grid; place-items: center; width: 100%; height: 48px; color: var(--accent); font: 800 1rem var(--display); }
+.logo .lg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.sync { margin: 4px 0 14px; }
+.sync ul { margin: 0; padding-left: 18px; font-size: 12px; line-height: 1.6; color: var(--muted); }
+.sync b { color: var(--fg); font-weight: 600; }
+@media (max-width: 860px) { .logos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .hstats { grid-template-columns: 1fr; } .logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
