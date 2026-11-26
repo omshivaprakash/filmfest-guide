@@ -10,7 +10,10 @@ imported festival replaces its entry from data/world-festivals/world-festivals.j
 Source and licence: everything comes from Wikidata (CC0). Each record links to its Wikidata item and,
 where one exists, its English Wikipedia article. No Wikipedia text is copied.
 """
-import json, os, re, sys, time, urllib.parse, urllib.request
+import json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import wikipedia  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 OUT = os.path.join(ROOT, 'data', 'world-editions', 'catalog.json')
@@ -121,7 +124,47 @@ def fetch():
     for s in subjects.values():  # stable output, so unchanged data commits nothing
         for field in ('types', 'directors', 'countries', 'languages'):
             s[field].sort()
-    return {'editions': editions, 'awards': awards, 'labels': labels, 'results': results, 'subjects': subjects}
+    pages = wikipedia.fetch_pages({val(r, 'wiki') for r in editions if val(r, 'wiki')})
+    return {'editions': editions, 'awards': awards, 'labels': labels, 'results': results, 'subjects': subjects, 'pages': pages}
+
+
+def norm(title):
+    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', title).encode('ascii', 'ignore').decode().lower())
+
+
+def add_wikipedia(pages, eds, films):
+    """Selections and awards from each edition's Wikipedia article, merged onto the Wikidata films by title."""
+    for fest, years in eds.items():
+        for year, ed in years.items():
+            page = pages.get(ed.get('source'))
+            if not page:
+                continue
+            index = {norm(f['title']): f for f in films.values() if f['festival'] == fest and f['year'] == year}
+            selections, awards = wikipedia.parse(page)
+            def film_for(title, link):
+                key = norm(title)
+                if not key:
+                    return None
+                if key not in index:
+                    fid = f'wp-{fest}-{year}-{key[:40]}'.lower()
+                    index[key] = films[fid] = {'id': fid, 'title': title, 'festival': fest, 'year': year, 'format': UNLISTED,
+                                               'credits': [], 'awards': [], 'sources': [link] if link else []}  # the edition's article is already its source
+                return index[key]
+            for section, title, link, director, country in selections:
+                film = film_for(title, link)
+                if not film:
+                    continue
+                film.setdefault('section', section)
+                if not film['credits'] and director:
+                    film['credits'] = [['Director', d] for d in re.split(r',\s*|\s+and\s+|\s*&\s*', director) if d]
+                if not film.get('country') and country:
+                    film['country'] = country
+                if film['format'] == UNLISTED:
+                    film['format'] = 'Short film' if re.search(r'short', section, re.I) else 'Documentary' if re.search(r'documentar', section, re.I) else UNLISTED
+            for name, title, link in awards:
+                film = film_for(title, link)
+                if film and not any(norm(a[0]) == norm(name) for a in film['awards']):
+                    film['awards'].append([name, ed['source']])
 
 
 def build(raw, world, hand):
@@ -158,6 +201,7 @@ def build(raw, world, hand):
             'awards': [], 'sources': [WD + r['subject']] + ([s['wiki']] if s['wiki'] else []), 'wikidata': r['subject']})
         if award not in film['awards']:
             film['awards'].append(award)
+    add_wikipedia(raw.get('pages', {}), eds, films)
     for film in films.values():  # wins before nominations
         film['awards'].sort(key=lambda a: (a[0].startswith('Nominated'), a[0]))
     festivals = []
@@ -167,7 +211,7 @@ def build(raw, world, hand):
         w = world.get(qid, {})
         record = {'id': hand.get(w.get('name'), (qid,))[0], 'wikidata': qid, 'short': hand.get(w.get('name'), (qid, short))[1], 'name': w.get('name', short), 'region': w.get('region', ''), 'country': w.get('country'), 'city': w.get('city'),
                   'lat': (w.get('ll') or [None, None])[1], 'lon': (w.get('ll') or [None])[0],
-                  'description': sentence(w.get('desc')), 'url': re.sub(r'^http://', 'https://', w.get('url') or ''),  # the site check requires https 'wiki': w.get('wiki'),
+                  'description': sentence(w.get('desc')), 'url': re.sub(r'^http://', 'https://', w.get('url') or ''), 'wiki': w.get('wiki'),  # the site check requires https
                   'editions': sorted(eds[qid].values(), key=lambda e: -e['year'])}
         if w.get('logo'):
             record['logo'] = w['logo']
@@ -175,8 +219,8 @@ def build(raw, world, hand):
     ids = {f['wikidata']: f['id'] for f in festivals}
     for record in [*films.values(), *honors]:
         record['festival'] = ids.get(record['festival'], record['festival'])
-    return {'source': 'Wikidata (CC0). Each record links to its Wikidata item and English Wikipedia article.',
-            'license': 'CC0 1.0', 'extractor': 'tools/extractors/world-editions/extract.py',
+    return {'source': 'Wikidata (CC0) and English Wikipedia edition articles. Each record links to its Wikidata item or the article it came from.',
+            'license': 'Wikidata CC0; facts drawn from English Wikipedia (CC BY-SA 4.0), attributed by source link.', 'extractor': 'tools/extractors/world-editions/extract.py',
             'festivals': festivals, 'films': sorted(films.values(), key=lambda f: (f['festival'], -f['year'], f['title'], f['id'])),
             'honors': sorted(honors, key=lambda h: (h['festival'], -h['year'], h['award'][2], h['award'][0]))}
 
@@ -196,6 +240,7 @@ def check():
     assert out['festivals'][0]['editions'] == [{'year': 2010, 'number': '63rd', 'source': WD + 'Q1'}]
     assert len(out['films']) == 1 and out['films'][0]['awards'][0][0] == 'Golden Leopard' and out['films'][0]['format'] == 'Feature'
     assert sentence('1998 film directed by Bille August') == '1998 film directed by Bille August'
+    wikipedia.check()
     print('self-check passed')
 
 
