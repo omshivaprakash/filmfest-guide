@@ -54,6 +54,8 @@ All data files are plain **JSON** (text files that any program can read). The fa
 | `artwork` | `{ file, source, ... }` still or poster, with its source |
 | `wikidata` | Wikidata id (`Q…`) where the film was matched |
 | `youtube` | List of `[video id, "trailer" or "video"]` from Wikidata; added on load from `data/youtube-links/youtube.json` |
+| `minutes`, `genres`, `imdb` | Runtime, Wikidata genres and IMDb id; added on load from `data/enrich/films.json` |
+| `artwork` (from enrich) | A Wikimedia Commons poster or still, copied to `data/enrich/posters/`, with `license`, `licenseUrl` and `credit`, used only when the film has no artwork |
 | `fromCatalogue`, `fromGoaKeralaImport` | Marks which importer wrote the record |
 
 ### `honors[]`: awards to a person, not a film
@@ -96,3 +98,13 @@ Keyed by person name: `{ file, source, credit, license, licenseName }`. Only pho
 ## 4. Extractor shards: `data/<name>/`
 
 Each extractor in `tools/extractors/<name>/` writes only to its own folder in `data/<name>/`. A shard uses the same field names as the matching list above (films, editions or festivals), so the app and `check-catalog.mjs` read it the same way. A shard of festivals, films and honours is `data/<name>/catalog.json` in the shape of `catalog.json`; list its path in `data/shards.json` and the app merges it in. A shard festival with `wikidata` (or an `id` matching a hand-listed entry) comes off the work in progress list. An extractor's own README describes anything extra it writes.
+
+### `data/enrich/`
+
+| File | Keyed by | Fields |
+|---|---|---|
+| `festivals.json` | world festival id (`Q…`) | `fiapf` (FIAPF category), `month` (usual month), `every` (`Annual`, `Biennial`…), `langs`, `editions` (dated editions on Wikidata), `desc` (only when the world list has none), `wiki` (a non-English Wikipedia article, only when there is no English one) |
+| `about.json` | world festival id | `{ lang, text }`, opening sentences of that non-English article (CC BY-SA 4.0) |
+| `films.json` | film id | `wikidata`, `minutes`, `genres`, `imdb`, `poster` (see `artwork` above) |
+
+The app merges these in on load and never lets them overwrite a value already in the catalogue or world list.

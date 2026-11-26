@@ -71,6 +71,8 @@ const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join
 
 async function start() {
   const linksLoad = fetch('data/youtube-links/youtube.json').then(reply => (reply.ok ? reply.json() : { films: {} })).catch(() => ({ films: {} }));
+  const optional = url => fetch(url).then(reply => (reply.ok ? reply.json() : null)).catch(() => null);
+  const extrasLoad = optional('data/enrich/films.json');
   const response = await fetch('catalog.json');
   if (!response.ok) throw new Error('Catalogue unavailable');
   const { festivals, films, honors, portraits = {}, worldFestivals: allHand = [] } = await response.json();
@@ -90,6 +92,13 @@ async function start() {
     film.title = tidyTitle(film.title);
     Object.assign(film, links[film.id]);  // YouTube links and Wikidata ids from the youtube-links extractor
   }
+  // Runtime, genres, IMDb id and Commons posters from the enrich extractor; the page works without it.
+  const filmExtras = (await extrasLoad)?.films || {};
+  for (const film of films) {
+    const { poster, ...extra } = filmExtras[film.id] || {};
+    Object.assign(film, { ...extra, ...film });
+    if (poster && !film.artwork) film.artwork = poster;
+  }
   const festivalMap = new Map(festivals.map(record => [record.id, record]));
   const label = record => `${festivalMap.get(record.festival).short} · ${record.year}`;
   const awards = films.flatMap(film => film.awards.map(award => ({ ...film, award, film }))).concat(honors);
@@ -105,8 +114,9 @@ async function start() {
   let worldFestivals = handWorld;
   let regions = unique(worldFestivals.map(record => record.region));
   // The world list is large, so it loads after the first screen and is merged with the hand-checked entries.
-  fetch('data/world-festivals/world-festivals.json').then(reply => (reply.ok ? reply.json() : null)).then(data => {
+  Promise.all([optional('data/world-festivals/world-festivals.json'), optional('data/enrich/festivals.json')]).then(([data, extras]) => {
     if (!data) return;
+    for (const record of data.festivals) Object.assign(record, { ...extras?.festivals?.[record.id], ...record });
     const key = name => normalize(name).replace(/[^a-z0-9]/g, '');
     const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
     const rows = data.festivals.filter(record => !imported.has(record.id)).map(({ ll, ...record }) => ({ ...record, lon: ll[0], lat: ll[1] }));
@@ -178,7 +188,7 @@ async function start() {
       figure.append(thumbnail('', film.artwork), caption);
       content.append(figure);
     }
-    const facts = [film.language, film.country, film.section].filter(Boolean).join(' · ');
+    const facts = [film.language, film.country, film.section, film.minutes && `${film.minutes} min`, film.genres?.join(', ')].filter(Boolean).join(' · ');
     if (facts) content.append(element('p', facts, 'meta'));
     if (film.summary) content.append(element('p', film.summary));
     if (film.cataloguePage) content.append(element('p', `Catalogue index · printed page ${film.cataloguePage}`, 'meta'));
@@ -191,7 +201,7 @@ async function start() {
     }));
     list('Awards', film.awards.map(award => source(award[1], [award[0], award[2]].filter(Boolean).join(' · '))));
     const references = film.sources.filter(url => url !== event.source);
-    list('Sources', [source(event.source, editionLabel(event)), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`)), film.wikidata && source(`https://www.wikidata.org/wiki/${film.wikidata}`, 'Wikidata')].filter(Boolean));
+    list('Sources', [source(event.source, editionLabel(event)), source(record.url, 'Official festival website'), ...references.map((url, index) => source(url, film.fromCatalogue ? 'Film catalogue' : `Film reference ${index + 1}`)), film.wikidata && source(`https://www.wikidata.org/wiki/${film.wikidata}`, 'Wikidata'), film.imdb && source(`https://www.imdb.com/title/${film.imdb}/`, 'IMDb')].filter(Boolean));
   }
   function showPerson(name) {
     open(name, 'Person');
@@ -448,7 +458,7 @@ async function start() {
   }
 
   let aboutTexts;
-  const worldAbout = () => (aboutTexts ||= fetch('data/world-festivals/world-about.json').then(reply => (reply.ok ? reply.json() : {})).catch(() => ({})));
+  const worldAbout = () => (aboutTexts ||= Promise.all([optional('data/world-festivals/world-about.json'), optional('data/enrich/about.json')]).then(([english, other]) => ({ ...other?.festivals, ...english })));
   function showWorld(record) {
     open(record.name, `${record.region} · Work in progress`);
     if (record.logo) {
@@ -458,16 +468,22 @@ async function start() {
       content.append(img);
     }
     const place = [record.city, record.country].filter(Boolean).join(', ');
-    const facts = [place + (record.approx ? ' (map position approximate)' : ''), record.since && `since ${record.since}`, record.month && `usually ${record.month}`].filter(Boolean).join(' · ');
+    const facts = [place + (record.approx ? ' (map position approximate)' : ''), record.since && `since ${record.since}`, record.every, record.month && `usually ${record.month}`, record.langs && `in ${record.langs.join(', ')}`].filter(Boolean).join(' · ');
+    if (record.fiapf) content.append(element('p', `FIAPF accredited · ${record.fiapf}`, 'tag'));
     if (record.types) content.append(element('p', `Type: ${record.types.join(', ')}`, 'meta'));
     content.append(element('p', facts, 'meta'));
     const about = element('p', record.desc ? record.desc.charAt(0).toUpperCase() + record.desc.slice(1) + '.' : '');
     content.append(about);
-    worldAbout().then(texts => { if (texts[record.id]) about.textContent = texts[record.id]; });
+    worldAbout().then(texts => {
+      const text = texts[record.id];
+      if (!text) return;
+      about.textContent = text.text || text;
+      if (text.lang) about.lang = text.lang;
+    });
     content.append(element('p', 'Listed so we can plan its import. Films, people and past editions will be added from its official catalogues.', 'meta'));
     list('Sources', [
       record.url && source(record.url, 'Official festival website'),
-      record.wiki && source(record.wiki, 'Wikipedia'),
+      record.wiki && source(record.wiki, /^https:\/\/en\./.test(record.wiki) ? 'Wikipedia' : `Wikipedia (${record.wiki.split('//')[1].split('.')[0]})`),
       /^Q\d+$/.test(record.id) && source(`https://www.wikidata.org/wiki/${record.id}`, 'Wikidata')
     ].filter(Boolean));
     if (record.logo) {

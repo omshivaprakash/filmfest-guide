@@ -1,0 +1,9 @@
+name: enrich
+on:
+  schedule: [{ cron: '41 4 2 * *' }]   # UTC, 2nd of each month; Wikidata and Commons change slowly
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  sync:
+    uses: ./.github/workflows/extract.yml
+    with: { name: enrich, args: run }
