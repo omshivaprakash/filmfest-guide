@@ -61,10 +61,22 @@ def cached(cache, name, fetch):
     return json.load(open(path))
 
 
-def sparql(query):
-    body = get(WDQS, urllib.parse.urlencode({'query': query}).encode(), 'application/sparql-results+json')
+def sparql(query, tries=12):
+    body = get(WDQS, urllib.parse.urlencode({'query': query}).encode(), 'application/sparql-results+json', tries)
     rows = json.loads(body)['results']['bindings']
     return [{**{k: v['value'] for k, v in row.items()}, **{k + '_lang': v['xml:lang'] for k, v in row.items() if 'xml:lang' in v}} for row in rows]
+
+
+def split_sparql(template, items, render):
+    """Run template over items; a query that times out (cut-off JSON or repeated refusals) is split in half."""
+    try:
+        return sparql(template % render(items), tries=3 if len(items) > 1 else 12)
+    except (RuntimeError, ValueError):
+        if len(items) == 1:
+            print(f'  skipped {items[0]}: query keeps failing', file=sys.stderr)
+            return []
+        half = len(items) // 2
+        return split_sparql(template, items[:half], render) + split_sparql(template, items[half:], render)
 
 
 def wiki_api(lang, site, **params):
@@ -109,7 +121,7 @@ def fetch_festivals(cache):
     world = json.load(open(os.path.join(WORLD, 'world-festivals.json')))['festivals']
     ids = sorted(record['id'] for record in world)
     for n, part in enumerate(chunks(ids, 200)):
-        cached(cache, f'fest-{digest(part)}.json', lambda: sparql(FESTIVAL_FACTS % ' '.join('wd:' + i for i in part)))
+        cached(cache, f'fest-{digest(part)}.json', lambda: split_sparql(FESTIVAL_FACTS, part, lambda ids: ' '.join('wd:' + i for i in ids)))
         print(f'festival facts {n + 1}/{-(-len(ids) // 200)}', file=sys.stderr)
     cached(cache, 'fiapf.json', lambda: wiki_api('en', 'wikipedia', action='parse', page='International Federation of Film Producers Associations', prop='wikitext'))
     # Other-language opening sentences for festivals with no English article, 20 titles per request.
@@ -309,12 +321,11 @@ def fetch_films(cache):
     films = all_films()
     todo = title_chunks(films)
     for n, (name, part) in enumerate(todo):
-        values = ' '.join(f'{literal(t)}@en {literal(t)}@mul' for t in part)
-        cached(cache, name, lambda: sparql(FILM_BY_TITLE % (values, FILM_CLASSES)))
+        cached(cache, name, lambda: split_sparql(FILM_BY_TITLE, part, lambda titles: (' '.join(f'{literal(t)}@en {literal(t)}@mul' for t in titles), FILM_CLASSES)))
         print(f'film titles {n + 1}/{len(todo)}', file=sys.stderr)
     candidates = film_candidates(cache, films)[1]
     for n, (name, part) in enumerate(fact_chunks(candidates)):
-        cached(cache, name, lambda: sparql(FILM_FACTS % ' '.join('wd:' + q for q in part)))
+        cached(cache, name, lambda: split_sparql(FILM_FACTS, part, lambda ids: ' '.join('wd:' + q for q in ids)))
         print(f'film facts {n + 1}', file=sys.stderr)
     files = picture_files(cache, candidates)
     for part in chunks(files, 50):
@@ -463,6 +474,16 @@ def test():
     years = collections.defaultdict(set, {'Q1': {2019}, 'Q2': {2020}})
     directors = collections.defaultdict(set, {'Q1': {person('Lee Ana')}, 'Q2': {person('Bob')}})
     assert match(film, {'Q1', 'Q2'}, years, directors, collections.defaultdict(set)) == 'Q1'
+    calls = []
+    def fake(query, tries=12):
+        calls.append(query)
+        if query.count('wd:') > 1:
+            raise ValueError('cut off')
+        return [query]
+    global sparql
+    real, sparql = sparql, fake
+    assert split_sparql('%s', ['A', 'B', 'C'], lambda ids: ' '.join('wd:' + i for i in ids)) == ['wd:A', 'wd:B', 'wd:C']
+    sparql = real
     print('ok')
 
 
