@@ -5,7 +5,7 @@
 
 Covers major festivals outside the Big Five (Cannes, Venice, Berlin, TIFF and Sundance have their own extractor).
 The shard has the catalog.json shape and is listed in data/shards.json. Festival ids are Wikidata QIDs, so an
-imported festival replaces its entry from world-festivals.json.
+imported festival replaces its entry from data/world-festivals/world-festivals.json.
 
 Source and licence: everything comes from Wikidata (CC0). Each record links to its Wikidata item and,
 where one exists, its English Wikipedia article. No Wikipedia text is copied.
@@ -202,7 +202,7 @@ def check():
 if __name__ == '__main__':
     check()
     if '--check' not in sys.argv:
-        world = {r['id']: r for r in json.load(open(os.path.join(ROOT, 'world-festivals.json')))['festivals']}
+        world = {r['id']: r for r in json.load(open(os.path.join(ROOT, 'data', 'world-festivals', 'world-festivals.json')))['festivals']}
         # A hand-listed festival keeps its id, so the app drops its work-in-progress entry.
         listed = json.load(open(os.path.join(ROOT, 'catalog.json'))).get('worldFestivals', [])
         hand = {r['name']: (r['id'], r.get('short') or r['name']) for r in listed}

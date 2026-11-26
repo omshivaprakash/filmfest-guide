@@ -27,14 +27,14 @@ These four files are the whole app: the screens, the colours and the logic. `geo
 ### 2. The guide's data: `catalog.json`
 One file with five lists: `festivals` (with their editions), `films` (with credits and awards), `honors` (awards given to a person rather than a film), `portraits` (credited photos of people) and `worldFestivals` (55 hand-checked festivals still to add). The People directory, the maps and the language counts are worked out from this file when the page loads.
 
-### 3. The world list: `world-festivals.json` and `world-about.json`
-About 8,100 film festivals from Wikidata. The list loads after the first screen so the page opens fast. The longer Wikipedia descriptions sit in `world-about.json` and load only when you open a festival.
+### 3. The world list: `data/world-festivals/world-festivals.json` and `data/world-festivals/world-about.json`
+About 8,100 film festivals from Wikidata. The list loads after the first screen so the page opens fast. The longer Wikipedia descriptions sit in `data/world-festivals/world-about.json` and load only when you open a festival.
 
 ### 4. Images: `images/`
-Film stills and posters from the catalogues, portraits, and festival logos from Wikimedia Commons in `images/world/`. Each image records its source and, where it has one, its licence.
+Film stills and posters from the catalogues, portraits, and festival logos from Wikimedia Commons in `data/world-festivals/logos/`. Each image records its source and, where it has one, its licence.
 
 ### 5. The tools: `tools/`
-Small Python scripts that collect the data. The older importers (`tools/import-*.py`, `tools/link-youtube.py`) read one source each and write into `catalog.json` or `world-festivals.json`. New sources go in `tools/extractors/<name>/` and write a shard under `data/<name>/`, one per source, so extractors never fight over the same file. They are only needed when updating data, never to *use* the site. See [Maintaining](MAINTAINING.md).
+Small Python scripts that collect the data. The older importers (`tools/import-*.py`) read one source each and write into `catalog.json`. The world list and YouTube links, and all new sources, go in `tools/extractors/<name>/` and write a shard under `data/<name>/`, one per source, so extractors never fight over the same file. They are only needed when updating data, never to *use* the site. See [Maintaining](MAINTAINING.md).
 
 ### 6. The offline copy: `sw.js` and `manifest.webmanifest`
 A small helper (a "service worker") saves the site on your device after your first visit, so it opens without internet. The manifest lets you install it to your home screen.

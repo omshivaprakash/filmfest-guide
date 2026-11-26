@@ -17,7 +17,7 @@ All from the Wikidata Query Service (CC0), about a dozen queries with a pause be
 - **Awards**: items linked to the festival by conferred by (P1027) or part of (P361), followed through award groups. `EXTRA_AWARDS` adds prizes whose items are not linked back (Golden George, Moscow).
 - **Winners** (P166) and **nominees** (P1411) of those awards, dated by the statement's point in time (P585) or its edition (P805). Films become `films`; people become `honors`.
 
-Festival ids are Wikidata QIDs, so an imported festival replaces its entry from `world-festivals.json`. Name, place, logo and description come from `world-festivals.json`.
+Festival ids are Wikidata QIDs, so an imported festival replaces its entry from `world-festivals.json`. Name, place, logo and description come from `data/world-festivals/world-festivals.json`.
 
 ## Licence
 

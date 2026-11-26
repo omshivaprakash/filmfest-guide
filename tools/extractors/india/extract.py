@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / 'data' / 'india' / 'catalog.json'
 UA = {'User-Agent': 'filmfest-guide-data/1.0 (open data project; github.com/omshivaprakash/filmfest-guide)'}
 
-# id matches the hand-listed worldFestivals entry (if any) and wikidata the world-festivals.json row, so the loader can drop both.
+# id matches the hand-listed worldFestivals entry (if any) and wikidata the data/world-festivals/world-festivals.json row, so the loader can drop both.
 FESTIVALS = [
     dict(id='kiff', wikidata='Q474265', wiki='Kolkata International Film Festival', short='KIFF', region='West Bengal', lat=22.57, lon=88.36, url='https://www.kiff.in', description='Golden Royal Bengal Tiger, Indian languages and Bengali Panorama.'),
     dict(id='mami', wikidata='Q17075409', wiki='Mumbai Film Festival', name='MAMI Mumbai Film Festival', short='MAMI', region='Maharashtra', lat=19.08, lon=72.88, url='https://www.mumbaifilmfestival.com', description='South Asia competition and world cinema in Mumbai.'),
@@ -301,7 +301,7 @@ def build(cache, out=OUT):
         year, _ = year_of(val(b, 'start'), val(b, 'date'), val(b, 'edLabel'))
         if year:
             wd_editions.setdefault(val(b, 'f'), {})[year] = dict(number=ORDINAL.search(val(b, 'edLabel')).group(1) if ORDINAL.search(val(b, 'edLabel')) else '', qid=val(b, 'ed'))
-    world = ROOT / 'world-festivals.json'
+    world = ROOT / 'data' / 'world-festivals' / 'world-festivals.json'
     logos = {r['id']: r['logo'] for r in json.loads(world.read_text())['festivals'] if r.get('logo')} if world.exists() else {}
     festivals, films, honors = [], {}, []
     for fest in FESTIVALS:

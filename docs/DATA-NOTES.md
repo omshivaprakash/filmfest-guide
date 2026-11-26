@@ -42,10 +42,10 @@ How complete each festival is, where its data comes from, and the known gaps. Co
 
 ## World festivals (work in progress)
 
-- **About 8,100 festivals** in `world-festivals.json`, from Wikidata items that are an instance of "film festival" or a common subclass, excluding single editions. Only festivals with a name and a country are kept. Retrieved 26 November 2026.
+- **About 8,100 festivals** in `data/world-festivals/world-festivals.json`, from Wikidata items that are an instance of "film festival" or a common subclass, excluding single editions. Only festivals with a name and a country are kept. Retrieved 26 November 2026.
 - **163 countries**, grouped into regions (India is its own region).
-- **About 1,300** have a description from the opening of their English Wikipedia article (`world-about.json`).
-- **About 440** have a logo or image from Wikimedia Commons in `images/world/`, each with its licence and credit.
+- **About 1,300** have a description from the opening of their English Wikipedia article (`data/world-festivals/world-about.json`).
+- **About 440** have a logo or image from Wikimedia Commons in `data/world-festivals/logos/`, each with its licence and credit.
 - **16 types**, from Wikidata classes and genres plus words in the name and description: Short film, LGBTQ+, Documentary, Environment and nature, Horror fantasy and sci-fi, Animation, Children and youth, Music and dance, Student and first films, Women, Experimental and art, Human rights and social, Mobile and online, Food sport and travel, Jewish, Indigenous. Many festivals have no type.
 - **55 hand-checked** festivals in `catalog.json` → `worldFestivals` add the usual month.
 - Films and people for these festivals are still to come.

@@ -63,7 +63,7 @@ How complete each festival is differs. The picture for each one is in **[docs/DA
 
 ## Open data
 
-The facts behind the guide are open data under **CC BY 4.0**: `catalog.json` (festivals, editions, films, credits, awards) and `world-festivals.json` (the world list). The world list comes from Wikidata (CC0); Wikipedia descriptions are CC BY-SA 4.0. Cite it as *FilmFest Guide (omshivaprakash), https://omshivaprakash.github.io/filmfest-guide/, CC BY 4.0*. Details in [LICENSE-DATA.md](LICENSE-DATA.md) and [CITATION.cff](CITATION.cff). What each field means is in the **[Data dictionary](docs/DATA-DICTIONARY.md)**.
+The facts behind the guide are open data under **CC BY 4.0**: `catalog.json` (festivals, editions, films, credits, awards) and `data/world-festivals/world-festivals.json` (the world list). The world list comes from Wikidata (CC0); Wikipedia descriptions are CC BY-SA 4.0. Cite it as *FilmFest Guide (omshivaprakash), https://omshivaprakash.github.io/filmfest-guide/, CC BY 4.0*. Details in [LICENSE-DATA.md](LICENSE-DATA.md) and [CITATION.cff](CITATION.cff). What each field means is in the **[Data dictionary](docs/DATA-DICTIONARY.md)**.
 
 ---
 

@@ -27,13 +27,15 @@ for (const festival of [...festivals, ...worldFestivals]) {
   if (festival.url) assert.equal(new URL(festival.url).protocol, 'https:');
 }
 for (const festival of worldFestivals) assert.ok(festival.name && festival.city && festival.country && festival.region && festival.month && festival.status === 'wip', festival.id);
-const world = JSON.parse(readFileSync(new URL('./world-festivals.json', import.meta.url))).festivals;
+const world = JSON.parse(readFileSync(new URL('./data/world-festivals/world-festivals.json', import.meta.url))).festivals;
 assert.equal(new Set(world.map(record => record.id)).size, world.length, 'world festival ids must be unique');
 for (const record of world) {
   assert.ok(/^Q\d+$/.test(record.id) && record.name && record.country && record.region, record.id);
   assert.ok(Math.abs(record.ll[1]) <= 90 && Math.abs(record.ll[0]) <= 180, `${record.id} needs coordinates`);
   if (record.logo) assert.ok(existsSync(new URL(`./${record.logo.file}`, import.meta.url)) && record.logo.license && record.logo.source, `${record.id} logo needs a file and licence`);
 }
+const { films: links } = JSON.parse(readFileSync(new URL('./data/youtube-links/youtube.json', import.meta.url)));
+for (const [id, link] of Object.entries(links)) assert.ok(films.some(film => film.id === id) && /^Q\d+$/.test(link.wikidata) && link.youtube.length, `youtube link ${id}`);
 // Data freshness: every source needs an id and label; a date, if given here or in its shard's stamp, must parse.
 const { sources } = JSON.parse(readFileSync(new URL('./sync.json', import.meta.url)));
 assert.equal(new Set(sources.map(entry => entry.id)).size, sources.length, 'sync.json ids must be unique');

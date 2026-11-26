@@ -68,11 +68,14 @@ The shared workflow:
 
 Runs share one concurrency group, so two extractors never push at the same time. If a run fails, nothing is committed and the site keeps the last good data; the workflow's log in the Actions tab says which source failed. Any workflow can also be started by hand from **Actions → the workflow → Run workflow**.
 
-**Data freshness.** The root `sync.json` lists every source with its `label` and `schedule`, and the home page's Data freshness panel reads it. A scheduled extractor adds a row `{ "id": "<name>", "label": "…", "schedule": "weekly" }` and leaves out `updated`, which comes from `data/<name>/sync.json`. Hand-run importers (the festival catalogues and the world list) carry `updated` and `records` in the root file; update them when you rerun one.
+**Data freshness.** The root `sync.json` lists every source with its `label` and `schedule`, and the home page's Data freshness panel reads it. A scheduled extractor adds a row `{ "id": "<name>", "label": "…", "schedule": "weekly" }` and leaves out `updated`, which comes from `data/<name>/sync.json`. Hand-run importers (the festival catalogues) carry `updated` and `records` in the root file; update them when you rerun one.
 
 | Extractor | Source | Workflow | Schedule (UTC) |
 |---|---|---|---|
 | [india](../tools/extractors/india/README.md) | English Wikipedia festival articles, Wikidata | `india.yml` | Tuesdays 04:23 |
+| world-festivals | Wikidata, English Wikipedia, Wikimedia Commons | world-festivals.yml | Mondays 03:17 |
+| youtube-links | Wikidata (P1651) | youtube-links.yml | Wednesdays 04:23 |
+| [world-editions](../tools/extractors/world-editions/README.md) | Wikidata (editions, award winners and nominees) | `world-editions.yml` | Mondays 04:17 |
 
 Pick a schedule that matches how often the source changes: daily during a festival's programme announcements, weekly for Wikidata, monthly for archives that rarely change. Spread start times so runs do not all start at once.
 
@@ -80,14 +83,15 @@ Pick a schedule that matches how often the source changes: daily during a festiv
 
 ## The original importers
 
-These read one source each and write straight into `catalog.json` or `world-festivals.json`. They run by hand.
+These read one source each and write straight into `catalog.json`. They run by hand. (The world list and YouTube links are now scheduled extractors; their commands are kept here for running by hand.)
 
 ### World festivals from Wikidata
 
 ```
-python3 tools/import-world-festivals.py fetch <cache-dir>   # query Wikidata, Wikipedia and Commons (slow, polite, resumable)
-python3 tools/import-world-festivals.py build <cache-dir>   # write world-festivals.json, world-about.json and images/world/
-python3 tools/import-world-festivals.py kinds <cache-dir>   # refresh the classes used for festival types
+python3 tools/extractors/world-festivals/extract.py [cache-dir]         # fetch then build, as the weekly workflow does
+python3 tools/extractors/world-festivals/extract.py fetch <cache-dir>   # query Wikidata, Wikipedia and Commons (slow, polite)
+python3 tools/extractors/world-festivals/extract.py build <cache-dir>   # write data/world-festivals/ (list, descriptions, logos)
+python3 tools/extractors/world-festivals/extract.py kinds <cache-dir>   # refresh the classes used for festival types
 ```
 
 Festivals are Wikidata items that are an instance of "film festival" (Q220505) or a common subclass, excluding single editions. The app loads the list after the first screen and merges in the hand-checked `worldFestivals` from `catalog.json`, which add the usual month. Each logo keeps its own licence and credit.
@@ -95,10 +99,10 @@ Festivals are Wikidata items that are an instance of "film festival" (Q220505) o
 ### YouTube links
 
 ```
-python3 tools/link-youtube.py <cache-dir>
+python3 tools/extractors/youtube-links/extract.py [cache-dir]
 ```
 
-Matches catalogue films to Wikidata films with a YouTube video ID (P1651) by title, year within two and director (or country when there is no director), and writes `youtube` and `wikidata` on each matched film.
+Matches catalogue films to Wikidata films with a YouTube video ID (P1651) by title, year within two and director (or country when there is no director), and writes `data/youtube-links/youtube.json`; the app adds `youtube` and `wikidata` to each matched film when it loads.
 
 ### Bengaluru catalogues
 
