@@ -55,6 +55,7 @@ h2 { font: 700 1.1rem/1.15 var(--display); margin: 0; }
 .kpi b { display: block; font: 800 clamp(1.25rem, 3.4vh, 1.9rem)/1 var(--display); color: var(--accent); font-variant-numeric: tabular-nums; }
 .kpi span { display: block; margin-top: 3px; font-size: 10.5px; line-height: 1.2; color: var(--muted); }
 .panel { flex: 0 0 auto; background: var(--surface); border-radius: 10px; padding: 8px; }
+.exbars h5 { margin: 16px 0 6px; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .panel h5 { margin: 0 0 6px; font-size: 10px; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
 .bars { display: flex; align-items: flex-end; gap: 3px; height: clamp(48px, 13vh, 120px); }
 .bars div { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 2px; }
