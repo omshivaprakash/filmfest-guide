@@ -117,11 +117,14 @@ def winners(wikitext, award=None):
             heads = {k: v for k, v in heads.items() if k < len(head.group(1))}
             heads[len(head.group(1))] = clean(head.group(2))
         path = ' / '.join(heads[k] for k in sorted(heads))
-        if line.startswith('{|') and not SKIP_SECTION.search(path) and (award or AWARD_SECTION.search(path)):
+        if line.startswith('{|') and not SKIP_SECTION.search(path):
+            start = i
             i, header, rows = read_table(lines, i)
             col = column(header)
             y, t, d, c = col('year'), col('english title', 'title', 'film'), col('director'), col('countr')
-            name = award or award_title(heads[max(heads)] if heads else '')
+            # outside award sections, a film column headed like "Best Film (Étoile d'Or Winner)" names its award
+            named = t is not None and 'winner' in header[t] and re.search(r'\(([^()]+?)\s+winners?\)', '\n'.join(lines[start:i]), re.I)
+            name = award or (award_title(heads[max(heads)] if heads else '') if AWARD_SECTION.search(path) else clean(named.group(1)) if named else None)
             found = []
             for r in rows if None not in (y, t, d) and name else []:
                 if len(r) < len(header):  # a rowspan row: several films share a year
@@ -224,6 +227,9 @@ def check():
     assert winners(table) == [('Golden Prize', 1968, 'Bonnie and Clyde', 'https://en.wikipedia.org/wiki/Bonnie_and_Clyde_%28film%29', 'Arthur Penn', '')], winners(table)
     nominees = table.replace('| 1967 || colspan="3"| Festival not held', "| 1968 || ''Other'' || Y || Z")
     assert winners(nominees) == [] and len(winners(table.split('== Programme')[0].replace('Golden Prize winners', 'History'), 'Big Award')) == 1
+    ceremonies = "== Ceremonies ==\n{|\n! Edition\n! Year\n! Best Film (Étoile d'Or Winner)\n! Director\n|-\n| 1st\n| 2001\n| ''[[Inch'Allah Dimanche]]''\n| Yamina Benguigui\n|}"
+    assert [w[:3] for w in winners(ceremonies)] == [("Étoile d'Or", 2001, "Inch'Allah Dimanche")], winners(ceremonies)
+    assert winners(ceremonies.replace(" (Étoile d'Or Winner)", '')) == []  # a plain film table outside award sections is not a winner list
     sel, aw = parse(sample)
     assert sel == [('Main Competition', 'The Birthday Party', 'https://en.wikipedia.org/wiki/The_Birthday_Party_%282025_film%29', 'Miguel Ángel Jiménez', 'Greece, Spain'),
                    ('Main Competition', 'Heads or Tails?', 'https://en.wikipedia.org/wiki/Heads_or_Tails%3F_%282025_film%29', 'Alessio Rigo de Righi and Matteo Zoppis', 'Italy')], sel

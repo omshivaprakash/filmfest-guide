@@ -324,6 +324,8 @@ async function start() {
       event.datesSource && event.datesSource !== event.source && source(event.datesSource, 'Dates source'),
       ...(event.archiveDocuments || []).map(doc => source(doc.url, doc.name))
     ].filter(Boolean));
+    list('Jury', (event.jury || []).map(([name, role]) => element('span', role ? `${name} · ${role}` : name)));
+    if (event.jurySource) list('Jury source', [source(event.jurySource, new URL(event.jurySource).hostname)]);
     if (count) content.append(button('Browse these films', 'btn', () => {
       detail.close();
       edition.value = String(event.year);
@@ -895,7 +897,7 @@ async function start() {
     } else if (view === 'years') {
       items = selected.editions.filter(event => match([event.year, event.number, event.dates])).map(event => {
         const count = filmsIn(selected.id, event.year).length;
-        return result(`${event.number} edition`, `${selected.short} ${event.year}`, [event.dates, count ? `${number(count)} films` : event.catalogue ? 'Catalogue PDF' : 'No films yet'].filter(Boolean).join(' · '), () => showEdition(selected, event), String(event.year).slice(2));
+        return result(event.number ? `${event.number} edition` : "Edition", `${selected.short} ${event.year}`, [event.dates, count ? `${number(count)} films` : event.catalogue ? 'Catalogue PDF' : 'No films yet'].filter(Boolean).join(' · '), () => showEdition(selected, event), String(event.year).slice(2));
       });
     } else if (view === 'people') {
       items = [...people].sort(([a], [b]) => a.localeCompare(b)).flatMap(([name, credits]) => {
