@@ -50,6 +50,8 @@ FESTIVALS = [
     dict(id='byoff', wikidata='Q917382', wiki='Bring Your Own Film Festival', short='BYOFF', region='Odisha', lat=19.80, lon=85.83, description='An open screening festival on the beach in Puri.'),
     dict(id='osians', wikidata='Q634317', wiki="Osian's Cinefan Festival of Asian and Arab Cinema", short='Cinefan', region='Delhi', lat=28.61, lon=77.21, description='Asian and Arab cinema in New Delhi.'),
 ]
+AWARDISH = re.compile(r'award|prize|winner|peacock|pheasant|tiger|conch|medal|mention|honou?r|best|jury|recipient|achievement', re.I)
+GENERIC = re.compile(r'^(?:the )?(?:winners?|awards?(?: and.*)?|recipients|medal|list of recipients)$', re.I)
 YEAR = re.compile(r'\b(19[5-9]\d|20[0-4]\d)\b')
 ORDINAL = re.compile(r'\b(\d{1,2}(?:st|nd|rd|th))\b')
 
@@ -151,7 +153,7 @@ def links(cache, fest):
 
 def clean(text):
     text = re.sub(r'\[(?:\d+|[a-z]|citation needed|note \d+)\]', '', text)
-    return re.sub(r'\s+', ' ', text).strip(' ,;:-–|')
+    return re.sub(r'\s+', ' ', text).strip(' ,;:-–|"“”')
 
 
 def text_of(node):
@@ -288,7 +290,7 @@ def extract(fest, page):
                             juries.append((year, category if not YEAR.search(category) else 'Jury', name))
                 continue
             first = low[0] if low else ''
-            if first in {'ceremony', 'year', 'edition'} and len(head) > 2 and not any(k in low for k in ('film', 'winner', 'title')):
+            if first in {'ceremony', 'year', 'edition'} and len(head) > 2 and not any(k in low for k in ('film', 'winner')) and not any(re.search(r'title|recipient|work|director', h) for h in low):
                 # One row per edition, one column per award (Kolkata).
                 for r in body:
                     year, number = year_of(text_of(r[0]))
@@ -301,7 +303,7 @@ def extract(fest, page):
                 continue
             # One row per award: Category | Winner, or Year | Film | Director.
             cat = next((i for i, h in enumerate(low) if h in {'category', 'award', 'section', 'prize'}), None)
-            win = next((i for i, h in enumerate(low) if h.startswith(('winner', 'film', 'title', 'recipient'))), None)
+            win = next((i for i, h in enumerate(low) if h.startswith(('winner', 'film', 'title', 'recipient')) or h == 'english title'), None)
             work = next((i for i, h in enumerate(low) if h.startswith('work')), None)  # Year | Recipient(s) | Work(s): award lists for people
             ycol = next((i for i, h in enumerate(low) if h in {'year', 'edition', 'ceremony'}), None)
             dcol = next((i for i, h in enumerate(low) if h.startswith('director')), None)
@@ -323,7 +325,13 @@ def extract(fest, page):
                     title = (parse_cell(r[work]) or ('', '', '', ''))[0] or text_of(r[work])
                     link = link or next((a.get('title') for a in r[work].xpath('.//a[@title]')), '')
                 award = text_of(r[cat]) if cat is not None else award_name(heading)
-                entries.append(dict(year=year, number=number or h_number, award=award, title=title, person=person, director=director, link=link))
+                # A table under a heading that names no award is a selection (Indian Panorama, Feature films): the film screened, it won nothing.
+                section = '' if cat is not None or AWARDISH.search(award) else award
+                if section and not title:
+                    continue
+                if not section and GENERIC.match(award):
+                    award = next((award_name(h) for h in reversed(trail[:-1]) if AWARDISH.search(h) and not GENERIC.match(award_name(h))), 'Award')
+                entries.append(dict(year=year, number=number or h_number, award=award, title=title, person=person, director=director, link=link, section=section))
         for li in el.xpath('./li') if el.tag in ('ul', 'ol') else []:
             # "2025: <i>Title</i> - Director | Country" under an award heading (KASHISH).
             text = text_of(strip_refs(li))
@@ -371,10 +379,10 @@ def award_item(li):
         if sep:
             award = clean(lxml.html.fragment_fromstring(f'<p>{before + token[:sep.start()]}</p>').text_content())
             got = parse_cell(lxml.html.fragment_fromstring(f'<td>{token[sep.end():] + "".join(tokens[n + 1:])}</td>'))
-            if not award or not got or len(award.split()) > 14:
+            if not award or not got or len(award.split()) > 14 or GENERIC.match(award):
                 return None
             title, person, director, link = got
-            quoted = not title and re.match(r'^(.+?)\s+for\s*["“](.+?)["”]', person)  # Person for"Film"
+            quoted = not title and re.match(r'^(.+?)\s+for\s*["“](.+?)["”]?$', person)  # Person for"Film"
             if quoted:
                 person, title = quoted.groups()
             person, director = (clean(re.sub(r'\s+from\s+[A-Z].*$', '', x)) for x in (person, director))
@@ -455,7 +463,7 @@ def build(cache, out=OUT):
             if not e['title']:
                 if e['person'] and e['person'] != e['award'] and len(e['person'].split()) <= 8 and is_honour(e['award']):
                     for person in re.split(r'\s+(?:&|and)\s+', e['person']):
-                        person = clean(re.sub(r'\s*\([^)]*\)$', '', person))  # "Sanjay Mishra (actor)"
+                        person = clean(re.sub(r'\s*\([^)]*\)$', '', person).split(',')[0])  # "Sanjay Mishra (actor)", "Name, Oscar-winning actor"
                         if re.search(r'cancel|postpone|not held|\.$', person, re.I):
                             continue
                         honors.append(dict(festival=fest['id'], year=e['year'], award=[e['award'], src, person], role=role_for(e['award']) or 'Honoree', **note))
@@ -479,13 +487,16 @@ def build(cache, out=OUT):
                 for name in re.split(r',\s*|\s+(?:&|and)\s+', e['director']):
                     if clean(name)[:1].isupper() and not re.search(r'[:()]', name):  # drops notes such as "executive producer X" or "Actor: X"
                         film['credits'].append(['Director', clean(name)])
-            award = [e['award'], src] + ([e['person']] if e['person'] else [])
             if src not in film['sources']:
                 film['sources'].append(src)
+            if e.get('section'):
+                film.setdefault('section', e['section'])
+                continue
+            award = [e['award'], src] + ([e['person']] if e['person'] else [])
             if award not in film['awards']:
                 film['awards'].append(award)
             role = role_for(e['award'])
-            if e['person'] and role and [role, e['person']] not in film['credits']:
+            if e['person'] and role and [role, e['person']] not in film['credits'] and ':' not in e['person'] and len(e['person'].split()) <= 6:
                 film['credits'].append([role, e['person']])
     shard = dict(
         about='Indian film festivals extracted by tools/extractors/india/extract.py from English Wikipedia and Wikidata. Facts only; each record links its source revision.',
@@ -533,6 +544,11 @@ def test():
     assert item('Best Director – Julia Solomonoff for"The Last Summer of La Boyita"') == ('Best Director', ('The Last Summer of La Boyita', 'Julia Solomonoff', '', ''))
     assert item('FIPRESCI Award: Best Film – <i>Camille</i> directed by <a>Boris Lojkine</a>') == ('FIPRESCI Award: Best Film', ('Camille', '', 'Boris Lojkine', ''))
     assert award_name('Golden Crow Pheasant for Best Film – Winners') == 'Golden Crow Pheasant for Best Film'
+    table = lambda heading, head, row: extract({}, {'title': 'T', 'html': f'<html><body><h2>{heading}</h2><table class="wikitable"><tr>{"".join(f"<th>{h}</th>" for h in head)}</tr><tr>{"".join(f"<td>{c}</td>" for c in row)}</tr></table></body></html>'})[0]
+    assert table('Silver Peacock Award winners', ['Year', 'Recipient(s)', 'Work(s)'], ['2009 (40th)', 'Ounie Lecomte', '<i>A Brand New Life</i>']) == [dict(year=2009, number='40th', award='Silver Peacock Award', title='A Brand New Life', person='Ounie Lecomte', director='', link='', section='')]
+    got = table('Indian Panorama 2019', ['No.', 'English title', 'Original title', 'Director'], ['1', '<i>Hellaro</i>', '<i>Hellaro</i>', 'Abhishek Shah'])
+    assert got[0]['section'] == 'Indian Panorama 2019' and got[0]['title'] == 'Hellaro' and got[0]['director'] == 'Abhishek Shah', got
+    assert table('Winners', ['Year', 'Film', 'Director'], ['2001', '<i>X</i>', 'Y'])[0]['award'] == 'Award'
     assert award_name('IFFI Best Director Award (2009–Present)') == 'IFFI Best Director Award'
     page = {'title': '50th International Film Festival of India', 'html': '<html><body><h2>Winners</h2><ul><li><a>IFFI Best Actor Award (Male)</a>: <a>Seu Jorge</a> for <i>Marighella</i></li></ul><link rel="mw:PageProp/Category" href="./Category:2019_film_festivals"/></body></html>'}
     assert extract({}, page)[0] == [dict(year=2019, number='50th', award='IFFI Best Actor Award (Male)', title='Marighella', person='Seu Jorge', director='', link='')], extract({}, page)
