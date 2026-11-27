@@ -89,6 +89,9 @@ async function start() {
     honors.push(...(shard.honors || []));
     Object.assign(portraits, shard.portraits);
   }
+  const announced = await optional('data/announced/announced.json');
+  mergeAnnounced([...festivals, ...allHand], announced?.editions);
+  films.push(...(announced?.films || []));
   const imported = new Set(festivals.flatMap(record => [record.id, record.wikidata]).filter(Boolean));
   const handWorld = allHand.filter(record => !imported.has(record.id));
   const links = (await linksLoad).films;
@@ -129,7 +132,7 @@ async function start() {
     const extra = [];
     for (const hand of handWorld) {
       const found = byName.get(key(hand.name)) || byHost.get(host(hand.url));
-      if (found) Object.assign(found, { short: hand.short, month: hand.month, city: found.city || hand.city });
+      if (found) Object.assign(found, { short: hand.short, month: hand.month, city: found.city || hand.city, editions: hand.editions });
       else extra.push(hand);
     }
     worldFestivals = [...extra, ...rows].sort((a, b) => (b.links || 0) - (a.links || 0));
@@ -318,6 +321,7 @@ async function start() {
     list('Documents', [
       event.catalogue && source(event.catalogue, event.catalogueLabel || 'Edition catalogue PDF'),
       event.source && event.source !== event.catalogue && source(event.source, 'Edition source'),
+      event.datesSource && event.datesSource !== event.source && source(event.datesSource, 'Dates source'),
       ...(event.archiveDocuments || []).map(doc => source(doc.url, doc.name))
     ].filter(Boolean));
     if (count) content.append(button('Browse these films', 'btn', () => {
@@ -590,6 +594,7 @@ async function start() {
     });
     content.append(element('p', 'Listed so we can plan its import. Films, people and past editions will be added from its official catalogues.', 'meta'));
     list('Sources', [
+      ...(Array.isArray(record.editions) ? record.editions : []).filter(event => event.datesSource).map(event => source(event.datesSource, `${event.year} dates`)),
       record.url && source(record.url, 'Official festival website'),
       record.wiki && source(record.wiki, /^https:\/\/en\./.test(record.wiki) ? 'Wikipedia' : `Wikipedia (${record.wiki.split('//')[1].split('.')[0]})`),
       /^Q\d+$/.test(record.id) && source(`https://www.wikidata.org/wiki/${record.id}`, 'Wikidata')

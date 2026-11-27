@@ -1,6 +1,7 @@
 {
   "about": "Data freshness shown on the home page. One entry per source. Hand-run importers carry `updated` here; a scheduled extractor in tools/extractors/<id>/ leaves it out, and the shared workflow stamps data/<id>/sync.json whenever new data lands.",
   "sources": [
+    { "id": "announced", "label": "Announced dates and results for current editions, checked by hand against news and festival sites", "updated": "2026-11-27", "records": 22, "schedule": "by hand" },
     { "id": "catalog", "label": "Festival catalogues: Bengaluru, Goa and Kerala", "updated": "2026-11-26", "records": 2907, "schedule": "by hand" },
     { "id": "india", "label": "More Indian festivals from Wikipedia and Wikidata", "schedule": "weekly" },
     { "id": "world-festivals", "label": "World festivals, types, descriptions and logos from Wikidata, Wikipedia and Commons", "schedule": "weekly" },

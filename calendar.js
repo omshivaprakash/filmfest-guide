@@ -40,6 +40,8 @@ function festivalWhen(record, today = new Date()) {
   const usually = `usually in ${monthsText(first, lastMonth)}`;
   const project = y => [new Date(y, first, startDay), endDay ? new Date(y + (lastMonth < first ? 1 : 0), lastMonth, endDay) : new Date(y + (lastMonth < first ? 1 : 0), lastMonth + 1, 0)];
   const lastTime = last ? ` · last ${rangeText(last)}` : '';
+  const off = record.editions?.find?.(event => event.year === year && event.off);
+  if (off) return { status: 'over', sure: true, text: `No ${year} edition · ${off.off}`, brief: `no ${year} edition`, start: project(year + 1)[0], end: null };
   if (last && last[0].getFullYear() === year) return { status: 'over', sure: true, text: `Over · ${rangeText(last)}`, brief: `ended ${short(last[1])}`, start: project(year + 1)[0], end: last[1] };
   for (const y of [year - 1, year]) {  // year - 1 catches a December–January run that started last year
     const [start, end] = project(y);
@@ -50,4 +52,19 @@ function festivalWhen(record, today = new Date()) {
   return { status: 'over', sure: false, text: `Likely over for ${year} · ${usually}`, brief: usually, start: project(year + 1)[0], end };
 }
 
-if (typeof module === 'object') module.exports = { festivalWhen, MONTHS };
+// data/announced/announced.json: hand-checked dates for current editions, merged by festival id. An existing edition keeps
+// its own fields and gains the announced ones; datesSource keeps the page the dates came from.
+function mergeAnnounced(records, editions = {}) {
+  for (const record of records) {
+    if (!editions[record.id]) continue;
+    const list = Array.isArray(record.editions) ? record.editions : (record.editions = []);
+    for (const edition of editions[record.id]) {
+      const same = list.find(event => event.year === edition.year);
+      if (same) Object.assign(same, { ...edition, ...same, datesSource: edition.source });
+      else list.push({ ...edition, datesSource: edition.source });
+    }
+    list.sort((a, b) => b.year - a.year);
+  }
+}
+
+if (typeof module === 'object') module.exports = { festivalWhen, mergeAnnounced, MONTHS };
