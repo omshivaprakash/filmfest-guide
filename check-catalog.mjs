@@ -7,7 +7,11 @@ const { festivals, films, honors, worldFestivals: hand = [] } = JSON.parse(readF
 const shardList = existsSync(new URL('./data/shards.json', import.meta.url)) ? JSON.parse(readFileSync(new URL('./data/shards.json', import.meta.url))) : [];
 for (const path of shardList) {
   const shard = JSON.parse(readFileSync(new URL(`./${path}`, import.meta.url)));
-  festivals.push(...(shard.festivals || []));
+  for (const record of shard.festivals || []) {  // same merge as app.js mergeFestivals: a known id only adds missing editions
+    const known = festivals.find(festival => festival.id === record.id);
+    if (!known) festivals.push(record);
+    else known.editions.push(...record.editions.filter(edition => !known.editions.some(old => old.year === edition.year)));
+  }
   films.push(...(shard.films || []));
   honors.push(...(shard.honors || []));
 }
