@@ -232,7 +232,8 @@ async function start() {
         : [strip.scrollLeft > 2 && 'left', strip.scrollLeft + strip.clientWidth < strip.scrollWidth - 2 && 'right'].filter(Boolean).join(' ');
     };
     strip.addEventListener('scroll', update, { passive: true });
-    if (!vertical) strip.addEventListener('focusin', event => event.target.scrollIntoView({ block: 'nearest', inline: 'center' }));
+    // Keyboard focus only: scrolling on a mouse/touch press moves the item away before the click lands.
+    if (!vertical) strip.addEventListener('focusin', event => event.target.matches(':focus-visible') && event.target.scrollIntoView({ block: 'nearest', inline: 'center' }));
     new ResizeObserver(update).observe(strip);
     new MutationObserver(update).observe(strip, { childList: true, subtree: true, characterData: true, attributeFilter: ['hidden'] });
     update();
