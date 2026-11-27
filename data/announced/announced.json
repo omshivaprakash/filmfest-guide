@@ -1,0 +1,345 @@
+{
+ "about": "Announced dates and results for current and upcoming editions, checked by hand against the cited source. app.js and check-catalog.mjs merge `editions` into the festival with that id (same year: fields added; new year: edition added), and add `films`. An edition with `off` says the year's edition is not being held. Never add a date or result that the source does not state.",
+ "checked": "2026-11-27",
+ "editions": {
+  "iffi": [
+   {
+    "year": 2026,
+    "number": "57th",
+    "dates": "20–28 November",
+    "source": "https://newsonair.gov.in/57th-iffi-to-begin-tomorrow-in-goa-with-stories-without-borders-as-its-theme/"
+   }
+  ],
+  "iffk": [
+   {
+    "year": 2026,
+    "number": "31st",
+    "dates": "11–18 December",
+    "source": "https://www.onmanorama.com/entertainment/entertainment-news/2026/10/29/iffk-round-the-clock-screening-thiruvananthapuram-kerala-film-festival.html"
+   }
+  ],
+  "kiff": [
+   {
+    "year": 2026,
+    "number": "32nd",
+    "dates": "16–23 December",
+    "source": "https://www.indiablooms.com/showbiz/rajinikanth-prabhas-akshay-kumar-kangana-ranaut-star-studded-kiff-2026-inauguration-to-shift-to-victoria-memorial/details"
+   }
+  ],
+  "mardelplata": [
+   {
+    "year": 2026,
+    "number": "41st",
+    "dates": "5–15 November",
+    "source": "https://www.ellitoral.com/escenarios-sociedad/incaa-41-festival-cine-mar-plata-5-15-noviembre-1100-peliculas-distinciones-natalia-oreiro-emilio-kauderer-alejandro-agresti-homenaje-hector-babenco-presencias-destacadas_0_E0FlEp9l7S.amp.html"
+   }
+  ],
+  "poff": [
+   {
+    "year": 2026,
+    "number": "30th",
+    "dates": "6–22 November",
+    "source": "https://sponsor.poff.ee/festival-en.html"
+   }
+  ],
+  "cairo": [
+   {
+    "year": 2026,
+    "number": "47th",
+    "dates": "11–20 November",
+    "source": "https://cineuropa.org/496346"
+   }
+  ],
+  "marrakech": [
+   {
+    "year": 2026,
+    "number": "23rd",
+    "dates": "20–28 November",
+    "source": "https://fr.le360.ma/culture/fifm-2026-76-films-trois-hommages-et-dix-rencontres-au-programme-de-la-23eme-edition_YKR2YKZHTND4HKBBIR2VO7ZQQY/"
+   }
+  ],
+  "sgiff": [
+   {
+    "year": 2026,
+    "number": "37th",
+    "dates": "21 October–1 November",
+    "source": "https://sgiff.com/press-office/singapore-international-film-festival-sgiff-announces-new-festival-dates-for-its-37th-edition-in-2026/"
+   }
+  ],
+  "havana": [
+   {
+    "year": 2026,
+    "number": "47th",
+    "dates": "3–13 December",
+    "source": "https://newsinamerica.com/pdcc/boletin/2026/abre-convocatoria-la-edicion-47-del-festival-internacional-del-nuevo-cine-latinoamericano/"
+   }
+  ],
+  "diff": [
+   {
+    "year": 2026,
+    "number": "15th",
+    "dates": "29 October–1 November",
+    "source": "https://www.timeout.com/india/news/at-diff-2026-independent-cinema-came-with-a-side-of-melancholy-110226"
+   }
+  ],
+  "kimff": [
+   {
+    "year": 2026,
+    "number": "23rd",
+    "dates": "27–31 May",
+    "source": "https://kathmandupost.com/art-culture/2026/05/19/kimff-2026-to-screen-over-50-films-from-29-countries"
+   }
+  ],
+  "redsea": [
+   {
+    "year": 2026,
+    "off": "postponed to late 2027",
+    "source": "https://www.screendaily.com/news/red-sea-international-film-festival-postponed-until-2027/5220602.article"
+   }
+  ]
+ },
+ "films": [
+  {
+   "id": "ann-iffi-2026-fatherland",
+   "title": "Fatherland",
+   "festival": "iffi",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Opening film",
+   "credits": [
+    [
+     "Director",
+     "Paweł Pawlikowski"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://newsonair.gov.in/57th-iffi-to-begin-tomorrow-in-goa-with-stories-without-borders-as-its-theme/"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-the-night-arezou-disappeared",
+   "title": "The Night Arezou Disappeared",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "International Competition",
+   "credits": [
+    [
+     "Director",
+     "Arian Vazirdaftari"
+    ]
+   ],
+   "awards": [
+    [
+     "Astor Piazzolla · Best Film",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ],
+    [
+     "Best Director",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios",
+     "Arian Vazirdaftari"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ],
+   "country": "Iran"
+  },
+  {
+   "id": "ann-mardelplata-2026-a-professora-de-frances",
+   "title": "A professora de francês",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "International Competition",
+   "credits": [
+    [
+     "Director",
+     "Ricardo Alves Jr."
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Prize",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ],
+    [
+     "Best Actress",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios",
+     "Grace Passô"
+    ],
+    [
+     "FIPRESCI Prize",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-elsinore",
+   "title": "Elsinore",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "International Competition",
+   "credits": [
+    [
+     "Director",
+     "Simon Stone"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Actor",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios",
+     "Andrew Scott"
+    ],
+    [
+     "Audience Award",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-truly-naked",
+   "title": "Truly Naked",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "International Competition",
+   "credits": [
+    [
+     "Director",
+     "Muriel d’Ansembourg"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Screenplay",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-2-valid-ids",
+   "title": "2 Valid Ids",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "International Competition",
+   "credits": [],
+   "awards": [
+    [
+     "Special Mention",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios",
+     "Marietta Subong"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-children-untold",
+   "title": "Children Untold",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "International Competition",
+   "credits": [
+    [
+     "Director",
+     "Miwa Nishikawa"
+    ]
+   ],
+   "awards": [
+    [
+     "SIGNIS Prize",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-el-pez-que-fuma",
+   "title": "El pez que fuma",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Latin American Competition",
+   "credits": [
+    [
+     "Director",
+     "Luis Fernández"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Film · Latin American Competition",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-cebar-frenar-llorar",
+   "title": "Cebar, frenar, llorar",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Argentine Competition",
+   "credits": [
+    [
+     "Director",
+     "Gerardo Tassan"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Film · Argentine Competition",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  },
+  {
+   "id": "ann-mardelplata-2026-chejov-en-rosario",
+   "title": "Chejov en Rosario",
+   "festival": "mardelplata",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Argentine Competition",
+   "credits": [
+    [
+     "Director",
+     "Gustavo Postiglione"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Director · Argentine Competition",
+     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios",
+     "Gustavo Postiglione"
+    ]
+   ],
+   "sources": [
+    "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
+   ]
+  }
+ ]
+}

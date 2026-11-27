@@ -11,6 +11,16 @@ for (const path of shardList) {
   films.push(...(shard.films || []));
   honors.push(...(shard.honors || []));
 }
+// Announced dates and results (data/announced), merged the way app.js merges them.
+const { festivalWhen, mergeAnnounced } = createRequire(import.meta.url)('./calendar.js');
+const announced = JSON.parse(readFileSync(new URL('./data/announced/announced.json', import.meta.url)));
+const announcedIds = new Set([...festivals, ...hand].map(festival => festival.id));
+for (const [id, list] of Object.entries(announced.editions)) for (const edition of list) {
+  assert.ok(announcedIds.has(id) && Number.isInteger(edition.year) && new URL(edition.source).protocol === 'https:', `announced ${id}`);
+  assert.ok(edition.off || festivalWhen({ editions: [edition] }, new Date(edition.year, 0, 1)), `announced ${id} ${edition.year} dates must parse`);
+}
+mergeAnnounced([...festivals, ...hand], announced.editions);
+films.push(...announced.films);
 const imported = new Set(festivals.flatMap(festival => [festival.id, festival.wikidata]).filter(Boolean));
 const worldFestivals = hand.filter(festival => !imported.has(festival.id));
 assert.equal(new Set(films.map(film => film.id)).size, films.length);
@@ -57,7 +67,6 @@ for (const entry of sources) {
   if (updated) assert.ok(!Number.isNaN(Date.parse(updated)), `${entry.id} has a bad updated date`);
 }
 // Calendar status (calendar.js) on fixed dates.
-const { festivalWhen } = createRequire(import.meta.url)('./calendar.js');
 const iffi = { editions: [{ year: 2026, dates: '20–28 November' }, { year: 2025, dates: '20–28 November' }] };
 const on = (record, y, m, d) => festivalWhen(record, new Date(y, m - 1, d))?.status;
 assert.equal(on(iffi, 2026, 11, 26), 'now');
@@ -71,6 +80,7 @@ assert.equal(on({ month: 'December' }, 2026, 11, 26), 'next');
 assert.equal(on({ month: 'June' }, 2026, 11, 26), 'over');
 assert.equal(festivalWhen({ month: 'December' }, new Date(2026, 10, 26)).brief, 'usually in December');
 assert.equal(festivalWhen({ editions: [{ year: 2025 }] }), null);
+assert.equal(on({ month: 'December', editions: [{ year: 2026, off: 'postponed' }] }, 2026, 11, 26), 'over');
 const impact = JSON.parse(readFileSync(new URL('./data/award-impact/impact.json', import.meta.url)));
 for (const [qid, record] of Object.entries(impact.films)) assert.ok(/^Q\d+$/.test(qid) && [...record.won, ...record.nominated].every(([name, award, year]) => name && /^Q\d+$/.test(award) && (year === null || Number.isInteger(year))), `award impact ${qid}`);
 console.log(`Validated ${films.length} films across ${festivals.length} festivals (${shardList.length} shards), plus ${worldFestivals.length} hand-listed and ${world.length} world festivals from Wikidata.`);
