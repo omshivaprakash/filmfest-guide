@@ -265,3 +265,22 @@ dialog .when { margin: 0 0 8px; }
 :root[lang=hi] { --body: "Inter", "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", system-ui, sans-serif; --display: "Fraunces", "Noto Serif Devanagari", "Noto Sans Devanagari", "Nirmala UI", Georgia, serif; }
 :root[lang=kn] *, :root[lang=hi] * { letter-spacing: 0 !important; }
 [data-pane][hidden] { display: none; }
+/* Home Overview: on now + festival of the month side by side, then one row of logos. */
+.ovrow { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 10px; }
+.ovrow > * { min-width: 0; }
+.ovwhen .wchips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-bottom: 8px; }
+.ovwhen .wchip { flex: 0 0 auto; }
+.ovwhen .hlink { padding: 0; }
+.ovlogos { margin-top: 10px; }
+@media (max-width: 560px) {
+  .ovrow { grid-template-columns: 1fr; gap: 8px; }
+  #home .top .sub { display: none; }
+  #home h1 { font-size: 1.25rem; }
+  #home-kpis .kpi b { font-size: 1.15rem; }
+  #home-kpis .kpi span { font-size: 10.5px; }
+  .ovlogos, .ovwhen .hlink { display: none; }
+  .ovwhen .wchips { margin-bottom: 4px; }
+  #home-kpis .kpi { padding: 6px 8px; }
+  #ov-fom .fom .thumbnail { width: 44px; height: 44px; }
+  #ov-fom .fom .d + .d, #ov-fom .meta { display: none; } /* both are on the On now tab and in the festival card */
+}
