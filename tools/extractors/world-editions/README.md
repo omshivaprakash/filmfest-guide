@@ -22,6 +22,8 @@ Then, from **English Wikipedia** edition articles (the ones Wikidata links, abou
 - **Line-ups**: every wikitable under a programme section that has a title and a director column (jury, industry and academy sections are skipped). Each row becomes a film with its `section`, director and country.
 - **Awards**: bulleted `Award: ''Film'' by Director` lines under award sections. Films are matched to the Wikidata records by title within the edition.
 
+And from each festival's **main English Wikipedia article** and the articles of its **awards** (those with an English sitelink), year-by-year winner tables with a year, a title and a director column. In a main article only award sections count, and the award is the section heading. A table where a year repeats lists nominees or ties, so it is skipped; only italicised titles count, so "not held" rows are dropped. A winner with no edition on record adds that edition, sourced to the list.
+
 Each festival keeps its Wikidata QID in `wikidata`; festivals hand-listed in catalog.json keep that id, so the imported festival replaces its entry from `world-festivals.json`. Name, place, logo and description come from `data/world-festivals/world-festivals.json`.
 
 ## Licence
