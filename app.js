@@ -10,6 +10,8 @@ const results = byId('results');
 const festivalTabs = { discover: 'Discover', films: 'Films', people: 'People', awards: 'Awards', map: 'Map', years: 'Past years' };
 const searchTabs = { films: 'Films', people: 'People', awards: 'Awards' };
 // Explore, like LitFest's: maps and research views across every festival.
+// Home tabs: one pane of the home page each, so home fits one screen; #<key> links to a pane.
+const homeTabs = { overview: 'Overview', now: 'On now', festivals: 'Festivals', explore: 'Explore', numbers: 'Numbers', notable: 'Notable festivals', winners: 'Winners', data: 'Data' };
 const exploreTabs = { map: 'Map', calendar: 'Calendar', languages: 'Languages', roles: 'Roles', impact: 'Award impact', across: 'Across festivals', world: 'World festivals' };
 const ROLES = ['Director', 'Writer', 'Actor', 'Producer', 'Cinematographer', 'Editor', 'Composer', 'Sound'];
 const listViews = ['films', 'people', 'awards', 'years', 'across', 'world'];
@@ -17,6 +19,7 @@ const exploreViews = ['map', 'languages', 'roles', 'impact'];
 const UNLISTED = 'Format unlisted';
 let festivalId = '';
 let view = 'home';
+let homeTab = 'overview';
 
 function element(tag, text, className) {
   const node = document.createElement(tag);
@@ -891,7 +894,7 @@ async function start() {
     const url = new URL(location.href);
     if (id) url.searchParams.set('f', id);
     else url.searchParams.delete('f');
-    url.hash = nextView === 'home' || (id && nextView === 'discover') ? '' : nextView;
+    url.hash = nextView === 'home' ? (homeTab === 'overview' ? '' : homeTab) : (id && nextView === 'discover') ? '' : nextView;
     if (url.href !== location.href) history.pushState(null, '', url);
     render();
   }
@@ -901,6 +904,7 @@ async function start() {
     const tab = location.hash.slice(1);
     const tabs = festivalId ? festivalTabs : { ...searchTabs, ...exploreTabs };
     view = Object.hasOwn(tabs, tab) ? tab : festivalId ? 'discover' : 'home';
+    homeTab = !festivalId && Object.hasOwn(homeTabs, tab) ? tab : 'overview';
   }
   function render() {
     const selected = festivalMap.get(festivalId);
@@ -916,17 +920,23 @@ async function start() {
       official.className = 'fext';
       line.replaceChildren(...(selected.logo ? [img] : []), element('span', selected.name, 'fn'), element('span', [latest.dates, latest.year].filter(Boolean).join(' '), 'fd'), ...[whenOf(selected)].filter(Boolean).map(whenBadge), official);
     }
-    const tabs = selected ? festivalTabs : view === 'home' ? {} : Object.hasOwn(exploreTabs, view) ? exploreTabs : searchTabs;
+    const tabs = selected ? festivalTabs : view === 'home' ? homeTabs : Object.hasOwn(exploreTabs, view) ? exploreTabs : searchTabs;
+    const onHome = tabs === homeTabs;
+    const refocus = byId('tabs').contains(document.activeElement);
     byId('tabs').replaceChildren(...Object.entries(tabs).map(([key, text]) => {
       const link = element('a', text);
-      link.href = key === 'discover' ? `?f=${festivalId}` : `${selected ? `?f=${festivalId}` : '?'}#${key}`;
-      if (key === view) link.setAttribute('aria-current', 'page');
+      link.href = key === 'discover' ? `?f=${festivalId}` : onHome && key === 'overview' ? './' : `${selected ? `?f=${festivalId}` : '?'}#${key}`;
+      if (key === (onHome ? homeTab : view)) link.setAttribute('aria-current', 'page');
       link.addEventListener('click', event => {
         event.preventDefault();
-        go(festivalId, key);
+        if (onHome) homeTab = key;
+        go(festivalId, onHome ? 'home' : key);
       });
       return link;
     }));
+    // Keep keyboard focus on the tab row after it is rebuilt.
+    if (refocus) byId('tabs').querySelector('[aria-current]')?.focus();
+    for (const pane of document.querySelectorAll('[data-pane]')) pane.hidden = pane.dataset.pane !== homeTab;
     document.body.dataset.view = view;
     byId('home').hidden = view !== 'home';
     byId('discover').hidden = view !== 'discover';
