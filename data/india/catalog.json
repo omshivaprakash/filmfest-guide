@@ -461,6 +461,78 @@
    ]
   },
   {
+   "id": "kiff",
+   "short": "KIFF",
+   "name": "Kolkata International Film Festival",
+   "region": "West Bengal",
+   "country": "India",
+   "description": "Golden Royal Bengal Tiger, Indian languages and Bengali Panorama.",
+   "wikidata": "Q474265",
+   "url": "https://www.kiff.in",
+   "lat": 22.57,
+   "lon": 88.36,
+   "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+   "logo": {
+    "file": "data/world-festivals/logos/Q474265.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Kolkata_International_Film_Festival.jpg",
+    "credit": "ಚೇತನ್ ಅಣ್ಣಾಜಿ ಗೌಡ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+   },
+   "editions": [
+    {
+     "year": 2025,
+     "number": "31st",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2024,
+     "number": "30th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2023,
+     "number": "29th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2022,
+     "number": "28th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2021,
+     "number": "26th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2019,
+     "number": "25th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2018,
+     "number": "24th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2017,
+     "number": "23rd",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2013,
+     "number": "19th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    },
+    {
+     "year": 2012,
+     "number": "18th",
+     "source": "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    }
+   ]
+  },
+  {
    "id": "mami",
    "short": "MAMI",
    "name": "MAMI Mumbai Film Festival",
@@ -7975,8 +8047,8 @@
    "festival": "iffi",
    "year": 2023,
    "format": "Feature",
-   "language": "German, Polish, English",
-   "country": "United States, Poland, United Kingdom",
+   "language": "English, German, Polish",
+   "country": "Poland, United Kingdom, United States",
    "summary": "2023 historical drama film by Jonathan Glazer.",
    "wikidata": "Q115993222",
    "credits": [
@@ -11134,7 +11206,7 @@
    "year": 2021,
    "format": "Feature",
    "language": "Spanish, Catalan, Galician",
-   "country": "Spain, Lithuania, France",
+   "country": "France, Spain, Lithuania",
    "summary": "2021 film by Juanjo Giménez Peña.",
    "wikidata": "Q109286299",
    "credits": [
@@ -21080,7 +21152,7 @@
    "year": 2017,
    "format": "Feature",
    "language": "Arabic",
-   "country": "France, Germany, Qatar, Palestine",
+   "country": "Qatar, Palestine, France, Germany",
    "summary": "2017 film by Annemarie Jacir.",
    "wikidata": "Q38421581",
    "credits": [
@@ -27629,6 +27701,1494 @@
    ],
    "sources": [
     "https://en.wikipedia.org/w/index.php?title=KASHISH_Pride_Film_Festival&oldid=1380179222"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-beautiful-evening-beautiful-day",
+   "title": "Beautiful Evening, Beautiful Day",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "language": "Croatian",
+   "country": "Poland, Croatia, Bosnia and Herzegovina",
+   "summary": "2024 Croatian film.",
+   "wikidata": "Q130284192",
+   "credits": [
+    [
+     "Director",
+     "Ivona Juka"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-kangbo-aloti",
+   "title": "Kangbo Aloti",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Khanjan Kishore Nath"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-porshi",
+   "title": "Porshi",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Chandrasish Ray"
+    ]
+   ],
+   "awards": [
+    [
+     "Bengali Panorama · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-riverstone",
+   "title": "Riverstone",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "summary": "2025 Sri Lankan film.",
+   "wikidata": "Q140726488",
+   "credits": [
+    [
+     "Director",
+     "Lalith Rathnayake"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Lalith Rathnayake"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-shape-of-momo",
+   "title": "Shape of Momo",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "language": "Hindi, English, Nepali",
+   "country": "India, South Korea",
+   "summary": "2025 film by Tribeny Rai.",
+   "wikidata": "Q136370164",
+   "credits": [
+    [
+     "Director",
+     "Tribeni Rai"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-the-elysian-field",
+   "title": "The Elysian Field",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Pradip Kurbah"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Pradip Kurbah"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-to-the-west-in-zapata",
+   "title": "To the West, in Zapata",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "David Bim"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ],
+    [
+     "IMI · FIPRESCI Award for International Competition",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2025-victoria",
+   "title": "Victoria",
+   "festival": "kiff",
+   "year": 2025,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sivaranjini J"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-a-joor",
+   "title": "Aājoor",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Aaryan Chandra Prakash"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Aaryan Chandra Prakash"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-beloved-tropic",
+   "title": "Beloved Tropic",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "language": "Spanish",
+   "country": "Colombia, Panama",
+   "summary": "2024 Panamanian film.",
+   "wikidata": "Q134475036",
+   "credits": [
+    [
+     "Director",
+     "Ana Endara"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ana Endara"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-dead-man-s-switch",
+   "title": "Dead Man's Switch",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "language": "Spanish",
+   "country": "Mexico",
+   "summary": "2024 Mexican film.",
+   "wikidata": "Q135854294",
+   "credits": [
+    [
+     "Director",
+     "Alejandro Gerber Bicecci"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-dhrubor-aschorjo-jibon",
+   "title": "Dhrubor Aschorjo Jibon",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "language": "Bangla",
+   "country": "India",
+   "summary": "2025 film by Abhijit Chowdhury.",
+   "wikidata": "Q134300317",
+   "credits": [
+    [
+     "Director",
+     "Abhijit Chowdhury"
+    ]
+   ],
+   "awards": [
+    [
+     "Bengali Panorama · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-lacchi",
+   "title": "Lacchi",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Krishne Gowda"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-nukkad-naatak-a-street-play",
+   "title": "Nukkad Naatak (A Street Play)",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Tanmaya Shekhar"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-putulnama",
+   "title": "Putulnama",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ranajit Ray"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2024-tarika",
+   "title": "Tarika",
+   "festival": "kiff",
+   "year": 2024,
+   "format": "Feature",
+   "language": "Bulgarian",
+   "country": "Luxembourg, Germany, Bulgaria",
+   "summary": "2024 Bulgarian film.",
+   "wikidata": "Q135854296",
+   "credits": [
+    [
+     "Director",
+     "Milko Lazarov"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ],
+    [
+     "IMI · FIPRESCI Award for International Competition",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-avni-ki-kismat",
+   "title": "Avni Ki Kismat",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Shonet Anthony Barretto"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Shonet Anthony Barretto"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-broken-dreams-stories-from-the-myanmar-c",
+   "title": "Broken Dreams: Stories from the Myanmar Coup",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "language": "Burmese",
+   "country": "Myanmar",
+   "summary": "2023 Burmese film.",
+   "wikidata": "Q124323620",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-chalchitra-ekhon-kaleidoscope-now",
+   "title": "Chalchitra Ekhon (Kaleidoscope Now)",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Anjan Dutt"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-children-of-nobody",
+   "title": "Children of Nobody",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Erez Tadmor"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-joseph-s-son",
+   "title": "Joseph's Son",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "country": "India",
+   "summary": "2023 Film.",
+   "wikidata": "Q128502447",
+   "credits": [
+    [
+     "Director",
+     "Haobam Paban Kumar"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-mon-potongo",
+   "title": "Mon Potongo",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "language": "Bangla",
+   "country": "Bangladesh",
+   "summary": "2024 film by Rajdeep-Sarmistha.",
+   "wikidata": "Q131429934",
+   "credits": [
+    [
+     "Director",
+     "Rajdeep Paul"
+    ],
+    [
+     "Director",
+     "Sarmistha Maiti"
+    ]
+   ],
+   "awards": [
+    [
+     "Bengali Panorama · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-one-way",
+   "title": "One Way",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Carlos Daniele Malave"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Carlos Daniele Malave"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2023-wild-swans",
+   "title": "Wild Swans",
+   "festival": "kiff",
+   "year": 2023,
+   "format": "Feature",
+   "country": "India",
+   "summary": "2023 Indian film.",
+   "wikidata": "Q124754021",
+   "credits": [
+    [
+     "Director",
+     "Rajni Basumatary"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-adieu-godard",
+   "title": "Adieu Godard",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "language": "Odia",
+   "country": "India",
+   "summary": "2022 Odia movie.",
+   "wikidata": "Q111942188",
+   "credits": [
+    [
+     "Director",
+     "Amartya Bhattacharyya"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-anatomia",
+   "title": "Anatomia",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ola Jankowska"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ola Jankowska"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-fortune",
+   "title": "Fortune",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Mujaheddin Muzaffar"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-guthlee-ladoo",
+   "title": "Guthlee Ladoo",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ishrat R Khan"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ishrat R Khan"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-hitler-s-witch",
+   "title": "Hitler's Witch",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ernesto Ardito & Virna Molina"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ernesto Ardito & Virna Molina"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-jhilli",
+   "title": "Jhilli",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "country": "India",
+   "summary": "2021 Indian Bengali-language film.",
+   "wikidata": "Q115812971",
+   "credits": [
+    [
+     "Director",
+     "Ishaan Ghose"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-muthayya",
+   "title": "Muthayya",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Bhaskhar Maurya"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-naanera",
+   "title": "Naanera",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Deepankar Prakash"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Deepankar Prakash"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-silent-glory",
+   "title": "Silent Glory",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nahid Hassanzadeh"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-streams",
+   "title": "Streams",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Mehdi Hmili"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-the-cloud-and-the-man",
+   "title": "The Cloud and the Man",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "language": "Bangla",
+   "country": "India",
+   "summary": "Film by Abhinandan Banerjee.",
+   "wikidata": "Q116752575",
+   "credits": [
+    [
+     "Director",
+     "Abhinandan Banerjee"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-the-terrace",
+   "title": "The Terrace",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2022-upon-entry",
+   "title": "Upon Entry",
+   "festival": "kiff",
+   "year": 2022,
+   "format": "Feature",
+   "language": "Spanish, English, Catalan",
+   "country": "Spain",
+   "summary": "2022 film directed by Alejandro Rojas and Juan Sebastián Vásquez.",
+   "wikidata": "Q114703286",
+   "credits": [
+    [
+     "Director",
+     "Alejandro Rojas"
+    ],
+    [
+     "Director",
+     "Juan Sebastián Vásquez"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-bander-band",
+   "title": "Bander Band",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "country": "Iran",
+   "summary": "2020 film directed by Manijeh Hekmat.",
+   "wikidata": "Q98098887",
+   "credits": [
+    [
+     "Director",
+     "Manijeh Hekmat"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-blindfold",
+   "title": "Blindfold",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Taras Dron"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-god-on-the-balcony",
+   "title": "God On The Balcony",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Biswajit Bora"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Biswajit Bora"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-kalla-nottam",
+   "title": "Kalla Nottam",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "country": "Singapore, India",
+   "summary": "2019 Indian film.",
+   "wikidata": "Q113954302",
+   "credits": [
+    [
+     "Director",
+     "Rahul Riji Nair"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-nonajoler-kabbo",
+   "title": "Nonajoler Kabbo",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "language": "Bangla",
+   "country": "France, Bangladesh",
+   "summary": "2020 Film by Rezwan Shahriar Sumit.",
+   "wikidata": "Q102124437",
+   "credits": [
+    [
+     "Director",
+     "Rezwan Shahriar Sumit"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2021-shambala",
+   "title": "Shambala",
+   "festival": "kiff",
+   "year": 2021,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Artykpai Suiundukov"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Artykpai Suiundukov"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-aga-s-house",
+   "title": "Aga's House",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Lendita Zeqiraj"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-devi-aur-hero",
+   "title": "Devi aur Hero",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-la-llorona",
+   "title": "La llorona",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "language": "Spanish",
+   "country": "France, Guatemala",
+   "summary": "2019 film directed by Jayro Bustamante.",
+   "wikidata": "Q66813625",
+   "credits": [
+    [
+     "Director",
+     "Jayro Bustamante"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-mai-ghat-crime-no-103-2005",
+   "title": "Mai Ghat: Crime No 103/2005",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ananth Narayan Mahadevan"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-run-kalyani",
+   "title": "Run Kalyani",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-the-painted-bird",
+   "title": "The Painted Bird",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "language": "Interslavic",
+   "country": "Ukraine, Czech Republic, Slovakia",
+   "summary": "2019 film by Václav Marhoul.",
+   "wikidata": "Q33101290",
+   "credits": [
+    [
+     "Director",
+     "Václav Marhoul"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Václav Marhoul"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2019-the-parcel",
+   "title": "The Parcel",
+   "festival": "kiff",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Indrasis Acharya"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Indrasis Acharya"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-kedara",
+   "title": "Kedara",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "language": "Bangla",
+   "country": "India",
+   "summary": "2019 slice of life Bengali film.",
+   "wikidata": "Q85773842",
+   "credits": [
+    [
+     "Director",
+     "Indradeep Dasgupta"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-sun-goes-around-the-earth",
+   "title": "Sun Goes Around the Earth",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Arijit Biswas"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Arijit Biswas"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-tarikh",
+   "title": "Tarikh",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "language": "Bangla",
+   "country": "India",
+   "summary": "2019 film.",
+   "wikidata": "Q65065339",
+   "credits": [
+    [
+     "Director",
+     "Churni Ganguly"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-the-third-wife",
+   "title": "The Third Wife",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "language": "Vietnamese",
+   "country": "Vietnam",
+   "summary": "2018 film by Ash Mayfair.",
+   "wikidata": "Q72236475",
+   "credits": [
+    [
+     "Director",
+     "Ash Mayfair"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-widow-of-silence",
+   "title": "Widow of Silence",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Praveen Morchhale"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2018-yomeddine",
+   "title": "Yomeddine",
+   "festival": "kiff",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Abu Bakr Shawky"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Abu Bakr Shawky"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-goodbye-katmandu",
+   "title": "Goodbye Katmandu",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "language": "Nepali",
+   "country": "Nepal",
+   "summary": "Nepali film directed by Nabin Subba.",
+   "wikidata": "Q16979149",
+   "credits": [
+    [
+     "Director",
+     "Nabin Subba"
+    ]
+   ],
+   "awards": [
+    [
+     "Asian Select - NETPAC award · Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-kupal",
+   "title": "Kupal",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [],
+   "awards": [
+    [
+     "IMI · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-los-perros",
+   "title": "Los Perros",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Marcela Said"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Golden Royal Bengal Tiger Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-pathumma",
+   "title": "Pathumma",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Panchakshari"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Special Jury Mention",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-sound-of-silence",
+   "title": "Sound of Silence",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Dr. Bijukumar Damodaran"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Dr. Bijukumar Damodaran"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-the-swan",
+   "title": "The Swan",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ása Hjörleifsdóttir"
+    ]
+   ],
+   "awards": [
+    [
+     "IMI · Best Director",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977",
+     "Ása Hjörleifsdóttir"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+   ]
+  },
+  {
+   "id": "in-kiff-2017-to-let",
+   "title": "To Let",
+   "festival": "kiff",
+   "year": 2017,
+   "format": "Feature",
+   "language": "Tamil",
+   "country": "India",
+   "summary": "2017 Tamil film directed by Chezhiyan.",
+   "wikidata": "Q55635947",
+   "credits": [
+    [
+     "Director",
+     "Chezhiyan"
+    ]
+   ],
+   "awards": [
+    [
+     "Competition on Indian Language’s Films · Hiralal Sen Memorial Award for Best Film",
+     "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
+    ]
+   ],
+   "sources": [
+    "https://en.wikipedia.org/w/index.php?title=Kolkata_International_Film_Festival&oldid=1377513977"
    ]
   },
   {
