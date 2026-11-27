@@ -51,7 +51,7 @@ FESTIVALS = [
     dict(id='osians', wikidata='Q634317', wiki="Osian's Cinefan Festival of Asian and Arab Cinema", short='Cinefan', region='Delhi', lat=28.61, lon=77.21, description='Asian and Arab cinema in New Delhi.'),
 ]
 AWARDISH = re.compile(r'award|prize|winner|peacock|pheasant|tiger|conch|medal|mention|honou?r|best|jury|recipient|achievement', re.I)
-GENERIC = re.compile(r'^(?:the )?(?:winners?|awards?(?: and.*)?|recipients|medal|list of recipients)$', re.I)
+GENERIC = re.compile(r'^(?:the )?(?:winners?|awards?(?: and.*)?|recipients|medal|list of recipients|jury package)$', re.I)
 YEAR = re.compile(r'\b(19[5-9]\d|20[0-4]\d)\b')
 ORDINAL = re.compile(r'\b(\d{1,2}(?:st|nd|rd|th))\b')
 
@@ -330,7 +330,7 @@ def extract(fest, page):
                 if section and not title:
                     continue
                 if not section and GENERIC.match(award):
-                    award = next((award_name(h) for h in reversed(trail[:-1]) if AWARDISH.search(h) and not GENERIC.match(award_name(h))), 'Award')
+                    award = next((award_name(h) for h in [*reversed(trail[:-1]), page.get('title', '')] if AWARDISH.search(h) and not GENERIC.match(award_name(h))), 'Award')
                 entries.append(dict(year=year, number=number or h_number, award=award, title=title, person=person, director=director, link=link, section=section))
         for li in el.xpath('./li') if el.tag in ('ul', 'ol') else []:
             # "2025: <i>Title</i> - Director | Country" under an award heading (KASHISH).
@@ -359,6 +359,7 @@ def extract(fest, page):
 def award_name(heading):
     # "Golden Crow Pheasant for Best Film – Winners", "IFFI Best Director Award (2009–Present)"
     heading = re.sub(r'\s*\((?:\d{4}|since)[^)]*\)$', '', heading)
+    heading = re.sub(r'^list of\s+(?:of\s+)?', '', heading, flags=re.I)  # "List of of IFFI Special Jury Award recipients"
     return clean(re.sub(r'\s*[–-]?\s*\b(?:winners|recipients)\b', '', heading, flags=re.I)) or heading
 
 
@@ -550,6 +551,7 @@ def test():
     assert got[0]['section'] == 'Indian Panorama 2019' and got[0]['title'] == 'Hellaro' and got[0]['director'] == 'Abhishek Shah', got
     assert table('Winners', ['Year', 'Film', 'Director'], ['2001', '<i>X</i>', 'Y'])[0]['award'] == 'Award'
     assert award_name('IFFI Best Director Award (2009–Present)') == 'IFFI Best Director Award'
+    assert award_name('List of of IFFI Special Jury Award recipients') == 'IFFI Special Jury Award' and GENERIC.match(award_name('List of award recipients'))
     page = {'title': '50th International Film Festival of India', 'html': '<html><body><h2>Winners</h2><ul><li><a>IFFI Best Actor Award (Male)</a>: <a>Seu Jorge</a> for <i>Marighella</i></li></ul><link rel="mw:PageProp/Category" href="./Category:2019_film_festivals"/></body></html>'}
     assert extract({}, page)[0] == [dict(year=2019, number='50th', award='IFFI Best Actor Award (Male)', title='Marighella', person='Seu Jorge', director='', link='')], extract({}, page)
     print('ok')
