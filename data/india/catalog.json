@@ -95,6 +95,21 @@
      "year": 2023,
      "dates": "27 October–5 November",
      "source": "https://www.screendaily.com/news/sarvnik-kaurs-against-the-tide-wins-top-prize-at-mumbai-film-festival/5187604.article"
+    },
+    {
+     "year": 2019,
+     "number": "21st",
+     "source": "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    },
+    {
+     "year": 2018,
+     "number": "20th",
+     "source": "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    },
+    {
+     "year": 2017,
+     "number": "19th",
+     "source": "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
     }
    ]
   },
@@ -248,6 +263,12 @@
      "year": 2022,
      "number": "17th",
      "source": "https://pib.gov.in/PressReleasePage.aspx?PRID=1831118"
+    },
+    {
+     "year": 2020,
+     "number": "16th",
+     "dates": "28 January–3 February",
+     "source": "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
     }
    ]
   },
@@ -10412,6 +10433,1370 @@
    "checked": "checked online 2026-11-26"
   },
   {
+   "id": "in-mami-2019-aise-hi",
+   "title": "Aise Hi",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Kislay"
+    ],
+    [
+     "Actor",
+     "Mohini Sharma"
+    ]
+   ],
+   "awards": [
+    [
+     "Film Critics Guild Award",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ],
+    [
+     "India Gold · Special Jury Mention, Best Actor (Female)",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners",
+     "Mohini Sharma"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-apna-apna-andaz",
+   "title": "Apna Apna Andaz",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Avishkar Bharadwaj"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Special Jury Mention",
+     "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+    ]
+   ],
+   "sources": [
+    "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-attention",
+   "title": "Attention",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Shubham Sanap"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Silver Gateway",
+     "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+    ]
+   ],
+   "sources": [
+    "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-a-lo-s-journey",
+   "title": "Aïlo's Journey",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Guillaume Maidatchevsky"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (5–12 years)",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-batti",
+   "title": "Batti",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Akshay Sarjerao Danavale"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Golden Gateway",
+     "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+    ]
+   ],
+   "sources": [
+    "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-bombay-rose",
+   "title": "Bombay Rose",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Gitanjali Rao"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Silver Gateway",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ],
+    [
+     "Manish Acharya Award for New Voices in Indian Cinema",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-buoyancy",
+   "title": "Buoyancy",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "country": "Australia",
+   "credits": [
+    [
+     "Director",
+     "Rodd Rathjen"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Silver Gateway",
+     "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+    ]
+   ],
+   "sources": [
+    "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-eeb-allay-ooo",
+   "title": "Eeb Allay Ooo!",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Prateek Vats"
+    ],
+    [
+     "Actor",
+     "Shardul Bhardwaj"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Golden Gateway",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ],
+    [
+     "Young Critics Choice Award",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ],
+    [
+     "India Gold · Special Jury Mention, Best Actor (Male)",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners",
+     "Shardul Bhardwaj"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-gamak-ghar",
+   "title": "Gamak Ghar",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Achal Mishra"
+    ]
+   ],
+   "awards": [
+    [
+     "Manish Acharya Award for New Voices in Indian Cinema",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-girl-in-the-hallway",
+   "title": "Girl in the Hallway",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Valerie Barnhart"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (13–17 years)",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-honeyland",
+   "title": "Honeyland",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Documentary",
+   "country": "North Macedonia",
+   "credits": [
+    [
+     "Director",
+     "Ljubomir Stefanov"
+    ],
+    [
+     "Director",
+     "Tamara Kotevska"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Golden Gateway",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-indian-circus",
+   "title": "Indian Circus",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Nikhil Rao"
+    ]
+   ],
+   "awards": [
+    [
+     "Royal Stag Large Short Films Award",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-nimtoh",
+   "title": "Nimtoh",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Saurav Rai"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Grand Jury Prize (screenwriting)",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-shut-up-sona",
+   "title": "Shut Up Sona",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Deepti Gupta"
+    ]
+   ],
+   "awards": [
+    [
+     "Film Critics Guild Award · Special Jury Mention",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-talking-about-trees",
+   "title": "Talking About Trees",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Suhaib Gasmelbari"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Grand Jury Prize",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-the-illegal",
+   "title": "The Illegal",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Danish Renzu"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Award for Discovering India",
+     "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/indian-cinema/jio-mami-21-mumbai-film-festival-full-list-of-winners"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2019-you-will-die-at-twenty",
+   "title": "You Will Die at Twenty",
+   "festival": "mami",
+   "year": 2019,
+   "format": "Feature",
+   "country": "Sudan",
+   "credits": [
+    [
+     "Director",
+     "Amjad Abu Alala"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Special Jury Mention",
+     "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+    ]
+   ],
+   "sources": [
+    "https://asianfilmfestivals.com/2019/10/25/mumbai-film-festival-winners-2019/"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-amelia",
+   "title": "Amelia",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Maribeth Romslo"
+    ],
+    [
+     "Director",
+     "Cristina Pippa"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (Short, 9+ years)",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-bulbul-can-sing",
+   "title": "Bulbul Can Sing",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rima Das"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Golden Gateway",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-chuskit",
+   "title": "Chuskit",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Priya Ramasubban"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (Feature, 5–9 years)",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-funan",
+   "title": "Funan",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Denis Do"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (Feature, 9+ years)",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-jaoon-kahan-bata-ae-dil",
+   "title": "Jaoon Kahan Bata Ae Dil",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Aadish Keluskar"
+    ]
+   ],
+   "awards": [
+    [
+     "Young Critics Choice Award",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-jonaki",
+   "title": "Jonaki",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Aditya Vikram Sengupta"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Silver Gateway",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ],
+    [
+     "Oxfam Best Film on Gender Equality · Special Jury Mention",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-listen",
+   "title": "Listen",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Astrid Bussink"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (Short, 5–9 years)",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-mehsampur",
+   "title": "Mehsampur",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Kabir Chowdhry"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Grand Jury Prize",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-metaphor",
+   "title": "Metaphor",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Gilroy Rodrigues"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Special Jury Mention",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-new-year-s-eve",
+   "title": "New Year's Eve",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Pranav Bhasin"
+    ]
+   ],
+   "awards": [
+    [
+     "Royal Stag Large Short Films Award",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-reza",
+   "title": "Reza",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Alireza Motamedi"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Special Jury Mention",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-sheher-ya-tum",
+   "title": "Sheher Ya Tum",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Karan Asnani"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Golden Gateway",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-sivaranjani-and-two-other-women",
+   "title": "Sivaranjani and Two Other Women",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Vasanth S Sai"
+    ]
+   ],
+   "awards": [
+    [
+     "Oxfam Best Film on Gender Equality · Special Jury Mention",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-soni",
+   "title": "Soni",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ivan Ayr"
+    ]
+   ],
+   "awards": [
+    [
+     "Oxfam Best Film on Gender Equality",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-the-gold-laden-sheep-and-the-sacred-moun",
+   "title": "The Gold-Laden Sheep and the Sacred Mountain",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ridham Janve"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Silver Gateway",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-the-heiresses",
+   "title": "The Heiresses",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Marcelo Martinessi"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Silver Gateway",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-the-island-of-hungry-ghosts",
+   "title": "The Island of Hungry Ghosts",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Gabrielle Brady"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Grand Jury Prize",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2018-yadav-ji",
+   "title": "Yadav Ji",
+   "festival": "mami",
+   "year": 2018,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Nishtha Sadwelkar"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Silver Gateway",
+     "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-aishwarya-ki-behen",
+   "title": "Aishwarya Ki Behen",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Nitesh Bhatia"
+    ]
+   ],
+   "awards": [
+    [
+     "Excellence in Digital Content · Gold",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-bambaiwale",
+   "title": "Bambaiwale",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Chirag Suryavanshi"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Special Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-cloudboy",
+   "title": "Cloudboy",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Meikeminne Clinckspoor"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Silver Gateway (Features)",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-detour",
+   "title": "Detour",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Sumi Mathai"
+    ]
+   ],
+   "awards": [
+    [
+     "Excellence in Digital Content · Special Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-half-a-life",
+   "title": "Half a Life",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Tamara Shogaolu"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (Shorts)",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-i-am-not-a-witch",
+   "title": "I Am Not a Witch",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rungano Nyoni"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Special Jury Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-in-the-shadows",
+   "title": "In the Shadows",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Dipesh Jain"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Grand Jury Prize",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-machines",
+   "title": "Machines",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Rahul Jain"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Silver Gateway",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-mandi",
+   "title": "Mandi",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Yashovardhan Mishra"
+    ]
+   ],
+   "awards": [
+    [
+     "Excellence in Digital Content · Silver",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-mdudu-boy",
+   "title": "Mdudu Boy",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Ella Smith"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Silver Gateway (Shorts)",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-on-body-and-soul",
+   "title": "On Body and Soul",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ildikó Enyedi"
+    ]
+   ],
+   "awards": [
+    [
+     "Audience Choice Award",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-quest",
+   "title": "Quest",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Jonathan Olshefski"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Silver Gateway",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-s-durga",
+   "title": "S Durga",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Sanal Kumar Sasidharan"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Special Jury Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-scary-mother",
+   "title": "Scary Mother",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Ana Urushadze"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Special Jury Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-summer-1993",
+   "title": "Summer 1993",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Carla Simón"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Golden Gateway",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-the-day-my-father-became-a-bush",
+   "title": "The Day My Father Became a Bush",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Nicole van Kilsdonk"
+    ]
+   ],
+   "awards": [
+    [
+     "Half Ticket · Golden Gateway (Features)",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-the-hungry",
+   "title": "The Hungry",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Bornila Chatterjee"
+    ]
+   ],
+   "awards": [
+    [
+     "Oxfam Best Film on Gender Equality · Special Jury Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-the-wolf-of-chawl-street",
+   "title": "The Wolf of Chawl Street",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Pranav Bhasin"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Silver Gateway",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-the-wound",
+   "title": "The Wound",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "John Trengove"
+    ]
+   ],
+   "awards": [
+    [
+     "International Competition · Grand Jury Prize",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-up-down-and-sideways",
+   "title": "Up, Down and Sideways",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Anushka Meenakshi"
+    ],
+    [
+     "Director",
+     "Iswar Srikumar"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Special Jury Mention",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-vacancy",
+   "title": "Vacancy",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Anurag Worlikar"
+    ]
+   ],
+   "awards": [
+    [
+     "Dimensions Mumbai · Golden Gateway",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-mami-2017-village-rockstars",
+   "title": "Village Rockstars",
+   "festival": "mami",
+   "year": 2017,
+   "format": "Feature",
+   "credits": [
+    [
+     "Director",
+     "Rima Das"
+    ]
+   ],
+   "awards": [
+    [
+     "India Gold · Golden Gateway",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ],
+    [
+     "Young Critics Choice Award",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ],
+    [
+     "Oxfam Best Film on Gender Equality",
+     "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+    ]
+   ],
+   "sources": [
+    "https://www.thequint.com/entertainment/cinema/who-won-what-at-mami-film-festival-2017"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
    "id": "in-miff-2024-6-a-akash-ganga",
    "title": "6-A Akash Ganga",
    "festival": "miff",
@@ -10938,6 +12323,434 @@
    "checked": "checked online 2026-11-26"
   },
   {
+   "id": "in-miff-2020-and-what-is-the-summer-saying",
+   "title": "And What Is the Summer Saying",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Payal Kapadia"
+    ]
+   ],
+   "awards": [
+    [
+     "Pramod Pati Award for Most Innovative / Experimental Film",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-atasi",
+   "title": "Atasi",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Putul Mahmood"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Documentary Film (under 60 minutes)",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-babenco-tell-me-when-i-die",
+   "title": "Babenco: Tell Me When I Die",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "country": "Brazil",
+   "credits": [
+    [
+     "Director",
+     "Barbara Paz"
+    ]
+   ],
+   "awards": [
+    [
+     "Golden Conch · Best Documentary",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-bebaak",
+   "title": "Bebaak",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Shazia Iqbal"
+    ],
+    [
+     "Cinematographer",
+     "Sachin Gadankush"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Short Fiction Film (up to 45 minutes)",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ],
+    [
+     "Best Cinematography",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020",
+     "Sachin Gadankush"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-echo-from-the-pukpui-skies",
+   "title": "Echo from the Pukpui Skies",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Joshy Joseph"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Jury Mention",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-fianc-es",
+   "title": "Fiancées",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "country": "Switzerland",
+   "credits": [
+    [
+     "Director",
+     "Myriam Rachmuth"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Editing",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-grandfather",
+   "title": "Grandfather",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Umashankar Nair"
+    ],
+    [
+     "Director",
+     "Gaiti Siddiqui"
+    ]
+   ],
+   "awards": [
+    [
+     "Dadasaheb Phalke Chitranagari Award for Best Debut Film",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-lacchavva",
+   "title": "Lacchavva",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Jai Shankar"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Short Fiction Film · Special Mention",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-mixi",
+   "title": "MIXI",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Animation",
+   "credits": [
+    [
+     "Director",
+     "Jyotsna Puthran"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Animation Film",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-naked-wall",
+   "title": "Naked Wall",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Anant Dass Sahni"
+    ]
+   ],
+   "awards": [
+    [
+     "IDPA Award for Best Student Film",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-panangaatu-nari",
+   "title": "Panangaatu Nari",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Animation",
+   "country": "India",
+   "credits": [
+    [
+     "Director",
+     "Divakar SK"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Animation",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-pariah-dog",
+   "title": "Pariah Dog",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [],
+   "awards": [
+    [
+     "Best Sound Design",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020",
+     "Jesse Alk"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-pavsacha-nibandh",
+   "title": "Pavsacha Nibandh",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Nagraj Manjule"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Short Fiction",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-portrait-of-suzanne",
+   "title": "Portrait of Suzanne",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Animation",
+   "country": "Germany",
+   "credits": [
+    [
+     "Director",
+     "Izabela Plucinska"
+    ]
+   ],
+   "awards": [
+    [
+     "Silver Conch · Best Animation",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-sindhustan",
+   "title": "Sindhustan",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Sapna Bhavnani"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Documentary Film (above 60 minutes)",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-son-rise",
+   "title": "Son Rise",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Documentary",
+   "credits": [
+    [
+     "Director",
+     "Vibha Bakshi"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Indian Documentary Film (under 60 minutes) · Special Mention",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-the-saleswoman",
+   "title": "The Saleswoman",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Editor",
+     "Aniruddha Chakraborty"
+    ]
+   ],
+   "awards": [
+    [
+     "Best Editing",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020",
+     "Aniruddha Chakraborty"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
+   "id": "in-miff-2020-the-wetland-s-wail",
+   "title": "The Wetland's Wail",
+   "festival": "miff",
+   "year": 2020,
+   "format": "Short film",
+   "credits": [
+    [
+     "Director",
+     "Aravind M"
+    ]
+   ],
+   "awards": [
+    [
+     "Special Award for Best Short Film on Water Conservation and Climate Change",
+     "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+    ]
+   ],
+   "sources": [
+    "https://cinestaan.com/articles/2020/feb/3/24310/barbara-paz-s-babenco-tell-me-when-i-die-nagraj-manjule-s-pavsacha-nibandh-win-top-prizes-at-miff-2020"
+   ],
+   "checked": "checked online 2026-11-27"
+  },
+  {
    "id": "in-piff-2022-potra",
    "title": "Potra",
    "festival": "piff",
@@ -11367,6 +13180,17 @@
    ],
    "role": "Honoree",
    "checked": "checked online 2026-11-26"
+  },
+  {
+   "festival": "mami",
+   "year": 2018,
+   "award": [
+    "Excellence in Cinema Award",
+    "https://www.thequint.com/entertainment/top-winners-at-mami-2018",
+    "Darren Aronofsky"
+   ],
+   "role": "Honoree",
+   "checked": "checked online 2026-11-27"
   },
   {
    "festival": "ciff-chennai",
