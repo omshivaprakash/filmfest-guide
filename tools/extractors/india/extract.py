@@ -290,7 +290,7 @@ def extract(fest, page):
                             juries.append((year, category if not YEAR.search(category) else 'Jury', name))
                 continue
             first = low[0] if low else ''
-            if first in {'ceremony', 'year', 'edition'} and len(head) > 2 and not any(k in low for k in ('film', 'winner')) and not any(re.search(r'title|recipient|work|director', h) for h in low):
+            if first in {'ceremony', 'year', 'edition'} and len(head) > 2 and not any(k in low for k in ('film', 'winner')) and not any(h.startswith(('english title', 'original title', 'title', 'recipient', 'work', 'director')) for h in low):  # KIFF's "Best Director" column is an award
                 # One row per edition, one column per award (Kolkata).
                 for r in body:
                     year, number = year_of(text_of(r[0]))
@@ -359,7 +359,7 @@ def extract(fest, page):
 def award_name(heading):
     # "Golden Crow Pheasant for Best Film – Winners", "IFFI Best Director Award (2009–Present)"
     heading = re.sub(r'\s*\((?:\d{4}|since)[^)]*\)$', '', heading)
-    heading = re.sub(r'^list of\s+(?:of\s+)?', '', heading, flags=re.I)  # "List of of IFFI Special Jury Award recipients"
+    heading = re.sub(r'^(?:list of\s+)?(?:of\s+)?', '', heading, flags=re.I)  # "List of of IFFI Special Jury Award recipients"
     return clean(re.sub(r'\s*[–-]?\s*\b(?:winners|recipients)\b', '', heading, flags=re.I)) or heading
 
 
@@ -551,6 +551,7 @@ def test():
     assert got[0]['section'] == 'Indian Panorama 2019' and got[0]['title'] == 'Hellaro' and got[0]['director'] == 'Abhishek Shah', got
     assert table('Winners', ['Year', 'Film', 'Director'], ['2001', '<i>X</i>', 'Y'])[0]['award'] == 'Award'
     assert award_name('IFFI Best Director Award (2009–Present)') == 'IFFI Best Director Award'
+    assert award_name('of IFFI Special Jury Award') == 'IFFI Special Jury Award'
     assert award_name('List of of IFFI Special Jury Award recipients') == 'IFFI Special Jury Award' and GENERIC.match(award_name('List of award recipients'))
     page = {'title': '50th International Film Festival of India', 'html': '<html><body><h2>Winners</h2><ul><li><a>IFFI Best Actor Award (Male)</a>: <a>Seu Jorge</a> for <i>Marighella</i></li></ul><link rel="mw:PageProp/Category" href="./Category:2019_film_festivals"/></body></html>'}
     assert extract({}, page)[0] == [dict(year=2019, number='50th', award='IFFI Best Actor Award (Male)', title='Marighella', person='Seu Jorge', director='', link='')], extract({}, page)
