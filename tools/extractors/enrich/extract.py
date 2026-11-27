@@ -267,6 +267,8 @@ def build_festivals(cache):
 FILM_BY_TITLE = '''SELECT ?f ?l ?year WHERE { VALUES ?l { %s } VALUES ?c { %s }
   { ?f rdfs:label ?l } UNION { ?f skos:altLabel ?l }
   ?f wdt:P31 ?c . OPTIONAL { ?f wdt:P577 ?d . BIND(YEAR(?d) AS ?year) } }'''
+FILM_BY_ARTICLE = '''SELECT ?f ?t WHERE { VALUES ?t { %s } VALUES ?c { %s }
+  ?a schema:about ?f ; schema:isPartOf <https://en.wikipedia.org/> ; schema:name ?t . ?f wdt:P31 ?c }'''
 FILM_FACTS = '''SELECT ?f ?k ?v ?u WHERE { VALUES ?f { %s }
   { ?f wdt:P57 ?x . ?x rdfs:label ?v . FILTER(LANG(?v) = "en") BIND("dir" AS ?k) }
   UNION { ?f wdt:P495 ?x . ?x rdfs:label ?v . FILTER(LANG(?v) = "en") BIND("country" AS ?k) }
@@ -299,10 +301,31 @@ def digest(items):
 
 
 def title_chunks(films):
-    # shortcut: films carrying a Wikidata id skip title matching; the 21,000 unlinked world-editions films
-    # are not title-matched yet (about 90 more queries), next batch.
-    films = [f for f in films if not f.get('wikidata') and f.get('_from') != 'data/world-editions/catalog.json']
+    films = [f for f in films if not f.get('wikidata')]  # films carrying a Wikidata id skip title matching
     return [(f'film-title-{digest(part)}.json', part) for part in chunks(film_titles(films), 250)]
+
+
+def article(film):
+    """The English Wikipedia article a film's source links to, as a page title (world-editions line-ups link them)."""
+    for url in film.get('sources') or []:
+        if url.startswith('https://en.wikipedia.org/wiki/'):
+            return urllib.parse.unquote(url.rsplit('/wiki/', 1)[1]).replace('_', ' ')
+    return None
+
+
+def article_chunks(films):
+    titles = sorted({article(f) for f in films if not f.get('wikidata') and article(f)})
+    return [(f'film-article-{digest(part)}.json', part) for part in chunks(titles, 250)]
+
+
+def by_article(cache, films):
+    """Article title to Wikidata film, from the sitelinks: an exact link, so it needs no year or director check."""
+    found = {}
+    for name, _ in article_chunks(films):
+        if os.path.exists(os.path.join(cache, name)):
+            for row in json.load(open(os.path.join(cache, name))):
+                found.setdefault(row['t'], set()).add(qid(row['f']))
+    return {t: next(iter(qs)) for t, qs in found.items() if len(qs) == 1}
 
 
 def fact_chunks(candidates):
@@ -316,6 +339,10 @@ def picture_files(cache, candidates):
 
 def fetch_films(cache):
     films = all_films()
+    todo = article_chunks(films)
+    for n, (name, part) in enumerate(todo):
+        cached(cache, name, lambda: split_sparql(FILM_BY_ARTICLE, part, lambda titles: (' '.join(f'{literal(t)}@en' for t in titles), FILM_CLASSES)))
+        print(f'film articles {n + 1}/{len(todo)}', file=sys.stderr)
     todo = title_chunks(films)
     for n, (name, part) in enumerate(todo):
         cached(cache, name, lambda: split_sparql(FILM_BY_TITLE, part, lambda titles: (' '.join(f'{literal(t)}@en {literal(t)}@mul' for t in titles), FILM_CLASSES)))
@@ -359,6 +386,7 @@ def film_candidates(cache, films):
                     years[qid(row['f'])].add(int(row['year']))
     wanted = {q for film in films for q in by_title.get(key(film['title']), ()) if near(years[q], film['year'], 2)}
     wanted |= {film['wikidata'] for film in films if film.get('wikidata')}
+    wanted |= set(by_article(cache, films).values())
     return (by_title, years), wanted
 
 
@@ -421,10 +449,11 @@ def build_films(cache):
                         'local': local, 'source': info['descriptionurl'],
                         'credit': f"{credit_line(meta)}, {meta['LicenseShortName']['value']}, via Wikimedia Commons",
                         'license': meta['LicenseShortName']['value'], 'licenseUrl': meta.get('LicenseUrl', {}).get('value')}
+    linked = by_article(cache, films)
     shard = {}
     shutil.rmtree(os.path.join(OUT, 'posters'), ignore_errors=True)
     for film in films:
-        q = film.get('wikidata') or match(film, by_title.get(key(film['title']), ()), years, directors, countries)
+        q = film.get('wikidata') or linked.get(article(film)) or match(film, by_title.get(key(film['title']), ()), years, directors, countries)
         if not q or q not in facts:
             continue
         f = facts[q]
@@ -489,6 +518,8 @@ def test():
     world = [{'id': 'Q1', 'name': 'Cannes Film Festival', 'wiki': 'https://en.wikipedia.org/wiki/Cannes_Film_Festival'},
              {'id': 'Q2', 'name': 'Molodist'}, {'id': 'Q3', 'name': 'Adelaide Film Festival'}, {'id': 'Q4', 'name': 'Cannes'}]
     assert fiapf_from_wikitext(sample, world) == {'Q1': 'A-list', 'Q2': 'Accredited'}
+    assert article({'sources': ['https://en.wikipedia.org/wiki/14th_%28film%29']}) == '14th (film)'
+    assert article({'sources': []}) is None
     calls = []
     def fake(query, tries=12):
         calls.append(query)
