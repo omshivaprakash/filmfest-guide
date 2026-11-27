@@ -459,6 +459,7 @@ def build(cache, out=OUT):
                               description=fest['description'], wikidata=fest['wikidata'], **({'url': fest['url']} if fest.get('url') else {}),
                               lat=fest['lat'], lon=fest['lon'], source=source, **({'logo': logos[fest['wikidata']]} if fest['wikidata'] in logos else {}), editions=editions))
         for e in entries:
+            e['award'] = re.sub(r'^(?:list of\s+)?of\s+', '', e['award'], flags=re.I)  # "List of of IFFI Special Jury Award recipients"
             src = e.get('source', source)
             note = {'checked': f"checked online {e['checked']}"} if e.get('checked') else {}
             if not e['title']:
@@ -550,6 +551,7 @@ def test():
     got = table('Indian Panorama 2019', ['No.', 'English title', 'Original title', 'Director'], ['1', '<i>Hellaro</i>', '<i>Hellaro</i>', 'Abhishek Shah'])
     assert got[0]['section'] == 'Indian Panorama 2019' and got[0]['title'] == 'Hellaro' and got[0]['director'] == 'Abhishek Shah', got
     assert table('Winners', ['Year', 'Film', 'Director'], ['2001', '<i>X</i>', 'Y'])[0]['award'] == 'Award'
+    assert [e['award'] for e in table('Awards', ['Ceremony', 'Golden Royal Bengal Tiger', 'Best Director'], ['2019', '<i>A</i> by B', 'C for <i>D</i>'])] == ['Golden Royal Bengal Tiger', 'Best Director']  # KIFF
     assert award_name('IFFI Best Director Award (2009–Present)') == 'IFFI Best Director Award'
     assert award_name('of IFFI Special Jury Award') == 'IFFI Special Jury Award'
     assert award_name('List of of IFFI Special Jury Award recipients') == 'IFFI Special Jury Award' and GENERIC.match(award_name('List of award recipients'))
