@@ -131,7 +131,7 @@ def fetch(world):
     for chunk in batched(awards):
         lists += [[awards[val(r, 'a')], val(r, 'aLabel'), val(r, 'wiki')] for r in sparql(f'''SELECT ?a ?aLabel ?wiki WHERE {{ VALUES ?a {{ {values(chunk)} }}
           ?wiki schema:about ?a; schema:isPartOf <https://en.wikipedia.org/> . SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''')]
-    lists.sort()
+    lists.sort(key=lambda l: (l[0], l[1] or '', l[2]))  # main articles have no award label
     pages = wikipedia.fetch_pages({val(r, 'wiki') for r in editions if val(r, 'wiki')} | {url for *_, url in lists})
     return {'editions': editions, 'awards': awards, 'labels': labels, 'results': results, 'subjects': subjects, 'pages': pages, 'lists': lists}
 
