@@ -42,7 +42,8 @@ const enrichFilms = new URL('./data/enrich/films.json', import.meta.url);
 if (existsSync(enrichFilms)) {
   const filmIds = new Set(films.map(film => film.id));
   for (const [id, extra] of Object.entries(JSON.parse(readFileSync(enrichFilms)).films)) {
-    assert.ok(filmIds.has(id) && /^Q\d+$/.test(extra.wikidata), `enrich film ${id}`);
+    if (!filmIds.has(id)) continue;  // a film a later shard run dropped: the app ignores it, and enrich's next run removes it
+    assert.ok(/^Q\d+$/.test(extra.wikidata), `enrich film ${id}`);
     if (extra.poster) assert.ok(existsSync(new URL(`./${extra.poster.file}`, import.meta.url)) && extra.poster.license && new URL(extra.poster.source).protocol === 'https:', `${id} poster needs a file and licence`);
   }
 }
