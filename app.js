@@ -216,6 +216,31 @@ async function start() {
   });
   byId('festival-strip').append(...chips);
 
+  // Make strips that scroll look like it: data-more names the cut-off edges (CSS fades them),
+  // and sideways strips get ‹ › buttons. Tab/Shift+Tab still reach every item; focus scrolls it into view.
+  function hintScroll(strip, vertical) {
+    const arrows = vertical ? [] : [-1, 1].map(step => {
+      const arrow = button(step < 0 ? '‹' : '›', `more ${step < 0 ? 'prev' : 'next'}`, () => strip.scrollBy({ left: step * strip.clientWidth * 0.7, behavior: 'smooth' }));
+      arrow.tabIndex = -1;
+      arrow.setAttribute('aria-hidden', 'true');
+      return arrow;
+    });
+    const update = () => {
+      if (arrows.length && !strip.contains(arrows[0])) strip.prepend(arrows[0]), strip.append(arrows[1]);
+      strip.dataset.more = vertical
+        ? (strip.scrollTop + strip.clientHeight < strip.scrollHeight - 2 ? 'down' : '')
+        : [strip.scrollLeft > 2 && 'left', strip.scrollLeft + strip.clientWidth < strip.scrollWidth - 2 && 'right'].filter(Boolean).join(' ');
+    };
+    strip.addEventListener('scroll', update, { passive: true });
+    if (!vertical) strip.addEventListener('focusin', event => event.target.scrollIntoView({ block: 'nearest', inline: 'center' }));
+    new ResizeObserver(update).observe(strip);
+    new MutationObserver(update).observe(strip, { childList: true, subtree: true, characterData: true, attributeFilter: ['hidden'] });
+    update();
+  }
+  hintScroll(byId('festival-strip'));
+  hintScroll(byId('tabs'));
+  hintScroll(document.querySelector('#home .body'), true);
+
   // Detail sheet
   function open(title, category) {
     const heading = element('h2', title);
@@ -948,6 +973,7 @@ async function start() {
     }));
     // Keep keyboard focus on the tab row after it is rebuilt.
     if (refocus) byId('tabs').querySelector('[aria-current]')?.focus();
+    byId('tabs').querySelector('[aria-current]')?.scrollIntoView({ block: 'nearest', inline: 'center' });
     for (const pane of document.querySelectorAll('[data-pane]')) pane.hidden = pane.dataset.pane !== homeTab;
     document.body.dataset.view = view;
     byId('home').hidden = view !== 'home';
