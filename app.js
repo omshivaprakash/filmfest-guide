@@ -285,7 +285,7 @@ async function start() {
   function showEdition(record, event) {
     open(`${record.short} ${event.year}`, editionLabel(event));
     const count = filmsIn(record.id, event.year).length;
-    content.append(element('p', count ? `${number(count)} films on record from this edition.` : 'The catalogue is available as a PDF. Indexed titles are still to come.', 'meta'));
+    content.append(element('p', count ? `${number(count)} films on record from this edition.` : event.catalogue ? 'The catalogue is available as a PDF. Indexed titles are still to come.' : 'No films on record from this edition yet: its sources list no line-up or winners we can import.', 'meta'));
     list('Documents', [
       event.catalogue && source(event.catalogue, event.catalogueLabel || 'Edition catalogue PDF'),
       event.source && event.source !== event.catalogue && source(event.source, 'Edition source'),
@@ -476,8 +476,8 @@ async function start() {
     const latest = record.editions[0];
     const recent = filmsIn(record.id, latest.year);
     const all = filmsIn(record.id);
-    const credited = unique(all.flatMap(film => film.credits.map(([, name]) => name)));
     const recordAwards = awards.filter(entry => entry.festival === record.id);
+    const credited = unique([...all.flatMap(film => film.credits.map(([, name]) => name)), ...recordAwards.filter(entry => !entry.film).map(entry => entry.award[2])]);
     byId('d-kicker').textContent = [latest.dates && `${latest.dates} ${latest.year}`, record.region].filter(Boolean).join(' · ');
     byId('d-title').textContent = `${record.name} ${latest.year}`;
     byId('d-sub').textContent = record.description;
@@ -505,8 +505,9 @@ async function start() {
       ...all.filter(film => film.artwork),
       ...all
     ]).slice(0, 18);
-    byId('d-shelf-title').textContent = picks.some(film => film.awards.length) ? 'Start here: award winners and new films' : 'Start here';
-    byId('d-shelf').replaceChildren(...picks.map(filmCard));
+    byId('d-shelf-title').textContent = !picks.length ? 'No films on record yet' : picks.some(film => film.awards.length) ? 'Start here: award winners and new films' : 'Start here';
+    // Say so rather than show an empty page: nothing here is invented, so a festival waits until a source lists its films.
+    byId('d-shelf').replaceChildren(...(picks.length ? picks.map(filmCard) : [element('p', `No films on record yet. Its sources list ${record.editions.length} edition${record.editions.length === 1 ? '' : 's'} but no line-up or winners we can import.${credited.length ? ' Honoured people are under People and Awards.' : ''}`, 'empty')]));
     fitShelf();
   }
   function filmCard(film) {
@@ -829,7 +830,7 @@ async function start() {
     })));
     documents = [...new Map(archiveLinks.map(doc => [doc.url, doc])).values()];
     archiveButton.hidden = documents.length === 0;
-    const emptyNote = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are still to come.' : 'No matches. Try a different search or filter.';
+    const emptyNote = editionRecord?.importedTitles === 0 ? 'This edition’s catalogue is available as a PDF. Indexed titles are still to come.' : selected && !filmsIn(selected.id).length && ['films', 'people'].includes(view) && !search.value ? 'No films on record yet for this festival.' : 'No matches. Try a different search or filter.';
     results.dataset.empty = emptyNote;
 
     const query = normalize(search.value.trim()).split(/\s+/).filter(Boolean);
@@ -848,7 +849,7 @@ async function start() {
     } else if (view === 'years') {
       items = selected.editions.filter(event => match([event.year, event.number, event.dates])).map(event => {
         const count = filmsIn(selected.id, event.year).length;
-        return result(`${event.number} edition`, `${selected.short} ${event.year}`, [event.dates, count ? `${number(count)} films` : 'Catalogue PDF'].filter(Boolean).join(' · '), () => showEdition(selected, event), String(event.year).slice(2));
+        return result(`${event.number} edition`, `${selected.short} ${event.year}`, [event.dates, count ? `${number(count)} films` : event.catalogue ? 'Catalogue PDF' : 'No films yet'].filter(Boolean).join(' · '), () => showEdition(selected, event), String(event.year).slice(2));
       });
     } else if (view === 'people') {
       items = [...people].sort(([a], [b]) => a.localeCompare(b)).flatMap(([name, credits]) => {

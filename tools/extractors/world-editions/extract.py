@@ -38,6 +38,7 @@ EXTRA_AWARDS = {'Q38842580': 'Q749235'}  # Golden George, Moscow
 FORMATS = {'Q24862': 'Short film', 'Q93204': 'Documentary', 'Q11424': 'Feature', 'Q24869': 'Feature', 'Q202866': 'Feature'}
 UNLISTED = 'Format unlisted'
 WD = 'https://www.wikidata.org/wiki/'
+WP = 'https://en.wikipedia.org/wiki/'
 MONTHS = 'January February March April May June July August September October November December'.split()
 
 
@@ -94,7 +95,7 @@ def year(row, *keys):
             return int(val(row, key)[:4])
 
 
-def fetch():
+def fetch(world):
     fests = values(FESTIVALS)
     editions = sparql(f'''SELECT ?fest ?e ?n ?start ?end ?point ?wiki WHERE {{ VALUES ?fest {{ {fests} }}
       {{ ?e wdt:P179 ?fest }} UNION {{ ?e wdt:P361 ?fest }} {{ ?e wdt:P393 ?n }} UNION {{ ?e wdt:P31 wd:Q27968055 }}
@@ -125,12 +126,48 @@ def fetch():
     for s in subjects.values():  # stable output, so unchanged data commits nothing
         for field in ('types', 'directors', 'countries', 'languages'):
             s[field].sort()
-    pages = wikipedia.fetch_pages({val(r, 'wiki') for r in editions if val(r, 'wiki')})
-    return {'editions': editions, 'awards': awards, 'labels': labels, 'results': results, 'subjects': subjects, 'pages': pages}
+    # Winner lists: each festival's main English Wikipedia article and each of its awards' own articles.
+    lists = [[qid, None, world[qid]['wiki']] for qid in FESTIVALS if (world.get(qid, {}).get('wiki') or '').startswith(WP)]
+    for chunk in batched(awards):
+        lists += [[awards[val(r, 'a')], val(r, 'aLabel'), val(r, 'wiki')] for r in sparql(f'''SELECT ?a ?aLabel ?wiki WHERE {{ VALUES ?a {{ {values(chunk)} }}
+          ?wiki schema:about ?a; schema:isPartOf <https://en.wikipedia.org/> . SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }} }}''')]
+    lists.sort()
+    pages = wikipedia.fetch_pages({val(r, 'wiki') for r in editions if val(r, 'wiki')} | {url for *_, url in lists})
+    return {'editions': editions, 'awards': awards, 'labels': labels, 'results': results, 'subjects': subjects, 'pages': pages, 'lists': lists}
 
 
 def norm(title):
     return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFKD', title).encode('ascii', 'ignore').decode().lower())
+
+
+def film_finder(films, fest, year, source=None):
+    """Find a festival-year film by normalised title, or add it (sourced to its own article and the listing article)."""
+    index = {norm(f['title']): f for f in films.values() if f['festival'] == fest and f['year'] == year}
+    def film_for(title, link):
+        key = norm(title)
+        if not key:
+            return None
+        if key not in index:
+            fid = f'wp-{fest}-{year}-{key[:40]}'.lower()
+            index[key] = films[fid] = {'id': fid, 'title': title, 'festival': fest, 'year': year, 'format': UNLISTED, 'credits': [], 'awards': [],
+                                       'sources': [s for s in (link, source) if s]}  # an edition's article is already its edition's source
+        return index[key]
+    return film_for
+
+
+def add_winner_lists(pages, lists, eds, films):
+    """Year-by-year winners from festival and award articles; a year with no edition yet gets one sourced to the list."""
+    finders = {}
+    for fest, award, url in lists:
+        for name, year, title, link, director, country in wikipedia.winners(pages.get(url, ''), award):
+            eds.setdefault(fest, {}).setdefault(year, {'year': year, 'source': url})
+            film = (finders.get((fest, year)) or finders.setdefault((fest, year), film_finder(films, fest, year, url)))(title, link)
+            if not film['credits'] and director:
+                film['credits'] = [['Director', d] for d in re.split(r',\s*|\s+and\s+|\s*&\s*', director) if d]
+            if not film.get('country') and country:
+                film['country'] = country
+            if not any(norm(a[0]) == norm(name) for a in film['awards']):  # a win replaces the same award's nomination
+                film['awards'] = [a for a in film['awards'] if norm(a[0]) != 'nominated' + norm(name)] + [[name, url]]
 
 
 def add_wikipedia(pages, eds, films):
@@ -140,17 +177,8 @@ def add_wikipedia(pages, eds, films):
             page = pages.get(ed.get('source'))
             if not page:
                 continue
-            index = {norm(f['title']): f for f in films.values() if f['festival'] == fest and f['year'] == year}
+            film_for = film_finder(films, fest, year)
             selections, awards = wikipedia.parse(page)
-            def film_for(title, link):
-                key = norm(title)
-                if not key:
-                    return None
-                if key not in index:
-                    fid = f'wp-{fest}-{year}-{key[:40]}'.lower()
-                    index[key] = films[fid] = {'id': fid, 'title': title, 'festival': fest, 'year': year, 'format': UNLISTED,
-                                               'credits': [], 'awards': [], 'sources': [link] if link else []}  # the edition's article is already its source
-                return index[key]
             for section, title, link, director, country in selections:
                 film = film_for(title, link)
                 if not film:
@@ -203,6 +231,7 @@ def build(raw, world, hand):
         if award not in film['awards']:
             film['awards'].append(award)
     add_wikipedia(raw.get('pages', {}), eds, films)
+    add_winner_lists(raw.get('pages', {}), raw.get('lists', []), eds, films)
     for film in films.values():  # wins before nominations
         film['awards'].sort(key=lambda a: (a[0].startswith('Nominated'), a[0]))
     festivals = []
@@ -240,6 +269,12 @@ def check():
     out = build(raw, {}, {})
     assert out['festivals'][0]['editions'] == [{'year': 2010, 'number': '63rd', 'source': WD + 'Q1'}]
     assert len(out['films']) == 1 and out['films'][0]['awards'][0][0] == 'Golden Leopard' and out['films'][0]['format'] == 'Feature'
+    raw['pages'] = {WP + 'Award': "{|\n! Year !! Film !! Director\n|-\n| 2010 || ''Film'' || D\n|-\n| 2011 || ''New'' || E and F\n|}"}
+    raw['lists'] = [['Q502053', 'Golden Leopard', WP + 'Award']]
+    out = build(raw, {}, {})
+    assert [e['year'] for e in out['festivals'][0]['editions']] == [2011, 2010] and len(out['films']) == 2, out
+    new, old = out['films']
+    assert old['awards'][0] == ['Golden Leopard', WD + 'Q9'] and len(old['awards']) == 2 and new['credits'] == [['Director', 'E'], ['Director', 'F']] and new['sources'] == [WP + 'Award']
     assert sentence('1998 film directed by Bille August') == '1998 film directed by Bille August'
     wikipedia.check()
     print('self-check passed')
@@ -254,7 +289,7 @@ def main():
         for qid, slug in HAND_IDS.items():
             r = next(r for r in listed if r['id'] == slug)
             hand[world[qid]['name']] = (slug, r.get('short') or r['name'])
-        out = build(fetch(), world, hand)
+        out = build(fetch(world), world, hand)
         os.makedirs(os.path.dirname(OUT), exist_ok=True)
         with open(OUT, 'w') as f:
             json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
