@@ -22,7 +22,8 @@ const monthsText = (first, last) => (first === last ? MONTHS[first] : `${MONTHS[
 function festivalWhen(record, today = new Date()) {
   today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
   const year = today.getFullYear();
-  const ranges = (record.editions || []).map(editionRange).filter(Boolean).sort((a, b) => a[0] - b[0]);
+  // World festivals carry an edition count (data/enrich), not a list; only guide festivals have dated editions.
+  const ranges = (Array.isArray(record.editions) ? record.editions : []).map(editionRange).filter(Boolean).sort((a, b) => a[0] - b[0]);
   const now = ranges.find(([start, end]) => start <= today && today <= end);
   if (now) return { status: 'now', sure: true, text: `On now · until ${short(now[1])}`, brief: `until ${short(now[1])}`, start: now[0], end: now[1] };
   const coming = ranges.find(([start]) => start > today);
