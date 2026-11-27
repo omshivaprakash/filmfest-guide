@@ -158,7 +158,8 @@ def parse(wikitext):
             if t is not None and d is not None:
                 section = heads.get(3) or heads.get(2) or ''
                 for r in rows:  # a short row sits under a rowspan, so its cells are shifted: skip it
-                    if len(r) >= len(header) and clean(r[t]) and not re.fullmatch(r'[\d\s–-]*', clean(r[d])):
+                    # a colspan row repeats one label across title and director: it is a section heading, not a film
+                    if len(r) >= len(header) and clean(r[t]) and clean(r[t]) != clean(r[d]) and not re.fullmatch(r'[\d\s–-]*', clean(r[d])):
                         selections.append((section, clean(r[t]), link_target(r[t]), clean(r[d]), clean(r[c]) if c is not None and c < len(r) else ''))
         elif line.startswith('*') and AWARD_SECTION.search(path) and not SKIP_SECTION.search(path):
             depth, body = len(line) - len(line.lstrip('*')), line.lstrip('*').strip()
@@ -186,6 +187,8 @@ def check():
 | colspan=2|''[[The Birthday Party (2025 film)|The Birthday Party]]''
 | Miguel Ángel Jiménez
 | Greece, Spain
+|-
+! colspan=4 | Special Screenings
 |-
 | ''[[Heads or Tails? (2025 film)|Heads or Tails?]]''
 | ''Testa O Croce?''
