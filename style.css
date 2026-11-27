@@ -264,3 +264,4 @@ dialog .when { margin: 0 0 8px; }
 :root[lang=kn] { --body: "Inter", "Noto Sans Kannada", "Tunga", "Kannada Sangam MN", system-ui, sans-serif; --display: "Fraunces", "Noto Serif Kannada", "Noto Sans Kannada", "Tunga", Georgia, serif; }
 :root[lang=hi] { --body: "Inter", "Noto Sans Devanagari", "Nirmala UI", "Kohinoor Devanagari", system-ui, sans-serif; --display: "Fraunces", "Noto Serif Devanagari", "Noto Sans Devanagari", "Nirmala UI", Georgia, serif; }
 :root[lang=kn] *, :root[lang=hi] * { letter-spacing: 0 !important; }
+[data-pane][hidden] { display: none; }

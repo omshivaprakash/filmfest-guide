@@ -36,13 +36,15 @@
 </header>
 
 <main class="view" id="home" hidden>
-  <div class="top">
+  <div class="body"><section data-pane="overview"><div class="top">
     <h1>What screens at film festivals, starting with India</h1>
     <p class="sub">Films, the people who made them, awards and past editions, side by side. Film records come from the official catalogues of the four Indian festivals in the guide so far; the rest of the world’s festivals are listed and being added.</p>
     <div class="lsw" role="group" aria-label="Language"><button type="button" data-lang="en" lang="en">English</button><button type="button" data-lang="kn" lang="kn">ಕನ್ನಡ</button><button type="button" data-lang="hi" lang="hi">हिन्दी</button></div>
   </div>
-  <div class="kpis" id="home-kpis"></div>
-  <div class="body"><div class="hwhen" id="home-when"></div><div class="fgrid" id="festival-cards"></div><div class="homeexplore">
+  <div class="kpis" id="home-kpis"></div></section>
+    <section data-pane="now" hidden><div class="hwhen" id="home-when"></div></section>
+    <section data-pane="festivals" hidden><div class="fgrid" id="festival-cards"></div></section>
+    <section class="homeexplore" data-pane="explore" hidden>
       <div class="panel mapwrap" id="home-map"></div>
       <div class="homelinks">
         <h2 class="vh">Explore</h2>
@@ -56,11 +58,11 @@
         <button type="button" class="hlink" data-go="world">World festivals, work in progress ›</button>
         <p class="legend"><span><i></i>In the guide</span><span><i class="wip"></i>Work in progress</span></p>
       </div>
-    </div>
-    <div class="hstats" id="home-stats"></div>
-    <h2 class="vh">Notable festivals worldwide</h2><div class="logos" id="home-logos"></div>
-    <h2 class="vh">Award-winning films</h2><div class="shelf" id="home-shelf"></div>
-    <div class="panel sync" id="home-sync" hidden><h5>Data freshness</h5><ul id="sync-list"></ul></div></div>
+    </section>
+    <section class="hstats" id="home-stats" data-pane="numbers" hidden></section>
+    <section data-pane="notable" hidden><h2 class="vh">Notable festivals worldwide</h2><div class="logos" id="home-logos"></div></section>
+    <section data-pane="winners" hidden><h2 class="vh">Award-winning films</h2><div class="shelf" id="home-shelf"></div></section>
+    <section data-pane="data" hidden><div class="panel sync" id="home-sync" hidden><h5>Data freshness</h5><ul id="sync-list"></ul></div></section></div>
 </main>
 
 <main class="view" id="discover" hidden>
