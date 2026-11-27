@@ -389,6 +389,12 @@ async function start() {
       box.lastChild.append(...entries.slice(0, 6).map(whenChip), button('Full calendar ›', 'hlink', () => go('', 'calendar')));
       return box;
     }));
+    // Overview: a one-row taste of the On now tab (full lists stay there).
+    byId('ov-when').replaceChildren(...[['Happening now', onNow()], ['Next up', comingNext()]].filter(([, entries]) => entries.length).flatMap(([heading, entries]) => {
+      const row = element('div', '', 'wchips');
+      row.append(...entries.slice(0, 6).map(whenChip));
+      return [element('h5', heading), row];
+    }), button('Full calendar ›', 'hlink', () => go('', 'calendar')));
     const homeMap = byId('home-map');
     homeMap.replaceChildren(worldMap(festivalPoints()));
     const winners = films.filter(film => film.awards.length && film.artwork).slice(0, 6);
@@ -420,7 +426,7 @@ async function start() {
       card.append(thumbnail(initials(pick.short || pick.name), pick.logo), copy);
       const also = element('p', others.length ? 'Also this month: ' : '', 'meta');
       others.slice(0, 4).forEach((record, index) => also.append(index ? ', ' : '', button(record.short || record.name, 'credit-link', () => showWorld(record))));
-      stats.push(panel(`Festival of the month · ${month}`, card, also));
+      byId('ov-fom').replaceChildren(panel(`Festival of the month · ${month}`, card, also));
     }
     const types = tally(worldFestivals, record => record.types || []);
     if (types.length) stats.push(panel(`Festivals by type · ${types.length} types`, ...barList(types.slice(0, 8).map(([name, count]) => [name, count, () => worldWith(kind, name)]))));
@@ -453,6 +459,12 @@ async function start() {
       tile.title = `${record.name} · ${record.city || record.country}`;
       tile.append(thumbnail(initials(record.short || record.name), record.logo, 'lg'), element('span', record.short || record.name));
       return tile;
+    }));
+    // Overview shows the first few logos; the Notable festivals tab has them all.
+    byId('ov-logos').replaceChildren(...[...byId('home-logos').children].slice(0, 6).map(tile => {
+      const copy = tile.cloneNode(true);
+      copy.addEventListener('click', () => tile.click());
+      return copy;
     }));
   }
   // Data freshness: sync.json lists each source; a scheduled extractor stamps data/<id>/sync.json only when its data changes.
