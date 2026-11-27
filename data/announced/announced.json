@@ -55,7 +55,46 @@
     "year": 2026,
     "number": "23rd",
     "dates": "20–28 November",
-    "source": "https://fr.le360.ma/culture/fifm-2026-76-films-trois-hommages-et-dix-rencontres-au-programme-de-la-23eme-edition_YKR2YKZHTND4HKBBIR2VO7ZQQY/"
+    "source": "https://fr.le360.ma/culture/fifm-2026-76-films-trois-hommages-et-dix-rencontres-au-programme-de-la-23eme-edition_YKR2YKZHTND4HKBBIR2VO7ZQQY/",
+    "jury": [
+     [
+      "Marion Cotillard",
+      "President"
+     ],
+     [
+      "Claes Bang",
+      ""
+     ],
+     [
+      "Vicky Krieps",
+      ""
+     ],
+     [
+      "Emma Mackey",
+      ""
+     ],
+     [
+      "Gilles Lellouche",
+      ""
+     ],
+     [
+      "Kaouther Ben Hania",
+      ""
+     ],
+     [
+      "Andrew Haigh",
+      ""
+     ],
+     [
+      "Ramata-Toulaye Sy",
+      ""
+     ],
+     [
+      "Saïd Hamich Benlarbi",
+      ""
+     ]
+    ],
+    "jurySource": "https://en.hespress.com/149615-marion-cotillard-leads-marrakech-film-festival-jury-seeking-fresh-voices-and-african-cinema.html"
    }
   ],
   "sgiff": [
@@ -340,6 +379,1280 @@
    "sources": [
     "https://www.otroscines.com/post/festival-de-mar-del-plata-2026-todos-los-premios"
    ]
+  },
+  {
+   "id": "ann-marrakech-2026-alkebulan",
+   "title": "Alkebulan",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Yassine Marco Marroccu"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco, Hungary, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-ben-imana",
+   "title": "Ben'imana",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Marie-Clémentine Dusabejambo"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Rwanda, Gabon, France, Norway"
+  },
+  {
+   "id": "ann-marrakech-2026-cairo-shadows",
+   "title": "Cairo Shadows",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Rani Massalha"
+    ],
+    [
+     "Director",
+     "Salem Massalha"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Belgium, Tunisia, Egypt"
+  },
+  {
+   "id": "ann-marrakech-2026-chronicles-from-the-siege",
+   "title": "Chronicles from the Siege",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Abdallah Al-Khatib"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Algeria, France, Palestine"
+  },
+  {
+   "id": "ann-marrakech-2026-congo-boy",
+   "title": "Congo Boy",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Rafiki Fariala"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Central African Republic, France, Democratic Republic of the Congo, Italy"
+  },
+  {
+   "id": "ann-marrakech-2026-a-day-in-the-life-of-jo-chapter-phaedra",
+   "title": "A Day in the Life of Jo: Chapter Phaedra",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Jacqueline Lentzou"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Greece, Germany, France"
+  },
+  {
+   "id": "ann-marrakech-2026-eklipse",
+   "title": "Eklipse",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Manuel Wetscher"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Austria, Italy"
+  },
+  {
+   "id": "ann-marrakech-2026-furies",
+   "title": "Furies",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Rami Kodeih"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Lebanon, Brazil"
+  },
+  {
+   "id": "ann-marrakech-2026-house-of-the-wind",
+   "title": "House of the Wind",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Auguste Bernard Kouemo Yanghu"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Cameroon, France, Belgium, Benin, Saudi Arabia, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-marie-madeleine",
+   "title": "Marie Madeleine",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Gessica Généus"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Haiti, Belgium, Luxembourg, Canada"
+  },
+  {
+   "id": "ann-marrakech-2026-our-share-of-sand",
+   "title": "Our Share of Sand",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Shalini Adnani"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United Kingdom, India, Greece"
+  },
+  {
+   "id": "ann-marrakech-2026-sad-girlz",
+   "title": "Sad Girlz",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Fernanda Tovar"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Mexico, Spain, France"
+  },
+  {
+   "id": "ann-marrakech-2026-waves-of-silence",
+   "title": "Waves of Silence",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Farzad Samsami"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Norway, Morocco, Sweden"
+  },
+  {
+   "id": "ann-marrakech-2026-the-world-before",
+   "title": "The World Before",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Official Competition",
+   "credits": [
+    [
+     "Director",
+     "Yoon Dan-bi"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "South Korea, Japan, France"
+  },
+  {
+   "id": "ann-marrakech-2026-the-debut",
+   "title": "The Debut",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Opening film",
+   "credits": [
+    [
+     "Director",
+     "Jesse Eisenberg"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United States"
+  },
+  {
+   "id": "ann-marrakech-2026-artificial",
+   "title": "Artificial",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Gala Screenings",
+   "credits": [
+    [
+     "Director",
+     "Luca Guadagnino"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United States, United Kingdom, Italy"
+  },
+  {
+   "id": "ann-marrakech-2026-his-weakest-creatures",
+   "title": "His Weakest Creatures",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Gala Screenings",
+   "credits": [
+    [
+     "Director",
+     "Omar Hilal"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United Kingdom, Egypt, Saudi Arabia"
+  },
+  {
+   "id": "ann-marrakech-2026-leila-et-la-nuit",
+   "title": "Leila et la nuit",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Gala Screenings",
+   "credits": [
+    [
+     "Director",
+     "Fellipe Barbosa"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Morocco, Brazil"
+  },
+  {
+   "id": "ann-marrakech-2026-the-only-living-pickpocket-in-new-york",
+   "title": "The Only Living Pickpocket in New York",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Gala Screenings",
+   "credits": [
+    [
+     "Director",
+     "Noah Segan"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United States"
+  },
+  {
+   "id": "ann-marrakech-2026-paper-tiger",
+   "title": "Paper Tiger",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Gala Screenings",
+   "credits": [
+    [
+     "Director",
+     "James Gray"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United States, Brazil, Italy"
+  },
+  {
+   "id": "ann-marrakech-2026-strawberries",
+   "title": "Strawberries",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Gala Screenings",
+   "credits": [
+    [
+     "Director",
+     "Laïla Marrakchi"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Morocco, Spain, Belgium"
+  },
+  {
+   "id": "ann-marrakech-2026-all-of-a-sudden",
+   "title": "All of a Sudden",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Ryusuke Hamaguchi"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Japan, Germany, Belgium"
+  },
+  {
+   "id": "ann-marrakech-2026-a-bit-of-light",
+   "title": "A Bit of Light",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Ali Asgari"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Iran, Switzerland, Italy, Canada, Turkey"
+  },
+  {
+   "id": "ann-marrakech-2026-the-burning-giants",
+   "title": "The Burning Giants",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Phuttiphong Aroonpheng"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Thailand, Singapore, France, Netherlands"
+  },
+  {
+   "id": "ann-marrakech-2026-citizen-osama",
+   "title": "Citizen Osama",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Ahmed Hassouna"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Palestine, France"
+  },
+  {
+   "id": "ann-marrakech-2026-clarissa",
+   "title": "Clarissa",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Arie Esiri"
+    ],
+    [
+     "Director",
+     "Chuko Esiri"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Nigeria, United States"
+  },
+  {
+   "id": "ann-marrakech-2026-dao",
+   "title": "Dao",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Alain Gomis"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Senegal, Guinea-Bissau"
+  },
+  {
+   "id": "ann-marrakech-2026-the-difficult-bride",
+   "title": "The Difficult Bride",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Rubaiyat Hossain"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Bangladesh, Portugal, Norway, Germany"
+  },
+  {
+   "id": "ann-marrakech-2026-everytime",
+   "title": "Everytime",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Sandra Wollner"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Germany, Austria"
+  },
+  {
+   "id": "ann-marrakech-2026-fatherland",
+   "title": "Fatherland",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Pawel Pawlikowski"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Poland, Germany, Italy, France"
+  },
+  {
+   "id": "ann-marrakech-2026-fjord",
+   "title": "Fjord",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Cristian Mungiu"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Romania, France, Norway, Denmark, Finland, Sweden"
+  },
+  {
+   "id": "ann-marrakech-2026-glaxo",
+   "title": "Glaxo",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Benjamín Naishtat"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Argentina, Brazil"
+  },
+  {
+   "id": "ann-marrakech-2026-it-will-happen-tonight",
+   "title": "It Will Happen Tonight",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Nanni Moretti"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Italy, France, Spain"
+  },
+  {
+   "id": "ann-marrakech-2026-kettice",
+   "title": "Ketticè",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Giovanni Tortorici"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Italy"
+  },
+  {
+   "id": "ann-marrakech-2026-a-long-winter",
+   "title": "A Long Winter",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Andrew Haigh"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United Kingdom, Canada"
+  },
+  {
+   "id": "ann-marrakech-2026-look-back",
+   "title": "Look Back",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Hirokazu Kore-eda"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Japan"
+  },
+  {
+   "id": "ann-marrakech-2026-the-roses-of-marrakech",
+   "title": "The Roses of Marrakech",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Ginevra Elkann"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Italy, Morocco, France"
+  },
+  {
+   "id": "ann-marrakech-2026-safe-exit",
+   "title": "Safe Exit",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Mohammed Hammad"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Egypt, Libya, Qatar, Tunisia, Germany"
+  },
+  {
+   "id": "ann-marrakech-2026-the-smell-of-apples",
+   "title": "The Smell of Apples",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "John Trengove"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "South Africa, Netherlands, Chile"
+  },
+  {
+   "id": "ann-marrakech-2026-the-station",
+   "title": "The Station",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Sara Ishaq"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Yemen, Jordan, France, Germany, Netherlands, Norway, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-that-s-all-folks",
+   "title": "That's All Folks",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "Gustave Kervern"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France"
+  },
+  {
+   "id": "ann-marrakech-2026-woman-unknown",
+   "title": "Woman Unknown",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Horizons",
+   "credits": [
+    [
+     "Director",
+     "May el-Toukhy"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Denmark, Latvia, Sweden"
+  },
+  {
+   "id": "ann-marrakech-2026-9-temples-to-heaven",
+   "title": "9 Temples to Heaven",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Sompot Chidgasornpongse"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Thailand, Singapore, France, Norway, China, Hong Kong, Indonesia, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-al-baraneya",
+   "title": "Al Baraneya",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Ashgan El-Hamus"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Netherlands, Egypt, Belgium, Saudi Arabia"
+  },
+  {
+   "id": "ann-marrakech-2026-bedeau-transit-camp",
+   "title": "Bedeau, Transit Camp",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Yohana Benattar"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France"
+  },
+  {
+   "id": "ann-marrakech-2026-the-diary-of-a-chambermaid",
+   "title": "The Diary of a Chambermaid",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Radu Jude"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Romania"
+  },
+  {
+   "id": "ann-marrakech-2026-edward-said-between-worlds",
+   "title": "Edward Said: Between Worlds",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Maiken Baird"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United States"
+  },
+  {
+   "id": "ann-marrakech-2026-enough-is-enough",
+   "title": "Enough Is Enough",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Elisé Sawasawa"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Democratic Republic of the Congo"
+  },
+  {
+   "id": "ann-marrakech-2026-i-deserve-a-lover-whose-every-rise-sets-",
+   "title": "I Deserve a Lover Whose Every Rise Sets Fiery Dooms Raging Across the Skies",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Mani Haghighi"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Iran"
+  },
+  {
+   "id": "ann-marrakech-2026-nahla",
+   "title": "Nahla",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Farouk Beloufa"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Algeria"
+  },
+  {
+   "id": "ann-marrakech-2026-once-upon-a-time-in-harlem",
+   "title": "Once Upon a Time in Harlem",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "William Greaves"
+    ],
+    [
+     "Director",
+     "David Greaves"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "United States"
+  },
+  {
+   "id": "ann-marrakech-2026-only-rebels-win",
+   "title": "Only Rebels Win",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Danielle Arbid"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Lebanon, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-tilai",
+   "title": "Tilaï",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Idrissa Ouedraogo"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Burkina Faso, Switzerland, France"
+  },
+  {
+   "id": "ann-marrakech-2026-variations-on-a-theme",
+   "title": "Variations on a Theme",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Jason Jacobs"
+    ],
+    [
+     "Director",
+     "Devon Delmar"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "South Africa, Netherlands, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-yesterday-the-eye-didn-t-sleep",
+   "title": "Yesterday the Eye Didn't Sleep",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "The 11th Continent",
+   "credits": [
+    [
+     "Director",
+     "Rakan Mayasi"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Belgium, Lebanon, Palestine, Qatar, Saudi Arabia"
+  },
+  {
+   "id": "ann-marrakech-2026-banou",
+   "title": "Banou",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "Moroccan Panorama",
+   "credits": [
+    [
+     "Director",
+     "Mouhssine El Badaoui"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Belgium, Morocco"
+  },
+  {
+   "id": "ann-marrakech-2026-bardi",
+   "title": "Bardi",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Documentary",
+   "section": "Moroccan Panorama",
+   "credits": [
+    [
+     "Director",
+     "Tala Hadid"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco, France, United States, Qatar"
+  },
+  {
+   "id": "ann-marrakech-2026-halima",
+   "title": "Halima",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Moroccan Panorama",
+   "credits": [
+    [
+     "Director",
+     "Yassine El Idrissi"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco"
+  },
+  {
+   "id": "ann-marrakech-2026-hoods",
+   "title": "Hoods",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Moroccan Panorama",
+   "credits": [
+    [
+     "Director",
+     "Mohamed Mouftakir"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco"
+  },
+  {
+   "id": "ann-marrakech-2026-man-of-signs",
+   "title": "Man of Signs",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Moroccan Panorama",
+   "credits": [
+    [
+     "Director",
+     "Zhor Fassi-Fihri"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco, France"
+  },
+  {
+   "id": "ann-marrakech-2026-until-dawn",
+   "title": "Until Dawn",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Moroccan Panorama",
+   "credits": [
+    [
+     "Director",
+     "Mohamed Zineddaine"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco, Italy"
+  },
+  {
+   "id": "ann-marrakech-2026-all-but-my-mother",
+   "title": "All But My Mother",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Young Audiences & Families",
+   "credits": [
+    [
+     "Director",
+     "Mohcine Besri"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Morocco"
+  },
+  {
+   "id": "ann-marrakech-2026-girl-in-the-clouds",
+   "title": "Girl in the Clouds",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Young Audiences & Families",
+   "credits": [
+    [
+     "Director",
+     "Philippe Riche"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France, Belgium"
+  },
+  {
+   "id": "ann-marrakech-2026-the-last-whale-singer",
+   "title": "The Last Whale Singer",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Young Audiences & Families",
+   "credits": [
+    [
+     "Director",
+     "Reza Memari"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Germany, Czech Republic, Canada"
+  },
+  {
+   "id": "ann-marrakech-2026-muyi",
+   "title": "Muyi",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Young Audiences & Families",
+   "credits": [
+    [
+     "Director",
+     "Julien Chheng"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "France"
+  },
+  {
+   "id": "ann-marrakech-2026-tummy-tom-and-the-lost-teddy-bear",
+   "title": "Tummy Tom and the Lost Teddy Bear",
+   "festival": "marrakech",
+   "year": 2026,
+   "format": "Format unlisted",
+   "section": "Young Audiences & Families",
+   "credits": [
+    [
+     "Director",
+     "Joost van den Bosch"
+    ],
+    [
+     "Director",
+     "Erik Verkerk"
+    ]
+   ],
+   "awards": [],
+   "sources": [
+    "https://marrakech-festival.com/wp-content/uploads/2026/11/FIFM26_-_CP_SELECTION_OFFICIELLE_ENG_c.pdf"
+   ],
+   "country": "Netherlands, Belgium"
   }
  ]
 }

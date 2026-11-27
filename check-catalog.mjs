@@ -17,6 +17,7 @@ const announced = JSON.parse(readFileSync(new URL('./data/announced/announced.js
 const announcedIds = new Set([...festivals, ...hand].map(festival => festival.id));
 for (const [id, list] of Object.entries(announced.editions)) for (const edition of list) {
   assert.ok(announcedIds.has(id) && Number.isInteger(edition.year) && new URL(edition.source).protocol === 'https:', `announced ${id}`);
+  if (edition.jury) assert.ok(edition.jury.every(([name]) => name) && new URL(edition.jurySource).protocol === 'https:', `announced ${id} ${edition.year} jury needs names and a source`);
   assert.ok(edition.off || festivalWhen({ editions: [edition] }, new Date(edition.year, 0, 1)), `announced ${id} ${edition.year} dates must parse`);
 }
 mergeAnnounced([...festivals, ...hand], announced.editions);
