@@ -73,6 +73,19 @@ function thumbnail(fallback, photo, className = 'thumbnail') {
 }
 const initials = name => name.split(/\s+/).slice(0, 2).map(part => part[0]).join('');
 
+// A shard festival whose id is already in the catalogue (a hand-built festival) only adds the editions the catalogue lacks.
+function mergeFestivals(festivals, incoming) {
+  const fresh = [];
+  for (const record of incoming) {
+    const known = festivals.find(festival => festival.id === record.id);
+    if (!known) { fresh.push(record); continue; }
+    const years = new Set(known.editions.map(edition => edition.year));
+    known.editions = [...known.editions, ...record.editions.filter(edition => !years.has(edition.year))].sort((a, b) => b.year - a.year);
+    known.wikidata ||= record.wikidata;
+  }
+  return fresh;
+}
+
 async function start() {
   const linksLoad = fetch('data/youtube-links/youtube.json').then(reply => (reply.ok ? reply.json() : { films: {} })).catch(() => ({ films: {} }));
   const optional = url => fetch(url).then(reply => (reply.ok ? reply.json() : null)).catch(() => null);
@@ -84,7 +97,7 @@ async function start() {
   const shardList = await fetch('data/shards.json').then(reply => (reply.ok ? reply.json() : [])).catch(() => []);
   for (const shard of await Promise.all(shardList.map(path => fetch(path).then(reply => (reply.ok ? reply.json() : null)).catch(() => null)))) {
     if (!shard) continue;
-    festivals.push(...(shard.festivals || []));
+    festivals.push(...mergeFestivals(festivals, shard.festivals || []));
     films.push(...(shard.films || []));
     honors.push(...(shard.honors || []));
     Object.assign(portraits, shard.portraits);
@@ -126,7 +139,9 @@ async function start() {
     for (const record of data.festivals) Object.assign(record, { ...extras?.festivals?.[record.id], ...record });
     const key = name => normalize(name).replace(/[^a-z0-9]/g, '');
     const host = url => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
-    const rows = data.festivals.filter(record => !imported.has(record.id)).map(({ ll, ...record }) => ({ ...record, lon: ll[0], lat: ll[1] }));
+    // Wikidata also has look-alike items for guide festivals ("International Film Festival of India (IFFI-Goa)"): match on the name without brackets.
+    const guideNames = new Set(festivals.map(record => key(record.name.replace(/\(.*?\)/g, ''))));
+    const rows = data.festivals.filter(record => !imported.has(record.id) && !guideNames.has(key(record.name.replace(/\(.*?\)/g, '')))).map(({ ll, ...record }) => ({ ...record, lon: ll[0], lat: ll[1] }));
     const byName = new Map(rows.map(record => [key(record.name), record]));
     const byHost = new Map(rows.filter(record => record.url).map(record => [host(record.url), record]));
     const extra = [];
